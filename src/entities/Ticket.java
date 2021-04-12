@@ -8,7 +8,7 @@ public class Ticket {
 
 	private String id;
 	private List<Integer> aV;
-	private LocalDate resolutionDate;
+	private LocalDateTime resolutionDate;
 	private LocalDateTime creationDate;
 	private Integer fV;
 	private Integer oV;
@@ -36,7 +36,7 @@ public class Ticket {
 		return aV;
 	}
 
-	public LocalDate getResolutionDate() {
+	public LocalDateTime getResolutionDate() {
 		return resolutionDate;
 	}
 
@@ -73,7 +73,7 @@ public class Ticket {
 		this.aV = aV;
 	}
 
-	public void setResolutionDate(LocalDate resolutionDate) {
+	public void setResolutionDate(LocalDateTime resolutionDate) {
 		this.resolutionDate = resolutionDate;
 	}
 

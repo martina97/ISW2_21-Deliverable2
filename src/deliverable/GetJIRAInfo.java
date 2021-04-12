@@ -266,16 +266,18 @@ public class GetJIRAInfo {
 				ticket.setIV(0);
 			}
            
-           compareDateVersion(ticket, creationDate, releases);
+           ticket.setOV(compareDateVersion(creationDate, releases));
+           
            
            ticketList.add(ticket);
+           
            /*
            System.out.println(ticket.getID());
            System.out.println("IV === " + ticket.getIV());
            System.out.println("OV === " + ticket.getOV());
            System.out.println("AV === " + ticket.getAV());
-			*/
-           
+		   */
+          
            //List<Integer> AVlist = getAVList(version);
            //String version=issues.getJSONObject(i%1000).getJSONObject("fields").getJSONArray("versions").getJSONObject(0).getString("name");
            
@@ -307,12 +309,13 @@ public class GetJIRAInfo {
   }
   
  
- public static void compareDateVersion(Ticket ticket, LocalDateTime date, List<Release> releases) {
+ public static Integer compareDateVersion(LocalDateTime date, List<Release> releases) {
 	 
-	 
+	 Integer releaseIndex =0;
 	 for (int k = 0; k<releases.size(); k++) {
 		 if (date.isBefore(releases.get(k).getDate())) {
-			 ticket.setOV(releases.get(k).getIndex());
+			 releaseIndex = releases.get(k).getIndex();
+			 //ticket.setOV(releases.get(k).getIndex());
 			 /*
 			 System.out.println("CREATION DATE == " + date + " ---> " + "INDEX RELEASE == " + releases.get(k).getIndex() +
 					 " VERSION == " + releases.get(k).getRelease() );
@@ -320,8 +323,7 @@ public class GetJIRAInfo {
 			 break;
 		 }
 	 }
-	 
-	 
+	 return releaseIndex;
 	 
 	 
  }
