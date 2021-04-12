@@ -1,0 +1,16 @@
+
+:entities.Ticket#getCreationDate()Ljava/time/LocalDateTime;i
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java+ +(%"1*º
+1i
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java,	 ,(º
+·
+i
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java,	 ,(
+%0java.time.LocalDateTime"__id*%*#
+entities.Ticket"
+creationDate"Œ
+i
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java, ,(
+
+%0java.time.LocalDateTimeB
+entities.Ticket

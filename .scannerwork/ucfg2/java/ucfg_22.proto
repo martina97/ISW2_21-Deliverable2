@@ -1,0 +1,18 @@
+
+Anull#compare(Ljava/time/LocalDateTime;Ljava/time/LocalDateTime;)It
+jD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/getReleaseInfo.java= =( "1*Á
+1t
+jD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/getReleaseInfo.java> >(ÅÂ
+t
+jD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/getReleaseInfo.java> >()	
+%0int"Jjava.time.LocalDateTime#compareTo(Ljava/time/chrono/ChronoLocalDateTime;)I*
+
+o1java.time.LocalDateTime*
+
+o2java.time.LocalDateTime21compareTo(Ljava/time/chrono/ChronoLocalDateTime;)"~
+t
+jD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/getReleaseInfo.java> >(*
+"":
+o1java.time.LocalDateTime:
+o2java.time.LocalDateTimeB%#
+!Ldeliverable/getReleaseInfo$2210;

@@ -1,0 +1,16 @@
+
+8entities.Ticket#getResolutionDate()Ljava/time/LocalDate;i
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java' '(#"1*´
+1i
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java(	 ((¸
+µ
+i
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java(	 ((
+%0java.time.LocalDate"__id*'*%
+entities.Ticket"
+resolutionDate"ˆ
+i
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java( ((
+
+%0java.time.LocalDateB
+entities.Ticket

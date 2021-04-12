@@ -44,28 +44,31 @@ public class Main {
 	
 	private static Logger logger = Logger.getLogger(Main.class.getName());
 	public static final String NAME_PROJECT = "BOOKKEEPER";
-	private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/.git";
-	private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER");
+	private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/bookkeeper/.git";
+	private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
 
 	private static Repository repository;
-	protected static List<Release> releases;
+	protected static List<Release> releasesList;
 	private static List<Ticket> ticketList;
+	private static ArrayList<RevCommit> commitList;
+
 
 
 
    public static void main(String[] args) throws IllegalStateException, GitAPIException, IOException, JSONException {
 	   
-	   // prendo tutta lista release progetto
-	   releases = GetJIRAInfo.getListRelease(NAME_PROJECT);
-	   
-	   for (int i = 0 ; i<releases.size(); i++ ) {
-		   System.out.println("RELEASES ===== " + releases.get(i).getIndex() + "--->" +  releases.get(i).getRelease()) ;
-	   }
-	   
+	   //metto in releases tutta la lista delle release del progetto
+	   releasesList = GetJIRAInfo.getListRelease(NAME_PROJECT);
+
+	   //salvo in commitList tutti i commit del progetto
+	   commitList = getGitINFO.getAllCommit(repoPath);
 	   
 	   // prendo tutti i ticket di tipo bug ecc e i relativi campi che mi interessano
 	   // DA JIRA e li metto in listaTicket
-	   ticketList = GetJIRAInfo.retrieveTickets2(NAME_PROJECT, releases);
+	   ticketList = GetJIRAInfo.retrieveTickets2(NAME_PROJECT, releasesList);
+	   
+	   getCommitTicket();
+	   
 	   
 	   /*
 	   ArrayList<RevCommit> commitList = new ArrayList<>();
@@ -84,13 +87,38 @@ public class Main {
 
    	}
    
+   public static void getCommitTicket() {
+	   
+	   for (Ticket ticket : ticketList) {
+		   Integer count = 0;
+		   String ticketID = ticket.getID();
+		   System.out.println("TICKET ID = " + ticketID);
+		   for(RevCommit commit : commitList) {
+			   String message = commit.getFullMessage();
+			   if (message.contains(ticketID +",") || message.contains(ticketID +"\r") || message.contains(ticketID +"\n")|| message.contains(ticketID + " ") || message.contains(ticketID +":")
+						 || message.contains(ticketID +".")|| message.contains(ticketID + "/") || message.endsWith(ticketID) ||
+						 message.contains(ticketID + "]")|| message.contains(ticketID+"_") || message.contains(ticketID + "-") || message.contains(ticketID + ")") ) {
+			   //if (message.contains(ticketID)) {
+				   count++;
+				   
+				   System.out.println("COMMIT ID = " + commit.getId() + "\n");
+				   //System.out.println("COMMIT MESSAGE = " + commit.getFullMessage() + "\n");
+
+			   //}
+		   }
+		   }
+		   System.out.println("Il numero di commit relativi al ticket e': " + count);
+		   System.out.println("\n\n#######\n\n");
+	   }
+	   
+	   
+   }
    
    public static ArrayList<LocalDate> findCommitTicket(ArrayList<RevCommit> commitList,ArrayList<Ticket> ticketList ) throws IOException {
 	   
 	   ArrayList<LocalDate> commitDateList = new ArrayList<>();
 	   ArrayList<LocalDate> resolutionDates = new ArrayList<>();
 	   TreeMap<Integer, ArrayList<Month>> yearMonthMap  = new TreeMap<>();
-	   FileWriter myWriter = new FileWriter("filename.txt");
 	   Integer count = 0;
 	   for (Ticket ticket : ticketList) {
 		   count++;
@@ -98,7 +126,6 @@ public class Main {
 		   for (RevCommit rev : commitList) {
 			   String commit = rev.getFullMessage();
 			   //System.out.println("MESSAGGIO COMMIT : \n" + commit.getFullMessage() + "\n\n\n");
-			   //myWriter.write(commit.getFullMessage() + "\n\n\n");
 			   String ticketID1 = ticket.getID();
 			   String ticketID2 = ticketID1.replace("DAFFODIL","DFDL");
 
@@ -168,7 +195,6 @@ public class Main {
 		   
 	   }
 	   yearMonthMap.forEach((key, value) -> logger.log(Level.INFO, "key: {0} --> value: {1} ",new Object[] { key, value,}));
-	   myWriter.close();
 	   return resolutionDates;
    }
    

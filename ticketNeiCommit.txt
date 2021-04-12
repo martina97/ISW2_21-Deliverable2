@@ -1,0 +1,79 @@
+BOOKKEEPER-1262/
+
+
+BOOKKEEPER-759:
+
+
+https://issues.apache.org/jira/browse/BOOKKEEPER-365
+
+
+This closes #704 from yzang/yzang/BOOKKEEPER-1040
+#######
+
+
+BOOKKEEPER-628
+
+It also includes changes for BOOKKEEPER-754 (flush ledger storage after replaying journal)
+
+BOOKKEEPER-628,
+
+This closes #183 from kishorekasi/BOOKKEEPER-588-kishore
+
+
+[BOOKKEEPER-980]
+
+Fix the issue described in [BOOKKEEPER-980](https://issues.apache.org/jira/browse/BOOKKEEPER-980).
+
+
+BOOKKEEPER-1028 and BOOKKEEPER-1029
+
+This closes #193 from athanatos/forupstream/BOOKKEEPER-1098
+#######
+
+ED ON #177  (you can review 868a3c8 for the only change that belongs to BOOKKEEPER-1088).
+
+
+Closes #110 from eolivelli/BOOKKEEPER-391-kerberos
+
+
+This commit is on top of BOOKKEEPER-1048 / #138. Once that gets merged, I will rebase. Posting now to get Jenkins run. Please review last commit f53f772f79d0a334edc0f05e66edb7cc645b1ffa in this PR for now.
+
+Closes #115 from govind-menon/BOOKKEEPER-1009_B
+
+
+ BOOKKEEPER-873 and BOOKKEEPER-553
+
+
+Closes #68 from eolivelli/BOOKKEEPER-912 and squashes the following commits:
+
+6c1eaca [eolivelli] BOOKKEEPER-912 Allow EnsemblePlacementPolicy to choose bookies using ledger custom data (multitenancy support)
+7c0ab37 [eolivelli] BOOKKEEPER-912 Allow EnsemblePlacementPolicy to choose bookies using ledger custom data (multitenancy support)
+#######
+
+https://issues.apache.org/jira/browse/BOOKKEEPER-952
+
+RB_ID=880463
+
+
+
+BOOKKEEPER-750.
+
+
+BOOKKEEPER-336 bookie r
+
+BOOKKEEPER-354: [BOOKKEEPER-296] [Documentation] Modify the bookkeeper start script and document the bookkeeper stop command in bookkeeperConfig.xml (Kiran BC via sijie)
+
+
+table (BOOKKEEPER-158)
+
+BOOKKEEPER-101 : Add Fencing to Bookkeeper (ivank)
+
+BOOKKEEPER-86: bookkeeper-benchmark fails to compile after BOOKKEEPER-68
+
+forgot to add test from BOOKKEEPER-38
+
+
+This closes #2459 from Ghatage/BOOKKEEPER-1262/cleanupDeprecatedCode, closes #1262#######
+
+
+5e399df(BOOKKEEPER-759: Delay Ensemble Change & Disable Ensemble
