@@ -255,7 +255,7 @@ public class GetJIRAInfo {
            String key = issues.getJSONObject(i%1000).get("key").toString();
            LocalDateTime creationDate= LocalDateTime.parse(issues.getJSONObject(i%1000).getJSONObject("fields").getString("created").substring(0,16));
            
-           System.out.println(issues.getJSONObject(i%1000));
+           //System.out.println(issues.getJSONObject(i%1000));
            
            JSONArray versions = issues.getJSONObject(i % 1000).getJSONObject("fields").getJSONArray("versions");
            List<Integer> listAV = getAVList(versions, releases);
@@ -265,8 +265,16 @@ public class GetJIRAInfo {
 			} else {
 				ticket.setIV(0);
 			}
+           
+           compareDateVersion(ticket, creationDate, releases);
+           
            ticketList.add(ticket);
            System.out.println(ticket.getID());
+           System.out.println("IV === " + ticket.getIV());
+           System.out.println("OV === " + ticket.getOV());
+           System.out.println("AV === " + ticket.getAV());
+
+
            
            //List<Integer> AVlist = getAVList(version);
            //String version=issues.getJSONObject(i%1000).getJSONObject("fields").getJSONArray("versions").getJSONObject(0).getString("name");
@@ -298,6 +306,22 @@ public class GetJIRAInfo {
      return ticketList;
   }
   
+ 
+ public static void compareDateVersion(Ticket ticket, LocalDateTime date, List<Release> releases) {
+	 
+	 
+	 for (int k = 0; k<releases.size(); k++) {
+		 if (date.isBefore(releases.get(k).getDate())) {
+			 ticket.setOV(releases.get(k).getIndex());
+			 System.out.println("CREATION DATE == " + date + " ---> " + "INDEX RELEASE == " + releases.get(k).getIndex());
+			 break;
+		 }
+	 }
+	 
+	 
+	 
+	 
+ }
   public static Integer getMostFrequentYear(List<LocalDateTime> resolDateList) {
 	  
 	  TreeMap<Integer, Integer> yearsAndTickets = new TreeMap<>();

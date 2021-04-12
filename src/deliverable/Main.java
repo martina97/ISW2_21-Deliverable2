@@ -58,7 +58,10 @@ public class Main {
 	   // prendo tutta lista release progetto
 	   releases = GetJIRAInfo.getListRelease(NAME_PROJECT);
 	   
-	   System.out.println("RELEASES ===== " + releases);
+	   for (int i = 0 ; i<releases.size(); i++ ) {
+		   System.out.println("RELEASES ===== " + releases.get(i).getIndex() + "--->" +  releases.get(i).getRelease()) ;
+	   }
+	   
 	   
 	   // prendo tutti i ticket di tipo bug ecc e i relativi campi che mi interessano
 	   // DA JIRA e li metto in listaTicket
