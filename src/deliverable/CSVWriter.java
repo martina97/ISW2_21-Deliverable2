@@ -78,7 +78,7 @@ public static void writeCsvReleases(List<Ticket> ticketList) {
 	
 
 	  try (
-	   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\csvReleases.csv")) {
+	   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\TicketsAndReleases4.csv")) {
 	   
 	   fileWriter.append("TICKET ID ; IV ; OV ; FV ; AV\n");
 	   for (Ticket ticket : ticketList) {

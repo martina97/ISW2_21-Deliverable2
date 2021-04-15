@@ -96,7 +96,7 @@ public class GetJIRAInfo {
 
 		if (releases.size() < 6)
 			return releaseList;
-		String pathname = "D:\\" + "Universita\\magistrale\\isw2\\Codici\\ISW2_Deliverable2_OK\\releases.csv";
+		String pathname = "D:\\" + "Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\Releases.csv";
 		try (FileWriter fileWriter = new FileWriter(pathname)) {
 
 			fileWriter.append("Index;Version ID;Version Name;Date");
@@ -161,69 +161,8 @@ public class GetJIRAInfo {
    
    
 
-   /*
-// ritorna la lista di ticket con le corrispondenti resolutionDate e creationDate
-  public static SortedMap<Month, ArrayList<String>> retrieveTickets() {
-	  
-	  String projName ="DAFFODIL";
-	   Integer j = 0;
-	   Integer i = 0;
-	   Integer total = 1;
-	   Integer myYear; 
-	   TreeMap<Month, ArrayList<String>> ticketMonthMap = new TreeMap<>();
-	   JSONArray issues ;
-	 /// RITORNA UNA LISTA DI TICKET
-	 ArrayList<Ticket> ticketList = new ArrayList<>();
-	 ArrayList<LocalDateTime> resolDateList = new ArrayList<>();
-      //Get JSON API for closed bugs w/ AV in the project
-      do {
-         //Only gets a max of 1000 at a time, so must do this multiple times if bugs >1000
-         j = i + 1000;
-         String url = "https://issues.apache.org/jira/rest/api/2/search?jql=project=%22"
-                + projName + "%22AND%22issueType%22=%22Bug%22AND(%22status%22=%22closed%22OR"
-                + "%22status%22=%22resolved%22)AND%22resolution%22=%22fixed%22&fields=key,resolutiondate,versions,created&startAt="
-                + i.toString() + "&maxResults=" + j.toString();
-         try 
-         {
-         JSONObject json = readJsonFromUrl(url);
-         
-         issues = json.getJSONArray("issues");
-         total = json.getInt("total");
-         for (; i < total && i < j; i++) {
-            //Iterate through each bug
-            String key = issues.getJSONObject(i%1000).get("key").toString();
-            LocalDateTime resolutionDate= LocalDateTime.parse(issues.getJSONObject(i%1000).getJSONObject("fields").getString("resolutiondate").substring(0,16));
-            Ticket ticket = new Ticket(key, resolutionDate);
-            ticketList.add(ticket);
-            resolDateList.add(resolutionDate);
-            System.out.println(ticket.getID() + "--->" + resolutionDate);
-         
-      } 
-      }
-	
-		catch (JSONException e) 
-		{
-			System.out.println("Error during JSON document analysis.");
-			e.printStackTrace();
-		} 
-		catch (IOException e) 
-		{
-			System.out.println("Error reading JSON file.");
-			e.printStackTrace();
-		}
-		} 
-      	while (i < total);  
-      
-      // trovo l'anno in cui c'è stata la maggior parte dei ticket risolti
-      myYear = getMostFrequentYear(resolDateList);
-      
-      // creo mappa avente come chiave l'id del ticket e come valore il mese relativo all'anno più frequente
-      getTicketMonthMap(myYear, ticketList, ticketMonthMap);
-      System.out.println(ticketMonthMap);
-      
-      return ticketMonthMap;
-   }
-*/
+   
+
    
 //ritorna la lista di ticket con le corrispondenti resolutionDate e creationDate
  public static ArrayList<Ticket> retrieveTickets2(String projName, List<Release> releases ) {
@@ -320,6 +259,10 @@ public class GetJIRAInfo {
 			 System.out.println("CREATION DATE == " + date + " ---> " + "INDEX RELEASE == " + releases.get(k).getIndex() +
 					 " VERSION == " + releases.get(k).getRelease() );
 					 */
+			 break;
+		 }
+		 if(date.isAfter(releases.get(releases.size()-1).getDate())) {
+			 releaseIndex = releases.get(releases.size()-1).getIndex();
 			 break;
 		 }
 	 }

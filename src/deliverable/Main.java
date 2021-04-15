@@ -73,8 +73,13 @@ public class Main {
 	   for (Ticket ticket : ticketList) {
 		   System.out.println("FV ===== " + ticket.getFV());
 	   }
-	   CSVWriter.writeCsvReleases(ticketList);
+	   //CSVWriter.writeCsvReleases(ticketList);
 	   
+	   // modifico le IV-AV dei ticket 
+	   setIv();
+	   checkAV();
+	   CSVWriter.writeCsvReleases(ticketList);
+
 	   
 	   /*
 	   ArrayList<RevCommit> commitList = new ArrayList<>();
@@ -93,6 +98,56 @@ public class Main {
 
    	}
    
+   public static void setIv() {
+	   /*
+	    * Per i ticket che hanno FV = 1 o OV = 1, setto IV = 1 e aggiusto le AV
+	    */
+	   for(Ticket ticket : ticketList) {
+		  
+		   if (ticket.getOV() == 1) {
+			   ticket.getAV().clear(); //svuoto la lista di AV per poi aggiornarla con valori corretti
+			   ticket.setIV(1);
+			   
+			   if (ticket.getFV() != 1) {
+				   System.out.println("TICKET = " + ticket.getID() + " IV = " + ticket.getIV() + " FV = " + ticket.getFV() + "\n\n");
+				   for (int i = ticket.getIV(); i<ticket.getFV();i++) {
+					   ticket.getAV().add(i);
+				   }
+			   }
+			   if( ticket.getFV() == 1) {
+				   ticket.getAV().add(0);
+			   } 
+		   }
+	   }
+	
+   }
+   
+   public static void checkAV() {
+	   
+	   for (Ticket ticket : ticketList) {
+		   if (ticket.getIV() != 0 ) {	//se IV = 0 --> AV=[null]
+			   if (ticket.getFV() > ticket.getIV() & ticket.getOV() > ticket.getIV()) {
+				   ticket.getAV().clear(); //svuoto la lista di AV per poi aggiornarla con valori corretti
+				   for (int i = ticket.getIV(); i<ticket.getFV();i++) {
+					   ticket.getAV().add(i);
+				   }
+			   }
+			   if (ticket.getFV() > ticket.getIV() & ticket.getOV() < ticket.getIV()) {
+				   ticket.setIV(0);
+				   ticket.getAV().clear();
+				   ticket.getAV().add(0);
+			   }
+			   if (ticket.getFV() < ticket.getIV()) {
+				   ticket.setIV(0);
+				   ticket.getAV().clear();
+				   ticket.getAV().add(0);
+			   }
+			
+		   }
+	   }
+	   
+   }
+   
    public static void getCommitTicket() {
 	   
 	   ArrayList<LocalDateTime> commitDateList = new ArrayList<>();
@@ -106,15 +161,12 @@ public class Main {
 			   if (message.contains(ticketID +",") || message.contains(ticketID +"\r") || message.contains(ticketID +"\n")|| message.contains(ticketID + " ") || message.contains(ticketID +":")
 						 || message.contains(ticketID +".")|| message.contains(ticketID + "/") || message.endsWith(ticketID) ||
 						 message.contains(ticketID + "]")|| message.contains(ticketID+"_") || message.contains(ticketID + "-") || message.contains(ticketID + ")") ) {
-			   //if (message.contains(ticketID)) {
 				   count++;
 				   LocalDateTime commitDate = commit.getAuthorIdent().getWhen().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
 				   commitDateList.add(commitDate);
 
 				   System.out.println("COMMIT ID = " + commit.getId() + " COMMIT DATE = " + commitDate);
-				   //System.out.println("COMMIT MESSAGE = " + commit.getFullMessage() + "\n");
 
-			   //}
 		   }
 		   }
 		   System.out.println("Il numero di commit relativi al ticket e': " + count);
@@ -140,7 +192,6 @@ public class Main {
 
 	   while (ticket.hasNext()) {
 		   Ticket t = ticket.next();
-		   //System.out.println("TICKET ID: " + t.getID() + " ---> " + t.getResolutionDate() + "\n\n");
 		   
 		   if (t.getResolutionDate() == null) {
 			   ticket.remove();
@@ -149,22 +200,5 @@ public class Main {
 	   
 	   
    }
-   
-   
-   
-   
-   public static void createEntriesCsv(ArrayList<LocalDate> resDates) {
-	   
-	  
-	   
-   }
-   
-
-   
-   
-   
-   
-   
-   
    
 }
