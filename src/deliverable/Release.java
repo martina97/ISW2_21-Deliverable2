@@ -1,10 +1,7 @@
 package deliverable;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
-import org.eclipse.jgit.revwalk.RevCommit;
 
 public class Release {
 
