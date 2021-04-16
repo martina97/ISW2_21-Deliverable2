@@ -78,23 +78,11 @@ public class Main {
 	   // modifico le IV-AV dei ticket 
 	   setIv();
 	   checkAV();
-	   CSVWriter.writeCsvReleases(ticketList);
-
-	   
-	   /*
-	   ArrayList<RevCommit> commitList = new ArrayList<>();
-	   String filePath = "D:\\" + "Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable1\\csv\\TicketsAndMonths.csv";
-
-	   //CSVWriter.writeCsv(filePath, ticketMonthMap);
-	   //trovo l'anno in cui ci sono stati la maggior parte di ticket risolti
-	   
-	   getGitINFO.getAllCommit(repoPath, commitList);
-	   ArrayList<LocalDate> resolutionDates = findCommitTicket(commitList, ticketList);
-	   System.out.println("\n\nresolutionDates size == " + resolutionDates.size());
-	   createEntriesCsv(resolutionDates);
-	   //CSVWriter.writeCsv2(filePath, ticketList);
-	    */
-
+	   //CSVWriter.writeCsvReleases(ticketList);
+	   int numTicket = ticketList.size();
+	   System.out.println("NUMERO TICKET = " + numTicket);
+	   int perc = numTicket * 1/100;
+	   System.out.println("PERC = " + perc);
 
    	}
    
@@ -170,7 +158,7 @@ public class Main {
 		   }
 		   }
 		   System.out.println("Il numero di commit relativi al ticket e': " + count);
-		   if (commitDateList.size() != 0) {
+		   if ( !commitDateList.isEmpty()) {
 			   //System.out.println("lista = " + commitDateList);
 			   Collections.sort(commitDateList);
 			   //System.out.println("\n\nlista ordinate = " + commitDateList);
