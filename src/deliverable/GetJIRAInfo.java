@@ -165,7 +165,7 @@ public class GetJIRAInfo {
 
    
 //ritorna la lista di ticket con le corrispondenti resolutionDate e creationDate
- public static ArrayList<Ticket> retrieveTickets2(String projName, List<Release> releases ) {
+ public static List<Ticket> retrieveTickets2(String projName, List<Release> releases ) {
 	  
 	   Integer j = 0;
 	   Integer i = 0;
@@ -209,22 +209,7 @@ public class GetJIRAInfo {
            
            
            ticketList.add(ticket);
-           
-           /*
-           System.out.println(ticket.getID());
-           System.out.println("IV === " + ticket.getIV());
-           System.out.println("OV === " + ticket.getOV());
-           System.out.println("AV === " + ticket.getAV());
-		   */
-          
-           //List<Integer> AVlist = getAVList(version);
-           //String version=issues.getJSONObject(i%1000).getJSONObject("fields").getJSONArray("versions").getJSONObject(0).getString("name");
-           
-           //ticketList.add(ticket);
-           //resolDateList.add(resolutionDate);
-           //System.out.println(ticket.getID() + "--->" + resolutionDate);
-           //System.out.println("####################\n\n");
-
+        
         }
 
         

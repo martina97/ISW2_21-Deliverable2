@@ -2,42 +2,28 @@ package deliverable;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.regex.Pattern;
 
-import org.eclipse.jgit.api.Git;
-import org.eclipse.jgit.api.InitCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import org.eclipse.jgit.api.errors.NoHeadException;
-import org.eclipse.jgit.lib.PersonIdent;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.revwalk.RevCommit;
-import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import org.json.JSONException;
 
 import entities.Ticket;
 
 
-import java.io.File;
-import java.io.FileWriter;
+
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.Instant;
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
-import java.time.Month;
-import java.time.Year;
+
 import java.time.ZoneId;
-import java.time.ZoneOffset;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
-import java.util.SortedMap;
-import java.util.TimeZone;
-import java.util.TreeMap;
+
 
 
 
@@ -49,9 +35,9 @@ public class Main {
 	private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
 
 	private static Repository repository;
-	protected static List<Release> releasesList;
+	private static List<Release> releasesList;
 	private static List<Ticket> ticketList;
-	private static ArrayList<RevCommit> commitList;
+	private static List<RevCommit> commitList;
 
 
 
@@ -62,7 +48,7 @@ public class Main {
 	   releasesList = GetJIRAInfo.getListRelease(NAME_PROJECT);
 
 	   //salvo in commitList tutti i commit del progetto
-	   commitList = getGitINFO.getAllCommit(repoPath);
+	   commitList = GetGitInfo.getAllCommit(repoPath);
 	   
 	   // prendo tutti i ticket di tipo bug ecc e i relativi campi che mi interessano
 	   // DA JIRA e li metto in listaTicket
@@ -159,9 +145,7 @@ public class Main {
 		   }
 		   System.out.println("Il numero di commit relativi al ticket e': " + count);
 		   if ( !commitDateList.isEmpty()) {
-			   //System.out.println("lista = " + commitDateList);
 			   Collections.sort(commitDateList);
-			   //System.out.println("\n\nlista ordinate = " + commitDateList);
 			   LocalDateTime resolutionDate = commitDateList.get(commitDateList.size()-1);
 			   System.out.println("data più recente = " + resolutionDate);
 			   ticket.setResolutionDate(resolutionDate);
