@@ -101,7 +101,6 @@ public class GetJIRAInfo {
 
 			fileWriter.append("Index;Version ID;Version Name;Date");
 			fileWriter.append("\n");
-			//numVersions = releases.size();
 			for (i = 0; i < releases.size(); i++) {
 				Integer index = i + 1;
 				fileWriter.append(index.toString());
@@ -118,7 +117,6 @@ public class GetJIRAInfo {
 			StringWriter sw = new StringWriter();
 			PrintWriter pw = new PrintWriter(sw);
 			e.printStackTrace(pw);
-			//Log.errorLog(sw.toString());
 		}
 
 		// ordina la mappa con date crescenti
@@ -164,166 +162,117 @@ public class GetJIRAInfo {
    
 
    
-//ritorna la lista di ticket con le corrispondenti resolutionDate e creationDate
- public static List<Ticket> retrieveTickets2(String projName, List<Release> releases ) {
-	  
-	   Integer j = 0;
-	   Integer i = 0;
-	   Integer total = 1;
-	   Integer myYear; 
-	   TreeMap<Month, ArrayList<String>> ticketMonthMap = new TreeMap<>();
-	   JSONArray issues ;
-	 /// RITORNA UNA LISTA DI TICKET
-	 ArrayList<Ticket> ticketList = new ArrayList<>();
-     //Get JSON API for closed bugs w/ AV in the project
-     do {
-        //Only gets a max of 1000 at a time, so must do this multiple times if bugs >1000
-        j = i + 1000;
-        String url = "https://issues.apache.org/jira/rest/api/2/search?jql=project=%22"
-               + projName + "%22AND%22issueType%22=%22Bug%22AND(%22status%22=%22closed%22OR"
-               + "%22status%22=%22resolved%22)AND%22resolution%22=%22fixed%22&fields=key,resolutiondate,affectedVersion,versions,created&startAt="
-               + i.toString() + "&maxResults=" + j.toString();
-        try 
-        {
-        JSONObject json = readJsonFromUrl(url);
-        
-        issues = json.getJSONArray("issues");
-        total = json.getInt("total");
-        for (; i < total && i < j; i++) {
-           //Iterate through each bug
-           String key = issues.getJSONObject(i%1000).get("key").toString();
-           LocalDateTime creationDate= LocalDateTime.parse(issues.getJSONObject(i%1000).getJSONObject("fields").getString("created").substring(0,16));
-           
-           //System.out.println(issues.getJSONObject(i%1000));
-           
-           JSONArray versions = issues.getJSONObject(i % 1000).getJSONObject("fields").getJSONArray("versions");
-           List<Integer> listAV = getAVList(versions, releases);
-           Ticket ticket = new Ticket(key, creationDate, listAV);
-           if (listAV.get(0) != null) {
-				ticket.setIV(listAV.get(0));
-			} else {
-				ticket.setIV(0);
-			}
-           
-           ticket.setOV(compareDateVersion(creationDate, releases));
-           
-           
-           ticketList.add(ticket);
-        
-        }
-
-        
-     }
+	//ritorna la lista di ticket con le corrispondenti resolutionDate e creationDate
+	 public static List<Ticket> retrieveTickets2(String projName, List<Release> releases ) {
+		  
+		   Integer j = 0;
+		   Integer i = 0;
+		   Integer total = 1;
+		   Integer myYear; 
+		   TreeMap<Month, ArrayList<String>> ticketMonthMap = new TreeMap<>();
+		   JSONArray issues ;
+		 /// RITORNA UNA LISTA DI TICKET
+		 ArrayList<Ticket> ticketList = new ArrayList<>();
+	     //Get JSON API for closed bugs w/ AV in the project
+	     do {
+	        //Only gets a max of 1000 at a time, so must do this multiple times if bugs >1000
+	        j = i + 1000;
+	        String url = "https://issues.apache.org/jira/rest/api/2/search?jql=project=%22"
+	               + projName + "%22AND%22issueType%22=%22Bug%22AND(%22status%22=%22closed%22OR"
+	               + "%22status%22=%22resolved%22)AND%22resolution%22=%22fixed%22&fields=key,resolutiondate,affectedVersion,versions,created&startAt="
+	               + i.toString() + "&maxResults=" + j.toString();
+	        try 
+	        {
+	        JSONObject json = readJsonFromUrl(url);
+	        
+	        issues = json.getJSONArray("issues");
+	        total = json.getInt("total");
+	        for (; i < total && i < j; i++) {
+	           //Iterate through each bug
+	           String key = issues.getJSONObject(i%1000).get("key").toString();
+	           LocalDateTime creationDate= LocalDateTime.parse(issues.getJSONObject(i%1000).getJSONObject("fields").getString("created").substring(0,16));
+	           
+	           //System.out.println(issues.getJSONObject(i%1000));
+	           
+	           JSONArray versions = issues.getJSONObject(i % 1000).getJSONObject("fields").getJSONArray("versions");
+	           List<Integer> listAV = getAVList(versions, releases);
+	           Ticket ticket = new Ticket(key, creationDate, listAV);
+	           if (listAV.get(0) != null) {
+					ticket.setIV(listAV.get(0));
+				} else {
+					ticket.setIV(0);
+				}
+	           
+	           ticket.setOV(compareDateVersion(creationDate, releases));
+	           
+	           
+	           ticketList.add(ticket);
+	        
+	        }
 	
-		catch (JSONException e) 
-		{
-			System.out.println("Error during JSON document analysis.");
-			e.printStackTrace();
-		} 
-		catch (IOException e) 
-		{
-			System.out.println("Error reading JSON file.");
-			e.printStackTrace();
-		}
-		} 
-     	while (i < total);  
-          
-     
-     return ticketList;
-  }
+	        
+	     }
+		
+			catch (JSONException e) 
+			{
+				System.out.println("Error during JSON document analysis.");
+				e.printStackTrace();
+			} 
+			catch (IOException e) 
+			{
+				System.out.println("Error reading JSON file.");
+				e.printStackTrace();
+			}
+			} 
+	     	while (i < total);  
+	          
+	     
+	     return ticketList;
+	  }
   
  
- public static Integer compareDateVersion(LocalDateTime date, List<Release> releases) {
-	 
-	 Integer releaseIndex =0;
-	 for (int k = 0; k<releases.size(); k++) {
-		 if (date.isBefore(releases.get(k).getDate())) {
-			 releaseIndex = releases.get(k).getIndex();
-			 //ticket.setOV(releases.get(k).getIndex());
-			 /*
-			 System.out.println("CREATION DATE == " + date + " ---> " + "INDEX RELEASE == " + releases.get(k).getIndex() +
-					 " VERSION == " + releases.get(k).getRelease() );
-					 */
-			 break;
+	 public static Integer compareDateVersion(LocalDateTime date, List<Release> releases) {
+		 
+		 Integer releaseIndex =0;
+		 for (int k = 0; k<releases.size(); k++) {
+			 if (date.isBefore(releases.get(k).getDate())) {
+				 releaseIndex = releases.get(k).getIndex();
+				 break;
+			 }
+			 
+			 if(date.isAfter(releases.get(releases.size()-1).getDate())) {
+				 releaseIndex = releases.get(releases.size()-1).getIndex();
+			 }
 		 }
-		 if(date.isAfter(releases.get(releases.size()-1).getDate())) {
-			 releaseIndex = releases.get(releases.size()-1).getIndex();
-			 break;
-		 }
+		 return releaseIndex;
 	 }
-	 return releaseIndex;
 	 
-	 
- }
-  public static Integer getMostFrequentYear(List<LocalDateTime> resolDateList) {
 	  
-	  TreeMap<Integer, Integer> yearsAndTickets = new TreeMap<>();
-	  for (int i = 0; i<resolDateList.size();i++) {
-		  Integer year = resolDateList.get(i).getYear();
-		  if (!yearsAndTickets.containsKey(year)) {
-			  //l'anno non e presente nell'Hash Map, quindi lo aggiungo
-			  yearsAndTickets.put(year, 1);
-		  }
-		  else {
-			  //l'anno e presente nell'Hash Map, quindi incremento il valore associato all'anno
-			  yearsAndTickets.put(year, yearsAndTickets.get(year) + 1);
-		  }
-	  }
-	  //yearsAndTickets.forEach((key, value) -> logger.log(Level.INFO, key + "= " + value + "\n\n"));
-	  yearsAndTickets.forEach((key, value) -> logger.log(Level.INFO, "nkey: {0} --> value: {1} ",new Object[] { key, value,}));
-
-	  // trovo l'anno in cui ci sono stati più ticket risolti
-	  Integer myYear = Collections.max(yearsAndTickets.entrySet(), Map.Entry.comparingByValue()).getKey();
-	  logger.log(Level.INFO,"\n\n{0}", myYear);
-	return myYear;
-  }
-  
-  
-  public static void getTicketMonthMap(Integer myYear, List<Ticket> ticketList, SortedMap<Month, ArrayList<String>> ticketMonthMap) {
-	  Integer count = 0;
-	  for (int i =0; i<ticketList.size(); i++) {
-		  Ticket ticket = ticketList.get(i);
-		  if (ticket.getResolutionDate().getYear() == 2020) {
-			  count++;
-			  Month myMonth = ticket.getResolutionDate().getMonth();
-			  String ticketID = ticket.getID();
-			  ticketMonthMap.putIfAbsent(myMonth, new ArrayList<String>());
-			  ticketMonthMap.get(myMonth).add(ticketID);
-		  }
-	  }
-	  System.out.println(ticketMonthMap.size());
-	  System.out.println("count = " + count );
-	  ticketMonthMap.forEach((key, value) -> logger.log(Level.INFO, "key: {0} --> value: {1} ",new Object[] { key, value,}));
-	  
-	  
-  }
-  
-  public static List<Integer> getAVList(JSONArray versions, List<Release> releases) throws JSONException {
-
-		ArrayList<Integer> listaAV = new ArrayList<>();
-
-		if (versions.length() == 0) {
-			listaAV.add(null);
-
-		} else {
-			for (int k = 0; k < versions.length(); k++) {
-				String affectedVersion = versions.getJSONObject(k).getString("name");
-				for (int g = 0; g < releases.size(); g++) {
-					if (affectedVersion.equals(releases.get(g).getRelease())) {
-						listaAV.add(releases.get(g).getIndex());
+	  public static List<Integer> getAVList(JSONArray versions, List<Release> releases) throws JSONException {
+	
+			ArrayList<Integer> listaAV = new ArrayList<>();
+	
+			if (versions.length() == 0) {
+				listaAV.add(null);
+	
+			} else {
+				for (int k = 0; k < versions.length(); k++) {
+					String affectedVersion = versions.getJSONObject(k).getString("name");
+					for (int g = 0; g < releases.size(); g++) {
+						if (affectedVersion.equals(releases.get(g).getRelease())) {
+							listaAV.add(releases.get(g).getIndex());
+						}
 					}
+	
 				}
-
 			}
+			return listaAV;
 		}
-
-		return listaAV;
-
-	}
-  
-  public static void main(String[] args) throws IOException, JSONException {
-		// Do nothing because is a main method
-
-	}
+	  
+	  
+	  public static void main(String[] args) throws IOException, JSONException {
+			// Do nothing because is a main method
+	
+		}
  
 }

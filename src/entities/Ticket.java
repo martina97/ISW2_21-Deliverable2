@@ -15,6 +15,7 @@ public class Ticket {
 	private Integer iV;
 	private Integer index;
 	private List<String> fileList;
+	private int p;
 
 	// costruttore
 	//public Ticket(String id, List<Integer> aV, LocalDateTime resolutionDate, LocalDateTime creationDate) {
@@ -63,6 +64,9 @@ public class Ticket {
 	public Integer getIV() {
 		return iV;
 	}
+	public Integer getP() {
+		return p;
+	}
 
 	// set
 	public void setID(String id) {
@@ -91,6 +95,9 @@ public class Ticket {
 
 	public void setIV(Integer iV) {
 		this.iV = iV;
+	}
+	public void setP(Integer p) {
+		this.p = p;
 	}
 
 	public void setIndex(Integer index) {

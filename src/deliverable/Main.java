@@ -65,10 +65,12 @@ public class Main {
 	   setIv();
 	   checkAV();
 	   //CSVWriter.writeCsvReleases(ticketList);
-	   int numTicket = ticketList.size();
-	   System.out.println("NUMERO TICKET = " + numTicket);
-	   int perc = numTicket * 1/100;
-	   System.out.println("PERC = " + perc);
+	   
+	   Collections.reverse(ticketList); //inverto l'ordine dei ticket nella lista per semlicita' nel calcolo proportion
+	   Proportion.proportion(ticketList);
+	   //CSVWriter.writeCsvReleases(ticketList);
+	   checkAV();
+	   CSVWriter.writeCsvReleases(ticketList);
 
    	}
    
@@ -100,27 +102,30 @@ public class Main {
 	   
 	   for (Ticket ticket : ticketList) {
 		   if (ticket.getIV() != 0 ) {	//se IV = 0 --> AV=[null]
-			   if (ticket.getFV() > ticket.getIV() & ticket.getOV() > ticket.getIV()) {
-				   ticket.getAV().clear(); //svuoto la lista di AV per poi aggiornarla con valori corretti
-				   for (int i = ticket.getIV(); i<ticket.getFV();i++) {
-					   ticket.getAV().add(i);
-				   }
+			   if (ticket.getFV() > ticket.getIV() && ticket.getOV() >= ticket.getIV()) {
+				   setAV(ticket);
+				 
 			   }
-			   if (ticket.getFV() > ticket.getIV() & ticket.getOV() < ticket.getIV()) {
+			   if (ticket.getFV() >= ticket.getIV() && ticket.getOV() < ticket.getIV() || ticket.getFV() < ticket.getIV()) {
 				   ticket.setIV(0);
 				   ticket.getAV().clear();
 				   ticket.getAV().add(0);
 			   }
-			   if (ticket.getFV() < ticket.getIV()) {
-				   ticket.setIV(0);
-				   ticket.getAV().clear();
-				   ticket.getAV().add(0);
-			   }
+			   
 			
 		   }
 	   }
 	   
    }
+   
+   public static void setAV(Ticket ticket) {
+	   ticket.getAV().clear(); //svuoto la lista di AV per poi aggiornarla con valori corretti
+
+	   for (int i = ticket.getIV(); i<ticket.getFV();i++) {
+		   ticket.getAV().add(i);
+	   }
+   }
+  
    
    public static void getCommitTicket() {
 	   

@@ -1,158 +1,16 @@
 
-Pdeliverable.GetJIRAInfo#getMostFrequentYear(Ljava/util/List;)Ljava/lang/Integer;s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java‚ ‚(+"7*Ë
-3s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java (à
-Ý
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java (8
-%7java.lang.Integer"__mapGet*&
-$
-yearsAndTicketsjava.util.TreeMap*
-
-yearjava.lang.Integerè
-å
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java (=
-%8java.lang.Integer"__mapSet*&
-$
-yearsAndTicketsjava.util.TreeMap*
-
-yearjava.lang.Integer*
-""*
-6*æ
-4s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java‰ ‰(æ
-ã
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java‰ ‰(!
-%6java.lang.Integer"__mapSet*&
-$
-yearsAndTicketsjava.util.TreeMap*
-
-yearjava.lang.Integer*2*
-6*ô
-5s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java† †( Î
-Ë
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java† †('
-%3java.time.LocalDateTime"
-__arrayGet*!
-
-resolDateListjava.util.List*
-""ÓÐ
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java† †(1	
-%4int""java.time.LocalDateTime#getYear()I*
+6deliverable.Release#getDate()Ljava/time/LocalDateTime;m
+cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java ("1*Â
+1m
+cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java	 (º
+·
+m
+cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java	 (
+%0java.time.LocalDateTime"__id*!*
+deliverable.Release"
+date"
+m
+cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java (
 
-%3java.time.LocalDateTime2	getYear()¦
-£
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java† †(2
-yearjava.lang.Integer"__id*
-	
-%4int¡ž
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java‡	 ‡(*
-%5boolean"2java.util.TreeMap#containsKey(Ljava/lang/Object;)Z*&
-$
-yearsAndTicketsjava.util.TreeMap*
-
-yearjava.lang.Integer2containsKey(Ljava/lang/Object;)*
-3
-4*É
-6s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java… …(ÆÃ
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java… …()	
-%2int"java.util.List#size()I*!
-
-resolDateListjava.util.List2size()*
-5
-1*Ÿ
-7s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java„/ „(>¤¡
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java„3 „(<
-%0java.util.TreeMap"java.util.TreeMap¶
-³
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java„/ „(>
-%1"java.util.TreeMap#<init>()V*
-
-%0java.util.TreeMap¿
-¼
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java„ „(?$
-yearsAndTicketsjava.util.TreeMap"__id*
-
-%0java.util.TreeMap*
-6*ˆ
-1s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java‘ ‘(›˜
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java‘ ‘({
-
-%9void";java.util.TreeMap#forEach(Ljava/util/function/BiConsumer;)V*&
-$
-yearsAndTicketsjava.util.TreeMap*
-""2(forEach(Ljava/util/function/BiConsumer;)ïì
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java”$ ”(>
-%10java.util.Set"+java.util.TreeMap#entrySet()Ljava/util/Set;*&
-$
-yearsAndTicketsjava.util.TreeMap2
-entrySet()ì
-é
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java”@ ”(\
-%11java.util.Comparator"<java.util.Map$Entry#comparingByValue()Ljava/util/Comparator;*"
-java.util.Map$EntryÁ
-¾
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java” ”(]
-%12java.util.Map$Entry"Yjava.util.Collections#max(Ljava/util/Collection;Ljava/util/Comparator;)Ljava/lang/Object;*"
-java.util.Collections*
-
-%10java.util.Set*
-
-%11java.util.Comparatorêç
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java” ”(f
-%13java.lang.Integer".java.util.Map$Entry#getKey()Ljava/lang/Object;*
-
-%12java.util.Map$Entry2getKey()·
-´
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java” ”(g
-myYearjava.lang.Integer"__id*
-
-%13java.lang.IntegerÈ
-Å
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java• •(	
-%14java.util.logging.Logger"__id*'*%
-deliverable.GetJIRAInfo"
-logger¦
-£
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java• •(
-%15java.util.logging.Level"__id*
-""˜•
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java• •(+
-%16void"\java.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)V*!
-
-%14java.util.logging.Logger* 
-
-%15java.util.logging.Level*	
-\n\n{0}*
-
-myYearjava.lang.Integer2Blog(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)"”
-s
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java– –(
-
-myYearjava.lang.Integer:
-resolDateListjava.util.ListB"
-deliverable.GetJIRAInfo
+%0java.time.LocalDateTimeB
+deliverable.Release
