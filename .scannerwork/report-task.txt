@@ -3,5 +3,5 @@ projectKey=martina97_ISW2_21-Deliverable2_BOOKKEEPER
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.19301
 dashboardUrl=https://sonarcloud.io/dashboard?id=martina97_ISW2_21-Deliverable2_BOOKKEEPER
-ceTaskId=AXjZy0OK5d-aOGneMR0C
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXjZy0OK5d-aOGneMR0C
+ceTaskId=AXjlrrtXPJTrG8DFBo_G
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXjlrrtXPJTrG8DFBo_G

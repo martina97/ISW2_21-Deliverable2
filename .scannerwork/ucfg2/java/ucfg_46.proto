@@ -1,0 +1,76 @@
+
+5deliverable.Proportion#calculateP(Lentities/Ticket;)Ip
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaB B("3*ó
+2p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaJ J(¶
+³
+p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaK K(	
+%3int"java.lang.Math#round(F)I*"
+java.lang.Math*
+""ž
+›
+p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaM M(
+%4java.io.PrintStream"__id*
+""±
+®
+p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaM M(.
+%5java.lang.String"__concat*
+p_round==== *
+""‡„
+p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaM M(/
+
+%6void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%4java.io.PrintStream*
+
+%5java.lang.String2println(Ljava/lang/String;)ž
+›
+p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaN N(
+%7java.io.PrintStream"__id*
+""³
+°
+p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaN N(2
+%8java.lang.String"__concat*
+p_noRound==== *
+""‡„
+p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaN N(3
+
+%9void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%7java.io.PrintStream*
+
+%8java.lang.String2println(Ljava/lang/String;)*
+1*¦
+3p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaC C(àÝ
+p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaC C(
+%0java.lang.Integer"*entities.Ticket#getFV()Ljava/lang/Integer;*
+
+ticketentities.Ticket2getFV()àÝ
+p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaD D(
+%1java.lang.Integer"*entities.Ticket#getOV()Ljava/lang/Integer;*
+
+ticketentities.Ticket2getOV()àÝ
+p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaE E(
+%2java.lang.Integer"*entities.Ticket#getIV()Ljava/lang/Integer;*
+
+ticketentities.Ticket2getIV()*
+2
+1*ñ
+1p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaQ	 Q("z
+p
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaQ Q(
+"":
+ticketentities.TicketB"
+deliverable.Proportion

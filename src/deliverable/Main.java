@@ -52,7 +52,7 @@ public class Main {
 	   
 	   // prendo tutti i ticket di tipo bug ecc e i relativi campi che mi interessano
 	   // DA JIRA e li metto in listaTicket
-	   ticketList = GetJIRAInfo.retrieveTickets2(NAME_PROJECT, releasesList);
+	   ticketList = GetJIRAInfo.retrieveTickets(NAME_PROJECT, releasesList);
 	   
 	   getCommitTicket();
 	   
@@ -108,6 +108,10 @@ public class Main {
 			   }
 			   if (ticket.getFV() >= ticket.getIV() && ticket.getOV() < ticket.getIV() || ticket.getFV() < ticket.getIV()) {
 				   ticket.setIV(0);
+				   ticket.getAV().clear();
+				   ticket.getAV().add(0);
+			   }
+			   if (ticket.getFV().equals(ticket.getIV())) {
 				   ticket.getAV().clear();
 				   ticket.getAV().add(0);
 			   }

@@ -163,7 +163,7 @@ public class GetJIRAInfo {
 
    
 	//ritorna la lista di ticket con le corrispondenti resolutionDate e creationDate
-	 public static List<Ticket> retrieveTickets2(String projName, List<Release> releases ) {
+	 public static List<Ticket> retrieveTickets(String projName, List<Release> releases ) {
 		  
 		   Integer j = 0;
 		   Integer i = 0;

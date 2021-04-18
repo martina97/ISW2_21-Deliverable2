@@ -36,8 +36,10 @@ public class Proportion {
 			listP.add(p);
 			sum = sum + p;
 		}
+		
 		System.out.println("LISTA P = " + listP);
 		System.out.println("SOMMA P = " + sum);
+		
 		float avg = (float)sum/perc;
 		int avg_round = Math.round(avg);
 		int avg_no_round = (int)avg;
