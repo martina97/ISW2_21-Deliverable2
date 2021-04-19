@@ -74,8 +74,8 @@ public class Proportion {
 		if (fV != oV) {
 			// se FV = OV --> P = 0
 			float p = (float) (fV - iV)/ (fV - oV); 
-			p_round = Math.round(p);
-			p_noRound = (int)p;
+			p_round = Math.round(p);	//arrotonda p in eccesso
+			p_noRound = (int)p;		// arrotonda in difetto
 			System.out.println("p_round==== " + p_round);
 			System.out.println("p_noRound==== " + p_noRound);
 
@@ -107,10 +107,8 @@ public class Proportion {
 						System.out.println("ticket precedenti = " + ticket2.getID());
 					}
 					setIvProp(listProp, ticket);
-					//addTicketList(listProp, ticket);
 	
 				}
-				//System.out.println("IV ===== " + ticket.getIV());
 				System.out.println("######\n\n");
 			}
 		}
