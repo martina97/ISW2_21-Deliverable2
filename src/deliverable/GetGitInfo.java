@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.InitCommand;
@@ -18,6 +19,8 @@ import org.eclipse.jgit.lib.ObjectId;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.eclipse.jgit.treewalk.TreeWalk;
+
+import entities.JavaFile;
 
 
 
@@ -62,18 +65,7 @@ public class GetGitInfo {
 		}
 	}
 	
-	
-	public static void getFilesRelease(List<Release> releasesList) {
-		/*
-		 * Prendo i file .java che stanno nei commit di una release e li inserisco
-		 * nella lista dei file nella release 
-		 */
-		
-	}
-
-	
-	
-	
+	/*
 	public static void commitHistory(Release release) throws  GitAPIException, IOException	{
 		Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
 
@@ -119,6 +111,9 @@ public class GetGitInfo {
 	        }
 	    }
 	}
+	*/
+	
+	
 	public static void commitHistory2(Path repoPath, List<Release> releasesList) throws  GitAPIException, IOException	{
 
 	
@@ -135,6 +130,11 @@ public class GetGitInfo {
 				    for (RevCommit commit : release.getCommitList()) {
 				    	analyzeCommit(commit, release, git);
 				    }
+				    List<JavaFile> listWithDuplicates = release.getFileList();
+				    List<JavaFile> listWithoutDuplicates = listWithDuplicates.stream()
+				     .distinct()
+				     .collect(Collectors.toList());
+					   System.out.println("NUMERO DI FILE JAVA DELLA RELEASE " + release.getIndex() +" == " + listWithoutDuplicates.size());
 		    	}
 		    }
 	}
@@ -169,11 +169,12 @@ public class GetGitInfo {
                 similarParents++;
         if (similarParents == 0 && tw.getPathString().endsWith(".java") ) {
                 //System.out.println("File names: " + tw.getPathString());
-                release.getFileList().add(tw.getPathString());
+        	JavaFile file = new JavaFile(tw.getPathString());
+            release.getFileList().add(file);
         }
 	}
 	
-	public static void getAllFileJava(Path repoPath, Release release) throws IOException, GitAPIException {
+	public static void getJavaFiles(Path repoPath, List<Release> releasesList) throws IOException, GitAPIException {
 
 		try (Git git = Git.init().setDirectory(repoPath.toFile()).call()) {
 
@@ -181,30 +182,22 @@ public class GetGitInfo {
 
 		InitCommand init = Git.init();
 		init.setDirectory(repoPath.toFile());
-		try (Git git = init.call()) {
-
-		}
 
 		try (Git git = Git.open(repoPath.toFile())) {
-			
-			for (RevCommit commit : release.getCommitList()) {
-
-				ObjectId treeId = commit.getTree();
-				List<String> filePath = new ArrayList<>();
+			for (Release release : releasesList) {
+				List<String> fileName = new ArrayList<>();
+				for (RevCommit commit : release.getCommitList()) {
 	
-				try (TreeWalk treeWalk = new TreeWalk(git.getRepository())) {
-					treeWalk.reset(treeId);
-					treeWalk.setRecursive(true);
-	
-					while (treeWalk.next()) {
-						if (treeWalk.getPathString().endsWith(".java")) {
-							filePath.add(treeWalk.getPathString());
-							String nameFile = treeWalk.getPathString();
-							release.getFileList().add(nameFile);
-							
+					ObjectId treeId = commit.getTree();
+		
+					try (TreeWalk treeWalk = new TreeWalk(git.getRepository())) {
+						treeWalk.reset(treeId);
+						treeWalk.setRecursive(true);
+		
+						while (treeWalk.next()) {
+							addJavaFiles(treeWalk,release, fileName);
 						}
-					}
-			
+					
 				} catch (IOException e) {
 					//Log.errorLog("Errore nel prendere i file java associati al commit");
 					StringWriter sw = new StringWriter();
@@ -218,8 +211,27 @@ public class GetGitInfo {
 				// commit e mi prendo le differenze
 	
 				}
+				List<JavaFile> listWithDuplicates = release.getFileList();
+			    List<JavaFile> listWithoutDuplicates = listWithDuplicates.stream().distinct().collect(Collectors.toList());
+				   System.out.println("NUMERO DI FILE JAVA DELLA RELEASE " + release.getIndex() +" == " + listWithoutDuplicates.size());
 			}
+			}
+		
 	}
+	
+	public static void addJavaFiles(TreeWalk treeWalk, Release release, List<String> fileName) {
+		if (treeWalk.getPathString().endsWith(".java")) {
+			String nameFile = treeWalk.getPathString();
+			if (!fileName.contains(nameFile)) {
+				fileName.add(nameFile);
+				JavaFile file = new JavaFile(nameFile);
+				file.setBugg("No");
+				release.getFileList().add(file);
+
+			}
+		}
+	}
+
 
 	public static void main(String[] args) {
 		// main

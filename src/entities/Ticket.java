@@ -2,7 +2,10 @@ package entities;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
+
+import org.eclipse.jgit.revwalk.RevCommit;
 
 public class Ticket {
 
@@ -15,6 +18,8 @@ public class Ticket {
 	private Integer iV;
 	private Integer index;
 	private List<String> fileList;
+	private List<RevCommit> commitList;
+
 	private int p;
 
 	// costruttore
@@ -25,6 +30,9 @@ public class Ticket {
 		this.aV = aV;
 		//this.resolutionDate = resolutionDate;
 		this.creationDate = creationDate;
+		this.fileList = new ArrayList<>();
+		this.commitList = new ArrayList<>();
+
 	}
 
 	// get
@@ -68,6 +76,11 @@ public class Ticket {
 		return p;
 	}
 
+	public List<RevCommit> getCommitList() {
+		return commitList;
+	}
+	
+	
 	// set
 	public void setID(String id) {
 		this.id = id;
@@ -106,5 +119,9 @@ public class Ticket {
 
 	public void setFileList(List<String> fileList) {
 		this.fileList = fileList;
+	}
+	
+	public void setCommitList(List<RevCommit> commitList) {
+		this.commitList = commitList;
 	}
 }

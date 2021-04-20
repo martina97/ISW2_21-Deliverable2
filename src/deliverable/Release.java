@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.eclipse.jgit.revwalk.RevCommit;
 
+import entities.JavaFile;
+
 
 public class Release {
 
@@ -13,7 +15,7 @@ public class Release {
 	private LocalDateTime date;
 	private String rel;
 	private List<RevCommit> commitList;
-	private List<String> fileList;
+	private List<JavaFile> fileList;
 
 
 	public Release(Integer index, LocalDateTime date, String release) {
@@ -41,7 +43,7 @@ public class Release {
 	public List<RevCommit> getCommitList() {
 		return commitList;
 	}
-	public List<String> getFileList() {
+	public List<JavaFile> getFileList() {
 		return fileList;
 	}
 
@@ -63,7 +65,7 @@ public class Release {
 		this.commitList = commitList;
 	}
 	
-	public void setFileList(List<String> fileList) {
+	public void setFileList(List<JavaFile> fileList) {
 		this.fileList = fileList;
 	}
 

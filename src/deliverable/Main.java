@@ -87,16 +87,10 @@ public class Main {
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   
 	   // per ogni release prendo tutti i file java che sono stati toccati nei commit 
-	   GetGitInfo.getFilesRelease(releasesList);
 	  // GetGitInfo.commitHistory(releasesList.get(0));
 	   //GetGitInfo.commitHistory2(repoPath, releasesList);
-	   GetGitInfo.getAllFileJava(repoPath, releasesList.get(0));
-	   System.out.println("NUMERO DI FILE JAVA DELLA RELEASE 1 == " + releasesList.get(0).getFileList().size());
-	   List<String> listWithDuplicates = releasesList.get(0).getFileList();
-	    List<String> listWithoutDuplicates = listWithDuplicates.stream()
-	     .distinct()
-	     .collect(Collectors.toList());
-		   System.out.println("NUMERO DI FILE JAVA DELLA RELEASE 1 == " + listWithoutDuplicates.size());
+	   GetGitInfo.getJavaFiles(repoPath, releasesList);
+	   
 
 
    	}
@@ -174,6 +168,7 @@ public class Main {
 				   count++;
 				   LocalDateTime commitDate = commit.getAuthorIdent().getWhen().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
 				   commitDateList.add(commitDate);
+				   ticket.getCommitList().add(commit);
 
 				   System.out.println("COMMIT ID = " + commit.getId() + " COMMIT DATE = " + commitDate);
 
