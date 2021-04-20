@@ -2,6 +2,7 @@ package deliverable;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.lib.Repository;
@@ -46,9 +47,22 @@ public class Main {
 	   
 	   //metto in releases tutta la lista delle release del progetto
 	   releasesList = GetJIRAInfo.getListRelease(NAME_PROJECT);
+	   
+	   
 
 	   //salvo in commitList tutti i commit del progetto
-	   commitList = GetGitInfo.getAllCommit(repoPath);
+	   commitList = GetGitInfo.getAllCommit(repoPath, releasesList);
+	   
+	   /*
+	   for (Release release : releasesList) {
+		   System.out.println("RELEASE NUMERO " + release.getIndex());
+		   System.out.println("IL NUMERO DEI COMMIT E' " + release.getCommitList().size());
+		   System.out.println("############\n\n\n\n");
+
+
+	   }
+	   */
+	   
 	   
 	   // prendo tutti i ticket di tipo bug ecc e i relativi campi che mi interessano
 	   // DA JIRA e li metto in listaTicket
@@ -66,11 +80,24 @@ public class Main {
 	   checkAV();
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   
-	   Collections.reverse(ticketList); //inverto l'ordine dei ticket nella lista per semlicita' nel calcolo proportion
+	   Collections.reverse(ticketList); //inverto l'ordine dei ticket nella lista per semplicita' nel calcolo proportion
 	   Proportion.proportion(ticketList);
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   checkAV();
-	   CSVWriter.writeCsvReleases(ticketList);
+	   //CSVWriter.writeCsvReleases(ticketList);
+	   
+	   // per ogni release prendo tutti i file java che sono stati toccati nei commit 
+	   GetGitInfo.getFilesRelease(releasesList);
+	  // GetGitInfo.commitHistory(releasesList.get(0));
+	   //GetGitInfo.commitHistory2(repoPath, releasesList);
+	   GetGitInfo.getAllFileJava(repoPath, releasesList.get(0));
+	   System.out.println("NUMERO DI FILE JAVA DELLA RELEASE 1 == " + releasesList.get(0).getFileList().size());
+	   List<String> listWithDuplicates = releasesList.get(0).getFileList();
+	    List<String> listWithoutDuplicates = listWithDuplicates.stream()
+	     .distinct()
+	     .collect(Collectors.toList());
+		   System.out.println("NUMERO DI FILE JAVA DELLA RELEASE 1 == " + listWithoutDuplicates.size());
+
 
    	}
    
