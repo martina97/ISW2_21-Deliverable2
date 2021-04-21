@@ -28,6 +28,15 @@ import org.json.JSONObject;
 
 import entities.Ticket;
 
+import org.eclipse.jgit.diff.DiffEntry;
+import org.eclipse.jgit.diff.DiffFormatter;
+import org.eclipse.jgit.diff.RawTextComparator;
+import org.eclipse.jgit.lib.ObjectReader;
+import org.eclipse.jgit.revwalk.RevCommit;
+import org.eclipse.jgit.revwalk.RevWalk;
+import org.eclipse.jgit.treewalk.CanonicalTreeParser;
+import org.eclipse.jgit.treewalk.EmptyTreeIterator;
+import org.eclipse.jgit.util.io.DisabledOutputStream;
 import org.json.JSONArray;
 
 public class GetJIRAInfo {
@@ -267,6 +276,9 @@ public class GetJIRAInfo {
 			}
 			return listaAV;
 		}
+	  
+	  
+	 
 	  
 	  
 	  public static void main(String[] args) throws IOException, JSONException {

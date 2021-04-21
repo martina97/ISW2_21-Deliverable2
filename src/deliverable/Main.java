@@ -9,6 +9,7 @@ import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.json.JSONException;
 
+import entities.JavaFile;
 import entities.Ticket;
 
 
@@ -51,7 +52,7 @@ public class Main {
 	   
 
 	   //salvo in commitList tutti i commit del progetto
-	   commitList = GetGitInfo.getAllCommit(repoPath, releasesList);
+	   commitList = GetGitInfo.getAllCommit(releasesList);
 	   
 	   /*
 	   for (Release release : releasesList) {
@@ -90,7 +91,14 @@ public class Main {
 	  // GetGitInfo.commitHistory(releasesList.get(0));
 	   //GetGitInfo.commitHistory2(repoPath, releasesList);
 	   GetGitInfo.getJavaFiles(repoPath, releasesList);
-	   
+	   System.out.println("\n\nSTAMPO FILE RELEASE 1 : " );
+
+	   for (JavaFile file : releasesList.get(0).getFileList()) {
+		   System.out.println(file.getName());
+	   }
+	   System.out.println("\n\n");
+
+	   GetGitInfo.checkRename(releasesList);
 
 
    	}

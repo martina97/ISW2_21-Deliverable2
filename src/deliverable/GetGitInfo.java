@@ -1,5 +1,6 @@
 package deliverable;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -8,17 +9,29 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.InitCommand;
 import org.eclipse.jgit.api.LogCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.eclipse.jgit.diff.DiffEntry;
+import org.eclipse.jgit.diff.DiffFormatter;
+import org.eclipse.jgit.diff.RawTextComparator;
 import org.eclipse.jgit.lib.ObjectId;
+import org.eclipse.jgit.lib.ObjectReader;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.revwalk.RevCommit;
+import org.eclipse.jgit.revwalk.RevWalk;
+import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
+import org.eclipse.jgit.treewalk.CanonicalTreeParser;
+import org.eclipse.jgit.treewalk.EmptyTreeIterator;
 import org.eclipse.jgit.treewalk.TreeWalk;
+import org.eclipse.jgit.util.io.DisabledOutputStream;
 
 import entities.JavaFile;
 
@@ -26,9 +39,12 @@ import entities.JavaFile;
 
 
 public class GetGitInfo {
-
+	private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/bookkeeper/.git";
+	private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
+	private static Repository repository;
+	public static final String FILE_EXTENSION = ".java";
 	
-	public static  List<RevCommit> getAllCommit(Path repoPath,List<Release> releasesList) throws IllegalStateException, GitAPIException, IOException {
+	public static  List<RevCommit> getAllCommit(List<Release> releasesList) throws IllegalStateException, GitAPIException, IOException {
 			
 		 ArrayList<RevCommit> commitList = new ArrayList<>();
 		try (Git git = Git.init().setDirectory(repoPath.toFile()).call()) {
@@ -195,7 +211,7 @@ public class GetGitInfo {
 						treeWalk.setRecursive(true);
 		
 						while (treeWalk.next()) {
-							addJavaFiles(treeWalk,release, fileName);
+							addJavaFile(treeWalk,release, fileName);
 						}
 					
 				} catch (IOException e) {
@@ -219,7 +235,11 @@ public class GetGitInfo {
 		
 	}
 	
-	public static void addJavaFiles(TreeWalk treeWalk, Release release, List<String> fileName) {
+	public static void addJavaFile(TreeWalk treeWalk, Release release, List<String> fileName) {
+		/* 
+		 * Aggiungo il file Java nella lista di file della release, 
+		 * e inizialmente setto buggyness = "no"
+		 */
 		if (treeWalk.getPathString().endsWith(".java")) {
 			String nameFile = treeWalk.getPathString();
 			if (!fileName.contains(nameFile)) {
@@ -232,7 +252,153 @@ public class GetGitInfo {
 		}
 	}
 
+	 public static void checkRename(List<Release> releasesList ) throws IOException {
+	 //public static void checkRename(Release release ) throws IOException {
+		 /*
+		  * Nella lista dei file in ogni release potrebbero esserci delle classi che sono state rinominate, sia tra una release
+		  * e l'altra, sia nella stessa release, quindi devo gestire i file in una stessa release che hanno nomi diversi ma sono gli stessi, 
+		  * sia file tra una release e l'altra 
+		  * alla fine mettero' in ogni release il nome finale che avra' la classe
+		  * IDEA: scorro tutti i commit in ogni release e mi prendo i file rinominati, e a ogni file mi vado a mettere una lista
+		  * di file alias, ossia file che hanno nomi diversi ma sono stessi file 
+		  */
+		 HashMap<String, List<String>> fileAliasMap = new HashMap<>();
+		 /* Lavoro con hashMap, dove:
+		  * key = new Path , value = lista old path 
+		  * vedo old path, e vedo:
+		  * 	se old path è una key della mappa, lo metto nella lista di old path e metto come nuova key il new path
+		  * 	se old path sta nella lista di old path, vedo se la key = new path
+		  * 		se si --> vado avanti
+		  * 		altrimenti --> metto come key il new path e metto la vecchia key nella lista 
+		  */
+		 
+		 FileRepositoryBuilder repositoryBuilder = new FileRepositoryBuilder();
+			repository = repositoryBuilder.setGitDir(new File(REPO)).readEnvironment() // scan environment GIT_* variables
+					.findGitDir() // scan up the file system tree
+					.setMustExist(true).build();
+		  for (Release release : releasesList) {
+			  for (RevCommit commit : release.getCommitList()) {
+				  System.out.println("COMMIT ID = " + commit.getId());
+					List<DiffEntry> diffs = getDiffs(commit);
+					if (diffs != null) {
+						for (DiffEntry diff : diffs) {
+							String type = diff.getChangeType().toString();
+							//System.out.println("TYPE = " + type);
 
+							String oldPath = diff.getOldPath();
+							//System.out.println("oldPath = " + oldPath);
+
+							String newPath = diff.getNewPath();
+							//System.out.println("newPath = " + newPath);
+							
+							
+							if (type.equals("RENAME") && oldPath.endsWith(FILE_EXTENSION)) {
+								//boolean oPCheck = true;
+								//boolean nPCheck = true;
+								System.out.println("oldPath = " + oldPath);
+								System.out.println("newPath = " + newPath);
+								populateMapAlias(oldPath, newPath, fileAliasMap);
+							}
+							
+						}
+					}
+					
+					System.out.println("##############\n\n" );
+			  	}
+			 
+
+			  }
+		  System.out.println("\n\n\nFILE ALIAS MAP == ");
+		  for (Map.Entry<String,List<String>> entry : fileAliasMap.entrySet()) {
+			    String key = entry.getKey(); 
+			    List<String> oldPaths = entry.getValue();
+			    System.out.println(key + "\n");
+			    for (String name : oldPaths) {
+				    System.out.println("old path == " + name + "\n");
+			    }
+			    System.out.println("############\n");
+			  
+		  }
+	  }
+	  
+	 public static void populateMapAlias(String oldPath, String newPath, HashMap<String, List<String>> fileAliasMap) {
+		 System.out.println("POPULATE MAP ALIAS\nold path = " + oldPath+ "\nnewPath = " + newPath + "\n");
+		 int count = 0;
+		 String key  = null ;
+		 List<String> oldPaths = new ArrayList<>();
+
+		 if (fileAliasMap.isEmpty()) {
+			 //List<String> oldPaths = new ArrayList<>();
+			 System.out.println("mappa vuota");
+			 oldPaths.add(oldPath);
+			 fileAliasMap.put(newPath, oldPaths);
+		 }
+		 else {
+			 System.out.println("mappa non vuota");
+			 for (Map.Entry<String,List<String>> entry : fileAliasMap.entrySet()) {
+				    key = entry.getKey(); 
+				    if (key.equals(newPath)) {
+				    	//entry.getValue().add(oldPath); //aggiungo oldPath alla lista di oldPaths 
+				    	count = 1;
+				    }
+				    
+				    else if (key.equals(oldPath)) {
+				    	//String newKey = newPath;
+				    	//oldPaths.add(oldPath);
+				    	count = 2;
+				    	//fileAliasMap.remove(key);
+				    	//fileAliasMap.put(newKey, oldPaths);
+				    }
+				    
+				    else {
+				    	count = 3;
+				        
+				    }
+			 }
+		 }
+		 if (count == 1 ) {
+			 System.out.println("count = 1 ");
+
+			 fileAliasMap.get(key).add(oldPath);
+		 }
+		 if (count == 2) {
+			 System.out.println("count = 2 ");
+
+			 String newKey = newPath;
+		     oldPaths.add(oldPath);
+		     fileAliasMap.remove(key);
+		     fileAliasMap.put(newKey, oldPaths);
+		 }
+		 if (count == 3) {
+			 System.out.println("count = 3 ");
+
+			 List<String> list = Arrays.asList(oldPath);
+		     fileAliasMap.put(newPath, list);
+		 }
+	 }
+
+	 
+	 
+	 
+	  public static List<DiffEntry> getDiffs(RevCommit commit) throws IOException {
+			List<DiffEntry> diffs;
+			DiffFormatter df = new DiffFormatter(DisabledOutputStream.INSTANCE);
+			df.setRepository(repository);
+			df.setDiffComparator(RawTextComparator.DEFAULT);
+			df.setContext(0);
+			df.setDetectRenames(true);
+			if (commit.getParentCount() != 0) {
+				RevCommit parent = (RevCommit) commit.getParent(0).getId();
+				diffs = df.scan(parent.getTree(), commit.getTree());
+			} else {
+				RevWalk rw = new RevWalk(repository);
+				ObjectReader reader = rw.getObjectReader();
+				diffs = df.scan(new EmptyTreeIterator(), new CanonicalTreeParser(null, reader, commit.getTree()));
+			}
+			return diffs;
+
+		}
+	  
 	public static void main(String[] args) {
 		// main
 	}
