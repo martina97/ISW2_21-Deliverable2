@@ -34,6 +34,7 @@ import org.eclipse.jgit.treewalk.TreeWalk;
 import org.eclipse.jgit.util.io.DisabledOutputStream;
 
 import entities.JavaFile;
+import entities.Ticket;
 
 
 
@@ -227,9 +228,6 @@ public class GetGitInfo {
 				// commit e mi prendo le differenze
 	
 				}
-				List<JavaFile> listWithDuplicates = release.getFileList();
-			    List<JavaFile> listWithoutDuplicates = listWithDuplicates.stream().distinct().collect(Collectors.toList());
-				   System.out.println("NUMERO DI FILE JAVA DELLA RELEASE " + release.getIndex() +" == " + listWithoutDuplicates.size());
 			}
 			}
 		
@@ -541,7 +539,50 @@ public class GetGitInfo {
 			
 		}
 	 
-	  public static List<DiffEntry> getDiffs(RevCommit commit) throws IOException {
+	 
+	 public static void checkBuggyness(List<Release> releasesList, List<Ticket> ticketList) throws IOException {
+		 
+		 /* per ogni ticket mi prendo la lista dei commit che contengono l'id del ticket,
+		  * mi prendo i file .java DELETE e MODIFY nel commit
+		  * vedo a che release appartiene il commit e vedo se essa è contenuta nelle AV del ticket
+		  * 	se si --> setto buggyness = "si" per i file java
+		  */
+		 FileRepositoryBuilder repositoryBuilder = new FileRepositoryBuilder();
+			repository = repositoryBuilder.setGitDir(new File(REPO)).readEnvironment() // scan environment GIT_* variables
+					.findGitDir() // scan up the file system tree
+					.setMustExist(true).build();
+		 for (Ticket ticket : ticketList) {
+			 List<Integer> aV = ticket.getAV();
+			 for (RevCommit commit : ticket.getCommitList()) {
+				 LocalDateTime commitDate = commit.getAuthorIdent().getWhen().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+				 int releaseCommit = GetJIRAInfo.compareDateVersion(commitDate, releasesList);
+				 List<DiffEntry> diffs = getDiffs(commit);
+					if (diffs != null) {
+						for (DiffEntry diff : diffs) {
+							String type = diff.getChangeType().toString();
+							//System.out.println("TYPE === " + type);
+							if (diff.toString().contains(FILE_EXTENSION) && (type.equals("MODIFY")
+									|| type.equals("DELETE"))) {
+								// vedo se releaseCommit e' contenuta nella AV del ticket, se si setto
+								// come buggy il file nella relativa release
+								checkFileBugg(diff, releasesList, releaseCommit, aV);
+							
+							
+							}
+							
+						}
+					}
+				 
+			 }
+		 }
+	 }
+	 
+	 public static void checkFileBugg(DiffEntry diff, List<Release> releasesList, int releaseCommit, List<Integer> aV) {
+	 
+	 }
+
+	 
+	 public static List<DiffEntry> getDiffs(RevCommit commit) throws IOException {
 			List<DiffEntry> diffs;
 			DiffFormatter df = new DiffFormatter(DisabledOutputStream.INSTANCE);
 			df.setRepository(repository);
@@ -558,7 +599,7 @@ public class GetGitInfo {
 			}
 			return diffs;
 
-		}
+	 }
 	  
 	public static void main(String[] args) {
 		// main

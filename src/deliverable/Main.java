@@ -56,20 +56,14 @@ public class Main {
 	   System.out.println("STAMPO DATA COMMIT RELEASE 1 " );
 
 	   
-	   
+	   /* inverto l'ordine dei commit appartenenti alle release
+	    * per gestire poi i rename 
+	    */
 	   for (Release release : releasesList) {
-		   Collections.reverse(release.getCommitList()); //inverto l'ordine dei ticket nella lista per semplicita' nel calcolo proportion
-
-		   
-	   }
-	   
-	   for (RevCommit commit : releasesList.get(0).getCommitList()) {
-		   LocalDateTime commitDate = commit.getAuthorIdent().getWhen().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
-
-		   System.out.println("DATA COMMIT =  " + commitDate);
+		   Collections.reverse(release.getCommitList()); 
 
 	   }
-	   
+	   	   
 	   /*
 	   for (Release release : releasesList) {
 		   System.out.println("RELEASE NUMERO " + release.getIndex());
@@ -87,9 +81,6 @@ public class Main {
 	   
 	   getCommitTicket();
 	   
-	   for (Ticket ticket : ticketList) {
-		   System.out.println("FV ===== " + ticket.getFV());
-	   }
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   
 	   // modifico le IV-AV dei ticket 
@@ -103,15 +94,20 @@ public class Main {
 	   checkAV();
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   
-	   // per ogni release prendo tutti i file java che sono stati toccati nei commit 
+	   /* per ogni release prendo tutti i file java che sono stati toccati nei commit 
+	    * e setto inizialmente buggyness = "no" 
+	    */
+	   
 	  // GetGitInfo.commitHistory(releasesList.get(0));
 	   //GetGitInfo.commitHistory2(repoPath, releasesList);
 	   GetGitInfo.getJavaFiles(repoPath, releasesList);
 
-	   GetGitInfo.checkRename(releasesList);
+	   //GetGitInfo.checkRename(releasesList);
+	   
+	   GetGitInfo.checkBuggyness(releasesList, ticketList);
 
 
-   	}
+   	}                                                                                                                                                                                                                                                                                                                                           
    
    public static void setIv() {
 	   /*
