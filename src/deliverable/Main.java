@@ -53,6 +53,22 @@ public class Main {
 
 	   //salvo in commitList tutti i commit del progetto
 	   commitList = GetGitInfo.getAllCommit(releasesList);
+	   System.out.println("STAMPO DATA COMMIT RELEASE 1 " );
+
+	   
+	   
+	   for (Release release : releasesList) {
+		   Collections.reverse(release.getCommitList()); //inverto l'ordine dei ticket nella lista per semplicita' nel calcolo proportion
+
+		   
+	   }
+	   
+	   for (RevCommit commit : releasesList.get(0).getCommitList()) {
+		   LocalDateTime commitDate = commit.getAuthorIdent().getWhen().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+
+		   System.out.println("DATA COMMIT =  " + commitDate);
+
+	   }
 	   
 	   /*
 	   for (Release release : releasesList) {
@@ -91,12 +107,6 @@ public class Main {
 	  // GetGitInfo.commitHistory(releasesList.get(0));
 	   //GetGitInfo.commitHistory2(repoPath, releasesList);
 	   GetGitInfo.getJavaFiles(repoPath, releasesList);
-	   System.out.println("\n\nSTAMPO FILE RELEASE 1 : " );
-
-	   for (JavaFile file : releasesList.get(0).getFileList()) {
-		   System.out.println(file.getName());
-	   }
-	   System.out.println("\n\n");
 
 	   GetGitInfo.checkRename(releasesList);
 

@@ -1,16 +1,16 @@
 
-*entities.Ticket#getOV()Ljava/lang/Integer;i
-_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java4 4("1*¤
+'entities.Ticket#getAV()Ljava/util/List;i
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java, ,("1*ž
 1i
-_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java5	 5(ª
-§
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java-	 -(§
+¤
 i
-_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java5	 5(
-%0java.lang.Integer"__id**
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java-	 -(
+%0java.util.List"__id**
 entities.Ticket"
-oV"†
+aV"ƒ
 i
-_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java5 5(
-
-%0java.lang.IntegerB
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java- -(
+
+%0java.util.ListB
 entities.Ticket

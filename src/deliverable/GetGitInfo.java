@@ -183,7 +183,7 @@ public class GetGitInfo {
         for (int i = 1; i < tw.getTreeCount(); i++)
             if (tw.getFileMode(i) == tw.getFileMode(0) && tw.getObjectId(0).equals(tw.getObjectId(i)))
                 similarParents++;
-        if (similarParents == 0 && tw.getPathString().endsWith(".java") ) {
+        if (similarParents == 0 && tw.getPathString().endsWith(FILE_EXTENSION) ) {
                 //System.out.println("File names: " + tw.getPathString());
         	JavaFile file = new JavaFile(tw.getPathString());
             release.getFileList().add(file);
@@ -240,7 +240,7 @@ public class GetGitInfo {
 		 * Aggiungo il file Java nella lista di file della release, 
 		 * e inizialmente setto buggyness = "no"
 		 */
-		if (treeWalk.getPathString().endsWith(".java")) {
+		if (treeWalk.getPathString().endsWith(FILE_EXTENSION)) {
 			String nameFile = treeWalk.getPathString();
 			if (!fileName.contains(nameFile)) {
 				fileName.add(nameFile);
@@ -277,8 +277,8 @@ public class GetGitInfo {
 					.findGitDir() // scan up the file system tree
 					.setMustExist(true).build();
 		  for (Release release : releasesList) {
+			  System.out.println("\n\nRELEASE " + release.getIndex());
 			  for (RevCommit commit : release.getCommitList()) {
-				  System.out.println("COMMIT ID = " + commit.getId());
 					List<DiffEntry> diffs = getDiffs(commit);
 					if (diffs != null) {
 						for (DiffEntry diff : diffs) {
@@ -297,18 +297,20 @@ public class GetGitInfo {
 								//boolean nPCheck = true;
 								System.out.println("oldPath = " + oldPath);
 								System.out.println("newPath = " + newPath);
-								populateMapAlias(oldPath, newPath, fileAliasMap);
+								prova(newPath, oldPath, fileAliasMap);
+								System.out.println("#####\n\n");
 							}
 							
 						}
 					}
 					
-					System.out.println("##############\n\n" );
 			  	}
 			 
 
 			  }
+		  
 		  System.out.println("\n\n\nFILE ALIAS MAP == ");
+		  /*
 		  for (Map.Entry<String,List<String>> entry : fileAliasMap.entrySet()) {
 			    String key = entry.getKey(); 
 			    List<String> oldPaths = entry.getValue();
@@ -318,11 +320,25 @@ public class GetGitInfo {
 			    }
 			    System.out.println("############\n");
 			  
+		  }*/
+		  
+		  
+		  for (int i = 0; i<fileAliasMap.size(); i++) {
+				 Object key = fileAliasMap.keySet().toArray()[i];
+				 //Object valueForFirstKey = fileAliasMap.get(key);
+				 List<String> oldPaths = fileAliasMap.get(key);
+				 System.out.println("new path == " + key + "\n");
+				 for (String name : oldPaths) {
+					    System.out.println("old path == " + name + "\n");
+				 }
+				 System.out.println("############\n");
+		    //i = fileAliasMap.size()-1;
 		  }
+		  
 	  }
 	  
 	 public static void populateMapAlias(String oldPath, String newPath, HashMap<String, List<String>> fileAliasMap) {
-		 System.out.println("POPULATE MAP ALIAS\nold path = " + oldPath+ "\nnewPath = " + newPath + "\n");
+		 System.out.println("\nPOPULATE MAP ALIAS\nold path = " + oldPath+ "\nnewPath = " + newPath + "\n");
 		 int count = 0;
 		 String key  = null ;
 		 List<String> oldPaths = new ArrayList<>();
@@ -337,25 +353,40 @@ public class GetGitInfo {
 			 System.out.println("mappa non vuota");
 			 for (Map.Entry<String,List<String>> entry : fileAliasMap.entrySet()) {
 				    key = entry.getKey(); 
-				    if (key.equals(newPath)) {
+				    //System.out.println("KEY == " + key);
+				    //System.out.println("oldPAth == " + oldPath);
+
+				    if (newPath.equals(key)) {
 				    	//entry.getValue().add(oldPath); //aggiungo oldPath alla lista di oldPaths 
 				    	count = 1;
+				    	//break;
 				    }
 				    
-				    else if (key.equals(oldPath)) {
+				    if (oldPath.equals(key)) {
 				    	//String newKey = newPath;
 				    	//oldPaths.add(oldPath);
 				    	count = 2;
 				    	//fileAliasMap.remove(key);
 				    	//fileAliasMap.put(newKey, oldPaths);
+				    	//break;
 				    }
 				    
 				    else {
 				    	count = 3;
-				        
+				    	/*
+						 List<String> list = Arrays.asList(oldPath);
+
+					    fileAliasMap.put(newPath, list);
+					    */
+
+				    	//break;
 				    }
 			 }
+			 
+			 
 		 }
+		 
+		 
 		 if (count == 1 ) {
 			 System.out.println("count = 1 ");
 
@@ -375,10 +406,140 @@ public class GetGitInfo {
 			 List<String> list = Arrays.asList(oldPath);
 		     fileAliasMap.put(newPath, list);
 		 }
+		 System.out.println("###\n");
 	 }
 
 	 
-	 
+	 public static void populateMapAlias2(String oldPath, String newPath, HashMap<String, List<String>> fileAliasMap) {
+		 System.out.println("\nPOPULATE MAP ALIAS\nold path = " + oldPath+ "\nnewPath = " + newPath + "\n");
+		 int count = 0;
+		 String key  = null ;
+		 List<String> oldPaths = new ArrayList<>();
+
+		 if (fileAliasMap.isEmpty()) {
+			 //List<String> oldPaths = new ArrayList<>();
+			 System.out.println("mappa vuota");
+
+			 oldPaths.add(oldPath);
+			 fileAliasMap.put(newPath, oldPaths);
+		 }
+		 else {
+			 System.out.println("mappa non vuota");
+				for (int i = 0; i<fileAliasMap.size(); i++) {
+					 key = (String) fileAliasMap.keySet().toArray()[i];
+					 oldPaths = fileAliasMap.get(key);
+				    //System.out.println("KEY == " + key);
+				    //System.out.println("oldPAth == " + oldPath);
+				if (count == 0 ) {
+				    if (newPath.equals(key)) {
+				    	//entry.getValue().add(oldPath); //aggiungo oldPath alla lista di oldPaths 
+				    	count = 1;
+				    	System.out.println("count = 1 ");
+
+						fileAliasMap.get(key).add(oldPath);
+				    }
+				    
+				    if (oldPath.equals(key)) {
+				    	//String newKey = newPath;
+				    	//oldPaths.add(oldPath);
+				    	count = 2;
+				    	//fileAliasMap.remove(key);
+				    	//fileAliasMap.put(newKey, oldPaths);
+				    	//break;
+				    	System.out.println("count = 2 ");
+
+						String newKey = newPath;
+					    oldPaths.add(oldPath);
+					    fileAliasMap.remove(key);
+					    fileAliasMap.put(newKey, oldPaths);
+				    }
+				    
+				    else {
+				    	count = 3;
+				    	System.out.println("count = 3 ");
+
+						//List<String> list = new ArrayList<>();
+						oldPaths.add(oldPath);
+					    fileAliasMap.put(newPath, oldPaths);
+				    	/*
+						 List<String> list = Arrays.asList(oldPath);
+
+					    fileAliasMap.put(newPath, list);
+					    */
+
+				    	//break;
+				    }
+			 }
+				}
+			 
+		 }
+		 
+		 /*
+		 if (count == 1 ) {
+			 System.out.println("count = 1 ");
+
+			 fileAliasMap.get(key).add(oldPath);
+		 }
+		 if (count == 2) {
+			 System.out.println("count = 2 ");
+
+			 String newKey = newPath;
+		     oldPaths.add(oldPath);
+		     fileAliasMap.remove(key);
+		     fileAliasMap.put(newKey, oldPaths);
+		 }
+		 if (count == 3) {
+			 System.out.println("count = 3 ");
+
+			 List<String> list = Arrays.asList(oldPath);
+		     fileAliasMap.put(newPath, list);
+		 }
+		 */
+		 System.out.println("###\n");
+	 }
+
+	 public static void prova(String newPath, String oldPath, HashMap<String, List<String>> map) {
+		 // i commit stanno nella lista con data in ordine crescente, quindi ogni file rinominato o non è mai 
+		 //stato rinominato in passato, oppure è stato rinominato quindi key della mappa = oldPath
+			if(map.isEmpty()) {
+				List<String> oldPaths = new ArrayList<>();
+				oldPaths.add(oldPath);
+				map.put(newPath,oldPaths);
+
+			}
+			else {
+				/*scorro la lista:
+				 * 	se oldPath è una key, metto key = newPath e oldPath lo metto nella lista di oldPaths --> break 
+				 *  altrimenti aggiungo alla mappa la coppia oldPath-newPath
+				 */
+				for(int i = 0 ; i<map.size();i++) {
+					String key = (String) map.keySet().toArray()[i];
+					//System.out.println("KEY == " + key);
+
+					List<String> oldPaths = map.get(key);
+					if (key.equals(oldPath)) {
+						System.out.println("KEY == NEW PATH");
+						System.out.println("KEY == " + key);
+						System.out.println("oldPath == " + oldPath);
+
+
+						String newKey = newPath;
+					    oldPaths.add(oldPath);
+					    map.remove(key);
+					    map.put(newKey, oldPaths);
+					    break;
+					}
+					else {
+						List<String> oldPaths2 = new ArrayList<>();
+						oldPaths2.add(oldPath);
+					    map.put(newPath, oldPaths2);
+
+					}
+					
+				}
+			}
+			
+		}
 	 
 	  public static List<DiffEntry> getDiffs(RevCommit commit) throws IOException {
 			List<DiffEntry> diffs;
