@@ -23,6 +23,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class Main {
 	private static List<Release> releasesList;
 	private static List<Ticket> ticketList;
 	private static List<RevCommit> commitList;
-
+	private static HashMap<String, List<String>> fileAliasMap;
 
 
 
@@ -90,6 +91,8 @@ public class Main {
 	   
 	   Collections.reverse(ticketList); //inverto l'ordine dei ticket nella lista per semplicita' nel calcolo proportion
 	   Proportion.proportion(ticketList);
+	   //Proportion.checkTicket2(ticketList);
+	   //Proportion.modifyListAV(ticketList);
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   checkAV();
 	   //CSVWriter.writeCsvReleases(ticketList);
@@ -102,9 +105,25 @@ public class Main {
 	   //GetGitInfo.commitHistory2(repoPath, releasesList);
 	   GetGitInfo.getJavaFiles(repoPath, releasesList);
 
-	   //GetGitInfo.checkRename(releasesList);
+	   fileAliasMap = GetGitInfo.checkRename(releasesList);
 	   
-	   GetGitInfo.checkBuggyness(releasesList, ticketList);
+	   GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
+	   
+	   System.out.println("\n\nSTAMPO BUGGYNESS");
+	   int numBugg = 0;
+	   int numFile = 0;
+	   for (Release release : releasesList) {
+		   for (JavaFile file : release.getFileList()) {
+			   numFile++;
+			   if (file.getBugg().equals("YES")) {
+				   numBugg++;
+			   }
+
+		   }
+	   }
+	   System.out.println("\n\nnumFile == " + numFile + "\tnumBugg == " + numBugg);
+
+
 
 
    	}                                                                                                                                                                                                                                                                                                                                           
