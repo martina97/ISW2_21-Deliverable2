@@ -2,7 +2,6 @@ package deliverable;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.lib.Repository;
@@ -91,9 +90,7 @@ public class Main {
 	   
 	   Collections.reverse(ticketList); //inverto l'ordine dei ticket nella lista per semplicita' nel calcolo proportion
 	   Proportion.proportion(ticketList);
-	   //Proportion.checkTicket2(ticketList);
-	   //Proportion.modifyListAV(ticketList);
-	   //CSVWriter.writeCsvReleases(ticketList);
+	   
 	   checkAV();
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   
@@ -101,13 +98,13 @@ public class Main {
 	    * e setto inizialmente buggyness = "no" 
 	    */
 	   
-	  // GetGitInfo.commitHistory(releasesList.get(0));
-	   //GetGitInfo.commitHistory2(repoPath, releasesList);
+	  
 	   GetGitInfo.getJavaFiles(repoPath, releasesList);
 
 	   fileAliasMap = GetGitInfo.checkRename(releasesList);
 	   
 	   GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
+	   
 	   
 	   System.out.println("\n\nSTAMPO BUGGYNESS");
 	   int numBugg = 0;

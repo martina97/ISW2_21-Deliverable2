@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
@@ -41,15 +42,19 @@ import entities.Ticket;
 
 
 
-public class GetGitInfo {
-	//private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/bookkeeper/.git";
-	private static final String REPO = "D:/Universita/magistrale/isw2/Codici/bookkeeper/.git";
 
-	//private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
-	private static Path repoPath = Paths.get("D:/Universita/magistrale/isw2/Codici/bookkeeper");
+
+public class GetGitInfo {
+	private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/bookkeeper/.git";
+	//private static final String REPO = "D:/Universita/magistrale/isw2/Codici/bookkeeper/.git";
+
+	private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
+	//private static Path repoPath = Paths.get("D:/Universita/magistrale/isw2/Codici/bookkeeper");
 
 	private static Repository repository;
 	public static final String FILE_EXTENSION = ".java";
+	private static HashMap<RevCommit, Integer> releaseCommitMap = new HashMap<>(); // hashmap con commit e release a cui
+
 	
 	public static  List<RevCommit> getAllCommit(List<Release> releasesList) throws IllegalStateException, GitAPIException, IOException {
 			
@@ -89,79 +94,9 @@ public class GetGitInfo {
 		}
 	}
 	
-	/*
-	public static void commitHistory(Release release) throws  GitAPIException, IOException	{
-		Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
-
-	
-		try (Git git = Git.init().setDirectory(repoPath.toFile()).call()) {
-			 //
-		    }
-		    InitCommand init = Git.init();
-		    init.setDirectory(repoPath.toFile());
-		    try (Git git = init.call()) {
-		    	//
-		    }
-		    try (Git git = Git.open(repoPath.toFile())) {
-		    for (RevCommit commit : release.getCommitList()) {
-		        String commitID = commit.getName();
-		        if (commitID != null && !commitID.isEmpty())
-		        {
-		            LogCommand logs2 = git.log().all();
-		            Repository repository = logs2.getRepository();
-		            TreeWalk tw = new TreeWalk(repository);
-		            tw.setRecursive(true);
-		            RevCommit commitToCheck = commit;
-		            tw.addTree(commitToCheck.getTree());
-		            for (RevCommit parent : commitToCheck.getParents())
-		            {
-		                tw.addTree(parent.getTree());
-		            }
-		            while (tw.next())
-		            {
-		                int similarParents = 0;
-		                for (int i = 1; i < tw.getTreeCount(); i++)
-		                    if (tw.getFileMode(i) == tw.getFileMode(0) && tw.getObjectId(0).equals(tw.getObjectId(i)))
-		                        similarParents++;
-		                if (similarParents == 0) {
-		                	if(tw.getPathString().endsWith(".java")) {
-		                        System.out.println("File names: " + tw.getPathString());
-		                        release.getFileList().add(tw.getPathString());
-		                	}
-		 
-		                }
-	            }
-		        }
-	        }
-	    }
-	}
-	*/
 	
 	
-	public static void commitHistory2(Path repoPath, List<Release> releasesList) throws  GitAPIException, IOException	{
-
 	
-		try (Git git = Git.init().setDirectory(repoPath.toFile()).call()) {
-			 //
-		    }
-		    InitCommand init = Git.init();
-		    init.setDirectory(repoPath.toFile());
-		    try (Git git = init.call()) {
-		    	//
-		    }
-		    try (Git git = Git.open(repoPath.toFile())) {
-		    	for (Release release : releasesList) {
-				    for (RevCommit commit : release.getCommitList()) {
-				    	analyzeCommit(commit, release, git);
-				    }
-				    List<JavaFile> listWithDuplicates = release.getFileList();
-				    List<JavaFile> listWithoutDuplicates = listWithDuplicates.stream()
-				     .distinct()
-				     .collect(Collectors.toList());
-					   System.out.println("NUMERO DI FILE JAVA DELLA RELEASE " + release.getIndex() +" == " + listWithoutDuplicates.size());
-		    	}
-		    }
-	}
 	
 	public static void analyzeCommit(RevCommit commit, Release release, Git git) throws IOException {
 		
@@ -258,7 +193,6 @@ public class GetGitInfo {
 	}
 
 	 public static HashMap<String, List<String>> checkRename(List<Release> releasesList ) throws IOException {
-	 //public static void checkRename(Release release ) throws IOException {
 		 /*
 		  * Nella lista dei file in ogni release potrebbero esserci delle classi che sono state rinominate, sia tra una release
 		  * e l'altra, sia nella stessa release, quindi devo gestire i file in una stessa release che hanno nomi diversi ma sono gli stessi, 
@@ -302,7 +236,7 @@ public class GetGitInfo {
 								//boolean nPCheck = true;
 								//System.out.println("oldPath = " + oldPath);
 								//System.out.println("newPath = " + newPath);
-								prova(newPath, oldPath, fileAliasMap);
+								populateMapAlias(newPath, oldPath, fileAliasMap);
 								//System.out.println("#####\n\n");
 							}
 							
@@ -343,168 +277,10 @@ public class GetGitInfo {
 		  
 	  }
 	  
-	 public static void populateMapAlias(String oldPath, String newPath, HashMap<String, List<String>> fileAliasMap) {
-		 System.out.println("\nPOPULATE MAP ALIAS\nold path = " + oldPath+ "\nnewPath = " + newPath + "\n");
-		 int count = 0;
-		 String key  = null ;
-		 List<String> oldPaths = new ArrayList<>();
-
-		 if (fileAliasMap.isEmpty()) {
-			 //List<String> oldPaths = new ArrayList<>();
-			 System.out.println("mappa vuota");
-			 oldPaths.add(oldPath);
-			 fileAliasMap.put(newPath, oldPaths);
-		 }
-		 else {
-			 System.out.println("mappa non vuota");
-			 for (Map.Entry<String,List<String>> entry : fileAliasMap.entrySet()) {
-				    key = entry.getKey(); 
-				    //System.out.println("KEY == " + key);
-				    //System.out.println("oldPAth == " + oldPath);
-
-				    if (newPath.equals(key)) {
-				    	//entry.getValue().add(oldPath); //aggiungo oldPath alla lista di oldPaths 
-				    	count = 1;
-				    	//break;
-				    }
-				    
-				    if (oldPath.equals(key)) {
-				    	//String newKey = newPath;
-				    	//oldPaths.add(oldPath);
-				    	count = 2;
-				    	//fileAliasMap.remove(key);
-				    	//fileAliasMap.put(newKey, oldPaths);
-				    	//break;
-				    }
-				    
-				    else {
-				    	count = 3;
-				    	/*
-						 List<String> list = Arrays.asList(oldPath);
-
-					    fileAliasMap.put(newPath, list);
-					    */
-
-				    	//break;
-				    }
-			 }
-			 
-			 
-		 }
-		 
-		 
-		 if (count == 1 ) {
-			 System.out.println("count = 1 ");
-
-			 fileAliasMap.get(key).add(oldPath);
-		 }
-		 if (count == 2) {
-			 System.out.println("count = 2 ");
-
-			 String newKey = newPath;
-		     oldPaths.add(oldPath);
-		     fileAliasMap.remove(key);
-		     fileAliasMap.put(newKey, oldPaths);
-		 }
-		 if (count == 3) {
-			 System.out.println("count = 3 ");
-
-			 List<String> list = Arrays.asList(oldPath);
-		     fileAliasMap.put(newPath, list);
-		 }
-		 System.out.println("###\n");
-	 }
 
 	 
-	 public static void populateMapAlias2(String oldPath, String newPath, HashMap<String, List<String>> fileAliasMap) {
-		 System.out.println("\nPOPULATE MAP ALIAS\nold path = " + oldPath+ "\nnewPath = " + newPath + "\n");
-		 int count = 0;
-		 String key  = null ;
-		 List<String> oldPaths = new ArrayList<>();
 
-		 if (fileAliasMap.isEmpty()) {
-			 //List<String> oldPaths = new ArrayList<>();
-			 System.out.println("mappa vuota");
-
-			 oldPaths.add(oldPath);
-			 fileAliasMap.put(newPath, oldPaths);
-		 }
-		 else {
-			 System.out.println("mappa non vuota");
-				for (int i = 0; i<fileAliasMap.size(); i++) {
-					 key = (String) fileAliasMap.keySet().toArray()[i];
-					 oldPaths = fileAliasMap.get(key);
-				    //System.out.println("KEY == " + key);
-				    //System.out.println("oldPAth == " + oldPath);
-				if (count == 0 ) {
-				    if (newPath.equals(key)) {
-				    	//entry.getValue().add(oldPath); //aggiungo oldPath alla lista di oldPaths 
-				    	count = 1;
-				    	System.out.println("count = 1 ");
-
-						fileAliasMap.get(key).add(oldPath);
-				    }
-				    
-				    if (oldPath.equals(key)) {
-				    	//String newKey = newPath;
-				    	//oldPaths.add(oldPath);
-				    	count = 2;
-				    	//fileAliasMap.remove(key);
-				    	//fileAliasMap.put(newKey, oldPaths);
-				    	//break;
-				    	System.out.println("count = 2 ");
-
-						String newKey = newPath;
-					    oldPaths.add(oldPath);
-					    fileAliasMap.remove(key);
-					    fileAliasMap.put(newKey, oldPaths);
-				    }
-				    
-				    else {
-				    	count = 3;
-				    	System.out.println("count = 3 ");
-
-						//List<String> list = new ArrayList<>();
-						oldPaths.add(oldPath);
-					    fileAliasMap.put(newPath, oldPaths);
-				    	/*
-						 List<String> list = Arrays.asList(oldPath);
-
-					    fileAliasMap.put(newPath, list);
-					    */
-
-				    	//break;
-				    }
-			 }
-				}
-			 
-		 }
-		 
-		 /*
-		 if (count == 1 ) {
-			 System.out.println("count = 1 ");
-
-			 fileAliasMap.get(key).add(oldPath);
-		 }
-		 if (count == 2) {
-			 System.out.println("count = 2 ");
-
-			 String newKey = newPath;
-		     oldPaths.add(oldPath);
-		     fileAliasMap.remove(key);
-		     fileAliasMap.put(newKey, oldPaths);
-		 }
-		 if (count == 3) {
-			 System.out.println("count = 3 ");
-
-			 List<String> list = Arrays.asList(oldPath);
-		     fileAliasMap.put(newPath, list);
-		 }
-		 */
-		 System.out.println("###\n");
-	 }
-
-	 public static void prova(String newPath, String oldPath, HashMap<String, List<String>> map) {
+	 public static void populateMapAlias(String newPath, String oldPath, HashMap<String, List<String>> map) {
 		 // i commit stanno nella lista con data in ordine crescente, quindi ogni file rinominato o non è mai 
 		 //stato rinominato in passato, oppure è stato rinominato quindi key della mappa = oldPath
 			if(map.isEmpty()) {
@@ -560,11 +336,11 @@ public class GetGitInfo {
 					.findGitDir() // scan up the file system tree
 					.setMustExist(true).build();
 		 for (Ticket ticket : ticketList) {
-			 System.out.println("TICKET == " + ticket.getID());
+			 //System.out.println("TICKET == " + ticket.getID());
 			 List<Integer> aV = ticket.getAV();
 			 for (RevCommit commit : ticket.getCommitList()) {
 				 LocalDateTime commitDate = commit.getAuthorIdent().getWhen().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
-				 System.out.println("COMMIT DATE === " + commitDate);
+				 //System.out.println("COMMIT DATE === " + commitDate);
 				 //LocalDateTime date = Instant.ofEpochSecond(commit.getCommitTime()).atZone(ZoneId.of("UTC")).toLocalDateTime();
 				 int releaseCommit = GetJIRAInfo.compareDateVersion(commitDate, releasesList);
 				 //System.out.println("LA RELEASE DEL COMMIT E' == " + releaseCommit);
@@ -586,7 +362,7 @@ public class GetGitInfo {
 					}
 				 
 			 }
-			 System.out.println("#########\n\n");
+			 //System.out.println("#########\n\n");
 		 }
 	 }
 	 
@@ -604,17 +380,18 @@ public class GetGitInfo {
 		 else {
 			 file = diff.getNewPath();
 		 }
-		 Release release = releasesList.get(releaseCommit-1); // la release a cui appartiene il commit
+		 //Release release = releasesList.get(releaseCommit-1); // la release a cui appartiene il commit
 		 /* scorro i file java nella lista della release, e se trovo un file java che ha il nome
 		  * del file trovato, setto il file buggy secondo le AV
 		  */
-		 for (JavaFile javaFile : release.getFileList()){ 
-			 if(javaFile.getName().equals(file) || checkMapRename(javaFile.getName(), fileAliasMap)) {
-				 //System.out.println("FILE TROVATO");
-				 compareRelAV(javaFile, aV, release);
+		 for (Release release : releasesList) {
+			 for (JavaFile javaFile : release.getFileList()){ 
+				 if(javaFile.getName().equals(file) || checkMapRename(javaFile.getName(), fileAliasMap)) {
+					 //System.out.println("FILE TROVATO");
+					 compareRelAV(javaFile, aV, release);
+				 }
 			 }
 		 }
-
 		 
 	 }
 
@@ -661,6 +438,14 @@ public class GetGitInfo {
 
 	 }
 	  
+	 
+	 
+	 
+	 
+	 
+	 
+	
+			
 	public static void main(String[] args) {
 		// main
 	}
