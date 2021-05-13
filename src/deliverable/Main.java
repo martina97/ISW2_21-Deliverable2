@@ -11,8 +11,6 @@ import org.json.JSONException;
 import entities.JavaFile;
 import entities.Ticket;
 
-
-
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -53,7 +51,6 @@ public class Main {
 
 	   //salvo in commitList tutti i commit del progetto
 	   commitList = GetGitInfo.getAllCommit(releasesList);
-	   System.out.println("STAMPO DATA COMMIT RELEASE 1 " );
 
 	   
 	   /* inverto l'ordine dei commit appartenenti alle release
@@ -61,7 +58,6 @@ public class Main {
 	    */
 	   for (Release release : releasesList) {
 		   Collections.reverse(release.getCommitList()); 
-
 	   }
 	   	   
 	   /*
@@ -88,24 +84,53 @@ public class Main {
 	   checkAV();
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   
-	   Collections.reverse(ticketList); //inverto l'ordine dei ticket nella lista per semplicita' nel calcolo proportion
+	   
+	   //Collections.reverse(ticketList); //inverto l'ordine dei ticket nella lista per semplicita' nel calcolo proportion
+	   
+	   System.out.println("IL NUMERO DI TICKET E': " + ticketList.size());
+	   
+	   
+	   /*
+	   // PROPORTION VECCHIO 
+	   Utils.checkTicket2(ticketList);
+	   Utils.modifyListAV(ticketList);
+	   */
+		
+	   // PROPORTION NUOVO
 	   Proportion.proportion(ticketList);
 	   
 	   checkAV();
+	   
+ 
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   
 	   /* per ogni release prendo tutti i file java che sono stati toccati nei commit 
 	    * e setto inizialmente buggyness = "no" 
 	    */
-	   
-	  
-	   GetGitInfo.getJavaFiles(repoPath, releasesList);
-
 	   fileAliasMap = GetGitInfo.checkRename(releasesList);
+	   System.out.println("\n\nfileAliasMap size == " + fileAliasMap.size());
+
+	   removeHalfRelease(releasesList, ticketList);
 	   
-	   GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
+	   //CSVWriter.writeCsvReleases(ticketList);
+	   
+	   GetGitInfo.getJavaFiles(repoPath, releasesList);
+	 
+
+	   //fileAliasMap = GetGitInfo.checkRename(releasesList);
 	   
 	   
+	   //GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
+	   GetGitInfo.getMetrics(releasesList, ticketList,fileAliasMap );
+
+	   int numRelease = releasesList.size();
+
+		// ora mi calcolo il valore di halfRelease
+		float half = (float) numRelease / 2;
+		int halfRelease = (int) half; // arrotondo in difetto
+	   
+	   System.out.println("\n\nfileAliasMap size == " + fileAliasMap.size());
+
 	   System.out.println("\n\nSTAMPO BUGGYNESS");
 	   int numBugg = 0;
 	   int numFile = 0;
@@ -121,10 +146,48 @@ public class Main {
 	   System.out.println("\n\nnumFile == " + numFile + "\tnumBugg == " + numBugg);
 
 
-
-
+	    
    	}                                                                                                                                                                                                                                                                                                                                           
+
    
+   public static void removeHalfRelease(List<Release> releasesList, List<Ticket> ticketList) {
+	   int releaseNumber = releasesList.size();
+	   float half = (float) releaseNumber / 2;
+	   int halfRelease = (int) half; // arrotondo in difetto, ora il numero di release che voglio e' la meta'
+	   
+	   System.out.println("NUMERO RELEASE == " + releaseNumber + " HALF RELEASE == " + halfRelease);
+	   
+	   Iterator<Release> i = releasesList.iterator();
+	   while (i.hasNext()) {
+	      Release s = i.next(); 
+	      if (s.getIndex() > halfRelease) {
+	      // Do something
+	    	  i.remove();
+	      }
+	   }
+	   
+	   removeTickets(halfRelease, ticketList);
+	   System.out.println("NUMERO RELEASE == " + releasesList.size());
+   }
+
+   public static void removeTickets(int halfRelease, List<Ticket> ticketList) {
+	   
+	   Iterator<Ticket> i = ticketList.iterator();
+	   while (i.hasNext()) {
+		  Ticket t = i.next(); 
+	      if (t.getIV() > halfRelease) {	//se IV>7 --> rimuovo ticket
+	    	  i.remove();
+	      }
+	      if(t.getOV() > halfRelease || t.getFV() > halfRelease) {
+	    	  List<Integer> aV = new ArrayList<>();
+	    	  for(int k = t.getIV(); k<halfRelease + 1; k++) {
+	    		  aV.add(k);
+	    	  }
+	    	  t.setAV(aV);
+	      }
+	   }
+   }
+
    public static void setIv() {
 	   /*
 	    * Per i ticket che hanno FV = 1 o OV = 1, setto IV = 1 e aggiusto le AV
@@ -136,7 +199,7 @@ public class Main {
 			   ticket.setIV(1);
 			   
 			   if (ticket.getFV() != 1) {
-				   System.out.println("TICKET = " + ticket.getID() + " IV = " + ticket.getIV() + " FV = " + ticket.getFV() + "\n\n");
+				   //System.out.println("TICKET = " + ticket.getID() + " IV = " + ticket.getIV() + " FV = " + ticket.getFV() + "\n\n");
 				   for (int i = ticket.getIV(); i<ticket.getFV();i++) {
 					   ticket.getAV().add(i);
 				   }
@@ -189,7 +252,7 @@ public class Main {
 	   for (Ticket ticket : ticketList) {
 		   Integer count = 0;
 		   String ticketID = ticket.getID();
-		   System.out.println("TICKET ID = " + ticketID);
+		   //System.out.println("TICKET ID = " + ticketID);
 		   for(RevCommit commit : commitList) {
 			   String message = commit.getFullMessage();
 			   if (message.contains(ticketID +",") || message.contains(ticketID +"\r") || message.contains(ticketID +"\n")|| message.contains(ticketID + " ") || message.contains(ticketID +":")
@@ -200,21 +263,21 @@ public class Main {
 				   commitDateList.add(commitDate);
 				   ticket.getCommitList().add(commit);
 
-				   System.out.println("COMMIT ID = " + commit.getId() + " COMMIT DATE = " + commitDate);
+				   //System.out.println("COMMIT ID = " + commit.getId() + " COMMIT DATE = " + commitDate);
 
 		   }
 		   }
-		   System.out.println("Il numero di commit relativi al ticket e': " + count);
+		   //System.out.println("Il numero di commit relativi al ticket e': " + count);
 		   if ( !commitDateList.isEmpty()) {
 			   Collections.sort(commitDateList);
 			   LocalDateTime resolutionDate = commitDateList.get(commitDateList.size()-1);
-			   System.out.println("data più recente = " + resolutionDate);
+			   //System.out.println("data più recente = " + resolutionDate);
 			   ticket.setResolutionDate(resolutionDate);
 	           ticket.setFV(GetJIRAInfo.compareDateVersion(resolutionDate, releasesList));
-	           System.out.println("FV ===" + ticket.getFV());
+	           //System.out.println("FV ===" + ticket.getFV());
 
 		   }
-		   System.out.println("\n\n#######\n\n");
+		   //System.out.println("\n\n#######\n\n");
 		   commitDateList.clear();
 
 

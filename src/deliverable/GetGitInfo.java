@@ -50,10 +50,9 @@ public class GetGitInfo {
 
 	private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
 	//private static Path repoPath = Paths.get("D:/Universita/magistrale/isw2/Codici/bookkeeper");
-
+	
 	private static Repository repository;
 	public static final String FILE_EXTENSION = ".java";
-	private static HashMap<RevCommit, Integer> releaseCommitMap = new HashMap<>(); // hashmap con commit e release a cui
 
 	
 	public static  List<RevCommit> getAllCommit(List<Release> releasesList) throws IllegalStateException, GitAPIException, IOException {
@@ -136,7 +135,7 @@ public class GetGitInfo {
 	public static void getJavaFiles(Path repoPath, List<Release> releasesList) throws IOException, GitAPIException {
 
 		try (Git git = Git.init().setDirectory(repoPath.toFile()).call()) {
-
+			// ciao 
 		}
 
 		InitCommand init = Git.init();
@@ -172,6 +171,11 @@ public class GetGitInfo {
 				}
 			}
 			}
+		for (int k = 0; k<releasesList.size(); k++) {
+			if(releasesList.get(k).getFileList().isEmpty()) {
+				releasesList.get(k).setFileList(releasesList.get(k-1).getFileList());
+			}
+		}
 		
 	}
 	
@@ -261,18 +265,20 @@ public class GetGitInfo {
 			  
 		  }*/
 		  
-		  
+		  //rimuovo duplicati nella lista degli oldPath
 		  for (int i = 0; i<fileAliasMap.size(); i++) {
 				 Object key = fileAliasMap.keySet().toArray()[i];
-				 //Object valueForFirstKey = fileAliasMap.get(key);
+				 //List<String> oldPaths = fileAliasMap.get(key);
+				 fileAliasMap.get(key).stream().distinct().collect(Collectors.toList());
 				 List<String> oldPaths = fileAliasMap.get(key);
+
 				 System.out.println("new path == " + key + "\n");
 				 for (String name : oldPaths) {
 					    System.out.println("old path == " + name + "\n");
 				 }
 				 System.out.println("############\n");
-		    //i = fileAliasMap.size()-1;
 		  }
+		  
 		  return fileAliasMap;
 		  
 	  }
@@ -331,12 +337,13 @@ public class GetGitInfo {
 		  * vedo a che release appartiene il commit e vedo se essa è contenuta nelle AV del ticket
 		  * 	se si --> setto buggyness = "si" per i file java
 		  */
+		 /*
 		 FileRepositoryBuilder repositoryBuilder = new FileRepositoryBuilder();
 			repository = repositoryBuilder.setGitDir(new File(REPO)).readEnvironment() // scan environment GIT_* variables
 					.findGitDir() // scan up the file system tree
-					.setMustExist(true).build();
+					.setMustExist(true).build();*/
+		 
 		 for (Ticket ticket : ticketList) {
-			 //System.out.println("TICKET == " + ticket.getID());
 			 List<Integer> aV = ticket.getAV();
 			 for (RevCommit commit : ticket.getCommitList()) {
 				 LocalDateTime commitDate = commit.getAuthorIdent().getWhen().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
@@ -349,8 +356,10 @@ public class GetGitInfo {
 						for (DiffEntry diff : diffs) {
 							String type = diff.getChangeType().toString();
 							//System.out.println("TYPE === " + type);
+							
 							if (diff.toString().contains(FILE_EXTENSION) && (type.equals("MODIFY")
-									|| type.equals("DELETE") || type.equals("RENAME")|| type.equals("ADD"))) {
+									|| type.equals("DELETE") )) { 
+							
 								// vedo se releaseCommit e' contenuta nella AV del ticket, se si setto
 								// come buggy il file nella relativa release
 								checkFileBugg(diff, releasesList, releaseCommit, aV, fileAliasMap);
@@ -366,6 +375,57 @@ public class GetGitInfo {
 		 }
 	 }
 	 
+	 
+public static void getMetrics(List<Release> releasesList, List<Ticket> ticketList, HashMap<String, List<String>> fileAliasMap) throws IOException {
+		 
+		 for (Release release : releasesList ) {
+			 System.out.println("RELEASE == " + release.getIndex());
+			 HashMap<String, Integer> nRMap = new HashMap<>(); //mappa che ha come key il nome del file e come value NR 
+			 int count = 0;
+			 for (RevCommit commit : release.getCommitList()) {
+				 count ++;
+				 System.out.println("COMMIT NUMERO " + count);
+				 List<DiffEntry> diffs = getDiffs(commit);
+					if (diffs != null) {
+						for (DiffEntry diff : diffs) {
+							String type = diff.getChangeType().toString();
+						
+							if (diff.toString().contains(FILE_EXTENSION) && (type.equals("MODIFY") || type.equals("DELETE") )) { 
+								String file;
+								
+								if (type.equals("MODIFY")) {
+									 file = diff.getOldPath();
+								 }
+								 else {
+									 file = diff.getNewPath();
+								}
+								System.out.println("FILE == " + file);
+								addFileNRMap(file, nRMap, fileAliasMap);
+							}
+						}
+					}
+					 System.out.println("--\n\n");
+
+					
+			 }
+			 System.out.println("##############\n\n");
+		 }
+	 }
+
+	 public static void addFileNRMap(String file, HashMap<String, Integer> nRMap, HashMap<String, List<String>> fileAliasMap) {
+		 if (nRMap.isEmpty()) {
+			 nRMap.put(file, 1);
+		 }
+		 else {
+			 if (!nRMap.containsKey(file)) {
+				 nRMap.put(file, 1);
+			 }
+			 else {
+				 //
+			 }
+		 }
+	 }
+
 	 public static void checkFileBugg(DiffEntry diff, List<Release> releasesList, int releaseCommit, List<Integer> aV, HashMap<String, List<String>> fileAliasMap) {
 		 
 		 /* se AV e' vuota, allora non faccio niente (il file ha gia' buggyness "no")
@@ -388,7 +448,7 @@ public class GetGitInfo {
 			 for (JavaFile javaFile : release.getFileList()){ 
 				 if(javaFile.getName().equals(file) || checkMapRename(javaFile.getName(), fileAliasMap)) {
 					 //System.out.println("FILE TROVATO");
-					 compareRelAV(javaFile, aV, release);
+					 compareReleaseAV(javaFile, aV, release);
 				 }
 			 }
 		 }
@@ -409,7 +469,7 @@ public class GetGitInfo {
 
 		 
 	 }
-	 public static void compareRelAV(JavaFile javaFile, List<Integer> aV, Release release) {
+	 public static void compareReleaseAV(JavaFile javaFile, List<Integer> aV, Release release) {
 		 //System.out.println("RELEASE COMMIT == " + release.getIndex() + "\tAV == " + aV);
 		 if (aV.contains(release.getIndex())) {
 			 //System.out.println("LA CLASSE E' BUGGY\n###\n");

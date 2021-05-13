@@ -94,9 +94,9 @@ public class Proportion {
 		
 	
 		int numTicket = ticketList.size();
-		System.out.println("NUMERO TICKET = " + numTicket);
+		//System.out.println("NUMERO TICKET = " + numTicket);
 		perc = numTicket * 1/100; 	// numero dei ticket precedenti di cui calcolare P con moving window
-		System.out.println("PERC = " + perc);
+		//System.out.println("PERC = " + perc);
 		
 		List<Ticket> listProp = new ArrayList<>(); // lista che contiene i ticket precedenti (# ticket = perc)
 		for (Ticket ticket : ticketList) {
@@ -105,15 +105,17 @@ public class Proportion {
 					addTicketList(listProp, ticket);
 				}
 				else {		//il ticket ha IV = 0, quindi calcolo proportion
-					System.out.println("ticket = " + ticket.getID() + "\n");
+					//System.out.println("ticket = " + ticket.getID() + "\n");
 					for (Ticket ticket2 : listProp) {
-						System.out.println("ticket precedenti = " + ticket2.getID());
+						//System.out.println("ticket precedenti = " + ticket2.getID());
 					}
 					setIvProp(listProp, ticket);
+
 	
 				}
-				System.out.println("######\n\n");
+				//System.out.println("######\n\n");
 			}
+
 		}
 		
 	}

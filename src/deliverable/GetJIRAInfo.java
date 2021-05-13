@@ -200,7 +200,6 @@ public class GetJIRAInfo {
 	           String key = issues.getJSONObject(i%1000).get("key").toString();
 	           LocalDateTime creationDate= LocalDateTime.parse(issues.getJSONObject(i%1000).getJSONObject("fields").getString("created").substring(0,16));
 	           
-	           //System.out.println(issues.getJSONObject(i%1000));
 	           
 	           JSONArray versions = issues.getJSONObject(i % 1000).getJSONObject("fields").getJSONArray("versions");
 	           List<Integer> listAV = getAVList(versions, releases);
@@ -212,7 +211,7 @@ public class GetJIRAInfo {
 				}
 	           
 	           ticket.setOV(compareDateVersion(creationDate, releases));
-	           
+
 	           
 	           ticketList.add(ticket);
 	        

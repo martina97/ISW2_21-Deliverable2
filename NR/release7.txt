@@ -1,0 +1,356 @@
+RELEASE == 7
+COMMIT NUMERO 1
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/BookieShell.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/FileInfo.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/LedgerCacheImpl.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/BookieJournalTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/LedgerCacheTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/UpgradeTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/replication/AuditorPeriodicCheckTest.java
+--
+
+
+COMMIT NUMERO 2
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieNettyServer.java
+--
+
+
+COMMIT NUMERO 3
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Bookie.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/BufferedChannel.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Journal.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/JournalChannel.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/SyncThread.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/conf/ServerConfiguration.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/util/MathUtils.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/BookieInitializationTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/BookieJournalTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/CookieTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/CreateNewLogTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/EntryLogTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/LedgerCacheTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/TestLedgerDirsManager.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/UpgradeTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/replication/TestLedgerUnderreplicationManager.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/BookKeeperClusterTestCase.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/BookieClientTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/BookieJournalRollingTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/ConcurrentLedgerTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/TestBackwardCompat.java
+FILE == hedwig-server/src/test/java/org/apache/hedwig/server/persistence/BookKeeperTestBase.java
+--
+
+
+COMMIT NUMERO 4
+--
+
+
+COMMIT NUMERO 5
+FILE == bookkeeper-benchmark/src/main/java/org/apache/bookkeeper/benchmark/BenchBookie.java
+FILE == bookkeeper-benchmark/src/main/java/org/apache/bookkeeper/benchmark/BenchReadThroughputLatency.java
+FILE == bookkeeper-benchmark/src/main/java/org/apache/bookkeeper/benchmark/BenchThroughputLatency.java
+FILE == bookkeeper-benchmark/src/main/java/org/apache/bookkeeper/benchmark/MySqlClient.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Bookie.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Cookie.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/FileInfo.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/FileSystemUpgrade.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/InterleavedLedgerStorage.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Journal.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/JournalChannel.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/LedgerDescriptorImpl.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/LedgerDirsManager.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/SyncThread.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/BookKeeperAdmin.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/LedgerChecker.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/LedgerEntry.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/LedgerFragmentReplicator.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/MacDigestManager.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/PendingAddOp.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/PendingReadOp.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/meta/AbstractZkLedgerManager.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/meta/MSLedgerManagerFactory.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieNettyServer.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieProtoEncoding.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieRequestHandler.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieServer.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/replication/ReplicationWorker.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/streaming/LedgerInputStream.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/streaming/LedgerOutputStream.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/tools/BookKeeperTools.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/util/EntryFormatter.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/util/NativeIO.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/BookieJournalTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/CompactionTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/EntryLogTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/IndexCorruptionTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/LedgerCacheTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/TestLedgerDirsManager.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/TestSyncThread.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/UpgradeTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/BookKeeperTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/BookieRecoveryTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/BookieWriteLedgerTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/LedgerCloseTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/LedgerRecoveryTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/ListLedgersTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/RoundRobinDistributionScheduleTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/SlowBookieTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/TestFencing.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/TestLedgerChecker.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/TestLedgerFragmentReplication.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/TestReadTimeout.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/TestSpeculativeRead.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/meta/TestLedgerManager.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/metastore/TestMetaStore.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/proto/TestDeathwatcher.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/proto/TestPerChannelBookieClient.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/replication/AuditorBookieTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/replication/AuditorLedgerCheckerTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/replication/BookieLedgerIndexTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/AsyncLedgerOpsTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/BookieClientTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/BookieFailureTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/BookieJournalRollingTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/BookieReadWriteTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/CloseTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/ConcurrentLedgerTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/ConditionalSetTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/LedgerDeleteTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/LoopbackClient.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/TestBackwardCompat.java
+--
+
+
+COMMIT NUMERO 6
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/LedgerRecoveryOp.java
+--
+
+
+COMMIT NUMERO 7
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/LedgerHandle.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/PendingAddOp.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/LedgerCloseTest.java
+--
+
+
+COMMIT NUMERO 8
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/PerChannelBookieClient.java
+--
+
+
+COMMIT NUMERO 9
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Bookie.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/EntryLogger.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/GarbageCollectorThread.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/InterleavedLedgerStorage.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/conf/ServerConfiguration.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/CompactionTest.java
+--
+
+
+COMMIT NUMERO 10
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Bookie.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/BookieShell.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/BufferedChannel.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/FileInfo.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/HandleFactoryImpl.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/IndexInMemPageMgr.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/IndexPersistenceMgr.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/LedgerCacheImpl.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/LedgerCacheMXBean.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/LedgerEntryPage.java
+--
+
+
+COMMIT NUMERO 11
+FILE == bookkeeper-benchmark/src/main/java/org/apache/bookkeeper/benchmark/BenchReadThroughputLatency.java
+FILE == bookkeeper-benchmark/src/main/java/org/apache/bookkeeper/benchmark/BenchThroughputLatency.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/conf/ClientConfiguration.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieClient.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/PerChannelBookieClient.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/LedgerCloseTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/SlowBookieTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/TestReadTimeout.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/TestSpeculativeRead.java
+FILE == hedwig-server/src/test/java/org/apache/hedwig/server/persistence/TestBookKeeperPersistenceManager.java
+FILE == hedwig-server/src/test/java/org/apache/hedwig/server/persistence/TestDeadlock.java
+--
+
+
+COMMIT NUMERO 12
+--
+
+
+COMMIT NUMERO 13
+--
+
+
+COMMIT NUMERO 14
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieClient.java
+--
+
+
+COMMIT NUMERO 15
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/GarbageCollectorThread.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/CompactionTest.java
+--
+
+
+COMMIT NUMERO 16
+--
+
+
+COMMIT NUMERO 17
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/BookieShutdownTest.java
+--
+
+
+COMMIT NUMERO 18
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Bookie.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/BookieShell.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/InterleavedLedgerStorage.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/LedgerDirsManager.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/ReadOnlyEntryLogger.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/conf/ServerConfiguration.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/BookieInitializationTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/CompactionTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/CreateNewLogTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/EntryLogTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/LedgerCacheTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/TestLedgerDirsManager.java
+--
+
+
+COMMIT NUMERO 19
+--
+
+
+COMMIT NUMERO 20
+--
+
+
+COMMIT NUMERO 21
+--
+
+
+COMMIT NUMERO 22
+--
+
+
+COMMIT NUMERO 23
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Bookie.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/BookieThread.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/GarbageCollectorThread.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Journal.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/LedgerDirsManager.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieServer.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/replication/AutoRecoveryMain.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/replication/ReplicationWorker.java
+--
+
+
+COMMIT NUMERO 24
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieServer.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/SlowBookieTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/BookKeeperClusterTestCase.java
+--
+
+
+COMMIT NUMERO 25
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/PerChannelBookieClient.java
+--
+
+
+COMMIT NUMERO 26
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Bookie.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/EntryLogger.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/GarbageCollectorThread.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/IndexPersistenceMgr.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/InterleavedLedgerStorage.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/LedgerDirsManager.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/conf/ServerConfiguration.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/util/DiskChecker.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/BookieInitializationTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/CompactionTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/TestSyncThread.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/util/TestDiskChecker.java
+--
+
+
+COMMIT NUMERO 27
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/LedgerHandle.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/LedgerOpenOp.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/ReadOnlyLedgerHandle.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/meta/AbstractZkLedgerManager.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/meta/HierarchicalLedgerManager.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/meta/LedgerManager.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/meta/MSLedgerManagerFactory.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookkeeperInternalCallbacks.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/replication/BookieLedgerIndexer.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/CompactionTest.java
+--
+
+
+COMMIT NUMERO 28
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Journal.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/conf/ServerConfiguration.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieNettyServer.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieRequestHandler.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieServer.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/client/SlowBookieTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/BookieReadWriteTest.java
+--
+
+
+COMMIT NUMERO 29
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/BookKeeper.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/LedgerCreateOp.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/LedgerDeleteOp.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/LedgerHandle.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/LedgerOpenOp.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/PendingAddOp.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/client/PendingReadOp.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/BookieClient.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/proto/PerChannelBookieClient.java
+--
+
+
+COMMIT NUMERO 30
+FILE == bookkeeper-stats-providers/codahale-metrics-provider/src/main/java/org/apache/bookkeeper/stats/CodahaleMetricsProvider.java
+--
+
+
+COMMIT NUMERO 31
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/Bookie.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/EntryLogger.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/GarbageCollectorThread.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/IndexPersistenceMgr.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/InterleavedLedgerStorage.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/LedgerDirsManager.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/BookieInitializationTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/CompactionTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/TestSyncThread.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/ReadOnlyBookieTest.java
+--
+
+
+COMMIT NUMERO 32
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/CheckpointSource.java
+--
+
+
+COMMIT NUMERO 33
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/BufferedChannel.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/bookie/EntryLogger.java
+FILE == bookkeeper-server/src/main/java/org/apache/bookkeeper/conf/ServerConfiguration.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/bookie/CompactionTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/LedgerDeleteTest.java
+FILE == bookkeeper-server/src/test/java/org/apache/bookkeeper/test/ReadOnlyBookieTest.java
+--
+
+
+COMMIT NUMERO 34
+--
+
+
+##############
