@@ -30,10 +30,19 @@ import java.util.List;
 public class Main {
 	
 	private static Logger logger = Logger.getLogger(Main.class.getName());
+	
+	// BOOKKEEPER 
 	public static final String NAME_PROJECT = "BOOKKEEPER";
 	private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/bookkeeper/.git";
 	private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
 
+	/* SYNCOPE 
+	public static final String NAME_PROJECT = "SYNCOPE";
+	private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/syncope/.git";
+	private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/syncope");
+	 */
+	
+	
 	private static Repository repository;
 	private static List<Release> releasesList;
 	private static List<Ticket> ticketList;
@@ -114,14 +123,28 @@ public class Main {
 	   
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   
-	   GetGitInfo.getJavaFiles(repoPath, releasesList);
-	 
+	   //GetGitInfo.getJavaFiles(repoPath, releasesList, fileAliasMap);
+	   GetGitInfo.getJavaFiles2(repoPath, releasesList, fileAliasMap);
 
+	   /*una volta che mi sono preso i javaFile per ogni release, devo cancellare quelli
+	    * che sono stati rinominati, quindi mi scorro tutte le release e tutti i file e controllo che 
+	    * ci sono solo una volta, e se c'e un file che e' stato rinominato lo cancello dalla lista
+	    * di file per quella release  
+	    */
+	   
+	   
 	   //fileAliasMap = GetGitInfo.checkRename(releasesList);
+	   for (Release release : releasesList) {
+		   System.out.println("NUMERO FILE RELATIVO A RELEASE " + release.getIndex() + " == " + release.getFileList().size());
+	   }
 	   
+	   System.out.println("###### checkBuggyness ###### ");
+	   GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
 	   
-	   //GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
-	   GetGitInfo.getMetrics(releasesList, ticketList,fileAliasMap );
+	   //CSVWriter.writeCsvBugg(releasesList);
+
+	   
+	   //GetGitInfo.getMetrics(releasesList, ticketList,fileAliasMap );
 
 	   int numRelease = releasesList.size();
 
@@ -265,7 +288,7 @@ public class Main {
 
 				   //System.out.println("COMMIT ID = " + commit.getId() + " COMMIT DATE = " + commitDate);
 
-		   }
+			   }
 		   }
 		   //System.out.println("Il numero di commit relativi al ticket e': " + count);
 		   if ( !commitDateList.isEmpty()) {

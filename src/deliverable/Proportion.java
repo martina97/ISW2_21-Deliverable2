@@ -40,19 +40,19 @@ public class Proportion {
 			sum = sum + p;
 		}
 		
-		System.out.println("LISTA P = " + listP);
-		System.out.println("SOMMA P = " + sum);
+		//System.out.println("LISTA P = " + listP);
+		//System.out.println("SOMMA P = " + sum);
 		
 		float avg = (float)sum/perc;
 		int avg_round = Math.round(avg);
 		int avg_no_round = (int)avg;
-		System.out.println("MEDIA P = " + avg + "\tavg_round = " + avg_round + "\tavg_no_round = " + avg_no_round);
+		//System.out.println("MEDIA P = " + avg + "\tavg_round = " + avg_round + "\tavg_no_round = " + avg_no_round);
 		int fV = ticket.getFV();
 		int oV = ticket.getOV();
 		int iV = fV - (fV - oV)*avg_round;
-		System.out.println("PREDICTED IV  = " + iV);
-		System.out.println("FV  = " + fV);
-		System.out.println("OV  = " + oV);
+		//System.out.println("PREDICTED IV  = " + iV);
+		//System.out.println("FV  = " + fV);
+		//System.out.println("OV  = " + oV);
 		
 		//predicted IV potrebbe essere > OV, in questo caso IV = OV
 		if (iV > oV) {
@@ -61,9 +61,9 @@ public class Proportion {
 		else {
 			ticket.setIV(iV);
 		}
-		System.out.println("\n\nIV  = " + ticket.getIV());
-		System.out.println("FV  = " + fV);
-		System.out.println("OV  = " + oV);
+		//System.out.println("\n\nIV  = " + ticket.getIV());
+		//System.out.println("FV  = " + fV);
+		//System.out.println("OV  = " + oV);
 		
 		
 	}
@@ -79,8 +79,8 @@ public class Proportion {
 			float p = (float) (fV - iV)/ (fV - oV); 
 			p_round = Math.round(p);	//arrotonda p in eccesso
 			p_noRound = (int)p;		// arrotonda in difetto
-			System.out.println("p_round==== " + p_round);
-			System.out.println("p_noRound==== " + p_noRound);
+			//System.out.println("p_round==== " + p_round);
+			//System.out.println("p_noRound==== " + p_noRound);
 
 		}
 		return p_round;

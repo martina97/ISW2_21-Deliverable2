@@ -56,6 +56,21 @@ public class Utils {
 		  map.forEach((key, value) -> System.out.println(key + "= " + value + "\n\n"));
 	}
 	
+	
+	public static void printHashMap(HashMap<String, List<String>> fileAliasMap) {
+		
+		  for (Map.Entry<String,List<String>> entry : fileAliasMap.entrySet()) {
+			    String key = entry.getKey(); 
+			    List<String> oldPaths = entry.getValue();
+			    System.out.println(key + "\n");
+			    for (String name : oldPaths) {
+				    System.out.println("old path == " + name + "\n");
+			    }
+			    System.out.println("############\n");
+			  
+		  }
+	}
+	
 public static void checkTicket2(List<Ticket> listaTicket) {
 
 		

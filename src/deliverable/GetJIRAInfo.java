@@ -204,7 +204,15 @@ public class GetJIRAInfo {
 	           JSONArray versions = issues.getJSONObject(i % 1000).getJSONObject("fields").getJSONArray("versions");
 	           List<Integer> listAV = getAVList(versions, releases);
 	           Ticket ticket = new Ticket(key, creationDate, listAV);
+	           /*
 	           if (listAV.get(0) != null) {
+					ticket.setIV(listAV.get(0));
+				} else {
+					ticket.setIV(0);
+				}
+				*/
+	           
+	           if ( ! ( listAV.isEmpty() || listAV.get(0) == null)){
 					ticket.setIV(listAV.get(0));
 				} else {
 					ticket.setIV(0);
