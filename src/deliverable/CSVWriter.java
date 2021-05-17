@@ -20,15 +20,19 @@ public class CSVWriter {
 	
 	public static void writeCsvBugg(List<Release> releasesList) {
 		try (
-				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\CSV FINALE.csv")) {
+				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\CSV FINALE2.csv")) {
 				   
-				   fileWriter.append("RELEASE ; FILENAME ; BUGGYNESS \n");
+				   fileWriter.append("RELEASE ; FILENAME ; NR ; NAUTH ; BUGGYNESS \n");
 				   for (Release release : releasesList) {
-					   
+					   System.out.println("RELEASE CSV == " + release.getIndex());
 					   for (JavaFile file : release.getFileList()) {
 						   fileWriter.append(release.getIndex().toString());
 						   fileWriter.append(";");
 						   fileWriter.append(file.getName());
+						   fileWriter.append(";");
+						   fileWriter.append(file.getNr().toString());
+						   fileWriter.append(";");
+						   fileWriter.append(file.getNAuth().toString());
 						   fileWriter.append(";");
 						   fileWriter.append(file.getBugg());
 						   fileWriter.append("\n");
@@ -43,7 +47,30 @@ public class CSVWriter {
 				
 	
 	
-	
+	public static void writeCsvBugg2(List<Release> releasesList) {
+		try (
+				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\CSV FINALE3.csv")) {
+				   
+				   fileWriter.append("RELEASE ; FILENAME ; NR ; BUGGYNESS \n");
+				   for (Release release : releasesList) {
+					   System.out.println("RELEASE CSV == " + release.getIndex());
+					   for (JavaFile file : release.getFileList()) {
+						   fileWriter.append(release.getIndex().toString());
+						   fileWriter.append(";");
+						   fileWriter.append(file.getName());
+						   fileWriter.append(";");
+						   fileWriter.append(file.getNr().toString());
+						   fileWriter.append(";");
+						   fileWriter.append(file.getBugg());
+						   fileWriter.append("\n");
+					   }
+				   } 
+				  } catch (Exception ex) {
+					  logger.log(Level.SEVERE,"Error in csv writer");
+					  ex.printStackTrace();
+				  
+				  }
+				 }	
 	
 	public static void writeCsvReleases(List<Ticket> ticketList) {
 	 

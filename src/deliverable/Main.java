@@ -124,7 +124,7 @@ public class Main {
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   
 	   //GetGitInfo.getJavaFiles(repoPath, releasesList, fileAliasMap);
-	   GetGitInfo.getJavaFiles2(repoPath, releasesList, fileAliasMap);
+	   GetGitInfo.getJavaFiles(repoPath, releasesList, fileAliasMap);
 
 	   /*una volta che mi sono preso i javaFile per ogni release, devo cancellare quelli
 	    * che sono stati rinominati, quindi mi scorro tutte le release e tutti i file e controllo che 
@@ -143,16 +143,11 @@ public class Main {
 	   
 	   //CSVWriter.writeCsvBugg(releasesList);
 
-	   
-	   //GetGitInfo.getMetrics(releasesList, ticketList,fileAliasMap );
+	   System.out.println("###### getMetrics ###### ");
 
-	   int numRelease = releasesList.size();
+	   GetGitInfo.getMetrics(releasesList, ticketList,fileAliasMap );
+	   CSVWriter.writeCsvBugg2(releasesList);
 
-		// ora mi calcolo il valore di halfRelease
-		float half = (float) numRelease / 2;
-		int halfRelease = (int) half; // arrotondo in difetto
-	   
-	   System.out.println("\n\nfileAliasMap size == " + fileAliasMap.size());
 
 	   System.out.println("\n\nSTAMPO BUGGYNESS");
 	   int numBugg = 0;
@@ -160,7 +155,7 @@ public class Main {
 	   for (Release release : releasesList) {
 		   for (JavaFile file : release.getFileList()) {
 			   numFile++;
-			   if (file.getBugg().equals("YES")) {
+			   if (file.getBugg().equals("Yes")) {
 				   numBugg++;
 			   }
 

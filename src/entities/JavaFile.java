@@ -12,7 +12,7 @@ public class JavaFile {
 	private Integer locTouched;
 	private Integer nr;
 	private Integer nFix;
-	private Integer nAuth;
+	private Integer NAuth;
 	private Integer locAdded;
 	private Integer maxLocAdded;
 	private Integer avgLocAdded;
@@ -141,12 +141,12 @@ public class JavaFile {
 		this.nFix = nFix;
 	}
 
-	public Integer getnAuth() {
-		return nAuth;
+	public Integer getNAuth() {
+		return NAuth;
 	}
 
-	public void setnAuth(Integer nAuth) {
-		this.nAuth = nAuth;
+	public void setNAuth(Integer NAuth) {
+		this.NAuth = NAuth;
 	}
 
 	public Integer getMAXChurn() {

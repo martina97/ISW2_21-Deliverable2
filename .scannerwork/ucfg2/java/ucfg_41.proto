@@ -1,16 +1,16 @@
 
-6deliverable.Release#getDate()Ljava/time/LocalDateTime;m
-cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java$ $("1*¬
-1m
-cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java%	 %(∫
-∑
-m
-cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java%	 %(
-%0java.time.LocalDateTime"__id*!*
-deliverable.Release"
-date"ê
-m
-cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java% %(
-
-%0java.time.LocalDateTimeB
-deliverable.Release
+5entities.JavaFile#getAvglocAdded()Ljava/lang/Integer;k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaC C("1*µ
+1k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaD	 D(∑
+¥
+k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaD	 D(
+%0java.lang.Integer"__id*&*$
+entities.JavaFile"
+avgLocAdded"à
+k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaD D(
+
+%0java.lang.IntegerB
+entities.JavaFile
