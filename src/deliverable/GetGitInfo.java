@@ -6,16 +6,13 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
@@ -36,6 +33,7 @@ import org.eclipse.jgit.treewalk.CanonicalTreeParser;
 import org.eclipse.jgit.treewalk.EmptyTreeIterator;
 import org.eclipse.jgit.treewalk.TreeWalk;
 import org.eclipse.jgit.util.io.DisabledOutputStream;
+import org.json.JSONException;
 
 import entities.JavaFile;
 import entities.Ticket;
@@ -57,10 +55,11 @@ public class GetGitInfo {
 	 */
 	
 	private static Repository repository;
-	public static final String FILE_EXTENSION = ".java";
-	public static final String RENAME = "RENAME";
-	public static final String DELETE = "DELETE";
-	public static final String MODIFY = "MODIFY";
+	private static final String FILE_EXTENSION = ".java";
+	private static final String RENAME = "RENAME";
+	private static final String DELETE = "DELETE";
+	private static final String MODIFY = "MODIFY";
+	
 	
 	public static  List<RevCommit> getAllCommit(List<Release> releasesList) throws IllegalStateException, GitAPIException, IOException {
 			
@@ -409,11 +408,6 @@ public class GetGitInfo {
 		  * vedo a che release appartiene il commit e vedo se essa è contenuta nelle AV del ticket
 		  * 	se si --> setto buggyness = "si" per i file java
 		  */
-		 /*
-		 FileRepositoryBuilder repositoryBuilder = new FileRepositoryBuilder();
-			repository = repositoryBuilder.setGitDir(new File(REPO)).readEnvironment() // scan environment GIT_* variables
-					.findGitDir() // scan up the file system tree
-					.setMustExist(true).build();*/
 		 
 		 for (Ticket ticket : ticketList) {
 			 List<Integer> aV = ticket.getAV();
@@ -425,160 +419,31 @@ public class GetGitInfo {
 				 //System.out.println("LA RELEASE DEL COMMIT E' == " + releaseCommit);
 				 List<DiffEntry> diffs = getDiffs(commit);
 					if (diffs != null) {
-						for (DiffEntry diff : diffs) {
-							String type = diff.getChangeType().toString();
-							//System.out.println("TYPE === " + type);
-							
-							if (diff.toString().contains(FILE_EXTENSION) && (type.equals(MODIFY)
-									|| type.equals(DELETE) )) { 
-							
-								// vedo se releaseCommit e' contenuta nella AV del ticket, se si setto
-								// come buggy il file nella relativa release
-								checkFileBugg(diff, releasesList, releaseCommit, aV, fileAliasMap);
-							}
-						}
+						analyzeDiffEntryBugg(diffs, releasesList, releaseCommit, aV, fileAliasMap);
 					}
 			 	}
 		 	}
 		 }
 	 
 	 
-
-	public static void getMetrics(List<Release> releasesList, List<Ticket> ticketList, HashMap<String, List<String>> fileAliasMap) throws IOException {
-		 
-		 for (Release release : releasesList ) {
-			 //Release release = releasesList.get(0);
-			 System.out.println("RELEASE == " + release.getIndex());
-			 
-			 /* creo hashMap che ha come 
-			  * key --> nome file
-			  * value --> HashMap con key = NR , value = lista autori 
-			  */
-			 HashMap<String, HashMap<Integer, List<String>>> nRandNauthMap = new HashMap<>();
-			 HashMap<String, Integer> chgSetSizeMap = new HashMap<>();
-			 for (RevCommit commit : release.getCommitList()) {
-				 String authName = commit.getAuthorIdent().getName();
-				 //System.out.println("NOME AUTORE == " + authName);
-				 List<DiffEntry> diffs = getDiffs(commit);
-					if (diffs != null) {
-						for (DiffEntry diff : diffs) {
-							int numDiff = diffs.size() -1 ;
-							String type = diff.getChangeType().toString();
-						
-							if (diff.toString().contains(FILE_EXTENSION) && (type.equals(MODIFY) || type.equals(DELETE)  || type.equals("ADD")||type.equals(RENAME) )) { 
-								String file;
-								
-								if (type.equals(DELETE) || type.equals(RENAME) ) {
-									 file = diff.getOldPath();
-								 }
-								 else {
-									 file = diff.getNewPath();
-								 }
-								//System.out.println("FILE == " + file);
-								addFileNrNAuthMap(file, nRandNauthMap, authName);
-								addFilechgSetSizeMap(file, chgSetSizeMap, numDiff);
-							}
-						}
-					}
-	
-					
-			 }
-			 
-			 for (String file: nRandNauthMap.keySet()) {
-				 //System.out.println("FILE == " + file);
-	
-				 HashMap<Integer, List<String>> map2 = nRandNauthMap.get(file);
-				 Iterator<Integer> iterator = map2.keySet().iterator();
-				 Integer nR = null;
-				 if(iterator.hasNext()){
-				       nR = iterator.next();
-				 }
-				 //System.out.println("NR === " + nR);
-				 List<String> listAuth = map2.get(nR);
-				 //System.out.println("nAUTH === " + listAuth.size());
-	
-				 for (JavaFile javaFile : release.getFileList()) {
-			    	if (javaFile.getName().equals(file)) {
-			    		//System.out.println("aleeeeee");
-			    		
-			    		javaFile.setNr(javaFile.getNr() + nR);
-			    		//javaFile.setNAuth(listAuth);
-			    		List<String> listAuthFile = javaFile.getNAuth();
-			    		listAuthFile.addAll(listAuth);
-			    		listAuthFile = listAuthFile.stream().distinct().collect(Collectors.toList());
-			    		javaFile.setNAuth(listAuthFile);
-			    		//System.out.println(listAuthFile);
-			    	}
-			    	if(javaFile.getoldPaths() != null && javaFile.getoldPaths().contains(file)) {
-			    		//System.out.println("CECIIIIIII");
-	
-			    		// file sta negli old path del filejava, quindi devo sommare NR e aggiungo autori
-			    		javaFile.setNr(javaFile.getNr() + nR);
-			    		List<String> listAuthFile = javaFile.getNAuth();
-			    		listAuthFile.addAll(listAuth);
-			    		listAuthFile = listAuthFile.stream().distinct().collect(Collectors.toList());
-			    		javaFile.setNAuth(listAuthFile);
-			    	}
-			    }
+	 public static void analyzeDiffEntryBugg(List<DiffEntry> diffs, List<Release> releasesList, int releaseCommit, List<Integer> aV, HashMap<String, List<String>>  fileAliasMap) {
+		 for (DiffEntry diff : diffs) {
+				String type = diff.getChangeType().toString();
+				//System.out.println("TYPE === " + type);
+				
+				if (diff.toString().contains(FILE_EXTENSION) && (type.equals(MODIFY)
+						|| type.equals(DELETE) )) { 
+				
+					// vedo se releaseCommit e' contenuta nella AV del ticket, se si setto
+					// come buggy il file nella relativa release
+					checkFileBugg(diff, releasesList, releaseCommit, aV, fileAliasMap);
+				}
 			}
-			 /*
-			 for (JavaFile javaFile : release.getFileList()) {
-				 System.out.println("FILE == " + javaFile.getName());
-				 System.out.println("nR == " + javaFile.getNr());
-				 System.out.println("nAuth == " + javaFile.getNAuth().size() + "\n\n");
-	
-			 }
-			*/
-			 
-			
-		 }
-	
-	}
-	
-	 public static void addFileNrNAuthMap(String file, HashMap<String, HashMap<Integer, List<String>>> nRandNauthMap, String authName) {
-		 
-		 if (nRandNauthMap.isEmpty()) {
-			   HashMap<Integer, List<String>> map2 = new HashMap<>();
-			   List<String> authNames = new ArrayList<>();
-			   authNames.add(authName);
-			   map2.put(1, authNames);
-			   nRandNauthMap.put(file,map2);
-		   }
-		   else {
-			   if (!nRandNauthMap.containsKey(file)) {
-				   HashMap<Integer, List<String>> map2 = new HashMap<>();
-				   List<String> authNames = new ArrayList<>();
-				   authNames.add(authName);
-				   map2.put(1, authNames);
-				   nRandNauthMap.put(file,map2);
-
-			   }
-			   else {
-				   HashMap<Integer, List<String>> map2 = nRandNauthMap.get(file);
-				   Iterator<Integer> iterator = map2.keySet().iterator();
-				   Integer key = null;
-				   if(iterator.hasNext()){
-				       key = iterator.next();
-				   }
-				   List<String> listAuth2 = map2.get(key);
-				   if (!listAuth2.contains(authName)) {
-					   listAuth2.add(authName);
-				   }
-				   map2.put(key+1, listAuth2);
-				   map2.remove(key);
-				   nRandNauthMap.put(file, map2);
-				   
-			   }
-		   }
-	   }
-	 
-	 
-	 public static void addFilechgSetSizeMap(String file,HashMap<String, Integer> chgSetSizeMap, int numDiff) {
-		 //null
 	 }
 
 	 
-	 public static void getMetrics2(List<Release> releasesList, List<Ticket> ticketList, HashMap<String, List<String>> fileAliasMap) throws IOException {
+
+	 public static void getMetrics(List<Release> releasesList, List<Ticket> ticketList, HashMap<String, List<String>> fileAliasMap) throws IOException {
 		 
 		 for (Release release : releasesList ) {
 			 //Release release = releasesList.get(0);
@@ -591,119 +456,76 @@ public class GetGitInfo {
 			 List<JavaFile> fileList = new ArrayList<>();
 			 for (RevCommit commit : release.getCommitList()) {
 				 String authName = commit.getAuthorIdent().getName();
-				 //System.out.println("NOME AUTORE == " + authName);
 				 List<DiffEntry> diffs = getDiffs(commit);
 					if (diffs != null) {
-						for (DiffEntry diff : diffs) {
-							int numDiff = diffs.size() -1 ;
-							String type = diff.getChangeType().toString();
-						
-							if (diff.toString().contains(FILE_EXTENSION) && (type.equals(MODIFY) || type.equals(DELETE)  || type.equals("ADD")||type.equals(RENAME) )) { 
-								String file;
-								
-								if (type.equals(DELETE) || type.equals(RENAME) ) {
-									 file = diff.getOldPath();
-								 }
-								 else {
-									 file = diff.getNewPath();
-								 }
-								System.out.println("FILE == " + file);
-								addFileList(fileList, file, authName);
-								System.out.println("######\n\n");
-
-							}
-						}
+						analyzeDiffEntryMetrics(diffs, fileList, authName);
 					}
-			 }
-				System.out.println(" ########### PRINT LIST #######\n\n");
-
-			 for (JavaFile javaFile : fileList) {
-				 System.out.println("javaFile == " + javaFile.getName());
-				 List<String> nAuth = javaFile.getNAuth();
-				 System.out.println("javaFile --> \tnR == " + javaFile.getNr() + "\tnAuth == " + nAuth.size());
-
-				 for (JavaFile fileRel : release.getFileList()) {
-					 if (javaFile.getName().equals(fileRel.getName())) {
-						 System.out.println("IL NOME DEL FILE STA NELLA RELEASE ");
-						 System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
-						 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
-						 List<String> listAuth = fileRel.getNAuth();
-						 listAuth.addAll(nAuth);
-						 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
-						 fileRel.setNAuth(listAuth);
-						 System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size() +"\n\n");
-						 
-					 }
-					 
-					 if(fileRel.getoldPaths()!=null && fileRel.getoldPaths().contains(javaFile.getName())) {
-						 System.out.println("IL NOME DEL FILE STA NEGLI ALIAS ");
-						 System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
-
-						 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
-						 List<String> listAuth = fileRel.getNAuth();
-						 listAuth.addAll(nAuth);
-						 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
-						 fileRel.setNAuth(listAuth);
-						 System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
-
-					 }
-				 }
-				 System.out.println("#####################\n\n");
-
-			 }
-			 
-			 /*
-			 for (String file: nRandNauthMap.keySet()) {
-				 //System.out.println("FILE == " + file);
-	
-				 HashMap<Integer, List<String>> map2 = nRandNauthMap.get(file);
-				 Iterator<Integer> iterator = map2.keySet().iterator();
-				 Integer nR = null;
-				 if(iterator.hasNext()){
-				       nR = iterator.next();
-				 }
-				 //System.out.println("NR === " + nR);
-				 List<String> listAuth = map2.get(nR);
-				 //System.out.println("nAUTH === " + listAuth.size());
-	
-				 for (JavaFile javaFile : release.getFileList()) {
-			    	if (javaFile.getName().equals(file)) {
-			    		//System.out.println("aleeeeee");
-			    		
-			    		javaFile.setNr(javaFile.getNr() + nR);
-			    		//javaFile.setNAuth(listAuth);
-			    		List<String> listAuthFile = javaFile.getNAuth();
-			    		listAuthFile.addAll(listAuth);
-			    		listAuthFile = listAuthFile.stream().distinct().collect(Collectors.toList());
-			    		javaFile.setNAuth(listAuthFile);
-			    		//System.out.println(listAuthFile);
-			    	}
-			    	if(javaFile.getoldPaths() != null && javaFile.getoldPaths().contains(file)) {
-			    		//System.out.println("CECIIIIIII");
-	
-			    		// file sta negli old path del filejava, quindi devo sommare NR e aggiungo autori
-			    		javaFile.setNr(javaFile.getNr() + nR);
-			    		List<String> listAuthFile = javaFile.getNAuth();
-			    		listAuthFile.addAll(listAuth);
-			    		listAuthFile = listAuthFile.stream().distinct().collect(Collectors.toList());
-			    		javaFile.setNAuth(listAuthFile);
-			    	}
-			    }
-			}
-			*/
-			 /*
-			 for (JavaFile javaFile : release.getFileList()) {
-				 System.out.println("FILE == " + javaFile.getName());
-				 System.out.println("nR == " + javaFile.getNr());
-				 System.out.println("nAuth == " + javaFile.getNAuth().size() + "\n\n");
-	
-			 }
-			*/
-			 
+			 	}
 			
+			 setFileRelease(fileList,  release);
+			 
 		 }
 	
 	}
+	 
+	 public static void setFileRelease(List<JavaFile> fileList, Release release) {
+		 for (JavaFile javaFile : fileList) {
+			 //System.out.println("javaFile == " + javaFile.getName());
+			 List<String> nAuth = javaFile.getNAuth();
+			 //System.out.println("javaFile --> \tnR == " + javaFile.getNr() + "\tnAuth == " + nAuth.size());
+
+			 for (JavaFile fileRel : release.getFileList()) {
+				 if (javaFile.getName().equals(fileRel.getName())) {
+					 //System.out.println("IL NOME DEL FILE STA NELLA RELEASE ");
+					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
+					 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
+					 List<String> listAuth = fileRel.getNAuth();
+					 listAuth.addAll(nAuth);
+					 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
+					 fileRel.setNAuth(listAuth);
+					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size() +"\n\n");
+					 
+				 }
+				 
+				 if(fileRel.getoldPaths()!=null && fileRel.getoldPaths().contains(javaFile.getName())) {
+					 //System.out.println("IL NOME DEL FILE STA NEGLI ALIAS ");
+					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
+
+					 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
+					 List<String> listAuth = fileRel.getNAuth();
+					 listAuth.addAll(nAuth);
+					 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
+					 fileRel.setNAuth(listAuth);
+					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
+
+				 }
+			 }
+			 //System.out.println("#####################\n\n");
+
+		 }
+	 }
+
+	 public static void analyzeDiffEntryMetrics(List<DiffEntry> diffs, List<JavaFile> fileList, String authName) {
+		for (DiffEntry diff : diffs) {
+			int numDiff = diffs.size() -1 ;
+			String type = diff.getChangeType().toString();
+		
+			if (diff.toString().contains(FILE_EXTENSION) && (type.equals(MODIFY) || type.equals(DELETE)  || type.equals("ADD")||type.equals(RENAME) )) { 
+				String file;
+				
+				if (type.equals(DELETE) || type.equals(RENAME) ) {
+					 file = diff.getOldPath();
+				 }
+				 else {
+					 file = diff.getNewPath();
+				 }
+				//System.out.println("FILE == " + file);
+				addFileList(fileList, file, authName);
+				//System.out.println("######\n\n");
+
+			}
+		}
+	 }
 	 
 	 public static void addFileList(List<JavaFile> fileList, String fileName, String authName) {
 		 int count = 0 ; 
@@ -814,5 +636,11 @@ public class GetGitInfo {
 			return diffs;
 
 	 }
+	 
+	 public static void main(String[] args) throws IOException, JSONException {
+			// Do nothing because is a main method
+	
+		}
+
 	 
 }

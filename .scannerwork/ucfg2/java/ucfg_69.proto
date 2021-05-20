@@ -1,38 +1,16 @@
 
-5deliverable.Proportion#calculateP(Lentities/Ticket;)Ip
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaG G("3*³
-2p
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaO O(¶
-³
-p
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaP P(	
-%3int"java.lang.Math#round(F)I*"
-java.lang.Math*
-""*
-1*¦
-3p
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaH H(àÝ
-p
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaH H(
-%0java.lang.Integer"*entities.Ticket#getFV()Ljava/lang/Integer;*
-
-ticketentities.Ticket2getFV()àÝ
-p
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaI I(
-%1java.lang.Integer"*entities.Ticket#getOV()Ljava/lang/Integer;*
-
-ticketentities.Ticket2getOV()àÝ
-p
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaJ J(
-%2java.lang.Integer"*entities.Ticket#getIV()Ljava/lang/Integer;*
-
-ticketentities.Ticket2getIV()*
-2
-1*ñ
-1p
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaV	 V("z
-p
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Proportion.javaV V(
-"":
-ticketentities.TicketB"
-deliverable.Proportion
+.entities.JavaFile#getSize()Ljava/lang/Integer;k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java- -("1*®
+1k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java.	 .(°
+­
+k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java.	 .(
+%0java.lang.Integer"__id**
+entities.JavaFile"
+size"ˆ
+k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java. .(
+
+%0java.lang.IntegerB
+entities.JavaFile

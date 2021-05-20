@@ -141,8 +141,8 @@ public class Main {
 
 	   System.out.println("###### getMetrics ###### ");
 
-	   GetGitInfo.getMetrics2(releasesList, ticketList,fileAliasMap );
-	   CSVWriter.writeCsvBugg2(releasesList);
+	   //GetGitInfo.getMetrics(releasesList, ticketList,fileAliasMap );
+	   //CSVWriter.writeCsvBugg2(releasesList);
 
 
 	   System.out.println("\n\nSTAMPO BUGGYNESS");

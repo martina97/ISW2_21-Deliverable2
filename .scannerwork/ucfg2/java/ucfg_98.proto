@@ -1,16 +1,17 @@
 
-1deliverable.Release#getIndex()Ljava/lang/Integer;m
-cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java( (("1*·
+2entities.JavaFile#getAVGChurn()Ljava/lang/Integer;m
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java¢ ¢("1*¸
 1m
-cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java)	 )(µ
-²
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java£	 £(¶
+³
 m
-cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java)	 )(
-%0java.lang.Integer"__id*"* 
-deliverable.Release"
-index"Š
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java£	 £(
+%0java.lang.Integer"__id*#*!
+entities.JavaFile"
+
+avgChurn"Š
 m
-cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java) )(
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java£ £(
 
-%0java.lang.IntegerB
-deliverable.Release
+%0java.lang.IntegerB
+entities.JavaFile

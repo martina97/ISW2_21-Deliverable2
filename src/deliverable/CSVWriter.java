@@ -49,7 +49,7 @@ public class CSVWriter {
 	
 	public static void writeCsvBugg2(List<Release> releasesList) {
 		try (
-				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\CSV FINALE7.csv")) {
+				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\CSV FINALE11.csv")) {
 				   
 				   fileWriter.append("RELEASE ; FILENAME ; NR ; NAUTH; BUGGYNESS \n");
 				   for (Release release : releasesList) {
