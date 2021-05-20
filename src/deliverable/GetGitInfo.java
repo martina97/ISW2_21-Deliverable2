@@ -607,34 +607,49 @@ public class GetGitInfo {
 								 else {
 									 file = diff.getNewPath();
 								 }
-								//System.out.println("FILE == " + file);
+								System.out.println("FILE == " + file);
 								addFileList(fileList, file, authName);
+								System.out.println("######\n\n");
+
 							}
 						}
 					}
-	
-					
 			 }
+				System.out.println(" ########### PRINT LIST #######\n\n");
+
 			 for (JavaFile javaFile : fileList) {
+				 System.out.println("javaFile == " + javaFile.getName());
 				 List<String> nAuth = javaFile.getNAuth();
+				 System.out.println("javaFile --> \tnR == " + javaFile.getNr() + "\tnAuth == " + nAuth.size());
+
 				 for (JavaFile fileRel : release.getFileList()) {
 					 if (javaFile.getName().equals(fileRel.getName())) {
+						 System.out.println("IL NOME DEL FILE STA NELLA RELEASE ");
+						 System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
 						 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
 						 List<String> listAuth = fileRel.getNAuth();
 						 listAuth.addAll(nAuth);
 						 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
-
 						 fileRel.setNAuth(listAuth);
-
+						 System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size() +"\n\n");
+						 
 					 }
+					 
 					 if(fileRel.getoldPaths()!=null && fileRel.getoldPaths().contains(javaFile.getName())) {
+						 System.out.println("IL NOME DEL FILE STA NEGLI ALIAS ");
+						 System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
+
 						 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
 						 List<String> listAuth = fileRel.getNAuth();
 						 listAuth.addAll(nAuth);
 						 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
 						 fileRel.setNAuth(listAuth);
+						 System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
+
 					 }
 				 }
+				 System.out.println("#####################\n\n");
+
 			 }
 			 
 			 /*
@@ -693,23 +708,35 @@ public class GetGitInfo {
 	 public static void addFileList(List<JavaFile> fileList, String fileName, String authName) {
 		 int count = 0 ; 
 		 if (fileList.isEmpty()) {
+			 System.out.println("LISTA VUOTA");
 			 JavaFile javaFile = new JavaFile(fileName);
 			 javaFile.setNr(1);
-			 javaFile.getNAuth().add(authName);
+			 List<String> listAuth = new ArrayList<>();
+			 listAuth.add(authName);
+			 javaFile.setNAuth(listAuth);
+			 //javaFile.getNAuth().add(authName);
 			 fileList.add(javaFile);
+			 count = 1;
 		}
 		 else {
 			 for ( JavaFile file : fileList) {
 				 if (file.getName().equals(fileName)) {
+					 System.out.println("FILE PRESENTE NELLA LISTA ");
+
 					 file.setNr(file.getNr()+1);
 					 file.getNAuth().add(authName);
 					 count =1;
 				 }
 			 }
 		 }
-		 if (count == 1) { //vuol dire che il nome del file non e' presente in fileList, quindi lo aggiungo
+		 if (count == 0) { //vuol dire che il nome del file non e' presente in fileList, quindi lo aggiungo
+			 System.out.println("FILE NON PRESENTE NELLA LISTA ");
+
 			 JavaFile javaFile = new JavaFile(fileName);
 			 javaFile.setNr(1);
+			 List<String> listAuth = new ArrayList<>();
+			 listAuth.add(authName);
+			 javaFile.setNAuth(listAuth);
 			 javaFile.getNAuth().add(authName);
 			 fileList.add(javaFile);
 		 }
