@@ -116,22 +116,18 @@ public class Main {
 	   /* per ogni release prendo tutti i file java che sono stati toccati nei commit 
 	    * e setto inizialmente buggyness = "no" 
 	    */
-	   fileAliasMap = GetGitInfo.checkRename(releasesList);
-	   System.out.println("\n\nfileAliasMap size == " + fileAliasMap.size());
+	   
+	   System.out.println("###### checkRename ###### ");
 
+	  fileAliasMap = GetGitInfo.checkRename(releasesList);
+	  System.out.println("\n\nfileAliasMap size == " + fileAliasMap.size());
+	   
 	   removeHalfRelease(releasesList, ticketList);
 	   
+
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   
-	   //GetGitInfo.getJavaFiles(repoPath, releasesList, fileAliasMap);
 	   GetGitInfo.getJavaFiles(repoPath, releasesList, fileAliasMap);
-
-	   /*una volta che mi sono preso i javaFile per ogni release, devo cancellare quelli
-	    * che sono stati rinominati, quindi mi scorro tutte le release e tutti i file e controllo che 
-	    * ci sono solo una volta, e se c'e un file che e' stato rinominato lo cancello dalla lista
-	    * di file per quella release  
-	    */
-	   
 	   
 	   //fileAliasMap = GetGitInfo.checkRename(releasesList);
 	   for (Release release : releasesList) {
@@ -145,7 +141,7 @@ public class Main {
 
 	   System.out.println("###### getMetrics ###### ");
 
-	   GetGitInfo.getMetrics(releasesList, ticketList,fileAliasMap );
+	   GetGitInfo.getMetrics2(releasesList, ticketList,fileAliasMap );
 	   CSVWriter.writeCsvBugg2(releasesList);
 
 
@@ -162,9 +158,6 @@ public class Main {
 		   }
 	   }
 	   System.out.println("\n\nnumFile == " + numFile + "\tnumBugg == " + numBugg);
-
-
-	    
    	}                                                                                                                                                                                                                                                                                                                                           
 
    
@@ -188,12 +181,13 @@ public class Main {
 	   System.out.println("NUMERO RELEASE == " + releasesList.size());
    }
 
+   
    public static void removeTickets(int halfRelease, List<Ticket> ticketList) {
 	   
 	   Iterator<Ticket> i = ticketList.iterator();
 	   while (i.hasNext()) {
 		  Ticket t = i.next(); 
-	      if (t.getIV() > halfRelease) {	//se IV>7 --> rimuovo ticket
+	      if (t.getIV() > halfRelease) {	//se IV>halfRelease --> rimuovo ticket
 	    	  i.remove();
 	      }
 	      if(t.getOV() > halfRelease || t.getFV() > halfRelease) {

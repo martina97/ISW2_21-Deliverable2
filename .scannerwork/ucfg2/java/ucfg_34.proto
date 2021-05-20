@@ -1,16 +1,16 @@
 
-0entities.JavaFile#getoldPath()Ljava/lang/String;k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java' '("1*¯
+-entities.JavaFile#getBugg()Ljava/lang/String;k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java% %("1*±
 1k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java(	 ((²
-¯
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java&	 &(´
+±
 k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java(	 ((
-%0java.lang.String"__id*"* 
-entities.JavaFile"	
-oldPath"‡
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java&	 &(
+%0java.lang.String"__id*$*"
+entities.JavaFile"
+	buggyness"‡
 k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java( ((
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java& &(
 
 %0java.lang.StringB
 entities.JavaFile

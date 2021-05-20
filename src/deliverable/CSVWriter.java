@@ -49,9 +49,9 @@ public class CSVWriter {
 	
 	public static void writeCsvBugg2(List<Release> releasesList) {
 		try (
-				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\CSV FINALE3.csv")) {
+				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\CSV FINALE6.csv")) {
 				   
-				   fileWriter.append("RELEASE ; FILENAME ; NR ; BUGGYNESS \n");
+				   fileWriter.append("RELEASE ; FILENAME ; NR ; NAUTH; BUGGYNESS \n");
 				   for (Release release : releasesList) {
 					   System.out.println("RELEASE CSV == " + release.getIndex());
 					   for (JavaFile file : release.getFileList()) {
@@ -60,6 +60,9 @@ public class CSVWriter {
 						   fileWriter.append(file.getName());
 						   fileWriter.append(";");
 						   fileWriter.append(file.getNr().toString());
+						   fileWriter.append(";");
+						   int size = file.getNAuth().size();
+						   fileWriter.append(String.valueOf(size));
 						   fileWriter.append(";");
 						   fileWriter.append(file.getBugg());
 						   fileWriter.append("\n");

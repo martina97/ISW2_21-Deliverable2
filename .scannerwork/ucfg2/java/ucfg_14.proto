@@ -1,16 +1,16 @@
 
-:entities.Ticket#getCreationDate()Ljava/time/LocalDateTime;i
-_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java4 4(%"1*º
+<entities.Ticket#getResolutionDate()Ljava/time/LocalDateTime;i
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java0 0('"1*¼
 1i
-_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java5	 5(º
-·
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java1	 1(¼
+¹
 i
-_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java5	 5(
-%0java.time.LocalDateTime"__id*%*#
-entities.Ticket"
-creationDate"Œ
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java1	 1(
+%0java.time.LocalDateTime"__id*'*%
+entities.Ticket"
+resolutionDate"Œ
 i
-_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java5 5(
+_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java1 1(
 
 %0java.time.LocalDateTimeB
 entities.Ticket

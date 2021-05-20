@@ -1,18 +1,20 @@
 package entities;
 
+import java.util.List;
+
 public class JavaFile {
 
 	private String name;
 	// private HashMap<Integer,String> fileMap = new HashMap<>(); //key = release,
 	// value = buggyness (yes/no)
-	private String oldPath;
+	private List<String> oldPaths;
 
 	private String buggyness;
 	private Integer size; // LOC
 	private Integer locTouched;
 	private Integer nr;
 	private Integer nFix;
-	private Integer NAuth;
+	private List<String> NAuth;
 	private Integer locAdded;
 	private Integer maxLocAdded;
 	private Integer avgLocAdded;
@@ -36,8 +38,8 @@ public class JavaFile {
 		return buggyness;
 	}
 
-	public String getoldPath() {
-		return oldPath;
+	public List<String> getoldPaths() {
+		return oldPaths;
 	}
 
 	public Integer getSize() {
@@ -121,8 +123,8 @@ public class JavaFile {
 		this.avgLocAdded = avgLOCAdded;
 	}
 
-	public void setOldPath(String oldPath) {
-		this.oldPath = oldPath;
+	public void setOldPaths(List<String> oldPaths) {
+		this.oldPaths = oldPaths;
 	}
 
 	public void setMaxChgSetSize(Integer maxChgSetSize) {
@@ -141,11 +143,11 @@ public class JavaFile {
 		this.nFix = nFix;
 	}
 
-	public Integer getNAuth() {
+	public List<String> getNAuth() {
 		return NAuth;
 	}
 
-	public void setNAuth(Integer NAuth) {
+	public void setNAuth(List<String> NAuth) {
 		this.NAuth = NAuth;
 	}
 

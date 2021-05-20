@@ -1,16 +1,17 @@
 
-.entities.JavaFile#getSize()Ljava/lang/Integer;k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java+ +("1*®
+/entities.JavaFile#getoldPaths()Ljava/util/List;k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java) )( "1*¬
 1k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java,	 ,(°
-­
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java*	 *(±
+®
 k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java,	 ,(
-%0java.lang.Integer"__id**
-entities.JavaFile"
-size"ˆ
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java*	 *(
+%0java.util.List"__id*#*!
+entities.JavaFile"
+
+oldPaths"…
 k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java, ,(
-
-%0java.lang.IntegerB
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java* *(
+
+%0java.util.ListB
 entities.JavaFile

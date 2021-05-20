@@ -1,88 +1,545 @@
 
-Mdeliverable.GetGitInfo#checkMapRename(Ljava/lang/String;Ljava/util/HashMap;)Zr
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java¡ ¡(&"6*Ë
-2r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java√ √()£
-†
+Wdeliverable.GetGitInfo#getMetrics(Ljava/util/List;Ljava/util/List;Ljava/util/HashMap;)Vr
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaæ æ("1*Æ
+24r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java—# —('û
+õ
 r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java√ √()
-entryjava.util.Map$Entry"__id*
-""¿
-Ω
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java—/ —(5
+%20java.lang.String"__id*
+""àÖ
 r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java√ √()
-entryjava.util.Map$Entry"
-__arrayGet*
-
-%0java.util.Set*
-""*
-5
-1*ı
-3r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java» »("|
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java» »(
-""*í
-4r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java∆# ∆(+êç
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java∆# ∆(>
-%4boolean",java.util.List#contains(Ljava/lang/Object;)Z*
-
-oldPathsjava.util.List*
-
-nameFilejava.lang.String2contains(Ljava/lang/Object;)*
-2
-3*Œ	
-5r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaƒ ƒ(ÈÊ
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaƒ ƒ("
-%1java.lang.String".java.util.Map$Entry#getKey()Ljava/lang/Object;*
-
-entryjava.util.Map$Entry2getKey()∞
-≠
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaƒ ƒ(#
-keyjava.lang.String"__id*
-
-%1java.lang.StringÎË
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java≈ ≈(/
-%2java.util.List"0java.util.Map$Entry#getValue()Ljava/lang/Object;*
-
-entryjava.util.Map$Entry2
-getValue()±
-Æ
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java≈ ≈(0
-oldPathsjava.util.List"__id*
-
-%2java.util.Listãà
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java∆ ∆(
-%3boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
-
-nameFilejava.lang.String*
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java—# —(6
+%21boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+typejava.lang.String*
 
-keyjava.lang.String2equals(Ljava/lang/Object;)*
-3
-4*È
-6r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java√, √(8ÍÁ
+%20java.lang.String2equals(Ljava/lang/Object;)*
+22
+23*–
+25r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaœ œ(ü
+ú
 r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java√, √(C
-%0java.util.Set"+java.util.HashMap#entrySet()Ljava/util/Set;*#
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaœ œ(
+filejava.lang.String"__id*
+""û
+õ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java— —(
+%18java.lang.String"__id*
+""àÖ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java— —(
+%19boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+typejava.lang.String*
+
+%18java.lang.String2equals(Ljava/lang/Object;)*
+24
+23*π
+26r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaŒ{ Œ(†
+ù
+t
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaŒá Œ(ç
+%16java.lang.String"__id*
+""âÜ
+s
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaŒ{ Œ(é
+%17boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+typejava.lang.String*
+
+%16java.lang.String2equals(Ljava/lang/Object;)*
+25
+18
+30
+32*˚
+27r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaŒg Œ(kˆÛ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaŒg Œ(y
+%15boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+typejava.lang.String*
+ADD2equals(Ljava/lang/Object;)*
+25
+26*Æ
+28r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaŒO Œ(Sû
+õ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaŒ[ Œ(a
+%13java.lang.String"__id*
+""àÖ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaŒO Œ(b
+%14boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+typejava.lang.String*
+
+%13java.lang.String2equals(Ljava/lang/Object;)*
+25
+27*Æ
+29r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaŒ8 Œ(<û
+õ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaŒD Œ(J
+%11java.lang.String"__id*
+""àÖ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaŒ8 Œ(K
+%12boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+typejava.lang.String*
+
+%11java.lang.String2equals(Ljava/lang/Object;)*
+25
+28*Õ
+30r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÃ Ã(ü
+ú
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÃ Ã(5
+typejava.lang.String"__id*
+""û
+õ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaŒ$ Œ(2
+%10java.lang.String"__id*
+""*
+29
+18
+30
+32*Ë
+32r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java» »(ﬂ
+‹
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java… …(-
+%9"<deliverable.GetGitInfo#getDiffs(LRevCommit;)Ljava/util/List;*"
+deliverable.GetGitInfo*
+""*
+18
+30
+32*˙
+10r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÍB Í(JÎË
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÍB Í(T
+%36java.lang.String"-entities.JavaFile#getName()Ljava/lang/String;*
+
+javaFileentities.JavaFile2	getName()âÜ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÍB Í(b
+%37boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+%36java.lang.String*
+
+aliasjava.lang.String2equals(Ljava/lang/Object;)*
+8
+9*Í
+33r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java« «(#Â‚
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java« «(3
+%8"3deliverable.Release#getCommitList()Ljava/util/List;* 
+
+releasedeliverable.Release2getCommitList()*
+18
+32*ë
+11r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÍ% Í(-çä
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÍ% Í(<
+%35boolean",java.util.List#contains(Ljava/lang/Object;)Z*
+
+oldPathsjava.util.List*
+
+filejava.lang.String2contains(Ljava/lang/Object;)*
+7
+10*‹
+34r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java¬ ¬(
+†
+ù
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java¬ ¬(
+%0java.io.PrintStream"__id*
+""ÒÓ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java¬' ¬(9
+%1java.lang.Integer"1deliverable.Release#getIndex()Ljava/lang/Integer;* 
+
+releasedeliverable.Release2
+getIndex()≈
+¬
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java¬ ¬(9
+%2java.lang.String"__concat*
+RELEASE == *
+
+%1java.lang.IntegerâÜ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java¬ ¬(:
+
+%3void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%0java.io.PrintStream*
+
+%2java.lang.String2println(Ljava/lang/String;)£†
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java√) √(2
+%4java.util.HashMap"java.util.HashMapµ
+≤
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java√% √(4
+%5"java.util.HashMap#<init>()V*
+
+%4java.util.HashMap¥
+±
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java√ √(5
+nRMapjava.util.HashMap"__id*
+
+%4java.util.HashMap£†
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaƒ1 ƒ(:
+%6java.util.HashMap"java.util.HashMapµ
+≤
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaƒ- ƒ(<
+%7"java.util.HashMap#<init>()V*
+
+%6java.util.HashMap*
+33*°
+12r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÈ! È(-⁄
+◊
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÈ! È(8
+%33java.util.List"__mapGet*#
 !
-fileAliasMapjava.util.HashMap2
-entrySet()*
-2*ı
-1r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÀ
- À("|
+fileAliasMapjava.util.HashMap*
+
+aliasjava.lang.String≤
+Ø
 r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÀ À(
-"":
-nameFilejava.lang.String:!
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÈ	 È(9
+oldPathsjava.util.List"__id*
+
+%33java.util.Listäá
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÍ Í(!
+%34boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+filejava.lang.String*
+
+aliasjava.lang.String2equals(Ljava/lang/Object;)*
+10
+11*Á
+13r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaË Ë((Á‰
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaË Ë(1
+%32java.util.Set")java.util.HashMap#keySet()Ljava/util/Set;*#
+!
+fileAliasMapjava.util.HashMap2keySet()*
+7*è
+14r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÂ	 Â(éã
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÂ	 Â(
+%31void"-entities.JavaFile#setNr(Ljava/lang/Integer;)V*
+
+javaFileentities.JavaFile*
+
+valuejava.lang.Integer2setNr(Ljava/lang/Integer;)*
+13*˚
+15r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java‰ ‰(ÎË
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java‰ ‰(
+%29java.lang.String"-entities.JavaFile#getName()Ljava/lang/String;*
+
+javaFileentities.JavaFile2	getName()àÖ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java‰ ‰(+
+%30boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+%29java.lang.String*
+
+filejava.lang.String2equals(Ljava/lang/Object;)*
+13
+14*Ú
+16r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java„  „('ÚÔ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java„  „(5
+%28java.util.List"1deliverable.Release#getFileList()Ljava/util/List;* 
+
+releasedeliverable.Release2getFileList()*
+6*é
+17r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java‚ ‚(’
+“
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java‚ ‚(&
+%27java.lang.Integer"__mapGet*
+
+nRMapjava.util.HashMap*
+
+filejava.lang.Stringµ
+≤
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java‚ ‚('
+valuejava.lang.Integer"__id*
+
+%27java.lang.Integer*
+16*‡
+18r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java· ·(‡›
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java· ·($
+%26java.util.Set")java.util.HashMap#keySet()Ljava/util/Set;*
+
+nRMapjava.util.HashMap2keySet()*
+5*ë
+0 "â
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÑ Ñ(
+implicit return*¯
+1r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java¿ ¿(•
+¢
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java¿ ¿(
+releasedeliverable.Release"__id*
+""Õ
+ 
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java¿ ¿(
+releasedeliverable.Release"
+__arrayGet* 
+
+releasesListjava.util.List*
+""*
+0
+34*‰
+2r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÒ	 Ò(†
+ù
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÒ	 Ò(
+fileentities.JavaFile"__id*
+""ø
+º
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÒ	 Ò(
+fileentities.JavaFile"
+__arrayGet*
+
+%42java.util.List*
+""*
+3
+1*€
+3r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÚ Ú(°
+û
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÚ Ú(
+%43java.io.PrintStream"__id*
+""Á‰
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÚ Ú()
+%44java.lang.String"-entities.JavaFile#getName()Ljava/lang/String;*
+
+fileentities.JavaFile2	getName()¡
+æ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÚ Ú(4
+%45java.lang.String"__concat*
+
+%44java.lang.String*
+
+\t -->Â‚
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÚ7 Ú(C
+%46java.lang.Integer",entities.JavaFile#getNr()Ljava/lang/Integer;*
+
+fileentities.JavaFile2getNr()—
+Œ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÚ Ú(C
+%47java.lang.String"__concat*
+
+%45java.lang.String*
+
+%46java.lang.Integerø
+º
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÚ Ú(L
+%48java.lang.String"__concat*
+
+%47java.lang.String*
+\n\nåâ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÚ Ú(M
+%49void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%43java.io.PrintStream*
+
+%48java.lang.String2println(Ljava/lang/String;)*
+2*Ò
+4r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÒ Ò( ÚÔ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÒ Ò(.
+%42java.util.List"1deliverable.Release#getFileList()Ljava/util/List;* 
+
+releasedeliverable.Release2getFileList()*
+2*‚
+5r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java·	 ·(ü
+ú
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java·	 ·(
+filejava.lang.String"__id*
+""Ω
+∫
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java·	 ·(
+filejava.lang.String"
+__arrayGet*
+
+%26java.util.Set*
+""*
+4
+17*Ì
+6r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java„ „(§
+°
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java„ „(
+javaFileentities.JavaFile"__id*
+""√
+¿
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java„ „(
+javaFileentities.JavaFile"
+__arrayGet*
+
+%28java.util.List*
+""*
+15
+5*‰
+7r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaË Ë(†
+ù
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaË Ë(
+aliasjava.lang.String"__id*
+""æ
+ª
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaË Ë(
+aliasjava.lang.String"
+__arrayGet*
+
+%32java.util.Set*
+""*
+6
+12*„
+8r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÎ
+ Î(ÈÊ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÎ Î()
+%40java.lang.Integer",entities.JavaFile#getNr()Ljava/lang/Integer;*
+
+javaFileentities.JavaFile2getNr()¯ı
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÎ
+ Î(2
+%41void"-entities.JavaFile#setNr(Ljava/lang/Integer;)V*
+
+javaFileentities.JavaFile*
+""2setNr(Ljava/lang/Integer;)*
+7*˛
+9r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÍf Í(nÏÈ
+s
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÍx Í(ä
+%38java.lang.String"-entities.JavaFile#getName()Ljava/lang/String;*
+
+javaFileentities.JavaFile2	getName()çä
+s
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÍf Í(ã
+%39boolean",java.util.List#contains(Ljava/lang/Object;)Z*
+
+oldPathsjava.util.List*
+
+%38java.lang.String2contains(Ljava/lang/Object;)*
+7
+8*‚
+21r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java◊ ◊(°
+û
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java◊ ◊(
+%22java.io.PrintStream"__id*
+""ƒ
+¡
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java◊ ◊(,
+%23java.lang.String"__concat*
+
+FILE == *
+
+filejava.lang.Stringåâ
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java◊ ◊(-
+%24void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%22java.io.PrintStream*
+
+%23java.lang.String2println(Ljava/lang/String;)ﬂ
+‹
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÿ ÿ(/
+%25void"^deliverable.GetGitInfo#addFileNRMap(Ljava/lang/String;Ljava/util/HashMap;Ljava/util/HashMap;)V*"
+deliverable.GetGitInfo*
+
+filejava.lang.String*
+
+nRMapjava.util.HashMap*#
+!
+fileAliasMapjava.util.HashMap*
+18
+30
+32*†
+22r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java’ ’(ü
+ú
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java’
+ ’("
+filejava.lang.String"__id*
+""*
+21*†
+23r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java“ “(ü
+ú
+r
+fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java“
+ “("
+filejava.lang.String"__id*
+""*
+21:
+releasesListjava.util.List:
+
+ticketListjava.util.List:!
 fileAliasMapjava.util.HashMapB"
 deliverable.GetGitInfo
