@@ -8,13 +8,12 @@ public class JavaFile {
 	// private HashMap<Integer,String> fileMap = new HashMap<>(); //key = release,
 	// value = buggyness (yes/no)
 	private List<String> oldPaths;
-
 	private String buggyness;
 	private Integer size; // LOC
 	private Integer locTouched;
 	private Integer nr;
 	private Integer nFix;
-	private List<String> NAuth;
+	private List<String> nAuth;
 	private Integer locAdded;
 	private Integer maxLocAdded;
 	private Integer avgLocAdded;
@@ -24,6 +23,7 @@ public class JavaFile {
 	private Integer chgSetSize;
 	private Integer maxChgSetSize;
 	private Integer avgChgSetSize;
+	private List<Integer> chgSetSizeList;
 
 	public JavaFile(String name) {
 		this.name = name;
@@ -81,7 +81,15 @@ public class JavaFile {
 	public Integer getAvgChgSetSize() {
 		return avgChgSetSize;
 	}
-
+	
+	public List<Integer> getChgSetSizeList() {
+		return chgSetSizeList;
+	}
+	
+	public List<String> getNAuth() {
+		return nAuth;
+	}
+	
 	// set
 	public void setName(String name) {
 		this.name = name;
@@ -143,14 +151,14 @@ public class JavaFile {
 		this.nFix = nFix;
 	}
 
-	public List<String> getNAuth() {
-		return NAuth;
+	public void setNAuth(List<String> nAuth) {
+		this.nAuth = nAuth;
 	}
 
-	public void setNAuth(List<String> NAuth) {
-		this.NAuth = NAuth;
+	public void setChgSetSizeList(List<Integer> chgSetSizeList) {
+		this.chgSetSizeList = chgSetSizeList;
 	}
-
+	
 	public Integer getMAXChurn() {
 		return maxChurn;
 	}

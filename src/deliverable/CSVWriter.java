@@ -1,6 +1,8 @@
 package deliverable;
 
 import java.io.FileWriter;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import java.util.logging.Logger;
@@ -49,9 +51,9 @@ public class CSVWriter {
 	
 	public static void writeCsvBugg2(List<Release> releasesList) {
 		try (
-				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\CSV FINALE13.csv")) {
+				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\CSV FINALE14.csv")) {
 				   
-				   fileWriter.append("RELEASE ; FILENAME ; NR ; NAUTH; ChgSetSize ; BUGGYNESS \n");
+				   fileWriter.append("RELEASE ; FILENAME ; NR ; NAUTH; ChgSetSize ; MAX_ChgSet ; BUGGYNESS \n");
 				   for (Release release : releasesList) {
 					   System.out.println("RELEASE CSV == " + release.getIndex());
 					   for (JavaFile file : release.getFileList()) {
@@ -65,6 +67,10 @@ public class CSVWriter {
 						   fileWriter.append(String.valueOf(size));
 						   fileWriter.append(";");
 						   fileWriter.append(file.getChgSetSize().toString());
+						   fileWriter.append(";");
+						   if
+						   int maxChgSet = Collections.max((file.getChgSetSizeList()));
+						   fileWriter.append(String.valueOf(maxChgSet));
 						   fileWriter.append(";");
 						   fileWriter.append(file.getBugg());
 						   fileWriter.append("\n");

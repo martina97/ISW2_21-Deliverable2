@@ -229,6 +229,7 @@ public class GetGitInfo {
 				file.setNr(0);
 				file.setNAuth(new ArrayList<>());
 				file.setChgSetSize(0);
+				file.setChgSetSizeList(new ArrayList<>());
 				//System.out.println("FILE == " + file.getName() + "\nLIST ALIAS == " + file.getoldPaths());
 				
 				release.getFileList().add(file);
@@ -482,11 +483,13 @@ public class GetGitInfo {
 			  * value --> HashMap con key = NR , value = lista autori 
 			  */
 			 List<JavaFile> fileList = new ArrayList<>();	//lista che contiene i nomi dei file dentro diffs dei commit per ogni release 
+			 List<Integer> chgSetSizeList = new ArrayList<>();
+			 
 			 for (RevCommit commit : release.getCommitList()) {
 				 String authName = commit.getAuthorIdent().getName();
 				 List<DiffEntry> diffs = getDiffs(commit);
 				 if (diffs != null) {
-					analyzeDiffEntryMetrics(diffs, fileList, authName);
+					analyzeDiffEntryMetrics(diffs, fileList, authName, chgSetSizeList);
 				 }
 			 }
 			 System.out.println("###\n\n");
@@ -494,7 +497,8 @@ public class GetGitInfo {
 		 }
 	}
 	 
-	 public static void analyzeDiffEntryMetrics(List<DiffEntry> diffs, List<JavaFile> fileList, String authName) {
+	 
+	 public static void analyzeDiffEntryMetrics(List<DiffEntry> diffs, List<JavaFile> fileList, String authName, List<Integer> chgSetSizeList) {
 		 	int numDiff = 0 ; 
 		 	for (DiffEntry diffEntry : diffs) {
 				if (diffEntry.toString().contains(FILE_EXTENSION)) { 
@@ -514,25 +518,29 @@ public class GetGitInfo {
 					 else {
 						 file = diff.getNewPath();
 					 }
-					//System.out.println("FILE == " + file);
+					System.out.println("FILE == " + file);
 					
 					addFileList(fileList, file, authName, numDiff);
-					//System.out.println("######\n\n");
+					System.out.println("######\n\n");
 
 				}
 			}
+			
 		 }
 	 
 	 public static void addFileList(List<JavaFile> fileList, String fileName, String authName, int numDiff) {
 		 int count = 0 ; 
 		 if (fileList.isEmpty()) {
-			 //System.out.println("LISTA VUOTA");
+			 System.out.println("LISTA VUOTA");
 			 JavaFile javaFile = new JavaFile(fileName);
 			 javaFile.setNr(1);
 			 List<String> listAuth = new ArrayList<>();
 			 listAuth.add(authName);
 			 javaFile.setNAuth(listAuth);
 			 javaFile.setChgSetSize(numDiff);
+			 List<Integer> chgSetSizeList = new ArrayList<>();
+			 chgSetSizeList.add(numDiff);
+			 javaFile.setChgSetSizeList(chgSetSizeList);
 			 //javaFile.getNAuth().add(authName);
 			 fileList.add(javaFile);
 			 count = 1;
@@ -540,18 +548,19 @@ public class GetGitInfo {
 		 else {
 			 for ( JavaFile file : fileList) {
 				 if (file.getName().equals(fileName)) {
-					 //System.out.println("FILE PRESENTE NELLA LISTA ");
+					 System.out.println("FILE PRESENTE NELLA LISTA ");
 
 					 file.setNr(file.getNr()+1);
 					 file.getNAuth().add(authName);
 					 file.setChgSetSize(file.getChgSetSize()+ numDiff);
+					 file.getChgSetSizeList().add(numDiff);
 					 count =1;
 				 }
 			 }
 		 }
 		 
 		 if (count == 0) { //vuol dire che il nome del file non e' presente in fileList, quindi lo aggiungo
-			 //System.out.println("FILE NON PRESENTE NELLA LISTA ");
+			 System.out.println("FILE NON PRESENTE NELLA LISTA ");
 
 			 JavaFile javaFile = new JavaFile(fileName);
 			 javaFile.setNr(1);
@@ -560,6 +569,9 @@ public class GetGitInfo {
 			 javaFile.setNAuth(listAuth);
 			 javaFile.getNAuth().add(authName);
 			 javaFile.setChgSetSize(numDiff);
+			 List<Integer> chgSetSizeList = new ArrayList<>();
+			 chgSetSizeList.add(numDiff);
+			 javaFile.setChgSetSizeList(chgSetSizeList);
 			 fileList.add(javaFile);
 		 }
 	 }
@@ -569,6 +581,7 @@ public class GetGitInfo {
 		 for (JavaFile javaFile : fileList) {
 			 //System.out.println("javaFile == " + javaFile.getName());
 			 List<String> nAuth = javaFile.getNAuth();
+			 List<Integer> chgSetSize = javaFile.getChgSetSizeList();
 			 //System.out.println("javaFile --> \tnR == " + javaFile.getNr() + "\tnAuth == " + nAuth.size());
 
 			 for (JavaFile fileRel : release.getFileList()) {
@@ -581,6 +594,9 @@ public class GetGitInfo {
 					 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
 					 fileRel.setNAuth(listAuth);
 					 fileRel.setChgSetSize(fileRel.getChgSetSize()+javaFile.getChgSetSize());
+					 List<Integer> chgSetSizeList = fileRel.getChgSetSizeList();
+					 chgSetSizeList.addAll(chgSetSize);
+					 fileRel.setChgSetSizeList(chgSetSizeList);
 					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size() +"\n\n");
 					 
 				 }
@@ -595,6 +611,9 @@ public class GetGitInfo {
 					 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
 					 fileRel.setNAuth(listAuth);
 					 fileRel.setChgSetSize(fileRel.getChgSetSize() + javaFile.getChgSetSize());
+					 List<Integer> chgSetSizeList = fileRel.getChgSetSizeList();
+					 chgSetSizeList.addAll(chgSetSize);
+					 fileRel.setChgSetSizeList(chgSetSizeList);
 					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
 
 				 }

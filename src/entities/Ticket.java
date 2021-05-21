@@ -18,7 +18,6 @@ public class Ticket {
 	private Integer index;
 	private List<String> fileList;
 	private List<RevCommit> commitList;
-
 	private int p;
 
 	// costruttore
