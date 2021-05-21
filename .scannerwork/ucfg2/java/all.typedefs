@@ -34,7 +34,7 @@ BaddRelease(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)[deliverable
 #readJsonFromUrl(Ljava/lang/String;)Gdeliverable.GetJIRAInfo#readJsonFromUrl(Ljava/lang/String;)LJSONObject;O
 main([Ljava/lang/String;)2deliverable.GetJIRAInfo#main([Ljava/lang/String;)V’
 3retrieveTickets(Ljava/lang/String;Ljava/util/List;)[deliverable.GetJIRAInfo#retrieveTickets(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;©
-=compareDateVersion(Ljava/time/LocalDateTime;Ljava/util/List;)hdeliverable.GetJIRAInfo#compareDateVersion(Ljava/time/LocalDateTime;Ljava/util/List;)Ljava/lang/Integer;•
+=compareDateVersion(Ljava/time/LocalDateTime;Ljava/util/List;)hdeliverable.GetJIRAInfo#compareDateVersion(Ljava/time/LocalDateTime;Ljava/util/List;)Ljava/lang/Integer;å
 deliverable.GetGitInfojava.lang.Object|
 0addOldPaths(Lentities/JavaFile;Ljava/util/List;)Hdeliverable.GetGitInfo#addOldPaths(Lentities/JavaFile;Ljava/util/List;)Vh
 checkRename(Ljava/util/List;)Gdeliverable.GetGitInfo#checkRename(Ljava/util/List;)Ljava/util/HashMap;¢
@@ -47,7 +47,8 @@ AcheckAlias(Ljava/lang/String;Ljava/util/List;Ljava/util/HashMap;)Ydeliverable.
 ?getMetrics(Ljava/util/List;Ljava/util/List;Ljava/util/HashMap;)Wdeliverable.GetGitInfo#getMetrics(Ljava/util/List;Ljava/util/List;Ljava/util/HashMap;)Vž
 AaddFileList(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Ydeliverable.GetGitInfo#addFileList(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V,
 <init>() deliverable.GetGitInfo#<init>()V°
-JcompareReleaseAV(Lentities/JavaFile;Ljava/util/List;Ldeliverable/Release;)bdeliverable.GetGitInfo#compareReleaseAV(Lentities/JavaFile;Ljava/util/List;Ldeliverable/Release;)VÆ
+JcompareReleaseAV(Lentities/JavaFile;Ljava/util/List;Ldeliverable/Release;)bdeliverable.GetGitInfo#compareReleaseAV(Lentities/JavaFile;Ljava/util/List;Ldeliverable/Release;)VN
+main([Ljava/lang/String;)1deliverable.GetGitInfo#main([Ljava/lang/String;)VÆ
 UcheckAlias2(Ljava/lang/String;Ljava/util/List;Ljava/util/HashMap;Lentities/JavaFile;)mdeliverable.GetGitInfo#checkAlias2(Ljava/lang/String;Ljava/util/List;Ljava/util/HashMap;Lentities/JavaFile;)Z®
 IpopulateMapAlias(Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)adeliverable.GetGitInfo#populateMapAlias(Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)V…
 deliverable.Releasejava.lang.ObjectS
@@ -364,13 +365,7 @@ CcomputeIfPresent(Ljava/lang/Object;Ljava/util/function/BiFunction;)gjava.util.
 afterNodeInsertion(Z)(java.util.HashMap#afterNodeInsertion(Z)Vi
 )afterNodeAccess(Ljava/util/HashMap$Node;)<java.util.HashMap#afterNodeAccess(Ljava/util/HashMap$Node;)Vi
 )writeObject(Ljava/io/ObjectOutputStream;)<java.util.HashMap#writeObject(Ljava/io/ObjectOutputStream;)V#
-size()java.util.HashMap#size()Iº
-deliverable.CSVWriterjava.lang.Object_
-"writeCsvReleases(Ljava/util/List;)9deliverable.CSVWriter#writeCsvReleases(Ljava/util/List;)VW
-writeCsvBugg(Ljava/util/List;)5deliverable.CSVWriter#writeCsvBugg(Ljava/util/List;)V+
-<init>()deliverable.CSVWriter#<init>()VM
-main([Ljava/lang/String;)0deliverable.CSVWriter#main([Ljava/lang/String;)VY
-writeCsvBugg2(Ljava/util/List;)6deliverable.CSVWriter#writeCsvBugg2(Ljava/util/List;)V¸
+size()java.util.HashMap#size()I¸
 entities.JavaFilejava.lang.ObjectW
  setAVGChurn(Ljava/lang/Integer;)3entities.JavaFile#setAVGChurn(Ljava/lang/Integer;)VQ
 setOldPaths(Ljava/util/List;)0entities.JavaFile#setOldPaths(Ljava/util/List;)Va
@@ -756,7 +751,13 @@ hashCode()java.time.ZoneId#hashCode()I&
 getAvailableZoneIds()5java.time.ZoneId#getAvailableZoneIds()Ljava/util/Set;U
 of(Ljava/lang/String;Z):java.time.ZoneId#of(Ljava/lang/String;Z)Ljava/time/ZoneId;d
 'readObject(Ljava/io/ObjectInputStream;)9java.time.ZoneId#readObject(Ljava/io/ObjectInputStream;)VE
-systemDefault()2java.time.ZoneId#systemDefault()Ljava/time/ZoneId;ò
+systemDefault()2java.time.ZoneId#systemDefault()Ljava/time/ZoneId;º
+deliverable.CSVWriterjava.lang.Object_
+"writeCsvReleases(Ljava/util/List;)9deliverable.CSVWriter#writeCsvReleases(Ljava/util/List;)VW
+writeCsvBugg(Ljava/util/List;)5deliverable.CSVWriter#writeCsvBugg(Ljava/util/List;)V+
+<init>()deliverable.CSVWriter#<init>()VM
+main([Ljava/lang/String;)0deliverable.CSVWriter#main([Ljava/lang/String;)VY
+writeCsvBugg2(Ljava/util/List;)6deliverable.CSVWriter#writeCsvBugg2(Ljava/util/List;)Vò
 java.io.Writerjava.lang.Appendablejava.io.Closeablejava.lang.Objectjava.io.Flushable&
 	write([C)java.io.Writer#write([C)Vc
  append(Ljava/lang/CharSequence;)?java.io.Writer#append(Ljava/lang/CharSequence;)Ljava/io/Writer;$

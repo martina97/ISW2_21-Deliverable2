@@ -228,6 +228,7 @@ public class GetGitInfo {
 				file.setBugg("No");
 				file.setNr(0);
 				file.setNAuth(new ArrayList<>());
+				file.setChgSetSize(0);
 				//System.out.println("FILE == " + file.getName() + "\nLIST ALIAS == " + file.getoldPaths());
 				
 				release.getFileList().add(file);
@@ -441,130 +442,6 @@ public class GetGitInfo {
 			}
 	 }
 
-	 
-
-	 public static void getMetrics(List<Release> releasesList, List<Ticket> ticketList, HashMap<String, List<String>> fileAliasMap) throws IOException {
-		 
-		 for (Release release : releasesList ) {
-			 //Release release = releasesList.get(0);
-			 System.out.println("RELEASE == " + release.getIndex());
-			 
-			 /* creo hashMap che ha come 
-			  * key --> nome file
-			  * value --> HashMap con key = NR , value = lista autori 
-			  */
-			 List<JavaFile> fileList = new ArrayList<>();
-			 for (RevCommit commit : release.getCommitList()) {
-				 String authName = commit.getAuthorIdent().getName();
-				 List<DiffEntry> diffs = getDiffs(commit);
-					if (diffs != null) {
-						analyzeDiffEntryMetrics(diffs, fileList, authName);
-					}
-			 	}
-			
-			 setFileRelease(fileList,  release);
-			 
-		 }
-	
-	}
-	 
-	 public static void setFileRelease(List<JavaFile> fileList, Release release) {
-		 for (JavaFile javaFile : fileList) {
-			 //System.out.println("javaFile == " + javaFile.getName());
-			 List<String> nAuth = javaFile.getNAuth();
-			 //System.out.println("javaFile --> \tnR == " + javaFile.getNr() + "\tnAuth == " + nAuth.size());
-
-			 for (JavaFile fileRel : release.getFileList()) {
-				 if (javaFile.getName().equals(fileRel.getName())) {
-					 //System.out.println("IL NOME DEL FILE STA NELLA RELEASE ");
-					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
-					 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
-					 List<String> listAuth = fileRel.getNAuth();
-					 listAuth.addAll(nAuth);
-					 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
-					 fileRel.setNAuth(listAuth);
-					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size() +"\n\n");
-					 
-				 }
-				 
-				 if(fileRel.getoldPaths()!=null && fileRel.getoldPaths().contains(javaFile.getName())) {
-					 //System.out.println("IL NOME DEL FILE STA NEGLI ALIAS ");
-					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
-
-					 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
-					 List<String> listAuth = fileRel.getNAuth();
-					 listAuth.addAll(nAuth);
-					 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
-					 fileRel.setNAuth(listAuth);
-					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
-
-				 }
-			 }
-			 //System.out.println("#####################\n\n");
-
-		 }
-	 }
-
-	 public static void analyzeDiffEntryMetrics(List<DiffEntry> diffs, List<JavaFile> fileList, String authName) {
-		for (DiffEntry diff : diffs) {
-			int numDiff = diffs.size() -1 ;
-			String type = diff.getChangeType().toString();
-		
-			if (diff.toString().contains(FILE_EXTENSION) && (type.equals(MODIFY) || type.equals(DELETE)  || type.equals("ADD")||type.equals(RENAME) )) { 
-				String file;
-				
-				if (type.equals(DELETE) || type.equals(RENAME) ) {
-					 file = diff.getOldPath();
-				 }
-				 else {
-					 file = diff.getNewPath();
-				 }
-				//System.out.println("FILE == " + file);
-				addFileList(fileList, file, authName);
-				//System.out.println("######\n\n");
-
-			}
-		}
-	 }
-	 
-	 public static void addFileList(List<JavaFile> fileList, String fileName, String authName) {
-		 int count = 0 ; 
-		 if (fileList.isEmpty()) {
-			 System.out.println("LISTA VUOTA");
-			 JavaFile javaFile = new JavaFile(fileName);
-			 javaFile.setNr(1);
-			 List<String> listAuth = new ArrayList<>();
-			 listAuth.add(authName);
-			 javaFile.setNAuth(listAuth);
-			 //javaFile.getNAuth().add(authName);
-			 fileList.add(javaFile);
-			 count = 1;
-		}
-		 else {
-			 for ( JavaFile file : fileList) {
-				 if (file.getName().equals(fileName)) {
-					 System.out.println("FILE PRESENTE NELLA LISTA ");
-
-					 file.setNr(file.getNr()+1);
-					 file.getNAuth().add(authName);
-					 count =1;
-				 }
-			 }
-		 }
-		 if (count == 0) { //vuol dire che il nome del file non e' presente in fileList, quindi lo aggiungo
-			 System.out.println("FILE NON PRESENTE NELLA LISTA ");
-
-			 JavaFile javaFile = new JavaFile(fileName);
-			 javaFile.setNr(1);
-			 List<String> listAuth = new ArrayList<>();
-			 listAuth.add(authName);
-			 javaFile.setNAuth(listAuth);
-			 javaFile.getNAuth().add(authName);
-			 fileList.add(javaFile);
-		 }
-	 }
-
-	 
 	 public static void checkFileBugg(DiffEntry diff, List<Release> releasesList, int releaseCommit, List<Integer> aV, HashMap<String, List<String>> fileAliasMap) {
 		 
 		 /* se AV e' vuota, allora non faccio niente (il file ha gia' buggyness "no")
@@ -591,9 +468,143 @@ public class GetGitInfo {
 				 }
 			 }
 		 }
+	 }
+	 
+
+	 public static void getMetrics(List<Release> releasesList, HashMap<String, List<String>> fileAliasMap) throws IOException {
 		 
+		 for (Release release : releasesList ) {
+			 //Release release = releasesList.get(0);
+			 //System.out.println("RELEASE == " + release.getIndex());
+			 
+			 /* creo hashMap che ha come 
+			  * key --> nome file
+			  * value --> HashMap con key = NR , value = lista autori 
+			  */
+			 List<JavaFile> fileList = new ArrayList<>();	//lista che contiene i nomi dei file dentro diffs dei commit per ogni release 
+			 for (RevCommit commit : release.getCommitList()) {
+				 String authName = commit.getAuthorIdent().getName();
+				 List<DiffEntry> diffs = getDiffs(commit);
+				 if (diffs != null) {
+					analyzeDiffEntryMetrics(diffs, fileList, authName);
+				 }
+			 }
+			 System.out.println("###\n\n");
+			 setFileRelease(fileList,  release);
+		 }
+	}
+	 
+	 public static void analyzeDiffEntryMetrics(List<DiffEntry> diffs, List<JavaFile> fileList, String authName) {
+		 	int numDiff = 0 ; 
+		 	for (DiffEntry diffEntry : diffs) {
+				if (diffEntry.toString().contains(FILE_EXTENSION)) { 
+					numDiff++;
+				}
+		 	}
+
+			for (DiffEntry diff : diffs) {
+				String type = diff.getChangeType().toString();
+			
+				if (diff.toString().contains(FILE_EXTENSION) && (type.equals(MODIFY) || type.equals(DELETE)  || type.equals("ADD")||type.equals(RENAME) )) { 
+					String file;
+					
+					if (type.equals(DELETE) || type.equals(RENAME) ) {
+						 file = diff.getOldPath();
+					 }
+					 else {
+						 file = diff.getNewPath();
+					 }
+					//System.out.println("FILE == " + file);
+					
+					addFileList(fileList, file, authName, numDiff);
+					//System.out.println("######\n\n");
+
+				}
+			}
+		 }
+	 
+	 public static void addFileList(List<JavaFile> fileList, String fileName, String authName, int numDiff) {
+		 int count = 0 ; 
+		 if (fileList.isEmpty()) {
+			 //System.out.println("LISTA VUOTA");
+			 JavaFile javaFile = new JavaFile(fileName);
+			 javaFile.setNr(1);
+			 List<String> listAuth = new ArrayList<>();
+			 listAuth.add(authName);
+			 javaFile.setNAuth(listAuth);
+			 javaFile.setChgSetSize(numDiff);
+			 //javaFile.getNAuth().add(authName);
+			 fileList.add(javaFile);
+			 count = 1;
+		}
+		 else {
+			 for ( JavaFile file : fileList) {
+				 if (file.getName().equals(fileName)) {
+					 //System.out.println("FILE PRESENTE NELLA LISTA ");
+
+					 file.setNr(file.getNr()+1);
+					 file.getNAuth().add(authName);
+					 file.setChgSetSize(file.getChgSetSize()+ numDiff);
+					 count =1;
+				 }
+			 }
+		 }
+		 
+		 if (count == 0) { //vuol dire che il nome del file non e' presente in fileList, quindi lo aggiungo
+			 //System.out.println("FILE NON PRESENTE NELLA LISTA ");
+
+			 JavaFile javaFile = new JavaFile(fileName);
+			 javaFile.setNr(1);
+			 List<String> listAuth = new ArrayList<>();
+			 listAuth.add(authName);
+			 javaFile.setNAuth(listAuth);
+			 javaFile.getNAuth().add(authName);
+			 javaFile.setChgSetSize(numDiff);
+			 fileList.add(javaFile);
+		 }
 	 }
 
+	 
+	 public static void setFileRelease(List<JavaFile> fileList, Release release) {
+		 for (JavaFile javaFile : fileList) {
+			 //System.out.println("javaFile == " + javaFile.getName());
+			 List<String> nAuth = javaFile.getNAuth();
+			 //System.out.println("javaFile --> \tnR == " + javaFile.getNr() + "\tnAuth == " + nAuth.size());
+
+			 for (JavaFile fileRel : release.getFileList()) {
+				 if (javaFile.getName().equals(fileRel.getName())) {
+					 //System.out.println("IL NOME DEL FILE STA NELLA RELEASE ");
+					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
+					 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
+					 List<String> listAuth = fileRel.getNAuth();
+					 listAuth.addAll(nAuth);
+					 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
+					 fileRel.setNAuth(listAuth);
+					 fileRel.setChgSetSize(fileRel.getChgSetSize()+javaFile.getChgSetSize());
+					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size() +"\n\n");
+					 
+				 }
+				 
+				 if(fileRel.getoldPaths()!=null && fileRel.getoldPaths().contains(javaFile.getName())) {
+					 //System.out.println("IL NOME DEL FILE STA NEGLI ALIAS ");
+					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
+
+					 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
+					 List<String> listAuth = fileRel.getNAuth();
+					 listAuth.addAll(nAuth);
+					 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
+					 fileRel.setNAuth(listAuth);
+					 fileRel.setChgSetSize(fileRel.getChgSetSize() + javaFile.getChgSetSize());
+					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
+
+				 }
+			 }
+			 //System.out.println("#####################\n\n");
+
+		 }
+	 }
+
+	 
 	 public static boolean checkMapRename(String nameFile,HashMap<String, List<String>> fileAliasMap ) {
 		 //System.out.println("############## checkMapRename ############## ");
 		 for (Entry<String, List<String>> entry : fileAliasMap.entrySet()) {
@@ -605,9 +616,8 @@ public class GetGitInfo {
 			    }
 		 }
 		 return false;
-
-		 
 	 }
+	 
 	 public static void compareReleaseAV(JavaFile javaFile, List<Integer> aV, Release release) {
 		 //System.out.println("RELEASE COMMIT == " + release.getIndex() + "\tAV == " + aV);
 		 if (aV.contains(release.getIndex())) {

@@ -1,16 +1,16 @@
 
-6deliverable.Release#getDate()Ljava/time/LocalDateTime;m
-cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java$ $("1*¬
+2deliverable.Release#getRelease()Ljava/lang/String;m
+cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java   ("1*≥
 1m
-cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java%	 %(∫
-∑
+cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java!	 !(≤
+Ø
 m
-cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java%	 %(
-%0java.time.LocalDateTime"__id*!*
-deliverable.Release"
-date"ê
+cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java!	 !(
+%0java.lang.String"__id* *
+deliverable.Release"
+rel"â
 m
-cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java% %(
-
-%0java.time.LocalDateTimeB
+cD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Release.java! !(
+
+%0java.lang.StringB
 deliverable.Release

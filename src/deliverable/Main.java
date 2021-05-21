@@ -135,15 +135,14 @@ public class Main {
 	   }
 	   
 	   System.out.println("###### checkBuggyness ###### ");
-	   GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
+	   //GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
 	   
 	   //CSVWriter.writeCsvBugg(releasesList);
 
 	   System.out.println("###### getMetrics ###### ");
 
-	   //GetGitInfo.getMetrics(releasesList, ticketList,fileAliasMap );
-	   //CSVWriter.writeCsvBugg2(releasesList);
-
+	   GetGitInfo.getMetrics(releasesList,fileAliasMap );
+	   CSVWriter.writeCsvBugg2(releasesList);
 
 	   System.out.println("\n\nSTAMPO BUGGYNESS");
 	   int numBugg = 0;
@@ -305,8 +304,5 @@ public class Main {
 			   ticket.remove();
 		   }
 	   }
-	   
-	   
    }
-   
 }

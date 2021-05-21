@@ -1,16 +1,16 @@
 
-7entities.JavaFile#getAvgChgSetSize()Ljava/lang/Integer;k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaQ Q( "1*·
+7entities.JavaFile#getMaxChgSetSize()Ljava/lang/Integer;k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaM M( "1*·
 1k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaR	 R(¹
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaN	 N(¹
 ¶
 k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaR	 R(
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaN	 N(
 %0java.lang.Integer"__id*(*&
 entities.JavaFile"
-avgChgSetSize"ˆ
+maxChgSetSize"ˆ
 k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaR R(
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaN N(
 
 %0java.lang.IntegerB
 entities.JavaFile
