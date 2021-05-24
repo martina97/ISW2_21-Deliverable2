@@ -1,0 +1,125 @@
+numTrain == 1
+numTest == 1
+ 
+
+RandomForest 
+
+AUC = 0.5
+kappa = 0.0
+ 
+
+NaiveBayes 
+
+AUC = 0.33054464164747327
+kappa = 0.0
+ 
+
+IBk 
+
+AUC = 0.5
+kappa = 0.0
+precision = 0.0
+recall = 0.0
+############################
+
+
+numTrain == 2
+numTest == 1
+ 
+
+RandomForest 
+
+AUC = 0.843939393939394
+kappa = 0.21857396488613204
+ 
+
+NaiveBayes 
+
+AUC = 0.5558484848484848
+kappa = 0.057820503824293205
+ 
+
+IBk 
+
+AUC = 0.6053636363636363
+kappa = 0.22487956541050236
+precision = 0.41935483870967744
+recall = 0.29545454545454547
+############################
+
+
+numTrain == 3
+numTest == 1
+ 
+
+RandomForest 
+
+AUC = NaN
+kappa = 1.0
+ 
+
+NaiveBayes 
+
+AUC = NaN
+kappa = 1.0
+ 
+
+IBk 
+
+AUC = NaN
+kappa = 0.0
+precision = 0.0
+recall = 0.0
+############################
+
+
+numTrain == 4
+numTest == 1
+ 
+
+RandomForest 
+
+AUC = 0.8808290155440415
+kappa = 0.31478260869565217
+ 
+
+NaiveBayes 
+
+AUC = 0.8952216465169833
+kappa = 0.08513931888544975
+ 
+
+IBk 
+
+AUC = 0.690846286701209
+kappa = 0.10497369679579142
+precision = 0.07894736842105263
+recall = 0.5
+############################
+
+
+numTrain == 5
+numTest == 1
+ 
+
+RandomForest 
+
+AUC = 0.9560778727445394
+kappa = 0.3331245458873055
+ 
+
+NaiveBayes 
+
+AUC = 0.9518043684710351
+kappa = 0.3021070829053195
+ 
+
+IBk 
+
+AUC = 0.6045143128476462
+kappa = 0.3086958728869481
+precision = 0.7857142857142857
+recall = 0.21153846153846154
+############################
+
+

@@ -24,8 +24,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 import weka.classifiers.Evaluation;
@@ -39,19 +41,23 @@ import weka.classifiers.lazy.IBk;
 import weka.filters.unsupervised.instance.RemovePercentage;
 import deliverable.GetJIRAInfo;
 import deliverable.Release;
+import entities.DBEntriesM2;
 import entities.Ticket;
 
 
 public class TestWekaEasy{
 	
 	protected static List<Release> releasesList;
+	protected static List<DBEntriesM2> dBentriesList;
 	public static final String NAME_PROJECT = "BOOKKEEPER";
 
 	public static void main(String args[]) throws Exception{
 		//load datasets
 		releasesList = GetJIRAInfo.getListRelease(NAME_PROJECT);
 		removeHalf(releasesList);
-		String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\datasetConVirgoleWEKA.arff";
+		dBentriesList = new ArrayList<>();
+		//String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\datasetConVirgoleWEKA.arff";
+		String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\MATTEO_BOOKKEEPERMetrics.arff";
 		
 		//prova(csvPath); 
 		//prova2(csvPath, releasesList);
@@ -59,30 +65,7 @@ public class TestWekaEasy{
 		
 		
 		
-		DataSource source1 = new DataSource("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\datasetConVirgoleWEKA.arff");
-		Instances training = source1.getDataSet();
 		
-		/*
-		DataSource source2 = new DataSource("C:/Program Files/Weka-3-8/data/breast-cancerNOTK.arff");
-		Instances testing = source2.getDataSet();
-
-		int numAttr = training.numAttributes();
-		training.setClassIndex(numAttr - 1);
-		testing.setClassIndex(numAttr - 1);
-
-		RandomForest classifier = new RandomForest();
-		NaiveBayes classifier2 = new NaiveBayes();
-		IBk classifier3 = new IBk();
-		
-		classifier.buildClassifier(training);
-
-		Evaluation eval = new Evaluation(testing);	
-
-		eval.evaluateModel(classifier, testing); 
-		
-		System.out.println("AUC = "+eval.areaUnderROC(1));
-		System.out.println("kappa = "+eval.kappa());
-		*/
 	}
 	
 	public static void removeHalf(List<Release> releasesList) {
@@ -127,37 +110,52 @@ public class TestWekaEasy{
 			instancesList.add(instances);
 		}
 		
-		/*
-		for (int j = 0; j<instancesList.size(); j++) {
-			System.out.println(instancesList.get(j));
-			System.out.println("##############\n\n\n");
-		}*/
 		
 		// ora instancesList contiene la lista di istanze, ossia tutte le righe che hanno come release1, poi 2, poi 3...
 		/* devo prendermi 2 release e mettere 1 come train e 2 come test
 		 * poi 1-2 come train e 3 come test ... 
 		 */
 		for (int k =2;k<releasesList.size(); k++) {
-			System.out.println(k);
+			Instances training = null;
+			Instances testing = null;
+			DBEntriesM2 entry = new DBEntriesM2(NAME_PROJECT);
+			//System.out.println(k);
 			int numTrain = k-1;
 			int numTest = k-(k-1);
+			entry.setNumTrainingRelease(numTrain);
+
 			// # train e' k-1
 			// # test e' k-(k-1)
 			System.out.println("numTrain == " + numTrain);
 			System.out.println("numTest == " + numTest);
 			int m;
+			//training = Instances.mergeInstances(instancesList.get(m), instancesList.get(m+1));
 			
 			//training set
-			for (m = 0; m<numTrain; m++) {
-				System.out.println(instancesList.get(m));
-			}
+			//System.out.println(" ###################### TRAINING SET ############################\n\n");
+			training = new Instances(instancesList.get(0));
 			
-			//test set
-			System.out.println("m == " + m);
-			System.out.println(instancesList.get(m));
+			for (m = 1; m<numTrain; m++) {
+				//System.out.println(instancesList.get(m));
+				for (Instance i : instancesList.get(m)) {
+					training.add(i);
+				}
+			}
+			//System.out.println("TRAINING ==== " + training);
 
 			
-			System.out.println("#####\n\n");
+			//System.out.println("\n\n ###################### TEST SET ############################\n\n");
+
+			//test set
+			//System.out.println("m == " + m);
+			//System.out.println(instancesList.get(m));
+			testing = instancesList.get(m);
+			//System.out.println("\n\nTESTING ==== " + testing);
+			int numAttr = training.numAttributes();
+			training.setClassIndex(numAttr - 1);
+			testing.setClassIndex(numAttr - 1);
+			classification(training, testing);
+			System.out.println("############################\n\n");
 
 
 		}
@@ -170,7 +168,50 @@ public class TestWekaEasy{
 		
 	}
 	
-	
+	public static void classification(Instances training, Instances testing ) {
+		
+		Map<String, List<Integer>> classifierMap = new HashMap<>();
+		RandomForest classifier = new RandomForest();
+		NaiveBayes classifier2 = new NaiveBayes();
+		IBk classifier3 = new IBk();
+		
+		try {
+			
+			// RandomForest
+			System.out.println(" \n\nRandomForest \n");
+			classifier.buildClassifier(training);
+			Evaluation eval = new Evaluation(testing);	
+			eval.evaluateModel(classifier, testing); 
+			System.out.println("AUC = "+eval.areaUnderROC(1));
+			System.out.println("kappa = "+eval.kappa());
+			
+			// NaiveBayes
+			System.out.println(" \n\nNaiveBayes \n");
+			classifier2.buildClassifier(training);
+			Evaluation eval2 = new Evaluation(testing);	
+			eval2.evaluateModel(classifier2, testing); 
+			System.out.println("AUC = "+eval2.areaUnderROC(1));
+			System.out.println("kappa = "+eval2.kappa());
+			
+			// IBk
+			System.out.println(" \n\nIBk \n");
+			classifier3.buildClassifier(training);
+			Evaluation eval3 = new Evaluation(testing);	
+			eval3.evaluateModel(classifier3, testing); 
+			System.out.println("AUC = "+eval3.areaUnderROC(1));
+			System.out.println("kappa = "+eval3.kappa());
+			System.out.println("precision = "+eval3.precision(1));
+			System.out.println("recall = "+eval3.recall(1));
+
+
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+	}
 	
 	public static void prova2(String csvPath, List<Release> releasesList) {
 		/* mi creo tot csv per training e test per fare walkForward
