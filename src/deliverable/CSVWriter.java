@@ -4,9 +4,10 @@ import java.io.FileWriter;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-
+import java.util.Map;
 import java.util.logging.Logger;
 
+import entities.DBEntriesM2;
 import entities.JavaFile;
 import entities.Ticket;
 
@@ -109,6 +110,48 @@ public class CSVWriter {
 	  
 	  	}
 	 }	
+	
+	
+	public static void writeCsvMilestone2(List<DBEntriesM2> dBentriesList) {
+		try (
+		   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\WekaMilestone2.csv")) {
+		   
+		   fileWriter.append("Dataset;#TrainingRelease;Classifier;Precision;Recall;AUC;Kappa\n");
+		   
+
+		   for(DBEntriesM2 entry : dBentriesList) {
+			   
+			   Map<String, List<Double>> classifierMap = entry.getClassifier();
+
+			   for (Map.Entry<String,List<Double>> mapEntry : classifierMap.entrySet()) {
+				    String classifierName = mapEntry.getKey();
+				    List<Double> value = mapEntry.getValue();
+				    fileWriter.append(entry.getDatasetName());
+					fileWriter.append(";");
+					fileWriter.append(entry.getNumTrainingRelease().toString());
+					fileWriter.append(";");
+					fileWriter.append(classifierName);
+					fileWriter.append(";");
+					for(int i = 0;i<value.size();i++) {
+						fileWriter.append(value.get(i).toString());
+						fileWriter.append(";");
+					}
+					fileWriter.append("\n");
+
+				  }
+
+			   
+		   }
+		   
+		   
+		  } catch (Exception ex) {
+			  logger.log(Level.SEVERE,"Error in csv writer");
+			  ex.printStackTrace();
+		  
+		  	}
+				 
+	}
+	
 	
 	public static void main(String[] args) {
 		 

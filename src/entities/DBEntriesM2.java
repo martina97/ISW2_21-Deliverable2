@@ -7,7 +7,7 @@ public class DBEntriesM2 {
 	
 	private String datasetName;
 	private Integer numTrainingRelease;
-	private Map<String, List<Integer>> classifier;
+	private Map<String, List<Double>> classifier;
 	private Integer precision;
 	private Integer recall;
 	private Integer auc;
@@ -26,7 +26,7 @@ public class DBEntriesM2 {
 		return numTrainingRelease;
 	}
 	
-	public Map<String, List<Integer>> getClassifier() {
+	public Map<String, List<Double>> getClassifier() {
 		return classifier;
 	}
 	
@@ -51,7 +51,7 @@ public class DBEntriesM2 {
 	public void setNumTrainingRelease(Integer numTrainingRelease) {
 		this.numTrainingRelease = numTrainingRelease;
 	}
-	public void setClassifier(Map<String, List<Integer>> classifier) {
+	public void setClassifier(Map<String, List<Double>> classifier) {
 		this.classifier = classifier;
 	}
 	public void setPrecision(Integer precision) {

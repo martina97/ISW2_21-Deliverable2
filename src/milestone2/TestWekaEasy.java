@@ -39,6 +39,7 @@ import weka.core.converters.ConverterUtils.DataSource;
 import weka.classifiers.evaluation.*;
 import weka.classifiers.lazy.IBk;
 import weka.filters.unsupervised.instance.RemovePercentage;
+import deliverable.CSVWriter;
 import deliverable.GetJIRAInfo;
 import deliverable.Release;
 import entities.DBEntriesM2;
@@ -56,13 +57,13 @@ public class TestWekaEasy{
 		releasesList = GetJIRAInfo.getListRelease(NAME_PROJECT);
 		removeHalf(releasesList);
 		dBentriesList = new ArrayList<>();
-		//String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\datasetConVirgoleWEKA.arff";
-		String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\MATTEO_BOOKKEEPERMetrics.arff";
+		String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\datasetConVirgoleWEKA.arff";
+		//String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\MATTEO_BOOKKEEPERMetrics.arff";
 		
 		//prova(csvPath); 
 		//prova2(csvPath, releasesList);
 		prova3(arffPath, releasesList);
-		
+		CSVWriter.writeCsvMilestone2(dBentriesList);
 		
 		
 		
@@ -154,8 +155,9 @@ public class TestWekaEasy{
 			int numAttr = training.numAttributes();
 			training.setClassIndex(numAttr - 1);
 			testing.setClassIndex(numAttr - 1);
-			classification(training, testing);
+			classification(training, testing, entry);
 			System.out.println("############################\n\n");
+			dBentriesList.add(entry);
 
 
 		}
@@ -168,9 +170,9 @@ public class TestWekaEasy{
 		
 	}
 	
-	public static void classification(Instances training, Instances testing ) {
+	public static void classification(Instances training, Instances testing, DBEntriesM2 entry ) {
 		
-		Map<String, List<Integer>> classifierMap = new HashMap<>();
+		Map<String, List<Double>> classifierMap = new HashMap<>();
 		RandomForest classifier = new RandomForest();
 		NaiveBayes classifier2 = new NaiveBayes();
 		IBk classifier3 = new IBk();
@@ -184,14 +186,35 @@ public class TestWekaEasy{
 			eval.evaluateModel(classifier, testing); 
 			System.out.println("AUC = "+eval.areaUnderROC(1));
 			System.out.println("kappa = "+eval.kappa());
+			System.out.println("precision = "+eval.precision(1));
+			System.out.println("recall = "+eval.recall(1));
+			List<Double> listRF = new ArrayList<>();
+			listRF.add(eval.precision(1));
+			listRF.add(eval.recall(1));
+			listRF.add(eval.areaUnderROC(1));
+			listRF.add(eval.kappa());
+			System.out.println("listRF == " + listRF);
+			classifierMap.put("RandomForest", listRF);
+			
+
+			
 			
 			// NaiveBayes
-			System.out.println(" \n\nNaiveBayes \n");
+			System.out.println("\n\nNaiveBayes \n");
 			classifier2.buildClassifier(training);
 			Evaluation eval2 = new Evaluation(testing);	
 			eval2.evaluateModel(classifier2, testing); 
 			System.out.println("AUC = "+eval2.areaUnderROC(1));
 			System.out.println("kappa = "+eval2.kappa());
+			System.out.println("precision = "+eval2.precision(1));
+			System.out.println("recall = "+eval2.recall(1));
+			List<Double> listNB = new ArrayList<>();
+			listNB.add(eval2.precision(1));
+			listNB.add(eval2.recall(1));
+			listNB.add(eval2.areaUnderROC(1));
+			listNB.add(eval2.kappa());
+			System.out.println("listNB == " + listNB);
+			classifierMap.put("NaiveBayes", listNB);
 			
 			// IBk
 			System.out.println(" \n\nIBk \n");
@@ -202,7 +225,14 @@ public class TestWekaEasy{
 			System.out.println("kappa = "+eval3.kappa());
 			System.out.println("precision = "+eval3.precision(1));
 			System.out.println("recall = "+eval3.recall(1));
-
+			List<Double> listIBk = new ArrayList<>();
+			listIBk.add(eval3.precision(1));
+			listIBk.add(eval3.recall(1));
+			listIBk.add(eval3.areaUnderROC(1));
+			listIBk.add(eval3.kappa());
+			System.out.println("listIBk == " + listIBk);
+			classifierMap.put("IBk", listIBk);
+			entry.setClassifier(classifierMap);
 
 
 		} catch (Exception e) {
