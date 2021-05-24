@@ -14,5 +14,6 @@
 	<classpathentry kind="lib" path="lib/org.eclipse.jgit-5.8.0.202006091008-r (1).jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-api-1.7.30.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.30 (1).jar"/>
+	<classpathentry kind="lib" path="lib/weka.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

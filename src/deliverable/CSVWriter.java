@@ -68,7 +68,6 @@ public class CSVWriter {
 						   fileWriter.append(";");
 						   fileWriter.append(file.getChgSetSize().toString());
 						   fileWriter.append(";");
-						   if
 						   int maxChgSet = Collections.max((file.getChgSetSizeList()));
 						   fileWriter.append(String.valueOf(maxChgSet));
 						   fileWriter.append(";");
