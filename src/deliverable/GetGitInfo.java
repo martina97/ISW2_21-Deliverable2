@@ -476,7 +476,7 @@ public class GetGitInfo {
 		 
 		 for (Release release : releasesList ) {
 			 //Release release = releasesList.get(0);
-			 //System.out.println("RELEASE == " + release.getIndex());
+			 System.out.println("RELEASE == " + release.getIndex());
 			 
 			 /* creo hashMap che ha come 
 			  * key --> nome file
@@ -491,6 +491,8 @@ public class GetGitInfo {
 				 if (diffs != null) {
 					analyzeDiffEntryMetrics(diffs, fileList, authName, chgSetSizeList);
 				 }
+				 System.out.println("###\n\n");
+
 			 }
 			 System.out.println("###\n\n");
 			 setFileRelease(fileList,  release);
@@ -505,6 +507,7 @@ public class GetGitInfo {
 					numDiff++;
 				}
 		 	}
+		 	System.out.println("numDiff == " + numDiff);
 
 			for (DiffEntry diff : diffs) {
 				String type = diff.getChangeType().toString();
@@ -548,7 +551,7 @@ public class GetGitInfo {
 		 else {
 			 for ( JavaFile file : fileList) {
 				 if (file.getName().equals(fileName)) {
-					 System.out.println("FILE PRESENTE NELLA LISTA ");
+					 //System.out.println("FILE PRESENTE NELLA LISTA ");
 
 					 file.setNr(file.getNr()+1);
 					 file.getNAuth().add(authName);

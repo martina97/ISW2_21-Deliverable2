@@ -1,6 +1,7 @@
 package deliverable;
 
 import java.io.FileWriter;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -52,9 +53,9 @@ public class CSVWriter {
 	
 	public static void writeCsvBugg2(List<Release> releasesList) {
 		try (
-				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\CSV FINALE14.csv")) {
+				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\CSV FINALE17.csv")) {
 				   
-				   fileWriter.append("RELEASE ; FILENAME ; NR ; NAUTH; ChgSetSize ; MAX_ChgSet ; BUGGYNESS \n");
+				   fileWriter.append("RELEASE;FILENAME;NR;NAUTH;ChgSetSize;MAX_ChgSet;AVG_ChgSet;BUGGYNESS\n");
 				   for (Release release : releasesList) {
 					   System.out.println("RELEASE CSV == " + release.getIndex());
 					   for (JavaFile file : release.getFileList()) {
@@ -69,8 +70,20 @@ public class CSVWriter {
 						   fileWriter.append(";");
 						   fileWriter.append(file.getChgSetSize().toString());
 						   fileWriter.append(";");
-						   int maxChgSet = Collections.max((file.getChgSetSizeList()));
-						   fileWriter.append(String.valueOf(maxChgSet));
+						   if(file.getChgSetSize().equals(0)) {
+							   fileWriter.append("0");
+							   fileWriter.append(";");
+							   fileWriter.append("0");
+						   }
+						   else {
+							   int maxChgSet = Collections.max((file.getChgSetSizeList()));
+							   fileWriter.append(String.valueOf(maxChgSet));
+							   fileWriter.append(";");
+							   double avgChgSet = Utils.calculateAverage(file.getChgSetSizeList());
+							   //fileWriter.append(String.valueOf(avgChgSet));
+							   fileWriter.append(String.format("%.2f",avgChgSet));
+							   
+						   }
 						   fileWriter.append(";");
 						   fileWriter.append(file.getBugg());
 						   fileWriter.append("\n");

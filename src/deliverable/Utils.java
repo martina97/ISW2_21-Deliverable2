@@ -401,8 +401,18 @@ public static void proportion(List<Ticket> listGood, List<Ticket> listNoIV, List
 	System.out.println("listaTicket size = " + listaTicket.size());
 
 }
-	
+	public static double calculateAverage(List<Integer> list) {
+		Integer sum = 0;
+	    if(!list.isEmpty()) {
+	    for (Integer mark : list) {
+	        sum += mark;
+	    }
+	    return sum.doubleValue() / list.size();
+	  }
+	  return sum;
+	}
 
+	
 	public static void main(String[] args){
 			// Do nothing because is a main method
 	}
