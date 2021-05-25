@@ -1,0 +1,145 @@
+﻿Dataset;#TrainingRelease;%Training;%DefectiveTraining;%DefectiveTesting;Classifier;Balancing;FeatureSelection;TP;FP;TN;FN;Precision;Recall;AUC;Kappa
+bookkeeper;1;7.72;42.08;23.59;Random Forest;No;No;40;36;194;31;0.53;0.56;0.84;0.4
+bookkeeper;1;7.72;42.08;23.59;Random Forest;Under Sampling;No;53;56;174;18;0.49;0.75;0.84;0.42
+bookkeeper;1;7.72;42.08;23.59;Random Forest;Over Sampling;No;62;59;171;9;0.51;0.87;0.84;0.5
+bookkeeper;1;7.72;42.08;23.59;Random Forest;SMOTE;No;64;72;158;7;0.47;0.9;0.85;0.45
+bookkeeper;1;7.72;42.08;23.59;Random Forest;No;Best First;53;55;175;18;0.49;0.75;0.81;0.43
+bookkeeper;1;7.72;42.08;23.59;Random Forest;Under Sampling;Best First;62;64;166;9;0.49;0.87;0.82;0.47
+bookkeeper;1;7.72;42.08;23.59;Random Forest;Over Sampling;Best First;57;72;158;14;0.44;0.8;0.8;0.38
+bookkeeper;1;7.72;42.08;23.59;Random Forest;SMOTE;Best First;67;84;146;4;0.44;0.94;0.82;0.42
+bookkeeper;1;7.72;42.08;23.59;Naive Bayes;No;No;26;10;220;45;0.72;0.37;0.79;0.39
+bookkeeper;1;7.72;42.08;23.59;Naive Bayes;Under Sampling;No;27;11;219;44;0.71;0.38;0.8;0.4
+bookkeeper;1;7.72;42.08;23.59;Naive Bayes;Over Sampling;No;32;20;210;39;0.62;0.45;0.8;0.4
+bookkeeper;1;7.72;42.08;23.59;Naive Bayes;SMOTE;No;26;9;221;45;0.74;0.37;0.8;0.4
+bookkeeper;1;7.72;42.08;23.59;Naive Bayes;No;Best First;34;18;212;37;0.65;0.48;0.85;0.44
+bookkeeper;1;7.72;42.08;23.59;Naive Bayes;Under Sampling;Best First;32;15;215;39;0.68;0.45;0.84;0.44
+bookkeeper;1;7.72;42.08;23.59;Naive Bayes;Over Sampling;Best First;34;21;209;37;0.62;0.48;0.82;0.42
+bookkeeper;1;7.72;42.08;23.59;Naive Bayes;SMOTE;Best First;33;19;211;38;0.63;0.46;0.85;0.42
+bookkeeper;1;7.72;42.08;23.59;IBk;No;No;37;45;185;34;0.45;0.52;0.66;0.31
+bookkeeper;1;7.72;42.08;23.59;IBk;Under Sampling;No;39;46;184;32;0.46;0.55;0.67;0.33
+bookkeeper;1;7.72;42.08;23.59;IBk;Over Sampling;No;34;35;195;37;0.49;0.48;0.61;0.33
+bookkeeper;1;7.72;42.08;23.59;IBk;SMOTE;No;37;46;184;34;0.45;0.52;0.66;0.3
+bookkeeper;1;7.72;42.08;23.59;IBk;No;Best First;60;73;157;11;0.45;0.85;0.76;0.41
+bookkeeper;1;7.72;42.08;23.59;IBk;Under Sampling;Best First;61;87;143;10;0.41;0.86;0.74;0.35
+bookkeeper;1;7.72;42.08;23.59;IBk;Over Sampling;Best First;55;82;148;16;0.4;0.77;0.76;0.32
+bookkeeper;1;7.72;42.08;23.59;IBk;SMOTE;Best First;61;73;157;10;0.46;0.86;0.77;0.41
+bookkeeper;2;17.41;31.79;4.33;Random Forest;No;No;9;82;338;10;0.1;0.47;0.69;0.1
+bookkeeper;2;17.41;31.79;4.33;Random Forest;Under Sampling;No;13;155;265;6;0.08;0.68;0.72;0.07
+bookkeeper;2;17.41;31.79;4.33;Random Forest;Over Sampling;No;13;157;263;6;0.08;0.68;0.69;0.06
+bookkeeper;2;17.41;31.79;4.33;Random Forest;SMOTE;No;10;134;286;9;0.07;0.53;0.69;0.05
+bookkeeper;2;17.41;31.79;4.33;Random Forest;No;Best First;6;84;336;13;0.07;0.32;0.7;0.04
+bookkeeper;2;17.41;31.79;4.33;Random Forest;Under Sampling;Best First;15;168;252;4;0.08;0.79;0.72;0.08
+bookkeeper;2;17.41;31.79;4.33;Random Forest;Over Sampling;Best First;12;155;265;7;0.07;0.63;0.64;0.06
+bookkeeper;2;17.41;31.79;4.33;Random Forest;SMOTE;Best First;11;136;284;8;0.07;0.58;0.69;0.06
+bookkeeper;2;17.41;31.79;4.33;Naive Bayes;No;No;7;63;357;12;0.1;0.37;0.72;0.1
+bookkeeper;2;17.41;31.79;4.33;Naive Bayes;Under Sampling;No;7;70;350;12;0.09;0.37;0.74;0.08
+bookkeeper;2;17.41;31.79;4.33;Naive Bayes;Over Sampling;No;7;70;350;12;0.09;0.37;0.74;0.08
+bookkeeper;2;17.41;31.79;4.33;Naive Bayes;SMOTE;No;7;64;356;12;0.1;0.37;0.72;0.09
+bookkeeper;2;17.41;31.79;4.33;Naive Bayes;No;Best First;7;67;353;12;0.09;0.37;0.71;0.09
+bookkeeper;2;17.41;31.79;4.33;Naive Bayes;Under Sampling;Best First;6;68;352;13;0.08;0.32;0.7;0.06
+bookkeeper;2;17.41;31.79;4.33;Naive Bayes;Over Sampling;Best First;7;74;346;12;0.09;0.37;0.66;0.08
+bookkeeper;2;17.41;31.79;4.33;Naive Bayes;SMOTE;Best First;8;73;347;11;0.1;0.42;0.71;0.1
+bookkeeper;2;17.41;31.79;4.33;IBk;No;No;8;121;299;11;0.06;0.42;0.57;0.04
+bookkeeper;2;17.41;31.79;4.33;IBk;Under Sampling;No;10;159;261;9;0.06;0.53;0.58;0.03
+bookkeeper;2;17.41;31.79;4.33;IBk;Over Sampling;No;10;154;266;9;0.06;0.53;0.59;0.03
+bookkeeper;2;17.41;31.79;4.33;IBk;SMOTE;No;9;129;291;10;0.07;0.47;0.58;0.04
+bookkeeper;2;17.41;31.79;4.33;IBk;No;Best First;10;131;289;9;0.07;0.53;0.61;0.05
+bookkeeper;2;17.41;31.79;4.33;IBk;Under Sampling;Best First;15;187;233;4;0.07;0.79;0.67;0.06
+bookkeeper;2;17.41;31.79;4.33;IBk;Over Sampling;Best First;10;160;260;9;0.06;0.53;0.57;0.03
+bookkeeper;2;17.41;31.79;4.33;IBk;SMOTE;Best First;10;142;278;9;0.07;0.53;0.6;0.04
+bookkeeper;3;31.53;19.49;13.44;Random Forest;No;No;2;0;380;57;1;0.03;0.82;0.06
+bookkeeper;3;31.53;19.49;13.44;Random Forest;Under Sampling;No;9;15;365;50;0.38;0.15;0.78;0.15
+bookkeeper;3;31.53;19.49;13.44;Random Forest;Over Sampling;No;8;8;372;51;0.5;0.14;0.78;0.17
+bookkeeper;3;31.53;19.49;13.44;Random Forest;SMOTE;No;3;0;380;56;1;0.05;0.8;0.08
+bookkeeper;3;31.53;19.49;13.44;Random Forest;No;Best First;18;0;380;41;1;0.31;0.77;0.43
+bookkeeper;3;31.53;19.49;13.44;Random Forest;Under Sampling;Best First;32;58;322;27;0.36;0.54;0.71;0.32
+bookkeeper;3;31.53;19.49;13.44;Random Forest;Over Sampling;Best First;23;29;351;36;0.44;0.39;0.71;0.33
+bookkeeper;3;31.53;19.49;13.44;Random Forest;SMOTE;Best First;18;0;380;41;1;0.31;0.76;0.43
+bookkeeper;3;31.53;19.49;13.44;Naive Bayes;No;No;0;0;380;59;NaN;0;0.8;0
+bookkeeper;3;31.53;19.49;13.44;Naive Bayes;Under Sampling;No;0;1;379;59;0;0;0.75,-0
+bookkeeper;3;31.53;19.49;13.44;Naive Bayes;Over Sampling;No;0;0;380;59;NaN;0;0.77;0
+bookkeeper;3;31.53;19.49;13.44;Naive Bayes;SMOTE;No;0;0;380;59;NaN;0;0.8;0
+bookkeeper;3;31.53;19.49;13.44;Naive Bayes;No;Best First;0;0;380;59;NaN;0;0.77;0
+bookkeeper;3;31.53;19.49;13.44;Naive Bayes;Under Sampling;Best First;0;0;380;59;NaN;0;0.71;0
+bookkeeper;3;31.53;19.49;13.44;Naive Bayes;Over Sampling;Best First;0;0;380;59;NaN;0;0.73;0
+bookkeeper;3;31.53;19.49;13.44;Naive Bayes;SMOTE;Best First;0;0;380;59;NaN;0;0.77;0
+bookkeeper;3;31.53;19.49;13.44;IBk;No;No;20;21;359;39;0.49;0.34;0.64;0.33
+bookkeeper;3;31.53;19.49;13.44;IBk;Under Sampling;No;24;45;335;35;0.35;0.41;0.67;0.27
+bookkeeper;3;31.53;19.49;13.44;IBk;Over Sampling;No;22;33;347;37;0.4;0.37;0.7;0.29
+bookkeeper;3;31.53;19.49;13.44;IBk;SMOTE;No;24;24;356;35;0.5;0.41;0.67;0.37
+bookkeeper;3;31.53;19.49;13.44;IBk;No;Best First;19;1;379;40;0.95;0.32;0.66;0.44
+bookkeeper;3;31.53;19.49;13.44;IBk;Under Sampling;Best First;32;57;323;27;0.36;0.54;0.68;0.32
+bookkeeper;3;31.53;19.49;13.44;IBk;Over Sampling;Best First;24;30;350;35;0.44;0.41;0.66;0.34
+bookkeeper;3;31.53;19.49;13.44;IBk;SMOTE;Best First;19;1;379;40;0.95;0.32;0.66;0.44
+bookkeeper;4;45.66;17.62;74.7;Random Forest;No;No;47;4;145;393;0.92;0.11;0.68;0.04
+bookkeeper;4;45.66;17.62;74.7;Random Forest;Under Sampling;No;195;22;127;245;0.9;0.44;0.64;0.2
+bookkeeper;4;45.66;17.62;74.7;Random Forest;Over Sampling;No;75;10;139;365;0.88;0.17;0.65;0.06
+bookkeeper;4;45.66;17.62;74.7;Random Forest;SMOTE;No;52;4;145;388;0.93;0.12;0.69;0.05
+bookkeeper;4;45.66;17.62;74.7;Random Forest;No;Best First;54;4;145;386;0.93;0.12;0.67;0.05
+bookkeeper;4;45.66;17.62;74.7;Random Forest;Under Sampling;Best First;162;40;109;278;0.8;0.37;0.6;0.07
+bookkeeper;4;45.66;17.62;74.7;Random Forest;Over Sampling;Best First;69;11;138;371;0.86;0.16;0.64;0.05
+bookkeeper;4;45.66;17.62;74.7;Random Forest;SMOTE;Best First;55;4;145;385;0.93;0.12;0.67;0.05
+bookkeeper;4;45.66;17.62;74.7;Naive Bayes;No;No;42;0;149;398;1;0.1;0.68;0.05
+bookkeeper;4;45.66;17.62;74.7;Naive Bayes;Under Sampling;No;45;2;147;395;0.96;0.1;0.69;0.05
+bookkeeper;4;45.66;17.62;74.7;Naive Bayes;Over Sampling;No;41;1;148;399;0.98;0.09;0.69;0.05
+bookkeeper;4;45.66;17.62;74.7;Naive Bayes;SMOTE;No;41;0;149;399;1;0.09;0.67;0.05
+bookkeeper;4;45.66;17.62;74.7;Naive Bayes;No;Best First;2;0;149;438;1;0;0.68;0
+bookkeeper;4;45.66;17.62;74.7;Naive Bayes;Under Sampling;Best First;11;1;148;429;0.92;0.03;0.66;0.01
+bookkeeper;4;45.66;17.62;74.7;Naive Bayes;Over Sampling;Best First;40;5;144;400;0.89;0.09;0.64;0.03
+bookkeeper;4;45.66;17.62;74.7;Naive Bayes;SMOTE;Best First;10;1;148;430;0.91;0.02;0.67;0.01
+bookkeeper;4;45.66;17.62;74.7;IBk;No;No;50;1;148;390;0.98;0.11;0.56;0.06
+bookkeeper;4;45.66;17.62;74.7;IBk;Under Sampling;No;188;31;118;252;0.86;0.43;0.62;0.15
+bookkeeper;4;45.66;17.62;74.7;IBk;Over Sampling;No;59;7;142;381;0.89;0.13;0.56;0.05
+bookkeeper;4;45.66;17.62;74.7;IBk;SMOTE;No;50;3;146;390;0.94;0.11;0.55;0.05
+bookkeeper;4;45.66;17.62;74.7;IBk;No;Best First;70;4;145;370;0.95;0.16;0.51;0.07
+bookkeeper;4;45.66;17.62;74.7;IBk;Under Sampling;Best First;154;36;113;286;0.81;0.35;0.56;0.07
+bookkeeper;4;45.66;17.62;74.7;IBk;Over Sampling;Best First;111;13;136;329;0.9;0.25;0.55;0.1
+bookkeeper;4;45.66;17.62;74.7;IBk;SMOTE;Best First;75;5;144;365;0.94;0.17;0.51;0.08
+bookkeeper;5;64.61;34.36;59.42;Random Forest;No;No;247;29;152;18;0.89;0.93;0.94;0.78
+bookkeeper;5;64.61;34.36;59.42;Random Forest;Under Sampling;No;265;66;115;0;0.8;1;0.93;0.67
+bookkeeper;5;64.61;34.36;59.42;Random Forest;Over Sampling;No;230;41;140;35;0.85;0.87;0.91;0.64
+bookkeeper;5;64.61;34.36;59.42;Random Forest;SMOTE;No;251;32;149;14;0.89;0.95;0.93;0.78
+bookkeeper;5;64.61;34.36;59.42;Random Forest;No;Best First;262;30;151;3;0.9;0.99;0.91;0.84
+bookkeeper;5;64.61;34.36;59.42;Random Forest;Under Sampling;Best First;263;50;131;2;0.84;0.99;0.88;0.75
+bookkeeper;5;64.61;34.36;59.42;Random Forest;Over Sampling;Best First;233;37;144;32;0.86;0.88;0.88;0.68
+bookkeeper;5;64.61;34.36;59.42;Random Forest;SMOTE;Best First;264;34;147;1;0.89;1;0.91;0.83
+bookkeeper;5;64.61;34.36;59.42;Naive Bayes;No;No;4;6;175;261;0.4;0.02;0.73,-0.01
+bookkeeper;5;64.61;34.36;59.42;Naive Bayes;Under Sampling;No;2;2;179;263;0.5;0.01;0.7,-0
+bookkeeper;5;64.61;34.36;59.42;Naive Bayes;Over Sampling;No;95;37;144;170;0.72;0.36;0.7;0.14
+bookkeeper;5;64.61;34.36;59.42;Naive Bayes;SMOTE;No;34;20;161;231;0.63;0.13;0.74;0.02
+bookkeeper;5;64.61;34.36;59.42;Naive Bayes;No;Best First;265;69;112;0;0.79;1;0.77;0.66
+bookkeeper;5;64.61;34.36;59.42;Naive Bayes;Under Sampling;Best First;265;173;8;0;0.61;1;0.74;0.05
+bookkeeper;5;64.61;34.36;59.42;Naive Bayes;Over Sampling;Best First;243;103;78;22;0.7;0.92;0.72;0.37
+bookkeeper;5;64.61;34.36;59.42;Naive Bayes;SMOTE;Best First;265;135;46;0;0.66;1;0.76;0.29
+bookkeeper;5;64.61;34.36;59.42;IBk;No;No;234;24;157;31;0.91;0.88;0.88;0.75
+bookkeeper;5;64.61;34.36;59.42;IBk;Under Sampling;No;250;37;144;15;0.87;0.94;0.87;0.75
+bookkeeper;5;64.61;34.36;59.42;IBk;Over Sampling;No;219;27;154;46;0.89;0.83;0.81;0.67
+bookkeeper;5;64.61;34.36;59.42;IBk;SMOTE;No;235;25;156;30;0.9;0.89;0.87;0.75
+bookkeeper;5;64.61;34.36;59.42;IBk;No;Best First;263;32;149;2;0.89;0.99;0.91;0.84
+bookkeeper;5;64.61;34.36;59.42;IBk;Under Sampling;Best First;265;47;134;0;0.85;1;0.89;0.77
+bookkeeper;5;64.61;34.36;59.42;IBk;Over Sampling;Best First;236;32;149;29;0.88;0.89;0.86;0.72
+bookkeeper;5;64.61;34.36;59.42;IBk;SMOTE;Best First;263;32;149;2;0.89;0.99;0.9;0.84
+bookkeeper;6;78.96;38.92;68.04;Random Forest;No;No;410;23;186;35;0.95;0.92;0.94;0.8
+bookkeeper;6;78.96;38.92;68.04;Random Forest;Under Sampling;No;417;63;146;28;0.87;0.94;0.93;0.67
+bookkeeper;6;78.96;38.92;68.04;Random Forest;Over Sampling;No;407;52;157;38;0.89;0.91;0.92;0.68
+bookkeeper;6;78.96;38.92;68.04;Random Forest;SMOTE;No;417;75;134;28;0.85;0.94;0.94;0.61
+bookkeeper;6;78.96;38.92;68.04;Random Forest;No;Best First;413;13;196;32;0.97;0.93;0.95;0.85
+bookkeeper;6;78.96;38.92;68.04;Random Forest;Under Sampling;Best First;422;79;130;23;0.84;0.95;0.93;0.61
+bookkeeper;6;78.96;38.92;68.04;Random Forest;Over Sampling;Best First;412;75;134;33;0.85;0.93;0.92;0.6
+bookkeeper;6;78.96;38.92;68.04;Random Forest;SMOTE;Best First;417;69;140;28;0.86;0.94;0.95;0.64
+bookkeeper;6;78.96;38.92;68.04;Naive Bayes;No;No;16;11;198;429;0.59;0.04;0.74,-0.01
+bookkeeper;6;78.96;38.92;68.04;Naive Bayes;Under Sampling;No;307;61;148;138;0.83;0.69;0.75;0.36
+bookkeeper;6;78.96;38.92;68.04;Naive Bayes;Over Sampling;No;399;94;115;46;0.81;0.9;0.77;0.48
+bookkeeper;6;78.96;38.92;68.04;Naive Bayes;SMOTE;No;298;53;156;147;0.85;0.67;0.78;0.37
+bookkeeper;6;78.96;38.92;68.04;Naive Bayes;No;Best First;434;110;99;11;0.8;0.98;0.81;0.51
+bookkeeper;6;78.96;38.92;68.04;Naive Bayes;Under Sampling;Best First;442;182;27;3;0.71;0.99;0.83;0.16
+bookkeeper;6;78.96;38.92;68.04;Naive Bayes;Over Sampling;Best First;430;133;76;15;0.76;0.97;0.8;0.39
+bookkeeper;6;78.96;38.92;68.04;Naive Bayes;SMOTE;Best First;436;116;93;9;0.79;0.98;0.79;0.49
+bookkeeper;6;78.96;38.92;68.04;IBk;No;No;408;27;182;37;0.94;0.92;0.89;0.78
+bookkeeper;6;78.96;38.92;68.04;IBk;Under Sampling;No;411;35;174;34;0.92;0.92;0.88;0.76
+bookkeeper;6;78.96;38.92;68.04;IBk;Over Sampling;No;392;34;175;53;0.92;0.88;0.86;0.7
+bookkeeper;6;78.96;38.92;68.04;IBk;SMOTE;No;408;27;182;37;0.94;0.92;0.9;0.78
+bookkeeper;6;78.96;38.92;68.04;IBk;No;Best First;409;27;182;36;0.94;0.92;0.94;0.78
+bookkeeper;6;78.96;38.92;68.04;IBk;Under Sampling;Best First;416;42;167;29;0.91;0.93;0.91;0.75
+bookkeeper;6;78.96;38.92;68.04;IBk;Over Sampling;Best First;407;41;168;38;0.91;0.91;0.89;0.72
+bookkeeper;6;78.96;38.92;68.04;IBk;SMOTE;Best First;410;30;179;35;0.93;0.92;0.93;0.77

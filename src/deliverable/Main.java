@@ -135,13 +135,12 @@ public class Main {
 	   }
 	   
 	   System.out.println("###### checkBuggyness ###### ");
-	   //GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
+	   GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
 	   
-	   //CSVWriter.writeCsvBugg(releasesList);
 
 	   System.out.println("###### getMetrics ###### ");
 
-	   GetGitInfo.getMetrics(releasesList,fileAliasMap );
+	   Metrics.getMetrics(releasesList);
 	   CSVWriter.writeCsvBugg2(releasesList);
 
 	   System.out.println("\n\nSTAMPO BUGGYNESS");

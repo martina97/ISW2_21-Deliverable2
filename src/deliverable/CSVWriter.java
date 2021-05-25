@@ -30,7 +30,7 @@ public class CSVWriter {
 				   for (Release release : releasesList) {
 					   System.out.println("RELEASE CSV == " + release.getIndex());
 					   for (JavaFile file : release.getFileList()) {
-						   fileWriter.append(release.getIndex().toString());
+						   fileWriter.append(release.getIndex().toString());	//release
 						   fileWriter.append(";");
 						   fileWriter.append(file.getName());
 						   fileWriter.append(";");
@@ -53,16 +53,52 @@ public class CSVWriter {
 	
 	public static void writeCsvBugg2(List<Release> releasesList) {
 		try (
-				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\CSV FINALE17.csv")) {
-				   
-				   fileWriter.append("RELEASE;FILENAME;NR;NAUTH;ChgSetSize;MAX_ChgSet;AVG_ChgSet;BUGGYNESS\n");
+				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\finali\\CSV FINALEEEE.csv")) {
+
+				   fileWriter.append("RELEASE;FILENAME;LOC;LOC_added;MAX_LOC_Added;AVG_LOC_Added;Churn;MAX_Churn;AVG_Churn;NR;NAUTH;ChgSetSize;MAX_ChgSet;AVG_ChgSet;BUGGYNESS\n");
 				   for (Release release : releasesList) {
-					   System.out.println("RELEASE CSV == " + release.getIndex());
+					   //System.out.println("RELEASE CSV == " + release.getIndex());
 					   for (JavaFile file : release.getFileList()) {
 						   fileWriter.append(release.getIndex().toString());
 						   fileWriter.append(";");
 						   fileWriter.append(file.getName());
 						   fileWriter.append(";");
+						   fileWriter.append(file.getSize().toString());
+						   fileWriter.append(";");
+						   fileWriter.append(file.getLOCadded().toString());
+						   fileWriter.append(";");
+						   
+						   if(file.getLOCadded().equals(0)) {
+							   fileWriter.append("0");
+							   fileWriter.append(";");
+							   fileWriter.append("0");
+						   }
+						   else {
+							   int maxLocAdded = Collections.max((file.getLocAddedList()));
+							   fileWriter.append(String.valueOf(maxLocAdded));
+							   fileWriter.append(";");
+							   double avgLocAdded = Utils.calculateAverage(file.getLocAddedList());
+							   //fileWriter.append(String.valueOf(avgChgSet));
+							   fileWriter.append(String.format("%.2f",avgLocAdded));
+						   }
+						   fileWriter.append(";");
+						   fileWriter.append(file.getChurn().toString());
+						   fileWriter.append(";");
+						   if(file.getChurn().equals(0)) {
+							   fileWriter.append("0");
+							   fileWriter.append(";");
+							   fileWriter.append("0");
+						   }
+						   else {
+							   int maxChurn = Collections.max((file.getChurnList()));
+							   fileWriter.append(String.valueOf(maxChurn));
+							   fileWriter.append(";");
+							   double avgChurn = Utils.calculateAverage(file.getChurnList());
+							   //fileWriter.append(String.valueOf(avgChgSet));
+							   fileWriter.append(String.format("%.2f",avgChurn));
+						   }
+						   fileWriter.append(";");
+
 						   fileWriter.append(file.getNr().toString());
 						   fileWriter.append(";");
 						   int size = file.getNAuth().size();
@@ -127,7 +163,7 @@ public class CSVWriter {
 	
 	public static void writeCsvMilestone2(List<DBEntriesM2> dBentriesList) {
 		try (
-		   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\WekaMilestone2.csv")) {
+		   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\BookkeeperCeciliaWeka.csv")) {
 		   
 		   fileWriter.append("Dataset;#TrainingRelease;Classifier;Precision;Recall;AUC;Kappa\n");
 		   

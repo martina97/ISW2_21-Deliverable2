@@ -51,6 +51,7 @@ public class TestWekaEasy{
 	protected static List<Release> releasesList;
 	protected static List<DBEntriesM2> dBentriesList;
 	public static final String NAME_PROJECT = "BOOKKEEPER";
+	//public static final String NAME_PROJECT = "AVRO";
 
 	public static void main(String args[]) throws Exception{
 		//load datasets
@@ -59,7 +60,8 @@ public class TestWekaEasy{
 		dBentriesList = new ArrayList<>();
 		String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\datasetConVirgoleWEKA.arff";
 		//String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\MATTEO_BOOKKEEPERMetrics.arff";
-		
+		//String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\BookkeeperCecilia.arff";
+
 		//prova(csvPath); 
 		//prova2(csvPath, releasesList);
 		prova3(arffPath, releasesList);

@@ -15,6 +15,7 @@ public class JavaFile {
 	private Integer nFix;
 	private List<String> nAuth;
 	private Integer locAdded;
+	private List<Integer> locAddedList;
 	private Integer maxLocAdded;
 	private Integer avgLocAdded;
 	private Integer churn;
@@ -24,6 +25,7 @@ public class JavaFile {
 	private Integer maxChgSetSize;
 	private Integer avgChgSetSize;
 	private List<Integer> chgSetSizeList;
+	private List<Integer> churnList;
 
 	public JavaFile(String name) {
 		this.name = name;
@@ -85,7 +87,13 @@ public class JavaFile {
 	public List<Integer> getChgSetSizeList() {
 		return chgSetSizeList;
 	}
+	public List<Integer> getChurnList() {
+		return churnList;
+	}
 	
+	public List<Integer> getLocAddedList() {
+		return locAddedList;
+	}
 	public List<String> getNAuth() {
 		return nAuth;
 	}
@@ -157,6 +165,12 @@ public class JavaFile {
 
 	public void setChgSetSizeList(List<Integer> chgSetSizeList) {
 		this.chgSetSizeList = chgSetSizeList;
+	}
+	public void setLocAddedList(List<Integer> locAddedList) {
+		this.locAddedList = locAddedList;
+	}
+	public void setChurnList(List<Integer> churnList) {
+		this.churnList = churnList;
 	}
 	
 	public Integer getMAXChurn() {
