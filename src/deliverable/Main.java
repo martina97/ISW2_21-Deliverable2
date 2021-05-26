@@ -109,7 +109,7 @@ public class Main {
 	   Proportion.proportion(ticketList);
 	   
 	   checkAV();
-	   
+	  
  
 	   //CSVWriter.writeCsvReleases(ticketList);
 	   
