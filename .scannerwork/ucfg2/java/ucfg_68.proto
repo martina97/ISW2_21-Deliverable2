@@ -1,16 +1,16 @@
 
--entities.JavaFile#getBugg()Ljava/lang/String;k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java% %("1*±
+7entities.JavaFile#getAvgChgSetSize()Ljava/lang/Integer;k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaS S( "1*·
 1k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java&	 &(´
-±
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaT	 T(¹
+¶
 k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java&	 &(
-%0java.lang.String"__id*$*"
-entities.JavaFile"
-	buggyness"‡
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaT	 T(
+%0java.lang.Integer"__id*(*&
+entities.JavaFile"
+avgChgSetSize"ˆ
 k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java& &(
-
-%0java.lang.StringB
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaT T(
+
+%0java.lang.IntegerB
 entities.JavaFile

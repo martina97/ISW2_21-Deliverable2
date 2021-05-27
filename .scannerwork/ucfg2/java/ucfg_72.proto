@@ -1,17 +1,16 @@
 
-2entities.JavaFile#getLOCadded()Ljava/lang/Integer;k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java5 5("1*²
+,entities.JavaFile#getNAuth()Ljava/util/List;k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaa a("1*©
 1k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java6	 6(´
-±
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javab	 b(®
+«
 k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java6	 6(
-%0java.lang.Integer"__id*#*!
-entities.JavaFile"
-
-locAdded"ˆ
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javab	 b(
+%0java.util.List"__id* *
+entities.JavaFile"
+nAuth"…
 k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java6 6(
-
-%0java.lang.IntegerB
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javab b(
+
+%0java.util.ListB
 entities.JavaFile

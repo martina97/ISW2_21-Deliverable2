@@ -1,55 +1,16 @@
 
-Cdeliverable.GetJIRAInfo#readAll(Ljava/io/Reader;)Ljava/lang/String;q
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java( (( "4*É
-2q
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java,
- ,(ÖÇ
-q
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java,
- ,(
-%3java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*
-
-sbjava.lang.StringBuilder*
-""2	append(C)*
-3*∫
-3q
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java+ +(π∂
-q
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java+ +(	
-%2int"java.io.Reader#read()I*
-
-rdjava.io.Reader2read()*
-2
-1*Æ
-4q
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java) )(-Æ´
-q
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java) )(+
-%0java.lang.StringBuilder"java.lang.StringBuilder¿
-Ω
-q
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java) )(-
-%1"!java.lang.StringBuilder#<init>()V*
-
-%0java.lang.StringBuilderº
-π
-q
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java) )(.
-sbjava.lang.StringBuilder"__id*
-
-%0java.lang.StringBuilder*
-3*˙
-1q
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java. .(ÒÓ
-q
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java. .(
-%4java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*
-
-sbjava.lang.StringBuilder2
-toString()"ç
-q
-gD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetJIRAInfo.java. .(
-
-%4java.lang.String:
-rdjava.io.ReaderB"
-deliverable.GetJIRAInfo
+3entities.DBEntriesM2#getRecall()Ljava/lang/Integer;n
+dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java$ $("1*º
+1n
+dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java%	 %(∏
+µ
+n
+dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java%	 %(
+%0java.lang.Integer"__id*$*"
+entities.DBEntriesM2"
+recall"ã
+n
+dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java% %(
+
+%0java.lang.IntegerB
+entities.DBEntriesM2

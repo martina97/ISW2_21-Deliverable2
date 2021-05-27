@@ -30,10 +30,11 @@ public class Metrics {
 	private static final String MODIFY = "MODIFY";
 	private static Repository repository;
 	private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/bookkeeper/.git";
+  	//private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/syncope/.git";
 
 	
 	
-	public static void getMetrics(List<Release> releasesList) throws IOException {
+	public static void getMetrics(List<Release> releasesList, String REPO) throws IOException {
 		FileRepositoryBuilder repositoryBuilder = new FileRepositoryBuilder();
 		repository = repositoryBuilder.setGitDir(new File(REPO)).readEnvironment() // scan environment GIT_* variables
 				.findGitDir() // scan up the file system tree
@@ -41,7 +42,7 @@ public class Metrics {
 		
 		 for (Release release : releasesList ) {
 			 //Release release = releasesList.get(0);
-			 System.out.println("RELEASE == " + release.getIndex());
+			 //System.out.println("RELEASE == " + release.getIndex());
 			 
 			 /* creo hashMap che ha come 
 			  * key --> nome file
@@ -62,10 +63,10 @@ public class Metrics {
 				 if (diffs != null) {
 					analyzeDiffEntryMetrics(diffs, fileList, authName, chgSetSizeList, df);
 				 }
-				 System.out.println("###\n\n");
+				 //System.out.println("###\n\n");
 
 			 }
-			 System.out.println("###\n\n");
+			 //System.out.println("###\n\n");
 			 setFileRelease(fileList,  release);
 		 }
 	}
@@ -91,9 +92,9 @@ public class Metrics {
 				 else {
 					 file = diff.getNewPath();
 				 }
-				System.out.println("FILE == " + file);
+				//System.out.println("FILE == " + file);
 				addFileList(fileList, file, authName, numDiff, diff, df);
-				System.out.println("######\n\n");
+				//System.out.println("######\n\n");
 
 			}
 		}
@@ -118,9 +119,9 @@ public class Metrics {
 			e.printStackTrace();
 		}
 		 int churn = locAdded - locDeleted;
-		 System.out.println("LOC ADDED == " + locAdded);
-		 System.out.println("LOC DELETED == " + locDeleted);
-		 System.out.println("CHURN == " + churn);
+		 //System.out.println("LOC ADDED == " + locAdded);
+		 //System.out.println("LOC DELETED == " + locDeleted);
+		 //System.out.println("CHURN == " + churn);
 
 		 if (fileList.isEmpty()) {
 			 //System.out.println("LISTA VUOTA");

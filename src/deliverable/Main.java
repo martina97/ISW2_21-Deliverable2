@@ -10,6 +10,7 @@ import org.json.JSONException;
 
 import entities.JavaFile;
 import entities.Ticket;
+import entities.Tuple;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -23,6 +24,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
 
 
 
@@ -30,38 +33,56 @@ import java.util.List;
 public class Main {
 	
 	private static Logger logger = Logger.getLogger(Main.class.getName());
+
 	
 	// BOOKKEEPER 
-	public static final String NAME_PROJECT = "BOOKKEEPER";
-	private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/bookkeeper/.git";
-	private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
-
-	/* SYNCOPE 
-	public static final String NAME_PROJECT = "SYNCOPE";
-	private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/syncope/.git";
-	private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/syncope");
-	 */
+	//public static final String NAME_PROJECT = "BOOKKEEPER";
+	//private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/bookkeeper/.git";
+	//private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
+	 
 	
+	// SYNCOPE 
+	//public static final String NAME_PROJECT = "SYNCOPE";
+	//private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/syncope/.git";
+	//private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/syncope");
 	
 	private static Repository repository;
 	private static List<Release> releasesList;
 	private static List<Ticket> ticketList;
 	private static List<RevCommit> commitList;
 	private static HashMap<String, List<String>> fileAliasMap;
-
+	private static Tuple<ArrayList<RevCommit>,HashMap<String, List<String>>>  tuple;
 
 
    public static void main(String[] args) throws IllegalStateException, GitAPIException, IOException, JSONException {
 	   
+	   // inserisco come input il nome del progetto che voglio analizzare (BOOKKEEPER / SYNCOPE)
+		Scanner input = new Scanner(System.in);
+		System.out.println("INSERIRE IN MAIUSCOLO IL NOME DEL PROGETTO CHE SI DESIDERA ANALIZZARE.\n\nIN PARTICOLARE "
+				+ "INSERIRE LA STRINGA ''BOOKKEEPER'' OPPURE ''SYNCOPE''");
+		String nameProject = input.next();
+		String nameProjectLowerCase = nameProject.toLowerCase();
+		String repo = "D:/Programmi/Eclipse/eclipse-workspace/" + nameProjectLowerCase + "/.git";
+		Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/" + nameProjectLowerCase);
+		input.close();
+
+		
 	   //metto in releases tutta la lista delle release del progetto
-	   releasesList = GetJIRAInfo.getListRelease(NAME_PROJECT);
+	   releasesList = GetJIRAInfo.getListRelease(nameProject);
 	   
 	   
 
 	   //salvo in commitList tutti i commit del progetto
-	   commitList = GetGitInfo.getAllCommit(releasesList);
+	   commitList = GetGitInfo.getAllCommit(releasesList, repoPath);
+	   /**
+	   System.out.println("################# GET ALL COMMIT2 ###############");
+	   tuple =  GetGitInfo.getAllCommit2(releasesList, repoPath, repo);
+	   commitList = tuple.getX();
+	   fileAliasMap = tuple.getY();
+	   System.out.println("\n\nfileAliasMap size == " + fileAliasMap.size());
 
-	   
+	   */
+
 	   /* inverto l'ordine dei commit appartenenti alle release
 	    * per gestire poi i rename 
 	    */
@@ -82,7 +103,7 @@ public class Main {
 	   
 	   // prendo tutti i ticket di tipo bug ecc e i relativi campi che mi interessano
 	   // DA JIRA e li metto in listaTicket
-	   ticketList = GetJIRAInfo.retrieveTickets(NAME_PROJECT, releasesList);
+	   ticketList = GetJIRAInfo.retrieveTickets(nameProject, releasesList);
 	   
 	   getCommitTicket();
 	   
@@ -119,14 +140,15 @@ public class Main {
 	   
 	   System.out.println("###### checkRename ###### ");
 
-	  fileAliasMap = GetGitInfo.checkRename(releasesList);
+	  fileAliasMap = GetGitInfo.checkRename2(releasesList, repo);
 	  System.out.println("\n\nfileAliasMap size == " + fileAliasMap.size());
 	   
 	   removeHalfRelease(releasesList, ticketList);
 	   
 
 	   //CSVWriter.writeCsvReleases(ticketList);
-	   
+	   System.out.println("###### getJavaFiles ###### ");
+
 	   GetGitInfo.getJavaFiles(repoPath, releasesList, fileAliasMap);
 	   
 	   //fileAliasMap = GetGitInfo.checkRename(releasesList);
@@ -140,8 +162,8 @@ public class Main {
 
 	   System.out.println("###### getMetrics ###### ");
 
-	   Metrics.getMetrics(releasesList);
-	   CSVWriter.writeCsvBugg2(releasesList);
+	   Metrics.getMetrics(releasesList, repo);
+	   CSVWriter.writeCsvBugg2(releasesList, nameProject);
 
 	   System.out.println("\n\nSTAMPO BUGGYNESS");
 	   int numBugg = 0;

@@ -1,8 +1,7 @@
 package deliverable;
 
 import java.io.FileWriter;
-import java.util.Arrays;
-import java.util.Collection;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -51,9 +50,9 @@ public class CSVWriter {
 				
 	
 	
-	public static void writeCsvBugg2(List<Release> releasesList) {
+	public static void writeCsvBugg2(List<Release> releasesList, String nameProject) {
 		try (
-				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\finali\\CSV FINALE BOOKKEEPER_PROPORTIONv2.csv")) {
+				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\FINITO\\CSV FINALE" + nameProject + ".csv")) {
 
 				   fileWriter.append("RELEASE;FILENAME;LOC;LOC_added;MAX_LOC_Added;AVG_LOC_Added;Churn;MAX_Churn;AVG_Churn;NR;NAUTH;ChgSetSize;MAX_ChgSet;AVG_ChgSet;BUGGYNESS\n");
 				   for (Release release : releasesList) {
@@ -128,7 +127,6 @@ public class CSVWriter {
 				  } catch (Exception ex) {
 					  logger.log(Level.SEVERE,"Error in csv writer");
 					  ex.printStackTrace();
-				  
 				  }
 				 }	
 	
@@ -197,14 +195,12 @@ public class CSVWriter {
 			  logger.log(Level.SEVERE,"Error in csv writer");
 			  ex.printStackTrace();
 		  
-		  	}
-				 
+		  	}	 
 	}
 	
 	
 	public static void main(String[] args) {
-		 
-		 // main
+		 // main method
 	}
 		 
 		 
