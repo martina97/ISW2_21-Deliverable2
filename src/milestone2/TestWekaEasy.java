@@ -14,6 +14,7 @@ package milestone2;
 import weka.core.Instance;
 //import required classes
 import weka.core.Instances;
+import weka.filters.Filter;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -24,17 +25,33 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import weka.filters.supervised.attribute.AttributeSelection;
+import weka.attributeSelection.BestFirst;
+import weka.attributeSelection.CfsSubsetEval;
+import weka.attributeSelection.WrapperSubsetEval;
+import weka.core.Instances;
+import weka.filters.Filter;
 
+import weka.attributeSelection.BestFirst;
+import weka.attributeSelection.CfsSubsetEval;
+import weka.attributeSelection.WrapperSubsetEval;
+import weka.classifiers.AbstractClassifier;
 import weka.classifiers.Evaluation;
+import weka.classifiers.meta.CostSensitiveClassifier;
 import weka.classifiers.meta.FilteredClassifier;
 import weka.classifiers.trees.RandomForest;
 import weka.classifiers.bayes.NaiveBayes;
 import weka.filters.supervised.instance.Resample;
+import weka.core.converters.ArffSaver;
+import weka.core.converters.CSVLoader;
 import weka.core.converters.ConverterUtils.DataSource;
 import weka.classifiers.evaluation.*;
 import weka.classifiers.lazy.IBk;
@@ -45,12 +62,30 @@ import deliverable.Release;
 import entities.DBEntriesM2;
 import entities.Ticket;
 
+import weka.classifiers.AbstractClassifier;
+import weka.classifiers.Evaluation;
+import weka.classifiers.bayes.NaiveBayes;
+import weka.classifiers.lazy.IBk;
+import weka.classifiers.meta.FilteredClassifier;
+import weka.classifiers.trees.RandomForest;
+import weka.core.Instances;
+import weka.core.converters.ArffSaver;
+import weka.core.converters.CSVLoader;
+import weka.filters.Filter;
+import weka.filters.supervised.instance.Resample;
+import weka.filters.supervised.instance.SpreadSubsample;
+import weka.filters.unsupervised.attribute.Normalize;
+
 
 public class TestWekaEasy{
 	
-	protected static List<Release> releasesList;
-	protected static List<DBEntriesM2> dBentriesList;
-	public static final String NAME_PROJECT = "BOOKKEEPER";
+	private static List<Release> releasesList;
+	private static List<DBEntriesM2> dBentriesList;
+	private static final String NAME_PROJECT = "BOOKKEEPER";
+	private static int datasetDimension;
+	static Logger logger = Logger.getLogger(TestWekaEasy.class.getName());
+
+	
 	//public static final String NAME_PROJECT = "AVRO";
 
 	public static void main(String args[]) throws Exception{
@@ -58,18 +93,42 @@ public class TestWekaEasy{
 		releasesList = GetJIRAInfo.getListRelease(NAME_PROJECT);
 		removeHalf(releasesList);
 		dBentriesList = new ArrayList<>();
-		String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\datasetConVirgoleWEKA.arff";
+		
+		String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\FINITO\\CSV FINALE BOOKKEEPER.arff";
 		//String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\MATTEO_BOOKKEEPERMetrics.arff";
 		//String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\BookkeeperCecilia.arff";
 
 		//prova(csvPath); 
 		//prova2(csvPath, releasesList);
-		prova3(arffPath, releasesList);
-		CSVWriter.writeCsvMilestone2(dBentriesList);
+		walkForward3(arffPath, releasesList);
+		//CSVWriter.writeCsvMilestone2(dBentriesList);
 		
 		
 		
 	}
+	
+	public static void writeArff() {
+		
+		String csvPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\FINITO\\CSV FINALE SYNCOPE_VIRGOLE.csv";
+
+		// load CSV
+	    CSVLoader loader = new CSVLoader();
+	    try {
+			loader.setSource(new File(csvPath));
+		    Instances data = loader.getDataSet();//get instances object
+		 // save ARFF
+		    ArffSaver saver = new ArffSaver();
+		    saver.setInstances(data);//set the dataset we want to convert
+		    saver.setFile(new File("D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\FINITO\\CSV FINALE SYNCOPE.arff"));
+		    saver.writeBatch();
+		    //and save as ARFF
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
 	
 	public static void removeHalf(List<Release> releasesList) {
 		int releaseNumber = releasesList.size();
@@ -87,31 +146,34 @@ public class TestWekaEasy{
 	}
 	
 	
-	public static void prova3(String arffPath, List<Release> releasesList) {
+	public static void walkForward(String arffPath, List<Release> releasesList) {
 		
 		DataSource source;
 		List<Instances> instancesList = new ArrayList<>();
 		
 		try {
 			source = new DataSource(arffPath);
+			Instances dataset = source.getDataSet();
+		    datasetDimension = dataset.size();
+
 			//Instances instances = source.getDataSet();	//instances = tutte le righe del dataset 
 
 			
-		for (Release release : releasesList) {
-			Instances instances = source.getDataSet();	//instances = tutte le righe del dataset 
-
-			Iterator<Instance> instance = instances.iterator();
-			int indexRelease = release.getIndex();
-			while (instance.hasNext()) {
-			      Instance i = instance.next(); 
-			      int index = (int)(i.value(0));
-			      if (index != indexRelease) {	
-			    	  instance.remove();
-			      }
+			for (Release release : releasesList) {
+				Instances instances = source.getDataSet();	//instances = tutte le righe del dataset 
+	
+				Iterator<Instance> instance = instances.iterator();
+				int indexRelease = release.getIndex();
+				while (instance.hasNext()) {
+				      Instance i = instance.next(); 
+				      int index = (int)(i.value(0));
+				      if (index != indexRelease) {	
+				    	  instance.remove();
+				      }
+				}
+				
+				instancesList.add(instances);
 			}
-			
-			instancesList.add(instances);
-		}
 		
 		
 		// ora instancesList contiene la lista di istanze, ossia tutte le righe che hanno come release1, poi 2, poi 3...
@@ -157,6 +219,7 @@ public class TestWekaEasy{
 			int numAttr = training.numAttributes();
 			training.setClassIndex(numAttr - 1);
 			testing.setClassIndex(numAttr - 1);
+			
 			classification(training, testing, entry);
 			System.out.println("############################\n\n");
 			dBentriesList.add(entry);
@@ -172,6 +235,620 @@ public class TestWekaEasy{
 		
 	}
 	
+	
+	
+public static void walkForward2(String arffPath, List<Release> releasesList) {
+		
+		DataSource source;
+		List<Instances> instancesList = new ArrayList<>();
+		List<String> classifierNames = Arrays.asList("Random Forest", "IBk", "Naive Bayes");
+		List<String> balancingNames = Arrays.asList("No sampling","oversampling", "undersampling","SMOTE");
+		List<String> featureSelectionNames = Arrays.asList("No selection", "Best first");
+
+
+		try {
+			source = new DataSource(arffPath);
+			Instances dataset = source.getDataSet();
+		    datasetDimension = dataset.size();
+
+			//Instances instances = source.getDataSet();	//instances = tutte le righe del dataset 
+
+			
+			for (Release release : releasesList) {
+				Instances instances = source.getDataSet();	//instances = tutte le righe del dataset 
+	
+				Iterator<Instance> instance = instances.iterator();
+				int indexRelease = release.getIndex();
+				while (instance.hasNext()) {
+				      Instance i = instance.next(); 
+				      int index = (int)(i.value(0));
+				      if (index != indexRelease) {	
+				    	  instance.remove();
+				      }
+				}
+				
+				instancesList.add(instances);
+			}
+		
+		
+		// ora instancesList contiene la lista di istanze, ossia tutte le righe che hanno come release1, poi 2, poi 3...
+		/* devo prendermi 2 release e mettere 1 come train e 2 come test
+		 * poi 1-2 come train e 3 come test ... 
+		 */
+		for (int k =2;k<releasesList.size()+1; k++) {
+			Instances training = null;
+			Instances testing = null;
+			DBEntriesM2 entry = new DBEntriesM2(NAME_PROJECT);
+			//System.out.println(k);
+			int numTrain = k-1;
+			int numTest = k-(k-1);
+			entry.setNumTrainingRelease(numTrain);
+
+			// # train e' k-1
+			// # test e' k-(k-1)
+			System.out.println("numTrain == " + numTrain);
+			System.out.println("numTest == " + numTest);
+			int m;
+			//training = Instances.mergeInstances(instancesList.get(m), instancesList.get(m+1));
+			
+			//training set
+			//System.out.println(" ###################### TRAINING SET ############################\n\n");
+			training = new Instances(instancesList.get(0));
+			
+			for (m = 1; m<numTrain; m++) {
+				//System.out.println(instancesList.get(m));
+				for (Instance i : instancesList.get(m)) {
+					training.add(i);
+				}
+			}
+			//System.out.println("TRAINING ==== " + training);
+
+			
+			//System.out.println("\n\n ###################### TEST SET ############################\n\n");
+
+			//test set
+			//System.out.println("m == " + m);
+			//System.out.println(instancesList.get(m));
+			testing = instancesList.get(m);
+			//System.out.println("\n\nTESTING ==== " + testing);
+			int numAttr = training.numAttributes();
+			training.setClassIndex(numAttr - 1);
+			testing.setClassIndex(numAttr - 1);
+			
+			int numAttrTrainingNoFilter = training.numAttributes();
+			System.out.println("numAttrTrainingNoFilter == " + numAttrTrainingNoFilter);
+			
+			//classification(training, testing, entry);
+			//chooseClassifier(classifierNames, training, testing);
+			chooseFeatureSelection(featureSelectionNames, training, testing);
+
+			
+			System.out.println("############################\n\n");
+			dBentriesList.add(entry);
+		}
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+
+
+public static void walkForward3(String arffPath, List<Release> releasesList) {
+	
+	DataSource source;
+	List<Instances> instancesList = new ArrayList<>();
+	List<String> classifierNames = Arrays.asList("Random Forest", "IBk", "Naive Bayes");
+	List<String> balancingNames = Arrays.asList("No sampling","oversampling", "undersampling","SMOTE");
+	List<String> featureSelectionNames = Arrays.asList("No selection", "Best first");
+
+
+	try {
+		source = new DataSource(arffPath);
+		Instances dataset = source.getDataSet();
+	    datasetDimension = dataset.size();
+
+		//Instances instances = source.getDataSet();	//instances = tutte le righe del dataset 
+
+		
+		for (Release release : releasesList) {
+			Instances instances = source.getDataSet();	//instances = tutte le righe del dataset 
+
+			Iterator<Instance> instance = instances.iterator();
+			int indexRelease = release.getIndex();
+			while (instance.hasNext()) {
+			      Instance i = instance.next(); 
+			      int index = (int)(i.value(0));
+			      if (index != indexRelease) {	
+			    	  instance.remove();
+			      }
+			}
+			
+			instancesList.add(instances);
+		}
+	
+	
+	// ora instancesList contiene la lista di istanze, ossia tutte le righe che hanno come release1, poi 2, poi 3...
+	/* devo prendermi 2 release e mettere 1 come train e 2 come test
+	 * poi 1-2 come train e 3 come test ... 
+	 */
+	for (int k =2;k<releasesList.size()+1; k++) {
+		Instances training = null;
+		Instances testing = null;
+		DBEntriesM2 entry = new DBEntriesM2(NAME_PROJECT);
+		//System.out.println(k);
+		int numTrain = k-1;
+		int numTest = k-(k-1);
+		entry.setNumTrainingRelease(numTrain);
+
+		// # train e' k-1
+		// # test e' k-(k-1)
+		System.out.println("numTrain == " + numTrain);
+		System.out.println("numTest == " + numTest);
+		int m;
+		//training = Instances.mergeInstances(instancesList.get(m), instancesList.get(m+1));
+		
+		//training set
+		//System.out.println(" ###################### TRAINING SET ############################\n\n");
+		training = new Instances(instancesList.get(0));
+		
+		for (m = 1; m<numTrain; m++) {
+			//System.out.println(instancesList.get(m));
+			for (Instance i : instancesList.get(m)) {
+				training.add(i);
+			}
+		}
+		//System.out.println("TRAINING ==== " + training);
+
+		
+		//System.out.println("\n\n ###################### TEST SET ############################\n\n");
+
+		//test set
+		//System.out.println("m == " + m);
+		//System.out.println(instancesList.get(m));
+		testing = instancesList.get(m);
+		//System.out.println("\n\nTESTING ==== " + testing);
+		int numAttr = training.numAttributes();
+		training.setClassIndex(numAttr - 1);
+		testing.setClassIndex(numAttr - 1);
+		
+		int numAttrTrainingNoFilter = training.numAttributes();
+		System.out.println("numAttrTrainingNoFilter == " + numAttrTrainingNoFilter);
+		
+		//classification(training, testing, entry);
+		chooseClassifier3(classifierNames, training, testing);
+		//chooseFeatureSelection(featureSelectionNames, training, testing);
+
+		
+		System.out.println("####################################################################################\n\n");
+		dBentriesList.add(entry);
+	}
+	
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+}
+
+
+	public static void chooseClassifier3(List<String> classifierNames, Instances training, Instances testing) {
+		AbstractClassifier classifier = null;
+	
+		for(int i = 0; i<classifierNames.size();i++) {
+			switch(i) {
+				case 0: //Random Forest
+					classifier = new RandomForest();
+				break;
+				
+				case 1: //IBk
+					classifier = new IBk();
+				break;
+				
+				case 2: //Naive Bayes
+					classifier = new NaiveBayes();
+				break;
+				default:
+					logger.log(Level.SEVERE,"Error in classifier selection ");
+					System.exit(1);
+				break;
+			}
+			//ho selezionato il classificatore, ora devo selezionare la tecnica di featureSelection
+			chooseFeatureSelection2(classifier,classifierNames.get(i), training, testing );
+
+			
+			//chooseFeatureSelection(classifier, training,testing);
+		}
+	
+	}
+
+	public static void chooseFeatureSelection2(AbstractClassifier classifier,String classifierName, Instances training, Instances testing ) {
+		List<String> featureSelectionNames = Arrays.asList("No selection", "Best first");
+		
+		String featureSelection = "no";
+		
+		for(int i = 0; i<featureSelectionNames.size(); i++) {
+			switch(i) {
+				case 0: //No selection
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionNames.get(i));
+				break;
+				
+				case 1: //Best first
+					System.out.println("\n\nLA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionNames.get(i));		
+					featureSelection = featureSelectionNames.get(i);
+					break;
+	
+				default:
+					logger.log(Level.SEVERE,"Error in feature selection ");
+					System.exit(1);
+				break;
+			}
+			applyFeatureSelection2(classifier, classifierName, featureSelection, training, testing);
+			
+		}
+		System.out.println("----\n\n");
+		
+	}
+	
+	public static void applyFeatureSelection2(AbstractClassifier classifier,String classifierName,String featureSelection,Instances training, Instances testing) {
+		
+		if(!featureSelection.equals("no")) {
+			//applico featureSelection
+			System.out.println("STO USANDO FEATURE SELECTION");
+			
+			//create AttributeSelection object
+			AttributeSelection filter = new AttributeSelection();
+			//create evaluator and search algorithm objects
+			CfsSubsetEval eval = new CfsSubsetEval();
+			BestFirst  search = new BestFirst ();
+			//set the algorithm to search backward
+			String [] bfSearchOpt = {"-D", "1",  "-N", "5"};
+			try {
+				search.setOptions(bfSearchOpt);
+				
+				//set the filter to use the evaluator and search algorithm
+				filter.setEvaluator(eval);
+				filter.setSearch(search);
+				//specify the dataset
+				Instances filteredTraining = null;
+				Instances filteredTesting = null;
+				
+				filter.setInputFormat(training);
+				//apply
+				filteredTraining = Filter.useFilter(training, filter);
+				filteredTesting = Filter.useFilter(testing, filter);
+				
+				int numAttrFiltered = filteredTraining.numAttributes();
+				filteredTraining.setClassIndex(numAttrFiltered - 1);
+				filteredTesting.setClassIndex(numAttrFiltered - 1);
+				
+				//lavora con feature selection
+				//System.out.println("numAttrFiltered == " + numAttrFiltered);
+				//chooseClassifier2(filteredTraining,filteredTesting );
+				chooseBalancing2(classifier, classifierName, featureSelection, filteredTraining,  filteredTesting);
+				//chooseBalancing(filteredTraining,filteredTesting);
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			
+		}
+		else {
+			//lavora senza feature selection
+			//chooseBalancing(training,testing);
+			//chooseClassifier2(training,testing);
+			chooseBalancing2(classifier, classifierName, featureSelection, training,  testing);
+
+
+		}
+	}
+	
+	
+	public static void chooseBalancing2(AbstractClassifier classifier,String classifierName,String featureSelectionName,Instances training, Instances testing) {
+		List<String> balancingNames = Arrays.asList("No sampling","oversampling", "undersampling","SMOTE");
+
+		for(int i = 0; i<balancingNames.size(); i++) {
+			switch(i) {
+				case 0: //No sampling
+					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+				break;
+				
+				case 1: //oversampling
+					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );					Resample resample = null;
+					
+				try {
+					resample = new Resample();
+					resample.setInputFormat(training);
+					resample.setNoReplacement(false);
+					resample.setBiasToUniformClass(1.0);
+					
+					int totInstances = training.size();
+					int positiveInstances = calculateNumberBuggyClass(training);
+					//System.out.println("positiveInstances == " + positiveInstances);
+					double percentage =  calculatePercentage(positiveInstances, totInstances);
+					//System.out.println("percentage == " + percentage);
+					resample.setSampleSizePercent(percentage*2);
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+					//FileLogger.getLogger().error("Errore nell'instanziazione dell'oversample"); System.exit(1); }
+				}
+					
+					
+					/*
+					int totInstances = training.size();
+					int positiveInstances = calculateNumberBuggyClass(training);
+					System.out.println("positiveInstances == " + positiveInstances);
+					
+					
+					
+					double percentage =  calculatePercentage(positiveInstances, totInstances);
+					
+					String[] optsOverSampling = new String[]{"-B", "1.0", "-Z", String.valueOf(2*percentage)};
+					
+					resample.setOptions(optsOverSampling);
+					
+					fc.setFilter(resample);
+					*/
+					break;
+					
+				case 2: //undersampling
+					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+					break;
+				
+				case 3: //SMOTE
+					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+					break;
+				
+				default:
+					logger.log(Level.SEVERE,"Error in feature selection ");
+					System.exit(1);
+				break;
+			}
+			
+		}
+		
+	}
+
+	public static void chooseFeatureSelection(List<String> featureSelectionNames, Instances training,Instances testing) {
+		//List<String> featureSelectionNames = Arrays.asList("No selection", "Best first");
+		
+		String featureSelection = "no";
+		
+		for(int i = 0; i<featureSelectionNames.size(); i++) {
+			switch(i) {
+				case 0: //No selection
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionNames.get(i) + "\n\n");
+				break;
+				
+				case 1: //Best first
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionNames.get(i));		
+					featureSelection = featureSelectionNames.get(i);
+					break;
+	
+				default:
+					logger.log(Level.SEVERE,"Error in feature selection ");
+					System.exit(1);
+				break;
+			}
+			applyFeatureSelection(featureSelection, training, testing);
+			
+		}
+		System.out.println("----\n\n");
+	}
+
+
+	public static void applyFeatureSelection(String featureSelection,Instances training, Instances testing) {
+		
+		if(!featureSelection.equals("no")) {
+			//applico featureSelection
+			System.out.println("STO USANDO FEATURE SELECTION");
+			
+			//create AttributeSelection object
+			AttributeSelection filter = new AttributeSelection();
+			//create evaluator and search algorithm objects
+			CfsSubsetEval eval = new CfsSubsetEval();
+			BestFirst  search = new BestFirst ();
+			//set the algorithm to search backward
+			String [] bfSearchOpt = {"-D", "1",  "-N", "5"};
+			try {
+				search.setOptions(bfSearchOpt);
+				
+				//set the filter to use the evaluator and search algorithm
+				filter.setEvaluator(eval);
+				filter.setSearch(search);
+				//specify the dataset
+				Instances filteredTraining = null;
+				Instances filteredTesting = null;
+				
+				filter.setInputFormat(training);
+				//apply
+				filteredTraining = Filter.useFilter(training, filter);
+				filteredTesting = Filter.useFilter(testing, filter);
+				
+				int numAttrFiltered = filteredTraining.numAttributes();
+				filteredTraining.setClassIndex(numAttrFiltered - 1);
+				filteredTesting.setClassIndex(numAttrFiltered - 1);
+				
+				//lavora con feature selection
+				System.out.println("numAttrFiltered == " + numAttrFiltered);
+				chooseClassifier2(filteredTraining,filteredTesting );
+				//chooseBalancing(filteredTraining,filteredTesting);
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			
+		}
+		else {
+			//lavora senza feature selection
+			//chooseBalancing(training,testing);
+			chooseClassifier2(training,testing);
+
+		}
+	}
+
+	
+	public static void chooseClassifier2(Instances training,Instances testing) {
+		List<String> classifierNames = Arrays.asList("Random Forest", "IBk", "Naive Bayes");
+		CostSensitiveClassifier fc = new CostSensitiveClassifier() ;
+        RandomForest randomForest = new RandomForest();
+        fc.setClassifier(randomForest);
+		
+		
+		
+		for(int i = 0; i<classifierNames.size(); i++) {
+			switch(i) {
+				case 0: //Random Forest
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionNames.get(i) + "\n\n");
+				break;
+				
+				case 1: //IBk
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionNames.get(i));		
+					break;
+					
+				case 2: //Naive Bayes
+					//
+					break;
+	
+				default:
+					logger.log(Level.SEVERE,"Error in feature selection ");
+					System.exit(1);
+				break;
+			}
+		
+
+		}
+	}
+
+	
+	
+	
+	public static void chooseBalancing(Instances training,Instances testing) {
+		List<String> balancingNames = Arrays.asList("No sampling","oversampling", "undersampling","SMOTE");
+		
+		
+		
+		for(int i = 0; i<balancingNames.size(); i++) {
+			switch(i) {
+				case 0: //No sampling
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+				break;
+				
+				case 1: //oversampling
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i));		
+					Resample resample = null;
+					
+				try {
+					resample = new Resample();
+					resample.setInputFormat(training);
+					resample.setNoReplacement(false);
+					resample.setBiasToUniformClass(1.0);
+					
+					int totInstances = training.size();
+					int positiveInstances = calculateNumberBuggyClass(training);
+					System.out.println("positiveInstances == " + positiveInstances);
+					double percentage =  calculatePercentage(positiveInstances, totInstances);
+					System.out.println("percentage == " + percentage);
+					resample.setSampleSizePercent(percentage*2);
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+					//FileLogger.getLogger().error("Errore nell'instanziazione dell'oversample"); System.exit(1); }
+
+				}
+					
+					
+					/*
+					int totInstances = training.size();
+					int positiveInstances = calculateNumberBuggyClass(training);
+					System.out.println("positiveInstances == " + positiveInstances);
+					
+					
+					
+					double percentage =  calculatePercentage(positiveInstances, totInstances);
+					
+					String[] optsOverSampling = new String[]{"-B", "1.0", "-Z", String.valueOf(2*percentage)};
+					
+					resample.setOptions(optsOverSampling);
+					
+					fc.setFilter(resample);
+					*/
+					break;
+					
+				case 2: //undersampling
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i));		
+				break;
+				
+				case 3: //SMOTE
+						System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i));		
+				break;
+				
+				default:
+					logger.log(Level.SEVERE,"Error in feature selection ");
+					System.exit(1);
+				break;
+			}
+			
+		}
+	}
+
+	
+	private static double getMinorityPercentage(int size, int defects) {
+		int minority = defects;
+		if (size - defects < defects)
+			minority = size-defects;
+		
+		return (double) minority/size * 100;
+	}
+	
+
+	
+	public static double calculatePercentage(int positiveInstances, int totInstances) {
+		
+		double percentage = 0;
+		
+		if(positiveInstances > (totInstances-positiveInstances)) {
+			
+			percentage = (positiveInstances*100)/(double) totInstances;
+		}else {
+			
+			percentage = ((totInstances-positiveInstances)*100)/(double) totInstances;
+		}
+		
+		return percentage;
+	}
+	
+	
+	public static int calculateNumberBuggyClass(Instances training) {
+			
+			int sizeTraining = training.size();
+			int positiveInstances = 0;
+			
+			for(int d=0;d<sizeTraining;d++) {
+				if(training.get(d).toString(training.numAttributes()-1).equals("Yes")) {
+					
+					positiveInstances++;
+				}
+			}
+			return positiveInstances;
+		}
+	
+	
+	
+
+
+
+		
+		
 	public static void classification(Instances training, Instances testing, DBEntriesM2 entry ) {
 		
 		Map<String, List<Double>> classifierMap = new HashMap<>();
