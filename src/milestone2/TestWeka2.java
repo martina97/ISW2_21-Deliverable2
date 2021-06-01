@@ -61,7 +61,9 @@ import weka.filters.unsupervised.instance.RemovePercentage;
 import deliverable.CSVWriter;
 import deliverable.GetJIRAInfo;
 import deliverable.Release;
+import deliverable.Utils;
 import entities.DBEntriesM2;
+import entities.M2Entries;
 import entities.Ticket;
 
 import weka.classifiers.AbstractClassifier;
@@ -82,7 +84,7 @@ import weka.filters.unsupervised.attribute.Normalize;
 public class TestWeka2{
 	
 	private static List<Release> releasesList;
-	private static List<DBEntriesM2> dBentriesList;
+	private static List<M2Entries> dBentriesList;
 	private static final String NAME_PROJECT = "BOOKKEEPER";
 	private static int datasetDimension;
 	static Logger logger = Logger.getLogger(TestWekaEasy.class.getName());
@@ -104,10 +106,10 @@ public class TestWeka2{
 		//prova2(csvPath, releasesList);
 		walkForward3(arffPath, releasesList);
 		//CSVWriter.writeCsvMilestone2(dBentriesList);
-		
-		
+		System.out.println("DIMENSIONE LISTA DB ENTRIES == " +dBentriesList.size() );
 		
 	}
+	
 	
 	public static void writeArff() {
 		
@@ -190,16 +192,20 @@ public class TestWeka2{
 		for (int k =2;k<releasesList.size()+1; k++) {
 			Instances training = null;
 			Instances testing = null;
-			DBEntriesM2 entry = new DBEntriesM2(NAME_PROJECT);
+			M2Entries entry = new M2Entries(NAME_PROJECT);
 			//System.out.println(k);
 			int numTrain = k-1;
 			int numTest = k-(k-1);
 			entry.setNumTrainingRelease(numTrain);
+			
 	
 			// # train e' k-1
 			// # test e' k-(k-1)
 			System.out.println("numTrain == " + numTrain);
 			System.out.println("numTest == " + numTest);
+		    System.out.println("datasetDimension == " + datasetDimension);
+
+
 			int m;
 			//training = Instances.mergeInstances(instancesList.get(m), instancesList.get(m+1));
 			
@@ -228,14 +234,35 @@ public class TestWeka2{
 			training.setClassIndex(numAttr - 1);
 			testing.setClassIndex(numAttr - 1);
 			
+			System.out.println("training.size() == " + training.size());
+			System.out.println("testing.size() == " + testing.size());
+			
+			float percTrain = Utils.calculatePercentage(training.size(), datasetDimension);
+			entry.setTrainingPerc(percTrain);
+			
+			System.out.println("%training == " + percTrain);
+
+			int positiveInstancesTrain = calculateNumberBuggyClass(training);
+			System.out.println("positiveInstancesTrain == " + positiveInstancesTrain);
+			
+			float percDefectTrain = Utils.calculatePercentage(positiveInstancesTrain, training.size());
+			entry.setDefectPercTrain(percDefectTrain);
+			System.out.println("percDefectTrain == " + percDefectTrain);
+
+			int positiveInstancesTest = calculateNumberBuggyClass(testing);
+			System.out.println("positiveInstancesTest == " + positiveInstancesTest);
+			float percDefectTest = Utils.calculatePercentage(positiveInstancesTest, testing.size());
+			entry.setDefectPercTest(percDefectTest);
+			System.out.println("percDefectTest == " + percDefectTest);
+
 			int numAttrTrainingNoFilter = training.numAttributes();
 			System.out.println("numAttrTrainingNoFilter == " + numAttrTrainingNoFilter);
 			
-			chooseClassifier3(classifierNames, training, testing);
+			chooseClassifier3(classifierNames, training, testing, entry);
 	
 			
 			System.out.println("####################################################################################\n\n");
-			dBentriesList.add(entry);
+			//dBentriesList.add(entry);
 		}
 		
 		} catch (Exception e) {
@@ -244,38 +271,97 @@ public class TestWeka2{
 	}
 
 
-	public static void chooseClassifier3(List<String> classifierNames, Instances training, Instances testing) {
+
+
+	public static void chooseClassifier3(List<String> classifierNames, Instances training, Instances testing, M2Entries entry) {
 		AbstractClassifier classifier = null;
 	
+		
 		for(int i = 0; i<classifierNames.size();i++) {
 			Instances training2 = new Instances(training);
 			Instances testing2 = new Instances(testing);
+			M2Entries entry2 = new M2Entries(NAME_PROJECT);
+			entry2.setNumTrainingRelease(entry.getNumTrainingRelease());
+			entry2.setTrainingPerc(entry.getTrainingPerc());
+			entry2.setDefectPercTrain(entry.getDefectPercTrain());
+			entry2.setDefectPercTest(entry.getDefectPercTest());
 
 			switch(i) {
 				case 0: //Random Forest
 					classifier = new RandomForest();
+					entry2.setClassifierName("Random Forest");
 				break;
 				
 				case 1: //IBk
 					classifier = new IBk();
+					entry2.setClassifierName("IBk");
+
 				break;
 				
 				case 2: //Naive Bayes
 					classifier = new NaiveBayes();
+					entry2.setClassifierName("Naive Bayes");
+
 				break;
 				default:
 					logger.log(Level.SEVERE,"Error in classifier selection ");
 					System.exit(1);
 				break;
 			}
-			//ho selezionato il classificatore, ora devo selezionare la tecnica di featureSelection
-			chooseFeatureSelection2(classifier,classifierNames.get(i), training2, testing2);
 			
-			//chooseFeatureSelection(classifier, training,testing);
+			//ho selezionato il classificatore, ora devo selezionare la tecnica di featureSelection
+			//chooseFeatureSelection2(classifier,classifierNames.get(i), training2, testing2);
+			chooseFeatureSelection3(classifier,entry2, training2, testing2);
+
+			//dBentriesList.add(entry2);
+
 		}
 	
 	}
 
+	
+	public static void chooseFeatureSelection3(AbstractClassifier classifier,M2Entries entry, Instances training, Instances testing ) {
+		List<String> featureSelectionNames = Arrays.asList("No selection", "Best first");
+		
+		
+		for(int i = 0; i<featureSelectionNames.size(); i++) {
+			Instances training2 = new Instances(training);
+			Instances testing2 = new Instances(testing);
+			
+			M2Entries entry2 = new M2Entries(NAME_PROJECT);
+			entry2.setNumTrainingRelease(entry.getNumTrainingRelease());
+			entry2.setClassifierName(entry.getClassifierName());
+			entry2.setTrainingPerc(entry.getTrainingPerc());
+			entry2.setDefectPercTrain(entry.getDefectPercTrain());
+			entry2.setDefectPercTest(entry.getDefectPercTest());
+
+			
+			switch(i) {
+				case 0: //No selection
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionNames.get(i));
+					entry2.setFeatureSelection(featureSelectionNames.get(i));
+				break;
+				
+				case 1: //Best first
+					System.out.println("\n\nLA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionNames.get(i));		
+					entry2.setFeatureSelection(featureSelectionNames.get(i));
+
+					break;
+	
+				default:
+					logger.log(Level.SEVERE,"Error in feature selection ");
+					System.exit(1);
+				break;
+			}
+			applyFeatureSelection3(classifier, entry2, training2, testing2);
+			//dBentriesList.add(entry2);
+			
+		}
+		System.out.println("----\n\n");
+		
+	}
+	
+	
 	public static void chooseFeatureSelection2(AbstractClassifier classifier,String classifierName, Instances training, Instances testing ) {
 		List<String> featureSelectionNames = Arrays.asList("No selection", "Best first");
 		
@@ -288,6 +374,8 @@ public class TestWeka2{
 			switch(i) {
 				case 0: //No selection
 					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionNames.get(i));
+					featureSelection = featureSelectionNames.get(i);
+
 				break;
 				
 				case 1: //Best first
@@ -304,6 +392,504 @@ public class TestWeka2{
 			
 		}
 		System.out.println("----\n\n");
+		
+	}
+	
+	
+	public static void applyFeatureSelection3(AbstractClassifier classifier,M2Entries entry,Instances training, Instances testing) {
+		
+		Instances training2 = new Instances(training);
+		Instances testing2 = new Instances(testing);
+		String featureSelection = entry.getFeatureSelection();
+		
+		if(!featureSelection.equals("No selection")) {
+			//applico featureSelection
+			System.out.println("STO USANDO FEATURE SELECTION");
+			
+			//create AttributeSelection object
+			AttributeSelection filter = new AttributeSelection();
+			//create evaluator and search algorithm objects
+			CfsSubsetEval eval = new CfsSubsetEval();
+			BestFirst  search = new BestFirst ();
+			//set the algorithm to search backward
+			String [] bfSearchOpt = {"-D", "1",  "-N", "5"};
+			try {
+				search.setOptions(bfSearchOpt);
+				
+				//set the filter to use the evaluator and search algorithm
+				filter.setEvaluator(eval);
+				filter.setSearch(search);
+				//specify the dataset
+				Instances filteredTraining = null;
+				Instances filteredTesting = null;
+				
+				filter.setInputFormat(training);
+				//apply
+				filteredTraining = Filter.useFilter(training2, filter);
+				filteredTesting = Filter.useFilter(testing2, filter);
+				
+				int numAttrFiltered = filteredTraining.numAttributes();
+				filteredTraining.setClassIndex(numAttrFiltered - 1);
+				filteredTesting.setClassIndex(numAttrFiltered - 1);
+				
+				//lavora con feature selection
+				//System.out.println("numAttrFiltered == " + numAttrFiltered);
+				//chooseClassifier2(filteredTraining,filteredTesting );
+				//chooseBalancing3(classifier, entry, featureSelection, filteredTraining,  filteredTesting);
+				chooseBalancing4(classifier, entry, filteredTraining,  filteredTesting);
+
+				//chooseBalancing(filteredTraining,filteredTesting);
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			
+		}
+		else {
+			//lavora senza feature selection
+			//chooseBalancing(training,testing);
+			//chooseClassifier2(training,testing);
+			//chooseBalancing3(classifier, entry, featureSelection, training2,  testing2);
+			chooseBalancing4(classifier, entry, training2,  testing2);
+
+
+
+		}
+	}
+	
+	
+	public static void chooseBalancing4(AbstractClassifier classifier,M2Entries entry, Instances training, Instances testing) {
+		
+		List<String> balancingNames = Arrays.asList("No sampling","oversampling", "undersampling","SMOTE");
+		String classifierName = entry.getClassifierName();
+		String featureSelectionName = entry.getFeatureSelection();
+		
+		
+		for(int i = 0; i<balancingNames.size(); i++) {
+			FilteredClassifier filteredClassifier = null;
+			Instances trainingBalanced = new Instances(training);
+			Instances testingBalanced = new Instances(testing);
+
+			M2Entries entry2 = new M2Entries(NAME_PROJECT);
+			entry2.setNumTrainingRelease(entry.getNumTrainingRelease());
+			entry2.setClassifierName(entry.getClassifierName());
+			entry2.setFeatureSelection(entry.getFeatureSelection());
+			entry2.setTrainingPerc(entry.getTrainingPerc());
+			entry2.setDefectPercTrain(entry.getDefectPercTrain());
+			entry2.setDefectPercTest(entry.getDefectPercTest());
+
+			
+			switch(i) {
+				case 0: //No sampling
+					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+					int positiveInstances2 = calculateNumberBuggyClass(trainingBalanced);
+					System.out.println("positiveInstances == " + positiveInstances2);
+					entry2.setBalancing(balancingNames.get(i));
+				break;
+				
+				case 1: //oversampling
+					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );	
+					entry2.setBalancing(balancingNames.get(i));
+
+					Resample resample = null;
+					
+				try {
+					resample = new Resample();
+					resample.setInputFormat(trainingBalanced);
+					resample.setNoReplacement(false);
+					resample.setBiasToUniformClass(1.0f);
+					
+					int totInstances = trainingBalanced.size();
+					int positiveInstances = calculateNumberBuggyClass(trainingBalanced);
+					System.out.println("positiveInstances == " + positiveInstances);
+					double percentage =  calculatePercentage(positiveInstances, totInstances);
+					//System.out.println("percentage == " + percentage);
+					resample.setSampleSizePercent(percentage*2);
+					filteredClassifier = new FilteredClassifier();
+					filteredClassifier.setClassifier(classifier);
+					filteredClassifier.setFilter(resample);
+					trainingBalanced = Filter.useFilter(trainingBalanced, resample);
+					positiveInstances = calculateNumberBuggyClass(trainingBalanced);
+					System.out.println("positiveInstances == " + positiveInstances);
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+					//FileLogger.getLogger().error("Errore nell'instanziazione dell'oversample"); System.exit(1); }
+				}
+				break;
+					
+				case 2: //undersampling
+					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+					entry2.setBalancing(balancingNames.get(i));
+
+					SpreadSubsample spreadSubsample = null;
+					int positiveInstances3 = calculateNumberBuggyClass(trainingBalanced);
+					System.out.println("positiveInstances == " + positiveInstances3);
+					try {
+						spreadSubsample = new SpreadSubsample();
+						spreadSubsample.setInputFormat(trainingBalanced);
+						String[] opts = new String[]{"-M", "1.0"};
+						spreadSubsample.setOptions(opts);
+						filteredClassifier = new FilteredClassifier();
+						filteredClassifier.setClassifier(classifier);
+						filteredClassifier.setFilter(spreadSubsample);
+						trainingBalanced = Filter.useFilter(trainingBalanced, spreadSubsample);
+						positiveInstances3 = calculateNumberBuggyClass(trainingBalanced);
+						System.out.println("positiveInstances == " + positiveInstances3);
+					} 
+					
+					catch (Exception e) { 
+						e.printStackTrace();
+						//FileLogger.getLogger().error("Errore nell'instanziazione dell'undersample");
+					}
+					break;
+				
+				case 3: //SMOTE
+					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+					entry2.setBalancing(balancingNames.get(i));
+
+					SMOTE smote = null;
+					
+					try {
+						int positiveInstances4 = calculateNumberBuggyClass(trainingBalanced);
+						System.out.println("positiveInstances == " + positiveInstances4);
+						smote = new SMOTE();
+						smote.setInputFormat(trainingBalanced);
+						filteredClassifier = new FilteredClassifier();
+						filteredClassifier.setClassifier(classifier);
+						filteredClassifier.setFilter(smote);
+						trainingBalanced = Filter.useFilter(trainingBalanced, smote);
+						positiveInstances4 = calculateNumberBuggyClass(trainingBalanced);
+						System.out.println("positiveInstances == " + positiveInstances4);
+					} 
+					catch (Exception e) { 
+						e.printStackTrace();
+						//FileLogger.getLogger().error("Errore nell'instanziazione dello SMOTE");
+					}
+					break;
+				
+					default:
+						logger.log(Level.SEVERE,"Error in feature selection ");
+						System.exit(1);
+					break;
+			}
+			//chooseCostSensitive(classifier, classifierName, featureSelectionName, filteredClassifier, balancingNames.get(i) , trainingBalanced,  testingBalanced);
+			chooseCostSensitive2(classifier, filteredClassifier, entry2 , trainingBalanced,  testingBalanced);
+			//dBentriesList.add(entry2);
+
+		}
+		
+	}
+	
+	
+	public static void chooseCostSensitive2(AbstractClassifier classifier,FilteredClassifier filteredClassifier,M2Entries entry , Instances training, Instances testing) {
+		List<String> costSensitiveNames = Arrays.asList("No cost sensitive", "Sensitive Threshold", "Sensitive Learning");
+		
+		
+		for(int i = 0; i<costSensitiveNames.size(); i++) {
+			CostSensitiveClassifier costSensitiveClassifier =null;
+			Instances training2 = new Instances(training);
+			Instances testing2 = new Instances(testing);
+			
+			M2Entries entry2 = new M2Entries(NAME_PROJECT);
+			entry2.setNumTrainingRelease(entry.getNumTrainingRelease());
+			entry2.setClassifierName(entry.getClassifierName());
+			entry2.setFeatureSelection(entry.getFeatureSelection());
+			entry2.setBalancing(entry.getBalancing());
+			entry2.setTrainingPerc(entry.getTrainingPerc());
+			entry2.setDefectPercTrain(entry.getDefectPercTrain());
+			entry2.setDefectPercTest(entry.getDefectPercTest());
+
+
+
+			switch(i) {
+				case 0: //No cost sensitive
+					//nulla, quindi CostSensitiveClassifier=null
+					entry2.setSensitivity(costSensitiveNames.get(i));
+					
+				break;
+				
+				case 1: //Sensitive Threshold
+					entry2.setSensitivity(costSensitiveNames.get(i));
+
+					costSensitiveClassifier = new CostSensitiveClassifier();
+
+					
+					if (filteredClassifier == null){
+						costSensitiveClassifier.setClassifier(classifier);
+						costSensitiveClassifier.setMinimizeExpectedCost(true);
+						costSensitiveClassifier.setCostMatrix(createCostMatrix(1.0,10.0));
+					}
+					else {
+						costSensitiveClassifier.setClassifier(filteredClassifier);
+						costSensitiveClassifier.setMinimizeExpectedCost(true);
+						costSensitiveClassifier.setCostMatrix(createCostMatrix(1.0,10.0));
+						
+					}
+				break;
+					
+				case 2: //Sensitive Learning
+					entry2.setSensitivity(costSensitiveNames.get(i));
+
+					costSensitiveClassifier = new CostSensitiveClassifier();
+					
+					if (filteredClassifier == null) {
+						costSensitiveClassifier.setClassifier(classifier);
+						costSensitiveClassifier.setMinimizeExpectedCost(false);
+						costSensitiveClassifier.setCostMatrix(createCostMatrix(1.0,10.0));
+						training2 = reweightClasses(training2); // duplico il numero di istanze che hanno come buggyness=yes, ossia i positivi
+					}
+					else {
+						costSensitiveClassifier.setClassifier(filteredClassifier);
+						costSensitiveClassifier.setMinimizeExpectedCost(false);
+						costSensitiveClassifier.setCostMatrix(createCostMatrix(1.0,10.0));
+						training2 = reweightClasses(training2); // duplico il numero di istanze che hanno come buggyness=yes, ossia i positivi
+						
+					}
+					
+					break;
+	
+			}
+			//chooseCostSensitive(classifier, classifierName, featureSelectionName, filteredClassifier, balancingName , training,  testing);
+			//checkModel(classifier, entry2.getClassifierName(), entry2.getFeatureSelection(), filteredClassifier, entry2.getBalancing() , costSensitiveClassifier,costSensitiveNames.get(i), training2,  testing2);
+			checkModel2(classifier, filteredClassifier, entry2 , costSensitiveClassifier, training2,  testing2);
+			dBentriesList.add(entry2);
+		}
+	}
+	
+	
+	public static void checkModel2(AbstractClassifier classifier, FilteredClassifier filteredClassifier, M2Entries entry, 
+			CostSensitiveClassifier costSensitiveClassifier ,Instances training, Instances testing) {
+
+		//classifier e' sempre diverso da null
+		//filteredClassifier puo' essere = null --> vuol dire che non sto usando balancing
+		// costClassifier puo' essere = null --> vuol dire che non sto usando cost sensitive
+		String classifierName = entry.getClassifierName();
+		String featureSelectionName = entry.getFeatureSelection();
+		String balancingName = entry.getBalancing();
+		String costSensitiveName = entry.getSensitivity();
+		
+		System.out.println(classifierName + "--->\t" + featureSelectionName +  "--->\t" + balancingName +  "--->\t" + costSensitiveName );
+
+		Evaluation eval = null;
+		try {
+			eval = new Evaluation(testing);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+			//FileLogger.getLogger().error("Errore nella inizializzazione dell' Evaluator")
+		}
+		
+		if(costSensitiveClassifier == null) {
+			System.out.println("NON STO USANDO COST SENSITIVE");
+
+			//evaluateNoCost(eval, filteredClassifier, classifier, balancingName, training, testing);
+			evaluateNoCost2(eval, filteredClassifier, classifier, entry, training, testing);
+
+
+		}
+		else {
+			System.out.println("STO USANDO COST SENSITIVE");
+			
+			evaluateCost2(eval, filteredClassifier, classifier, costSensitiveClassifier, entry, training, testing);
+
+
+		}
+		
+
+		
+		System.out.println("\n\n" );
+
+	}
+	
+	
+	public static void evaluateNoCost2(Evaluation eval, FilteredClassifier filteredClassifier, AbstractClassifier classifier, M2Entries entry, Instances training, Instances testing) {
+
+		String balancingName = entry.getBalancing();
+
+		//controllo balancing, quindi filteredClassifier
+		if (filteredClassifier == null) {
+			System.out.println("NON STO USANDO BALANCING");
+			try {
+				classifier.buildClassifier(training);
+				eval.evaluateModel(classifier, testing);
+				addEntryEvaluation(eval,entry);
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+				//FileLogger.getLogger().error("Errore nel build del classificatore con filtro");
+			}
+			
+		}
+		else {	//sto usando balancing, quindi filteredClassifier
+			System.out.println("STO USANDO BALANCING ==  " + balancingName);
+			try {
+				filteredClassifier.buildClassifier(training);
+				eval.evaluateModel(filteredClassifier, testing);
+				addEntryEvaluation(eval,entry);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static void addEntryEvaluation(Evaluation eval, M2Entries entry) {
+		entry.setPrecision(eval.precision(1));
+		entry.setRecall(eval.recall(1));
+		entry.setAuc(eval.areaUnderROC(1));
+		entry.setKappa(eval.kappa());
+		System.out.println("AUC = "+eval.areaUnderROC(1));
+		System.out.println("kappa = "+eval.kappa());
+		System.out.println("precision = "+eval.precision(1));
+		System.out.println("recall = "+eval.recall(1));
+	}
+	
+	public static void evaluateCost2(Evaluation eval, FilteredClassifier filteredClassifier, AbstractClassifier classifier, CostSensitiveClassifier costSensitiveClassifier, M2Entries entry, Instances training, Instances testing) {
+		String balancingName = entry.getBalancing();
+
+		if (filteredClassifier == null) {
+			System.out.println("NON STO USANDO BALANCING");
+			try {
+				costSensitiveClassifier.buildClassifier(training);
+				eval.evaluateModel(costSensitiveClassifier, testing);
+				addEntryEvaluation(eval,entry);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		}
+		else {
+			System.out.println("STO USANDO BALANCING ==  " + balancingName);
+			try {
+				costSensitiveClassifier.buildClassifier(training);
+				eval.evaluateModel(costSensitiveClassifier, testing);
+				addEntryEvaluation(eval,entry);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	public static void chooseBalancing3(AbstractClassifier classifier,M2Entries entry,String featureSelectionName,Instances training, Instances testing) {
+		List<String> balancingNames = Arrays.asList("No sampling","oversampling", "undersampling","SMOTE");
+		String classifierName = entry.getClassifierName();
+		for(int i = 0; i<balancingNames.size(); i++) {
+			FilteredClassifier filteredClassifier = null;
+			Instances trainingBalanced = new Instances(training);
+			Instances testingBalanced = new Instances(testing);
+
+
+			switch(i) {
+				case 0: //No sampling
+					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+					int positiveInstances2 = calculateNumberBuggyClass(trainingBalanced);
+					System.out.println("positiveInstances == " + positiveInstances2);
+				break;
+				
+				case 1: //oversampling
+					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );					
+					Resample resample = null;
+					
+				try {
+					resample = new Resample();
+					resample.setInputFormat(trainingBalanced);
+					resample.setNoReplacement(false);
+					resample.setBiasToUniformClass(1.0f);
+					
+					int totInstances = trainingBalanced.size();
+					int positiveInstances = calculateNumberBuggyClass(trainingBalanced);
+					System.out.println("positiveInstances == " + positiveInstances);
+					double percentage =  calculatePercentage(positiveInstances, totInstances);
+					//System.out.println("percentage == " + percentage);
+					resample.setSampleSizePercent(percentage*2);
+					filteredClassifier = new FilteredClassifier();
+					filteredClassifier.setClassifier(classifier);
+					filteredClassifier.setFilter(resample);
+					trainingBalanced = Filter.useFilter(trainingBalanced, resample);
+					positiveInstances = calculateNumberBuggyClass(trainingBalanced);
+					System.out.println("positiveInstances == " + positiveInstances);
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+					//FileLogger.getLogger().error("Errore nell'instanziazione dell'oversample"); System.exit(1); }
+				}
+				break;
+					
+				case 2: //undersampling
+					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+					SpreadSubsample spreadSubsample = null;
+					int positiveInstances3 = calculateNumberBuggyClass(trainingBalanced);
+					System.out.println("positiveInstances == " + positiveInstances3);
+					try {
+						spreadSubsample = new SpreadSubsample();
+						spreadSubsample.setInputFormat(trainingBalanced);
+						String[] opts = new String[]{"-M", "1.0"};
+						spreadSubsample.setOptions(opts);
+						filteredClassifier = new FilteredClassifier();
+						filteredClassifier.setClassifier(classifier);
+						filteredClassifier.setFilter(spreadSubsample);
+						trainingBalanced = Filter.useFilter(trainingBalanced, spreadSubsample);
+						positiveInstances3 = calculateNumberBuggyClass(trainingBalanced);
+						System.out.println("positiveInstances == " + positiveInstances3);
+					} 
+					
+					catch (Exception e) { 
+						e.printStackTrace();
+						//FileLogger.getLogger().error("Errore nell'instanziazione dell'undersample");
+					}
+					break;
+				
+				case 3: //SMOTE
+					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
+					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
+					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+					SMOTE smote = null;
+					
+					try {
+						int positiveInstances4 = calculateNumberBuggyClass(trainingBalanced);
+						System.out.println("positiveInstances == " + positiveInstances4);
+						smote = new SMOTE();
+						smote.setInputFormat(trainingBalanced);
+						filteredClassifier = new FilteredClassifier();
+						filteredClassifier.setClassifier(classifier);
+						filteredClassifier.setFilter(smote);
+						trainingBalanced = Filter.useFilter(trainingBalanced, smote);
+						positiveInstances4 = calculateNumberBuggyClass(trainingBalanced);
+						System.out.println("positiveInstances == " + positiveInstances4);
+					} 
+					catch (Exception e) { 
+						e.printStackTrace();
+						//FileLogger.getLogger().error("Errore nell'instanziazione dello SMOTE");
+					}
+					break;
+				
+					default:
+						logger.log(Level.SEVERE,"Error in feature selection ");
+						System.exit(1);
+					break;
+			}
+			chooseCostSensitive(classifier, classifierName, featureSelectionName, filteredClassifier, balancingNames.get(i) , trainingBalanced,  testingBalanced);
+			//evaluateModel(classifier, classifierName, featureSelectionName, filteredClassifier, balancingNames.get(i) , training,  testing);
+		}
 		
 	}
 	
@@ -529,7 +1115,7 @@ public class TestWeka2{
 	
 			}
 			//chooseCostSensitive(classifier, classifierName, featureSelectionName, filteredClassifier, balancingName , training,  testing);
-			evaluateModel(classifier, classifierName, featureSelectionName, filteredClassifier, balancingName , costSensitiveClassifier,costSensitiveNames.get(i), training2,  testing2);
+			checkModel(classifier, classifierName, featureSelectionName, filteredClassifier, balancingName , costSensitiveClassifier,costSensitiveNames.get(i), training2,  testing2);
 		}
 		
 		
@@ -583,7 +1169,7 @@ public class TestWeka2{
 
 	
 	
-	public static void evaluateModel(AbstractClassifier classifier,String classifierName,String featureSelectionName, FilteredClassifier filteredClassifier, String balancingName, 
+	public static void checkModel(AbstractClassifier classifier,String classifierName,String featureSelectionName, FilteredClassifier filteredClassifier, String balancingName, 
 			CostSensitiveClassifier costSensitiveClassifier , String costSensitiveName, Instances training, Instances testing) {
 
 		//classifier e' sempre diverso da null
@@ -602,51 +1188,16 @@ public class TestWeka2{
 		if(costSensitiveClassifier == null) {
 			System.out.println("NON STO USANDO COST SENSITIVE");
 
-			//controllo balancing, quindi filteredClassifier
-			if (filteredClassifier == null) {
-				System.out.println("NON STO USANDO BALANCING");
-				try {
-					classifier.buildClassifier(training);
-					eval.evaluateModel(classifier, testing);
-					
-				} catch (Exception e) {
-					e.printStackTrace();
-					//FileLogger.getLogger().error("Errore nel build del classificatore con filtro");
-				}
-				
-			}
-			else {	//sto usando balancing, quindi filteredClassifier
-				System.out.println("STO USANDO BALANCING ==  " + balancingName);
-				try {
-					filteredClassifier.buildClassifier(training);
-					eval.evaluateModel(filteredClassifier, testing);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
+			evaluateNoCost(eval, filteredClassifier, classifier, balancingName, training, testing);
+			
+
 		}
 		else {
 			System.out.println("STO USANDO COST SENSITIVE");
+			
+			evaluateCost(eval, filteredClassifier, classifier, costSensitiveClassifier, balancingName, training, testing);
 
-			if (filteredClassifier == null) {
-				System.out.println("NON STO USANDO BALANCING");
-				try {
-					costSensitiveClassifier.buildClassifier(training);
-					eval.evaluateModel(costSensitiveClassifier, testing);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-				
-			}
-			else {
-				System.out.println("STO USANDO BALANCING ==  " + balancingName);
-				try {
-					costSensitiveClassifier.buildClassifier(training);
-					eval.evaluateModel(costSensitiveClassifier, testing);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
+
 		}
 		
 
@@ -655,10 +1206,57 @@ public class TestWeka2{
 
 	}
 
+	public static void evaluateNoCost(Evaluation eval, FilteredClassifier filteredClassifier, AbstractClassifier classifier, String balancingName, Instances training, Instances testing) {
+
+		//controllo balancing, quindi filteredClassifier
+		if (filteredClassifier == null) {
+			System.out.println("NON STO USANDO BALANCING");
+			try {
+				classifier.buildClassifier(training);
+				eval.evaluateModel(classifier, testing);
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+				//FileLogger.getLogger().error("Errore nel build del classificatore con filtro");
+			}
+			
+		}
+		else {	//sto usando balancing, quindi filteredClassifier
+			System.out.println("STO USANDO BALANCING ==  " + balancingName);
+			try {
+				filteredClassifier.buildClassifier(training);
+				eval.evaluateModel(filteredClassifier, testing);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	
 	
+	public static void evaluateCost(Evaluation eval, FilteredClassifier filteredClassifier, AbstractClassifier classifier, CostSensitiveClassifier costSensitiveClassifier, String balancingName, Instances training, Instances testing) {
+
+		if (filteredClassifier == null) {
+			System.out.println("NON STO USANDO BALANCING");
+			try {
+				costSensitiveClassifier.buildClassifier(training);
+				eval.evaluateModel(costSensitiveClassifier, testing);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		}
+		else {
+			System.out.println("STO USANDO BALANCING ==  " + balancingName);
+			try {
+				costSensitiveClassifier.buildClassifier(training);
+				eval.evaluateModel(costSensitiveClassifier, testing);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	
-	
+
 	public static void prova() {
 		AbstractClassifier classifier = null;
 		classifier = new RandomForest();

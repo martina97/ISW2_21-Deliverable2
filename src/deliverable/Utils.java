@@ -413,6 +413,12 @@ public static void proportion(List<Ticket> listGood, List<Ticket> listNoIV, List
 	}
 
 	
+	public static float calculatePercentage(Integer numerator, Integer total) {
+		float perc = (float)100*numerator/total;
+		perc = Float.parseFloat(String.format("%.1f", perc).replace(',', '.'));
+	   return perc;
+	}
+	
 	public static void main(String[] args){
 			// Do nothing because is a main method
 	}
