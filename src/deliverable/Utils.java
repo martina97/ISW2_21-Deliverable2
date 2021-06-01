@@ -7,6 +7,8 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -14,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
@@ -416,8 +419,28 @@ public static void proportion(List<Ticket> listGood, List<Ticket> listNoIV, List
 	public static float calculatePercentage(Integer numerator, Integer total) {
 		float perc = (float)100*numerator/total;
 		perc = Float.parseFloat(String.format("%.1f", perc).replace(',', '.'));
+		
+		DecimalFormat df = new DecimalFormat("#.##", DecimalFormatSymbols.getInstance(Locale.US));
+		System.out.println("PROVA DOUBLEEEEE ----> " + df.format(perc));
 	   return perc;
 	}
+	
+	
+	public static float calculatePercentage2(Integer numerator, Integer total) {
+		float perc = (float)100*numerator/total;
+		return perc;
+	}
+	
+	
+	
+	public static String doubleTransform(Double value) {		
+		DecimalFormat df = new DecimalFormat("#.##", DecimalFormatSymbols.getInstance(Locale.US));
+		return df.format(value);
+	}
+	
+
+
+
 	
 	public static void main(String[] args){
 			// Do nothing because is a main method

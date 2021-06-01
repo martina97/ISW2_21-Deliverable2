@@ -85,7 +85,7 @@ public class TestWeka2{
 	
 	private static List<Release> releasesList;
 	private static List<M2Entries> dBentriesList;
-	private static final String NAME_PROJECT = "BOOKKEEPER";
+	private static final String NAME_PROJECT = "SYNCOPE";
 	private static int datasetDimension;
 	static Logger logger = Logger.getLogger(TestWekaEasy.class.getName());
 
@@ -98,14 +98,14 @@ public class TestWeka2{
 		removeHalf(releasesList);
 		dBentriesList = new ArrayList<>();
 		
-		String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\FINITO\\CSV FINALE BOOKKEEPER.arff";
+		String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\FINITO\\CSV FINALE SYNCOPE.arff";
 		//String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\MATTEO_BOOKKEEPERMetrics.arff";
 		//String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\BookkeeperCecilia.arff";
 
 		//prova(csvPath); 
 		//prova2(csvPath, releasesList);
 		walkForward3(arffPath, releasesList);
-		//CSVWriter.writeCsvMilestone2(dBentriesList);
+		CSVWriter.writeCsvMilestone3(dBentriesList);
 		System.out.println("DIMENSIONE LISTA DB ENTRIES == " +dBentriesList.size() );
 		
 	}
@@ -156,8 +156,6 @@ public class TestWeka2{
 		DataSource source;
 		List<Instances> instancesList = new ArrayList<>();
 		List<String> classifierNames = Arrays.asList("Random Forest", "IBk", "Naive Bayes");
-		List<String> balancingNames = Arrays.asList("No sampling","oversampling", "undersampling","SMOTE");
-		List<String> featureSelectionNames = Arrays.asList("No selection", "Best first");
 	
 	
 		try {
@@ -237,7 +235,7 @@ public class TestWeka2{
 			System.out.println("training.size() == " + training.size());
 			System.out.println("testing.size() == " + testing.size());
 			
-			float percTrain = Utils.calculatePercentage(training.size(), datasetDimension);
+			float percTrain = Utils.calculatePercentage2(training.size(), datasetDimension);
 			entry.setTrainingPerc(percTrain);
 			
 			System.out.println("%training == " + percTrain);
@@ -245,13 +243,13 @@ public class TestWeka2{
 			int positiveInstancesTrain = calculateNumberBuggyClass(training);
 			System.out.println("positiveInstancesTrain == " + positiveInstancesTrain);
 			
-			float percDefectTrain = Utils.calculatePercentage(positiveInstancesTrain, training.size());
+			float percDefectTrain = Utils.calculatePercentage2(positiveInstancesTrain, training.size());
 			entry.setDefectPercTrain(percDefectTrain);
 			System.out.println("percDefectTrain == " + percDefectTrain);
 
 			int positiveInstancesTest = calculateNumberBuggyClass(testing);
 			System.out.println("positiveInstancesTest == " + positiveInstancesTest);
-			float percDefectTest = Utils.calculatePercentage(positiveInstancesTest, testing.size());
+			float percDefectTest = Utils.calculatePercentage2(positiveInstancesTest, testing.size());
 			entry.setDefectPercTest(percDefectTest);
 			System.out.println("percDefectTest == " + percDefectTest);
 
@@ -321,7 +319,7 @@ public class TestWeka2{
 
 	
 	public static void chooseFeatureSelection3(AbstractClassifier classifier,M2Entries entry, Instances training, Instances testing ) {
-		List<String> featureSelectionNames = Arrays.asList("No selection", "Best first");
+		List<String> featureSelectionNames = Arrays.asList("No", "Best first");
 		
 		
 		for(int i = 0; i<featureSelectionNames.size(); i++) {
@@ -402,7 +400,7 @@ public class TestWeka2{
 		Instances testing2 = new Instances(testing);
 		String featureSelection = entry.getFeatureSelection();
 		
-		if(!featureSelection.equals("No selection")) {
+		if(!featureSelection.equals("No")) {
 			//applico featureSelection
 			System.out.println("STO USANDO FEATURE SELECTION");
 			
@@ -461,7 +459,7 @@ public class TestWeka2{
 	
 	public static void chooseBalancing4(AbstractClassifier classifier,M2Entries entry, Instances training, Instances testing) {
 		
-		List<String> balancingNames = Arrays.asList("No sampling","oversampling", "undersampling","SMOTE");
+		List<String> balancingNames = Arrays.asList("No","oversampling", "undersampling","SMOTE");
 		String classifierName = entry.getClassifierName();
 		String featureSelectionName = entry.getFeatureSelection();
 		
@@ -592,7 +590,7 @@ public class TestWeka2{
 	
 	
 	public static void chooseCostSensitive2(AbstractClassifier classifier,FilteredClassifier filteredClassifier,M2Entries entry , Instances training, Instances testing) {
-		List<String> costSensitiveNames = Arrays.asList("No cost sensitive", "Sensitive Threshold", "Sensitive Learning");
+		List<String> costSensitiveNames = Arrays.asList("No", "Sensitive Threshold", "Sensitive Learning");
 		
 		
 		for(int i = 0; i<costSensitiveNames.size(); i++) {
@@ -746,10 +744,24 @@ public class TestWeka2{
 		entry.setRecall(eval.recall(1));
 		entry.setAuc(eval.areaUnderROC(1));
 		entry.setKappa(eval.kappa());
+		entry.setTP((int)eval.numTruePositives(1));
+		entry.setTN((int)eval.numTrueNegatives(1));
+		entry.setFP((int)eval.numFalsePositives(1));
+		entry.setFN((int)eval.numFalseNegatives(1));
+
+		
 		System.out.println("AUC = "+eval.areaUnderROC(1));
 		System.out.println("kappa = "+eval.kappa());
 		System.out.println("precision = "+eval.precision(1));
 		System.out.println("recall = "+eval.recall(1));
+		System.out.println("numTruePositives = "+eval.numTruePositives(1));
+		System.out.println("numTruePositives = "+(int)eval.numTruePositives(1));
+
+		System.out.println("numTrueNegatives = "+eval.numTrueNegatives(1));
+		System.out.println("numFalsePositives = "+eval.numFalsePositives(1));
+		System.out.println("numFalseNegatives = "+eval.numFalseNegatives(1));
+
+
 	}
 	
 	public static void evaluateCost2(Evaluation eval, FilteredClassifier filteredClassifier, AbstractClassifier classifier, CostSensitiveClassifier costSensitiveClassifier, M2Entries entry, Instances training, Instances testing) {

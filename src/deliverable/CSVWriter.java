@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 
 import entities.DBEntriesM2;
 import entities.JavaFile;
+import entities.M2Entries;
 import entities.Ticket;
 
 import java.util.logging.Level;
@@ -186,6 +187,63 @@ public class CSVWriter {
 					fileWriter.append("\n");
 
 				  }
+
+			   
+		   }
+		   
+		   
+		  } catch (Exception ex) {
+			  logger.log(Level.SEVERE,"Error in csv writer");
+			  ex.printStackTrace();
+		  
+		  	}	 
+	}
+	
+	public static void writeCsvMilestone3(List<M2Entries> dBentriesList) {
+		try (
+		   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\weka\\SyncopeWeka.csv")) {
+		   
+		   fileWriter.append("Dataset;#TrainingRelease;%training;%Defective in training;%Defective in testing;Classifier;"
+		   		+ "Balancing;Feature Selection;Sensitivity;TP;FP;TN;FN;Precision;Recall;AUC;Kappa\n");
+		   
+
+		   for(M2Entries entry : dBentriesList) {
+			  
+			    fileWriter.append(entry.getDatasetName());
+				fileWriter.append(";");
+				fileWriter.append(entry.getNumTrainingRelease().toString());
+				fileWriter.append(";");
+				fileWriter.append(Utils.doubleTransform(entry.getTrainingPerc()));
+				fileWriter.append(";");
+				fileWriter.append(Utils.doubleTransform(entry.getDefectPercTrain()));
+				fileWriter.append(";");
+				fileWriter.append(Utils.doubleTransform(entry.getDefectPercTest()));
+				fileWriter.append(";");
+				fileWriter.append(entry.getClassifierName());
+				fileWriter.append(";");
+				fileWriter.append(entry.getFeatureSelection());
+				fileWriter.append(";");
+				fileWriter.append(entry.getBalancing());
+				fileWriter.append(";");
+				fileWriter.append(entry.getSensitivity());
+				fileWriter.append(";");
+				fileWriter.append(entry.getTP().toString());
+				fileWriter.append(";");
+				fileWriter.append(entry.getFP().toString());
+				fileWriter.append(";");
+				fileWriter.append(entry.getTN().toString());
+				fileWriter.append(";");
+				fileWriter.append(entry.getFN().toString());
+				fileWriter.append(";");
+				fileWriter.append(Utils.doubleTransform(entry.getPrecision()));
+				fileWriter.append(";");
+				fileWriter.append(Utils.doubleTransform(entry.getRecall()));
+				fileWriter.append(";");
+				fileWriter.append(Utils.doubleTransform(entry.getAuc()));
+				fileWriter.append(";");
+				fileWriter.append(Utils.doubleTransform(entry.getKappa()));
+				fileWriter.append("\n");
+
 
 			   
 		   }

@@ -59,7 +59,7 @@ public class M2Entries {
 		public Integer getTP() {
 			return tP;
 		}
-		public Integer getfP() {
+		public Integer getFP() {
 			return fP;
 		}
 		public Integer getTN() {
@@ -110,8 +110,8 @@ public class M2Entries {
 		public void setSensitivity(String sensitivity) {
 			this.sensitivity = sensitivity;
 		}
-		public void setTP(Integer tP) {
-			this.tP = tP;
+		public void setTP(Integer d) {
+			this.tP = d;
 		}
 		public void setFP(Integer fP) {
 			this.fP = fP;
