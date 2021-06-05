@@ -9,8 +9,8 @@ import org.eclipse.jgit.revwalk.RevCommit;
 import org.json.JSONException;
 
 import entities.JavaFile;
+import entities.Release;
 import entities.Ticket;
-import entities.Tuple;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -21,7 +21,6 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -34,32 +33,19 @@ public class Main {
 	
 	private static Logger logger = Logger.getLogger(Main.class.getName());
 
-	
-	// BOOKKEEPER 
-	//public static final String NAME_PROJECT = "BOOKKEEPER";
-	//private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/bookkeeper/.git";
-	//private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
-	 
-	
-	// SYNCOPE 
-	//public static final String NAME_PROJECT = "SYNCOPE";
-	//private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/syncope/.git";
-	//private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/syncope");
-	
-	private static Repository repository;
 	private static List<Release> releasesList;
 	private static List<Ticket> ticketList;
 	private static List<RevCommit> commitList;
-	private static HashMap<String, List<String>> fileAliasMap;
-	private static Tuple<ArrayList<RevCommit>,HashMap<String, List<String>>>  tuple;
+	private static Map<String, List<String>> fileAliasMap;
 
 
    public static void main(String[] args) throws IllegalStateException, GitAPIException, IOException, JSONException {
 	   
 	   // inserisco come input il nome del progetto che voglio analizzare (BOOKKEEPER / SYNCOPE)
 		Scanner input = new Scanner(System.in);
-		System.out.println("INSERIRE IN MAIUSCOLO IL NOME DEL PROGETTO CHE SI DESIDERA ANALIZZARE.\n\nIN PARTICOLARE "
-				+ "INSERIRE LA STRINGA ''BOOKKEEPER'' OPPURE ''SYNCOPE''");
+		logger.log(Level.INFO,"INSERIRE IN MAIUSCOLO IL NOME DEL PROGETTO CHE SI DESIDERA ANALIZZARE.\n\nIN PARTICOLARE "
+				+ "INSERIRE LA STRINGA ''BOOKKEEPER'' OPPURE ''SYNCOPE''" );
+		
 		String nameProject = input.next();
 		String nameProjectLowerCase = nameProject.toLowerCase();
 		String repo = "D:/Programmi/Eclipse/eclipse-workspace/" + nameProjectLowerCase + "/.git";
@@ -74,98 +60,66 @@ public class Main {
 
 	   //salvo in commitList tutti i commit del progetto
 	   commitList = GetGitInfo.getAllCommit(releasesList, repoPath);
-	   /**
-	   System.out.println("################# GET ALL COMMIT2 ###############");
-	   tuple =  GetGitInfo.getAllCommit2(releasesList, repoPath, repo);
-	   commitList = tuple.getX();
-	   fileAliasMap = tuple.getY();
-	   System.out.println("\n\nfileAliasMap size == " + fileAliasMap.size());
+	
 
-	   */
-
-	   /* inverto l'ordine dei commit appartenenti alle release
-	    * per gestire poi i rename 
-	    */
+	   // inverto l'ordine dei commit appartenenti alle release per gestire poi i rename 
 	   for (Release release : releasesList) {
 		   Collections.reverse(release.getCommitList()); 
 	   }
-	   	   
-	   /*
-	   for (Release release : releasesList) {
-		   System.out.println("RELEASE NUMERO " + release.getIndex());
-		   System.out.println("IL NUMERO DEI COMMIT E' " + release.getCommitList().size());
-		   System.out.println("############\n\n\n\n");
-
-
-	   }
-	   */
 	   
 	   
-	   // prendo tutti i ticket di tipo bug ecc e i relativi campi che mi interessano
-	   // DA JIRA e li metto in listaTicket
+	   // prendo tutti i ticket di tipo bug ecc e i relativi campi che mi interessano DA JIRA e li metto in listaTicket
 	   ticketList = GetJIRAInfo.retrieveTickets(nameProject, releasesList);
 	   
 	   getCommitTicket();
-	   
-	   //CSVWriter.writeCsvReleases(ticketList);
-	   
+	   	   
 	   // modifico le IV-AV dei ticket 
 	   setIv();
 	   checkAV();
-	   //CSVWriter.writeCsvReleases(ticketList);
 	   
-	   
-	   //Collections.reverse(ticketList); //inverto l'ordine dei ticket nella lista per semplicita' nel calcolo proportion
-	   
-	   System.out.println("IL NUMERO DI TICKET E': " + ticketList.size());
-	   
-	   
-	   /*
+	   logger.log(Level.INFO,"Numero ticket = {0}.", ticketList.size());
+	  	   
 	   // PROPORTION VECCHIO 
-	   Utils.checkTicket2(ticketList);
-	   Utils.modifyListAV(ticketList);
-	   */
-		
-	   // PROPORTION NUOVO
-	   Proportion.proportion(ticketList);
+	   Proportion.checkTicket2(ticketList);
+	   Proportion.modifyListAV(ticketList);
 	   
-	   checkAV();
-	  
- 
-	   //CSVWriter.writeCsvReleases(ticketList);
+
+	   /*
+	   // PROPORTION NUOVO
+	   Collections.reverse(ticketList); //inverto l'ordine dei ticket nella lista per semplicita' nel calcolo proportion
+
+	   Proportion.proportion(ticketList); //PROPORTION NUOVO
+	   
+	   checkAV();	//PROPORTION NUOVO
+	   */
+	   
 	   
 	   /* per ogni release prendo tutti i file java che sono stati toccati nei commit 
 	    * e setto inizialmente buggyness = "no" 
 	    */
 	   
-	   System.out.println("###### checkRename ###### ");
+	  logger.log(Level.INFO,"###### checkRename ###### ");
 
-	  fileAliasMap = GetGitInfo.checkRename2(releasesList, repo);
-	  System.out.println("\n\nfileAliasMap size == " + fileAliasMap.size());
+	  fileAliasMap = GetGitInfo.checkRename(releasesList, repo);
+	  logger.log(Level.INFO,"FileAliasMap SIZE = {0}.", fileAliasMap.size());
 	   
 	   removeHalfRelease(releasesList, ticketList);
 	   
 
-	   //CSVWriter.writeCsvReleases(ticketList);
-	   System.out.println("###### getJavaFiles ###### ");
+	   logger.log(Level.INFO,"###### getJavaFiles ###### ");
 
 	   GetGitInfo.getJavaFiles(repoPath, releasesList, fileAliasMap);
 	   
-	   //fileAliasMap = GetGitInfo.checkRename(releasesList);
-	   for (Release release : releasesList) {
-		   System.out.println("NUMERO FILE RELATIVO A RELEASE " + release.getIndex() + " == " + release.getFileList().size());
-	   }
 	   
-	   System.out.println("###### checkBuggyness ###### ");
+	   logger.log(Level.INFO,"###### checkBuggyness ###### ");
 	   GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
 	   
 
-	   System.out.println("###### getMetrics ###### ");
+	   logger.log(Level.INFO,"###### getMetrics ###### ");
 
 	   Metrics.getMetrics(releasesList, repo);
-	   CSVWriter.writeCsvBugg2(releasesList, nameProject);
 
-	   System.out.println("\n\nSTAMPO BUGGYNESS");
+	   logger.log(Level.INFO,"\n\nSTAMPO BUGGYNESS");
 	   int numBugg = 0;
 	   int numFile = 0;
 	   for (Release release : releasesList) {
@@ -186,8 +140,9 @@ public class Main {
 	   float half = (float) releaseNumber / 2;
 	   int halfRelease = (int) half; // arrotondo in difetto, ora il numero di release che voglio e' la meta'
 	   
-	   System.out.println("NUMERO RELEASE == " + releaseNumber + " HALF RELEASE == " + halfRelease);
-	   
+	   logger.log(Level.INFO,"NUMERO RELEASE == = {0}.", releaseNumber);
+	   logger.log(Level.INFO,"HALF RELEASE == = {0}.", halfRelease);
+
 	   Iterator<Release> i = releasesList.iterator();
 	   while (i.hasNext()) {
 	      Release s = i.next(); 
@@ -198,7 +153,6 @@ public class Main {
 	   }
 	   
 	   removeTickets(halfRelease, ticketList);
-	   System.out.println("NUMERO RELEASE == " + releasesList.size());
    }
 
    
@@ -231,7 +185,6 @@ public class Main {
 			   ticket.setIV(1);
 			   
 			   if (ticket.getFV() != 1) {
-				   //System.out.println("TICKET = " + ticket.getID() + " IV = " + ticket.getIV() + " FV = " + ticket.getFV() + "\n\n");
 				   for (int i = ticket.getIV(); i<ticket.getFV();i++) {
 					   ticket.getAV().add(i);
 				   }
@@ -282,36 +235,26 @@ public class Main {
 	   ArrayList<LocalDateTime> commitDateList = new ArrayList<>();
 
 	   for (Ticket ticket : ticketList) {
-		   Integer count = 0;
 		   String ticketID = ticket.getID();
-		   //System.out.println("TICKET ID = " + ticketID);
 		   for(RevCommit commit : commitList) {
 			   String message = commit.getFullMessage();
 			   if (message.contains(ticketID +",") || message.contains(ticketID +"\r") || message.contains(ticketID +"\n")|| message.contains(ticketID + " ") || message.contains(ticketID +":")
 						 || message.contains(ticketID +".")|| message.contains(ticketID + "/") || message.endsWith(ticketID) ||
 						 message.contains(ticketID + "]")|| message.contains(ticketID+"_") || message.contains(ticketID + "-") || message.contains(ticketID + ")") ) {
-				   count++;
 				   LocalDateTime commitDate = commit.getAuthorIdent().getWhen().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
 				   commitDateList.add(commitDate);
 				   ticket.getCommitList().add(commit);
 
-				   //System.out.println("COMMIT ID = " + commit.getId() + " COMMIT DATE = " + commitDate);
-
 			   }
 		   }
-		   //System.out.println("Il numero di commit relativi al ticket e': " + count);
 		   if ( !commitDateList.isEmpty()) {
 			   Collections.sort(commitDateList);
 			   LocalDateTime resolutionDate = commitDateList.get(commitDateList.size()-1);
-			   //System.out.println("data più recente = " + resolutionDate);
 			   ticket.setResolutionDate(resolutionDate);
 	           ticket.setFV(GetJIRAInfo.compareDateVersion(resolutionDate, releasesList));
-	           //System.out.println("FV ===" + ticket.getFV());
 
 		   }
-		   //System.out.println("\n\n#######\n\n");
 		   commitDateList.clear();
-
 
 	   }
 	   //rimuovo dalla lista dei ticket tutti i ticket che non hanno una resolutionDate, ossia che non hanno nessun commit associato

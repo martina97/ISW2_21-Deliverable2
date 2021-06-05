@@ -1,7 +1,5 @@
 package entities;
 
-import java.util.List;
-import java.util.Map;
 
 public class M2Entries {
 

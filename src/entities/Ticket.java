@@ -21,12 +21,10 @@ public class Ticket {
 	private int p;
 
 	// costruttore
-	//public Ticket(String id, List<Integer> aV, LocalDateTime resolutionDate, LocalDateTime creationDate) {
 	public Ticket(String id, LocalDateTime creationDate, List<Integer> aV) {
 
 		this.id = id;
 		this.aV = aV;
-		//this.resolutionDate = resolutionDate;
 		this.creationDate = creationDate;
 		this.fileList = new ArrayList<>();
 		this.commitList = new ArrayList<>();

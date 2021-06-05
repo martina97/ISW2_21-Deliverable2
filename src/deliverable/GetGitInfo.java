@@ -14,11 +14,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.InitCommand;
-import org.eclipse.jgit.api.LogCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.diff.DiffEntry;
 import org.eclipse.jgit.diff.DiffFormatter;
@@ -33,35 +34,25 @@ import org.eclipse.jgit.treewalk.CanonicalTreeParser;
 import org.eclipse.jgit.treewalk.EmptyTreeIterator;
 import org.eclipse.jgit.treewalk.TreeWalk;
 import org.eclipse.jgit.util.io.DisabledOutputStream;
-import org.json.JSONException;
 
 
 import entities.JavaFile;
+import entities.Release;
 import entities.Ticket;
-import entities.Tuple;
-
-
-
 
 
 
 public class GetGitInfo {
 	
-	// BOOKKEEPER 
-	//private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/bookkeeper/.git";
-	//private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/bookkeeper");
+	private GetGitInfo() {}
 	
-	// SYNCOPE 
-	//private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/syncope/.git";
-	//private static Path repoPath = Paths.get("D:/Programmi/Eclipse/eclipse-workspace/syncope");
-	 
-	
+	private static Logger logger = Logger.getLogger(GetGitInfo.class.getName());
 	private static Repository repository;
 	private static final String FILE_EXTENSION = ".java";
 	private static final String RENAME = "RENAME";
 	private static final String DELETE = "DELETE";
 	private static final String MODIFY = "MODIFY";
-	private static final Git git = null;
+	
 	
 	public static  List<RevCommit> getAllCommit(List<Release> releasesList, Path repoPath) throws IllegalStateException, GitAPIException, IOException {
 			
@@ -80,56 +71,11 @@ public class GetGitInfo {
 		    		 commitList.add(rev);
 		    		 // a ogni commit assegno la release e lo metto nella lista dei commit di quella release 
 					   LocalDateTime commitDate = rev.getAuthorIdent().getWhen().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
-					   //LocalDateTime date = Instant.ofEpochSecond(rev.getCommitTime()).atZone(ZoneId.of("UTC")).toLocalDateTime();
 					   int releaseCommit = GetJIRAInfo.compareDateVersion(commitDate, releasesList);
 					   addListCommitRelease(releaseCommit, releasesList, rev);
 		    	 }
 		    }
 		    return commitList;
-		}
-	
-	
-	public static Tuple<ArrayList<RevCommit>,HashMap<String, List<String>>> getAllCommit2(List<Release> releasesList, Path repoPath, String REPO) throws IllegalStateException, GitAPIException, IOException {
-		 ArrayList<RevCommit> commitList = new ArrayList<>();
-		 HashMap<String, List<String>> fileAliasMap = new HashMap<>();
-
-		Tuple<ArrayList<RevCommit>,HashMap<String, List<String>>>  tuple = new Tuple(commitList, fileAliasMap);
-		
-		
-		FileRepositoryBuilder repositoryBuilder = new FileRepositoryBuilder();
-		repository = repositoryBuilder.setGitDir(new File(REPO)).readEnvironment() // scan environment GIT_* variables
-				.findGitDir() // scan up the file system tree
-				.setMustExist(true).build();
-		
-		try (Git git = Git.init().setDirectory(repoPath.toFile()).call()) {
-			 //
-		    }
-		    InitCommand init = Git.init();
-		    init.setDirectory(repoPath.toFile());
-		    try (Git git = init.call()) {
-		    	//
-		    }
-		    try (Git git = Git.open(repoPath.toFile())) {
-		    	Iterable<RevCommit> logs = git.log().all().call();
-		    	 for (RevCommit rev : logs) {
-		    		 commitList.add(rev);
-		    		 // a ogni commit assegno la release e lo metto nella lista dei commit di quella release 
-					   LocalDateTime commitDate = rev.getAuthorIdent().getWhen().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
-					   //LocalDateTime date = Instant.ofEpochSecond(rev.getCommitTime()).atZone(ZoneId.of("UTC")).toLocalDateTime();
-					   int releaseCommit = GetJIRAInfo.compareDateVersion(commitDate, releasesList);
-					   addListCommitRelease(releaseCommit, releasesList, rev);
-					   analyzeDiffRename(rev, fileAliasMap);
-
-		    	 }
-		    }
-		    for (int i = 0; i<fileAliasMap.size(); i++) {
-				 Object key = fileAliasMap.keySet().toArray()[i];
-				 fileAliasMap.get(key).stream().distinct().collect(Collectors.toList());
-		  }
-		    
-		    tuple.setX(commitList);
-		    tuple.setY(fileAliasMap);
-		   return tuple;
 		}
 	
 	
@@ -150,7 +96,7 @@ public class GetGitInfo {
 	public static void getJavaFiles(Path repoPath, List<Release> releasesList, Map<String, List<String>> fileAliasMap) throws IOException, GitAPIException {
 
 		try (Git git = Git.init().setDirectory(repoPath.toFile()).call()) {
-			// ciao 
+			// null
 		}
 
 		InitCommand init = Git.init();
@@ -168,21 +114,16 @@ public class GetGitInfo {
 						treeWalk.setRecursive(true);
 		
 						while (treeWalk.next()) {
-							addJavaFile2(treeWalk,release, fileNameList, fileAliasMap);
+							addJavaFile(treeWalk,release, fileNameList, fileAliasMap);
 						}
 					
 				} catch (IOException e) {
-					//Log.errorLog("Errore nel prendere i file java associati al commit");
-					StringWriter sw = new StringWriter();
-					PrintWriter pw = new PrintWriter(sw);
-					e.printStackTrace(pw);
-					//Log.errorLog(sw.toString());
+					logger.log(Level.SEVERE,"Errore nel prendere i file java associati al commit");
+					System.exit(1);
 				}
 				//Log.infoLog("\n\nIl numero di file .java relativi alla release e: " + filePath.size());
 	
-				// per ogni release mi devo prendere tutti i file, cerco quel file se e nel
-				// commit e mi prendo le differenze
-	
+			
 				}
 			}
 		}
@@ -196,68 +137,7 @@ public class GetGitInfo {
 	}
 	
 	
-	
-	public static void addJavaFile(TreeWalk treeWalk, Release release, List<String> fileNameList,  HashMap<String, List<String>> fileAliasMap) {
-		/* 
-		 * Aggiungo il file Java nella lista di file della release, 
-		 * e inizialmente setto buggyness = "no"
-		 */
-		if (treeWalk.getPathString().endsWith(FILE_EXTENSION) ) {
-			String nameFile = treeWalk.getPathString();
-			
-			//controllo se nameFile e' gia' nella lista fileName oppure se e' un alias di un altro file presente
-			// nella lista fileName 
-			// devo controllare se fileName contiene gia' uno degli alias del file 
-			if (!checkAlias(nameFile, fileNameList,fileAliasMap ) && !fileNameList.contains(nameFile)) {
-				fileNameList.add(nameFile);
-				JavaFile file = new JavaFile(nameFile);
-				file.setBugg("No");
-				file.setNr(0);
-				file.setNAuth(new ArrayList<>());
-				release.getFileList().add(file);
-			}
-		}
-	}	  
-	
-	public static boolean checkAlias(String nameFile,List<String> fileNameList, HashMap<String, List<String>> fileAliasMap) {
-		
-		// devo controllare se fileNameList contiene nameFile oppure un alias di nameFile 
-		// per prima cosa vedo se in fileAliasMap c'e il file, se c'e mi salvo tutti gli alias in una lista (compreso nameFile)
-		// e poi controllo se fileNameList contiene gia' uno di questi 
-		
-		List<String> listAlias = new ArrayList<>();
-		//System.out.println("############################# checkAlias ########################\n\n");
-		for (Entry<String, List<String>> entry : fileAliasMap.entrySet()) {
-		    String key = entry.getKey();
-		    List<String> oldPaths = entry.getValue();
-		    if (nameFile.equals(key) || oldPaths.contains(nameFile)) {
-		    	for (String file : oldPaths) {
-		    		listAlias.add(file);
-		    	}
-		    	listAlias.add(nameFile);
-		    	listAlias.add(key);
-		    	listAlias = listAlias.stream().distinct().collect(Collectors.toList());
-		    }
-	 }
-		
-	// ora devo vedere se fileNameList contiene gia' un file contenuto in listAlias 
-	// se si --> non aggiungo il file in fileName
-	// se no --> lo aggiungo
-	for (String file : listAlias) {
-		if (fileNameList.contains(file)) {
-
-			return true;
-		}
-	}
-	/*
-	if(fileNameList.contains(nameFile)) {
-		return true;
-	}
-	*/
-	return false;
-	}
-	
-	public static void addJavaFile2(TreeWalk treeWalk, Release release, List<String> fileNameList,  Map<String, List<String>> fileAliasMap) {
+	public static void addJavaFile(TreeWalk treeWalk, Release release, List<String> fileNameList,  Map<String, List<String>> fileAliasMap) {
 		/* 
 		 * Aggiungo il file Java nella lista di file della release, 
 		 * e inizialmente setto buggyness = "no"
@@ -270,9 +150,8 @@ public class GetGitInfo {
 			// devo controllare se fileName contiene gia' uno degli alias del file 
 			JavaFile file = new JavaFile(nameFile);
 
-			if (!checkAlias2(nameFile, fileNameList,fileAliasMap, file ) && !fileNameList.contains(nameFile)) {
+			if (!checkAlias(nameFile, fileNameList,fileAliasMap, file ) && !fileNameList.contains(nameFile)) {
 				fileNameList.add(nameFile);
-				//JavaFile file = new JavaFile(nameFile);
 				file.setBugg("No");
 				file.setNr(0);
 				file.setNAuth(new ArrayList<>());
@@ -287,22 +166,19 @@ public class GetGitInfo {
 					file.setSize(Metrics.loc(treeWalk, repository));
 				} catch (IOException e) {
 					e.printStackTrace();
-				}
-				//System.out.println("FILE == " + file.getName() + "\nLIST ALIAS == " + file.getoldPaths());
-				
+				}				
 				release.getFileList().add(file);
 			}
 		}
 	}	  
 	
-	public static boolean checkAlias2(String nameFile,List<String> fileNameList, Map<String, List<String>> fileAliasMap, JavaFile file) {
+	public static boolean checkAlias(String nameFile,List<String> fileNameList, Map<String, List<String>> fileAliasMap, JavaFile file) {
 		
 		// devo controllare se fileNameList contiene nameFile oppure un alias di nameFile 
 		// per prima cosa vedo se in fileAliasMap c'e il file, se c'e mi salvo tutti gli alias in una lista (compreso nameFile)
 		// e poi controllo se fileNameList contiene gia' uno di questi 
 		
 		List<String> listAlias = new ArrayList<>();
-		//System.out.println("############################# checkAlias ########################\n\n");
 		for (Entry<String, List<String>> entry : fileAliasMap.entrySet()) {
 		    String key = entry.getKey();
 		    List<String> oldPaths = entry.getValue();
@@ -314,7 +190,6 @@ public class GetGitInfo {
 		    	listAlias.add(key);
 		    	listAlias = listAlias.stream().distinct().collect(Collectors.toList());
 		    	addOldPaths(file, listAlias);
-		    	//file.setOldPaths(listAlias);
 		    }
 	 }
 		
@@ -327,13 +202,10 @@ public class GetGitInfo {
 			return true;
 		}
 	}
-	/*
-	if(fileNameList.contains(nameFile)) {
-		return true;
-	}
-	*/
+
 	return false;
 	}
+	
 	
 	public static void addOldPaths(JavaFile file, List<String> listAlias) {
 		
@@ -354,7 +226,7 @@ public class GetGitInfo {
 	
 	 
 	  
-	 public static HashMap<String, List<String>> checkRename2(List<Release> releasesList, String REPO ) throws IOException {
+	 public static Map<String, List<String>> checkRename(List<Release> releasesList, String REPO ) throws IOException {
 		 /*
 		  * Nella lista dei file in ogni release potrebbero esserci delle classi che sono state rinominate, sia tra una release
 		  * e l'altra, sia nella stessa release, quindi devo gestire i file in una stessa release che hanno nomi diversi ma sono gli stessi, 
@@ -378,7 +250,6 @@ public class GetGitInfo {
 					.findGitDir() // scan up the file system tree
 					.setMustExist(true).build();
 		  for (Release release : releasesList) {
-			  //System.out.println("\n\nRELEASE " + release.getIndex());
 			  for (RevCommit commit : release.getCommitList()) {
 				  analyzeDiffRename(commit, fileAliasMap);
 					
@@ -396,21 +267,17 @@ public class GetGitInfo {
 	  }
 	 
 
-	 public static void analyzeDiffRename(RevCommit commit, HashMap<String, List<String>> fileAliasMap) {
+	 public static void analyzeDiffRename(RevCommit commit, Map<String, List<String>> fileAliasMap) {
 		 List<DiffEntry> diffs;
 		try {
 			diffs = getDiffs(commit);
 			if (diffs != null) {
 				for (DiffEntry diff : diffs) {
 					String type = diff.getChangeType().toString();
-					//System.out.println("TYPE = " + type);
 
 					String oldPath = diff.getOldPath();
-					//System.out.println("oldPath = " + oldPath);
 
-					String newPath = diff.getNewPath();
-					//System.out.println("newPath = " + newPath);
-					
+					String newPath = diff.getNewPath();					
 					
 					if (type.equals(RENAME) && oldPath.endsWith(FILE_EXTENSION)) {
 						populateMapAlias(newPath, oldPath, fileAliasMap);
@@ -419,14 +286,15 @@ public class GetGitInfo {
 				}
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.log(Level.SEVERE,"Errore nell analizzare diffEntries commit");
+			System.exit(1);
 		}
 		
 	 }
 
 	 
 	 
-	 public static void populateMapAlias(String newPath, String oldPath, HashMap<String, List<String>> map) {
+	 public static void populateMapAlias(String newPath, String oldPath, Map<String, List<String>> map) {
 		 // i commit stanno nella lista con data in ordine crescente, quindi ogni file rinominato o non è mai 
 		 //stato rinominato in passato, oppure è stato rinominato quindi key della mappa = oldPath
 			if(map.isEmpty()) {
@@ -442,15 +310,9 @@ public class GetGitInfo {
 				 */
 				for(int i = 0 ; i<map.size();i++) {
 					String key = (String) map.keySet().toArray()[i];
-					//System.out.println("KEY == " + key);
 
 					List<String> oldPaths = map.get(key);
 					if (key.equals(oldPath)) {
-						//System.out.println("KEY == NEW PATH");
-						//System.out.println("KEY == " + key);
-						//System.out.println("oldPath == " + oldPath);
-
-
 						String newKey = newPath;
 					    oldPaths.add(oldPath);
 					    map.remove(key);
@@ -470,7 +332,7 @@ public class GetGitInfo {
 		}
 	 
 	 
-	 public static void checkBuggyness(List<Release> releasesList, List<Ticket> ticketList, HashMap<String, List<String>> fileAliasMap) throws IOException {
+	 public static void checkBuggyness(List<Release> releasesList, List<Ticket> ticketList, Map<String, List<String>> fileAliasMap) throws IOException {
 		 
 		 /* per ogni ticket mi prendo la lista dei commit che contengono l'id del ticket,
 		  * mi prendo i file .java DELETE e MODIFY nel commit
@@ -482,35 +344,31 @@ public class GetGitInfo {
 			 List<Integer> aV = ticket.getAV();
 			 for (RevCommit commit : ticket.getCommitList()) {
 				 LocalDateTime commitDate = commit.getAuthorIdent().getWhen().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
-				 //System.out.println("COMMIT DATE === " + commitDate);
-				 //LocalDateTime date = Instant.ofEpochSecond(commit.getCommitTime()).atZone(ZoneId.of("UTC")).toLocalDateTime();
-				 int releaseCommit = GetJIRAInfo.compareDateVersion(commitDate, releasesList);
-				 //System.out.println("LA RELEASE DEL COMMIT E' == " + releaseCommit);
+				
 				 List<DiffEntry> diffs = getDiffs(commit);
-					if (diffs != null) {
-						analyzeDiffEntryBugg(diffs, releasesList, releaseCommit, aV, fileAliasMap);
-					}
-			 	}
-		 	}
+				 if (diffs != null) {
+					 analyzeDiffEntryBugg(diffs, releasesList, aV, fileAliasMap);
+				}
+			 }
 		 }
+	}
 	 
 	 
-	 public static void analyzeDiffEntryBugg(List<DiffEntry> diffs, List<Release> releasesList, int releaseCommit, List<Integer> aV, HashMap<String, List<String>>  fileAliasMap) {
+	 public static void analyzeDiffEntryBugg(List<DiffEntry> diffs, List<Release> releasesList, List<Integer> aV, Map<String, List<String>>  fileAliasMap) {
 		 for (DiffEntry diff : diffs) {
 				String type = diff.getChangeType().toString();
-				//System.out.println("TYPE === " + type);
 				
 				if (diff.toString().contains(FILE_EXTENSION) && (type.equals(MODIFY)
 						|| type.equals(DELETE) )) { 
 				
 					// vedo se releaseCommit e' contenuta nella AV del ticket, se si setto
 					// come buggy il file nella relativa release
-					checkFileBugg(diff, releasesList, releaseCommit, aV, fileAliasMap);
+					checkFileBugg(diff, releasesList, aV, fileAliasMap);
 				}
 			}
 	 }
 
-	 public static void checkFileBugg(DiffEntry diff, List<Release> releasesList, int releaseCommit, List<Integer> aV, HashMap<String, List<String>> fileAliasMap) {
+	 public static void checkFileBugg(DiffEntry diff, List<Release> releasesList,List<Integer> aV, Map<String, List<String>> fileAliasMap) {
 		 
 		 /* se AV e' vuota, allora non faccio niente (il file ha gia' buggyness "no")
 		  * se AV non e' vuota --> prendo il file e lo setto buggy o no se la release del 
@@ -538,8 +396,7 @@ public class GetGitInfo {
 	 }
 	 
 
-	 public static boolean checkMapRename(String nameFile,HashMap<String, List<String>> fileAliasMap ) {
-		 //System.out.println("############## checkMapRename ############## ");
+	 public static boolean checkMapRename(String nameFile,Map<String, List<String>> fileAliasMap ) {
 		 for (Entry<String, List<String>> entry : fileAliasMap.entrySet()) {
 			    String key = entry.getKey();
 			    List<String> oldPaths = entry.getValue();
@@ -552,9 +409,7 @@ public class GetGitInfo {
 	 }
 	 
 	 public static void compareReleaseAV(JavaFile javaFile, List<Integer> aV, Release release) {
-		 //System.out.println("RELEASE COMMIT == " + release.getIndex() + "\tAV == " + aV);
 		 if (aV.contains(release.getIndex())) {
-			 //System.out.println("LA CLASSE E' BUGGY\n###\n");
 			 javaFile.setBugg("Yes");
 		 }
 	 }
@@ -576,13 +431,9 @@ public class GetGitInfo {
 				ObjectReader reader = rw.getObjectReader();
 				diffs = df.scan(new EmptyTreeIterator(), new CanonicalTreeParser(null, reader, commit.getTree()));
 			}
+			
 			return diffs;
 	 }
 	 
-	 public static void main(String[] args) throws IOException, JSONException {
-			// Do nothing because is a main method
-	
-		}
-
 	 
 }

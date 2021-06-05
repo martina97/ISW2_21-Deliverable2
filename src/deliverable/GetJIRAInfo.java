@@ -24,11 +24,15 @@ import java.util.logging.Logger;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import entities.Release;
 import entities.Ticket;
 
 import org.json.JSONArray;
 
 public class GetJIRAInfo {
+	
+	private GetJIRAInfo() {}
+
 	
 	private static Map<LocalDateTime, String> releaseNames;
 	private static Map<LocalDateTime, String> releaseID;
@@ -193,13 +197,7 @@ public class GetJIRAInfo {
 	           JSONArray versions = issues.getJSONObject(i % 1000).getJSONObject("fields").getJSONArray("versions");
 	           List<Integer> listAV = getAVList(versions, releases);
 	           Ticket ticket = new Ticket(key, creationDate, listAV);
-	           /*
-	           if (listAV.get(0) != null) {
-					ticket.setIV(listAV.get(0));
-				} else {
-					ticket.setIV(0);
-				}
-				*/
+	         
 	           
 	           if ( ! ( listAV.isEmpty() || listAV.get(0) == null)){
 					ticket.setIV(listAV.get(0));
@@ -219,14 +217,14 @@ public class GetJIRAInfo {
 		
 			catch (JSONException e) 
 			{
-				System.out.println("Error during JSON document analysis.");
-				e.printStackTrace();
+				logger.log(Level.SEVERE,"Error during JSON document analysis.");
+				System.exit(1);
 			} 
 			catch (IOException e) 
 			{
-				System.out.println("Error reading JSON file.");
-				e.printStackTrace();
-			}
+				logger.log(Level.SEVERE,"Error reading JSON file.");
+				System.exit(1);			
+				}
 			} 
 	     	while (i < total);  
 	          
@@ -271,15 +269,7 @@ public class GetJIRAInfo {
 				}
 			}
 			return listaAV;
-		}
+	}
 	  
-	  
-	 
-	  
-	  
-	  public static void main(String[] args) throws IOException, JSONException {
-			// Do nothing because is a main method
-	
-		}
  
 }

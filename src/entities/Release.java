@@ -1,12 +1,10 @@
-package deliverable;
+package entities;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.jgit.revwalk.RevCommit;
-
-import entities.JavaFile;
 
 
 public class Release {

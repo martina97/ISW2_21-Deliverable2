@@ -4,7 +4,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.stream.Collectors;
@@ -21,27 +20,27 @@ import org.eclipse.jgit.treewalk.TreeWalk;
 import org.eclipse.jgit.util.io.DisabledOutputStream;
 
 import entities.JavaFile;
+import entities.Release;
+
 
 public class Metrics {
+	
+	private Metrics() {}
+
 	
 	private static final String FILE_EXTENSION = ".java";
 	private static final String RENAME = "RENAME";
 	private static final String DELETE = "DELETE";
 	private static final String MODIFY = "MODIFY";
-	private static Repository repository;
-	private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/bookkeeper/.git";
-  	//private static final String REPO = "D:/Programmi/Eclipse/eclipse-workspace/syncope/.git";
 
 	
-	
-	public static void getMetrics(List<Release> releasesList, String REPO) throws IOException {
+	public static void getMetrics(List<Release> releasesList, String repo) throws IOException {
 		FileRepositoryBuilder repositoryBuilder = new FileRepositoryBuilder();
-		repository = repositoryBuilder.setGitDir(new File(REPO)).readEnvironment() // scan environment GIT_* variables
+		Repository repository = repositoryBuilder.setGitDir(new File(repo)).readEnvironment() // scan environment GIT_* variables
 				.findGitDir() // scan up the file system tree
 				.setMustExist(true).build();
 		
 		 for (Release release : releasesList ) {
-			 //Release release = releasesList.get(0);
 			 //System.out.println("RELEASE == " + release.getIndex());
 			 
 			 /* creo hashMap che ha come 
@@ -63,10 +62,8 @@ public class Metrics {
 				 if (diffs != null) {
 					analyzeDiffEntryMetrics(diffs, fileList, authName, chgSetSizeList, df);
 				 }
-				 //System.out.println("###\n\n");
 
 			 }
-			 //System.out.println("###\n\n");
 			 setFileRelease(fileList,  release);
 		 }
 	}
@@ -78,7 +75,6 @@ public class Metrics {
 				numDiff++;
 			}
 	 	}
-	 	//System.out.println("numDiff == " + numDiff);
 
 		for (DiffEntry diff : diffs) {
 			String type = diff.getChangeType().toString();
@@ -92,10 +88,7 @@ public class Metrics {
 				 else {
 					 file = diff.getNewPath();
 				 }
-				//System.out.println("FILE == " + file);
 				addFileList(fileList, file, authName, numDiff, diff, df);
-				//System.out.println("######\n\n");
-
 			}
 		}
 		
@@ -108,21 +101,15 @@ public class Metrics {
 		 try {
 			for(Edit edit : df.toFileHeader(diff).toEditList()) {
 
-					//ocAddedOnce = edit.getEndB() - edit.getBeginB();
 					locAdded += edit.getEndB() - edit.getBeginB();
 					locDeleted += edit.getEndA() - edit.getBeginA();
-					//locAddedList.add(locAddedOnce);
 
-					//locDeleted += edit.getEndA() - edit.getBeginA();	//endA=BeginB								
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		 int churn = locAdded - locDeleted;
-		 //System.out.println("LOC ADDED == " + locAdded);
-		 //System.out.println("LOC DELETED == " + locDeleted);
-		 //System.out.println("CHURN == " + churn);
-
+		 
 		 if (fileList.isEmpty()) {
 			 //System.out.println("LISTA VUOTA");
 			 JavaFile javaFile = new JavaFile(fileName);
@@ -142,7 +129,6 @@ public class Metrics {
 			 List<Integer> churnList = new ArrayList<>();
 			 churnList.add(churn);
 			 javaFile.setChurnList(churnList);
-			 //javaFile.getNAuth().add(authName);
 			 fileList.add(javaFile);
 			 count = 1;
 		}
@@ -253,7 +239,6 @@ public class Metrics {
 
 				 }
 			 }
-			 //System.out.println("#####################\n\n");
 
 		 }
 	 }
