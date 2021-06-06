@@ -5,8 +5,6 @@ import java.util.List;
 public class JavaFile {
 
 	private String name;
-	// private HashMap<Integer,String> fileMap = new HashMap<>(); //key = release,
-	// value = buggyness (yes/no)
 	private List<String> oldPaths;
 	private String buggyness;
 	private Integer size; // LOC

@@ -41,14 +41,8 @@ public class Metrics {
 				.setMustExist(true).build();
 		
 		 for (Release release : releasesList ) {
-			 //System.out.println("RELEASE == " + release.getIndex());
 			 
-			 /* creo hashMap che ha come 
-			  * key --> nome file
-			  * value --> HashMap con key = NR , value = lista autori 
-			  */
 			 List<JavaFile> fileList = new ArrayList<>();	//lista che contiene i nomi dei file dentro diffs dei commit per ogni release 
-			 List<Integer> chgSetSizeList = new ArrayList<>();
 			 
 			 for (RevCommit commit : release.getCommitList()) {
 				 DiffFormatter df = new DiffFormatter(DisabledOutputStream.INSTANCE);	
@@ -60,7 +54,7 @@ public class Metrics {
 				 List<DiffEntry> diffs = GetGitInfo.getDiffs(commit);
 				 
 				 if (diffs != null) {
-					analyzeDiffEntryMetrics(diffs, fileList, authName, chgSetSizeList, df);
+					analyzeDiffEntryMetrics(diffs, fileList, authName, df);
 				 }
 
 			 }
@@ -68,7 +62,7 @@ public class Metrics {
 		 }
 	}
 	
-	public static void analyzeDiffEntryMetrics(List<DiffEntry> diffs, List<JavaFile> fileList, String authName, List<Integer> chgSetSizeList,DiffFormatter df) {
+	public static void analyzeDiffEntryMetrics(List<DiffEntry> diffs, List<JavaFile> fileList, String authName,DiffFormatter df) {
 	 	int numDiff = 0 ; 
 	 	for (DiffEntry diffEntry : diffs) {
 			if (diffEntry.toString().contains(FILE_EXTENSION)) { 
@@ -111,7 +105,7 @@ public class Metrics {
 		 int churn = locAdded - locDeleted;
 		 
 		 if (fileList.isEmpty()) {
-			 //System.out.println("LISTA VUOTA");
+			 //LISTA VUOTA
 			 JavaFile javaFile = new JavaFile(fileName);
 			 javaFile.setNr(1);
 			 List<String> listAuth = new ArrayList<>();
@@ -135,7 +129,7 @@ public class Metrics {
 		 else {
 			 for ( JavaFile file : fileList) {
 				 if (file.getName().equals(fileName)) {
-					 //System.out.println("FILE PRESENTE NELLA LISTA ");
+					 //FILE PRESENTE NELLA LISTA
 
 					 file.setNr(file.getNr()+1);
 					 file.getNAuth().add(authName);
@@ -151,7 +145,7 @@ public class Metrics {
 		 }
 		 
 		 if (count == 0) { //vuol dire che il nome del file non e' presente in fileList, quindi lo aggiungo
-			 //System.out.println("FILE NON PRESENTE NELLA LISTA ");
+			 //FILE NON PRESENTE NELLA LISTA
 
 			 JavaFile javaFile = new JavaFile(fileName);
 			 javaFile.setNr(1);
@@ -178,18 +172,15 @@ public class Metrics {
 	
 	 public static void setFileRelease(List<JavaFile> fileList, Release release) {
 		 for (JavaFile javaFile : fileList) {
-			 //System.out.println("javaFile == " + javaFile.getName());
 			 List<String> nAuth = javaFile.getNAuth();
 			 List<Integer> chgSetSize = javaFile.getChgSetSizeList();
 			 List<Integer> locAdded = javaFile.getLocAddedList();
 			 List<Integer> churn = javaFile.getChurnList();
 
-			 //System.out.println("javaFile --> \tnR == " + javaFile.getNr() + "\tnAuth == " + nAuth.size());
 
 			 for (JavaFile fileRel : release.getFileList()) {
 				 if (javaFile.getName().equals(fileRel.getName())) {
-					 //System.out.println("IL NOME DEL FILE STA NELLA RELEASE ");
-					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
+					 //IL NOME DEL FILE STA NELLA RELEASE
 					 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
 					 List<String> listAuth = fileRel.getNAuth();
 					 listAuth.addAll(nAuth);
@@ -208,13 +199,11 @@ public class Metrics {
 					 List<Integer> churnList = fileRel.getChurnList();
 					 churnList.addAll(churn);
 					 fileRel.setChurnList(churnList);
-					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size() +"\n\n");
 					 
 				 }
 				 
 				 if(fileRel.getoldPaths()!=null && fileRel.getoldPaths().contains(javaFile.getName())) {
-					 //System.out.println("IL NOME DEL FILE STA NEGLI ALIAS ");
-					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
+					 //IL NOME DEL FILE STA NEGLI ALIAS
 
 					 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
 					 List<String> listAuth = fileRel.getNAuth();
@@ -235,7 +224,6 @@ public class Metrics {
 					 List<Integer> churnList = fileRel.getChurnList();
 					 churnList.addAll(churn);
 					 fileRel.setChurnList(churnList);
-					 //System.out.println("fileRel --> \tnR == " + fileRel.getNr() + "\tnAuth == " + fileRel.getNAuth().size());
 
 				 }
 			 }

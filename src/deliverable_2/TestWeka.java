@@ -1,4 +1,4 @@
-package milestone2;
+package deliverable_2;
 /*
  *  How to use WEKA API in Java 
  *  Copyright (C) 2014 
@@ -16,33 +16,21 @@ import weka.core.Instance;
 import weka.core.Instances;
 import weka.filters.Filter;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
+
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
+
 import java.io.IOException;
-import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import weka.filters.supervised.attribute.AttributeSelection;
 import weka.attributeSelection.BestFirst;
 import weka.attributeSelection.CfsSubsetEval;
-import weka.attributeSelection.WrapperSubsetEval;
-import weka.core.Instances;
-import weka.filters.Filter;
 
-import weka.attributeSelection.BestFirst;
-import weka.attributeSelection.CfsSubsetEval;
-import weka.attributeSelection.WrapperSubsetEval;
 import weka.classifiers.AbstractClassifier;
 import weka.classifiers.CostMatrix;
 import weka.classifiers.Evaluation;
@@ -55,29 +43,14 @@ import weka.filters.supervised.instance.SMOTE;
 import weka.core.converters.ArffSaver;
 import weka.core.converters.CSVLoader;
 import weka.core.converters.ConverterUtils.DataSource;
-import weka.classifiers.evaluation.*;
 import weka.classifiers.lazy.IBk;
-import weka.filters.unsupervised.instance.RemovePercentage;
 import deliverable.CSVWriter;
 import deliverable.GetJIRAInfo;
 import deliverable.Utils;
 import entities.M2Entries;
 import entities.Release;
-import entities.Ticket;
 
-import weka.classifiers.AbstractClassifier;
-import weka.classifiers.Evaluation;
-import weka.classifiers.bayes.NaiveBayes;
-import weka.classifiers.lazy.IBk;
-import weka.classifiers.meta.FilteredClassifier;
-import weka.classifiers.trees.RandomForest;
-import weka.core.Instances;
-import weka.core.converters.ArffSaver;
-import weka.core.converters.CSVLoader;
-import weka.filters.Filter;
-import weka.filters.supervised.instance.Resample;
 import weka.filters.supervised.instance.SpreadSubsample;
-import weka.filters.unsupervised.attribute.Normalize;
 
 
 public class TestWeka{
@@ -85,9 +58,10 @@ public class TestWeka{
 	private static List<M2Entries> dBentriesList;
 	private static final String NAME_PROJECT = "BOOKKEEPER";
 	static Logger logger = Logger.getLogger(TestWeka.class.getName());
+	private static final String ERROR_CLASSIFIER = "Error in building classifier";
 
 	
-	public static void main(String args[]) throws Exception{
+	public static void main(String[] args) throws Exception{
 		
 		//load datasets
 		List<Release> releasesList = GetJIRAInfo.getListRelease(NAME_PROJECT);
@@ -97,9 +71,7 @@ public class TestWeka{
 		String arffPath = "D:"+"\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\FINITO\\CSV FINALE "+ NAME_PROJECT +".arff";
 
 		walkForward(arffPath, releasesList);
-		CSVWriter.writeCsvMilestone2(dBentriesList,NAME_PROJECT);
-		System.out.println("DIMENSIONE LISTA DB ENTRIES == " +dBentriesList.size() );
-		
+		CSVWriter.writeCsvMilestone2(dBentriesList,NAME_PROJECT);		
 	}
 	
 	
@@ -127,7 +99,7 @@ public class TestWeka{
 	
 	
 	public static void removeHalf(List<Release> releasesList) {
-		/*
+		/**
 		 * Rimuovo la seconda meta' delle release.
 		 * 
 		 * @param releasesList	lista di release prese da JIRA
@@ -159,10 +131,7 @@ public class TestWeka{
 		try {
 			source = new DataSource(arffPath);
 			Instances dataset = source.getDataSet();
-		    int datasetDimension = dataset.size();
-	
-			//Instances instances = source.getDataSet();	//instances = tutte le righe del dataset 
-	
+		    int datasetDimension = dataset.size();	
 			
 			for (Release release : releasesList) {
 				Instances instances = source.getDataSet();	//instances = tutte le righe del dataset 
@@ -189,18 +158,13 @@ public class TestWeka{
 			Instances training = null;
 			Instances testing = null;
 			M2Entries entry = new M2Entries(NAME_PROJECT);
-			//System.out.println(k);
-			int numTrain = k-1;
-			int numTest = k-(k-1);
+			int numTrain = k-1;	//# RELEASE TRAINING SET 
+			//numTest = k-(k-1)
 			entry.setNumTrainingRelease(numTrain);
 			
 	
 			// # train e' k-1
 			// # test e' k-(k-1)
-			System.out.println("numTrain == " + numTrain);
-			System.out.println("numTest == " + numTest);
-		    System.out.println("datasetDimension == " + datasetDimension);
-
 
 			int m;
 			
@@ -208,7 +172,6 @@ public class TestWeka{
 			training = new Instances(instancesList.get(0));
 			
 			for (m = 1; m<numTrain; m++) {
-				//System.out.println(instancesList.get(m));
 				for (Instance i : instancesList.get(m)) {
 					training.add(i);
 				}
@@ -221,37 +184,27 @@ public class TestWeka{
 			training.setClassIndex(numAttr - 1);
 			testing.setClassIndex(numAttr - 1);
 			
-			System.out.println("training.size() == " + training.size());
-			System.out.println("testing.size() == " + testing.size());
 			
-			float percTrain = Utils.calculatePercentage(training.size(), datasetDimension);
+			float percTrain = Utils.calculatePercentage(training.size(), datasetDimension);	//%TRAINING
 			entry.setTrainingPerc(percTrain);
 			
-			System.out.println("%training == " + percTrain);
-
 			int positiveInstancesTrain = calculateNumberBuggyClass(training);
-			System.out.println("positiveInstancesTrain == " + positiveInstancesTrain);
 			
 			float percDefectTrain = Utils.calculatePercentage(positiveInstancesTrain, training.size());
 			entry.setDefectPercTrain(percDefectTrain);
-			System.out.println("percDefectTrain == " + percDefectTrain);
 
 			int positiveInstancesTest = calculateNumberBuggyClass(testing);
-			System.out.println("positiveInstancesTest == " + positiveInstancesTest);
 			float percDefectTest = Utils.calculatePercentage(positiveInstancesTest, testing.size());
 			entry.setDefectPercTest(percDefectTest);
-			System.out.println("percDefectTest == " + percDefectTest);
 
-			int numAttrTrainingNoFilter = training.numAttributes();
-			System.out.println("numAttrTrainingNoFilter == " + numAttrTrainingNoFilter);
+			// numAttrTrainingNoFilter = training.numAttributes()
 			
 			chooseClassifier(classifierNames, training, testing, entry);
-	
 			
-			System.out.println("####################################################################################\n\n");
 		}
 		
 		} catch (Exception e) {
+			logger.log(Level.SEVERE,"Error in walkForward");
 			e.printStackTrace();
 		}
 	}
@@ -319,12 +272,12 @@ public class TestWeka{
 			
 			switch(i) {
 				case 0: //No selection
-					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionNames.get(i));
+					// LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' =  featureSelectionNames.get(i))
 					entry2.setFeatureSelection(featureSelectionNames.get(i));
 				break;
 				
 				case 1: //Best first
-					System.out.println("\n\nLA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionNames.get(i));		
+					// LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' =  featureSelectionNames.get(i))
 					entry2.setFeatureSelection(featureSelectionNames.get(i));
 
 					break;
@@ -337,7 +290,6 @@ public class TestWeka{
 			applyFeatureSelection(classifier, entry2, training2, testing2);
 			
 		}
-		System.out.println("----\n\n");
 		
 	}
 	
@@ -351,8 +303,7 @@ public class TestWeka{
 		String featureSelection = entry.getFeatureSelection();
 		
 		if(!featureSelection.equals("No")) {
-			//applico featureSelection
-			System.out.println("STO USANDO FEATURE SELECTION");
+			//STO USANDO FEATURE SELECTION
 			
 			//create AttributeSelection object
 			AttributeSelection filter = new AttributeSelection();
@@ -380,11 +331,11 @@ public class TestWeka{
 				filteredTraining.setClassIndex(numAttrFiltered - 1);
 				filteredTesting.setClassIndex(numAttrFiltered - 1);
 				
-				//lavora con feature selection
-				//System.out.println("numAttrFiltered == " + numAttrFiltered);
-				
+				//lavora con feature selection				
 				chooseBalancing(classifier, entry, filteredTraining,  filteredTesting);				
+				
 			} catch (Exception e) {
+				logger.log(Level.SEVERE,"Error in applying feature selection ");
 				e.printStackTrace();
 			}
 			
@@ -393,8 +344,6 @@ public class TestWeka{
 		else {
 			//lavora senza feature selection
 			chooseBalancing(classifier, entry, training2,  testing2);
-
-
 
 		}
 	}
@@ -423,16 +372,12 @@ public class TestWeka{
 			
 			switch(i) {
 				case 0: //No sampling
-					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
-					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
-					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+					//LA TECNICA DI BALANCING CHE STO USANDO E' = + balancingNames.get(i) 
 					entry2.setBalancing(balancingNames.get(i));
 				break;
 				
 				case 1: //oversampling
-					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
-					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
-					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );	
+					//LA TECNICA DI BALANCING CHE STO USANDO E' = + balancingNames.get(i) 	
 					entry2.setBalancing(balancingNames.get(i));
 
 					Resample resample = null;
@@ -445,9 +390,7 @@ public class TestWeka{
 					
 					int totInstances = trainingBalanced.size();
 					int positiveInstances = calculateNumberBuggyClass(trainingBalanced);
-					System.out.println("positiveInstances == " + positiveInstances);
 					double percentage =  calculatePercentage(positiveInstances, totInstances);
-					//System.out.println("percentage == " + percentage);
 					resample.setSampleSizePercent(percentage*2);
 					filteredClassifier = new FilteredClassifier();
 					filteredClassifier.setClassifier(classifier);
@@ -455,15 +398,14 @@ public class TestWeka{
 					trainingBalanced = Filter.useFilter(trainingBalanced, resample);
 					
 				} catch (Exception e) {
+					logger.log(Level.SEVERE,"Error in oversampling");
 					e.printStackTrace();
-					//FileLogger.getLogger().error("Errore nell'instanziazione dell'oversample"); System.exit(1); }
 				}
 				break;
 					
 				case 2: //undersampling
-					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
-					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
-					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+					//LA TECNICA DI BALANCING CHE STO USANDO E' = + balancingNames.get(i) 
+
 					entry2.setBalancing(balancingNames.get(i));
 
 					SpreadSubsample spreadSubsample = null;
@@ -479,15 +421,14 @@ public class TestWeka{
 					} 
 					
 					catch (Exception e) { 
+						logger.log(Level.SEVERE,"Error in undersampling");
 						e.printStackTrace();
-						//FileLogger.getLogger().error("Errore nell'instanziazione dell'undersample");
 					}
 					break;
 				
 				case 3: //SMOTE
-					System.out.println("IL CLASSIFICATORE CHE STO USANDO E' == " + classifierName );
-					System.out.println("LA TECNICA DI FEATURE SELECTION CHE STO USANDO E' == " + featureSelectionName );
-					System.out.println("LA TECNICA DI BALANCING CHE STO USANDO E' == " + balancingNames.get(i) );
+					//LA TECNICA DI BALANCING CHE STO USANDO E' = + balancingNames.get(i) 
+
 					entry2.setBalancing(balancingNames.get(i));
 
 					SMOTE smote = null;
@@ -503,13 +444,13 @@ public class TestWeka{
 						
 					} 
 					catch (Exception e) { 
+						logger.log(Level.SEVERE,"Error in SMOTE");
 						e.printStackTrace();
-						//FileLogger.getLogger().error("Errore nell'instanziazione dello SMOTE");
 					}
 					break;
 				
 					default:
-						logger.log(Level.SEVERE,"Error in feature selection ");
+						logger.log(Level.SEVERE,"Error in balancing ");
 						System.exit(1);
 					break;
 			}
@@ -573,16 +514,21 @@ public class TestWeka{
 						costSensitiveClassifier.setClassifier(classifier);
 						costSensitiveClassifier.setMinimizeExpectedCost(false);
 						costSensitiveClassifier.setCostMatrix(createCostMatrix(1.0,10.0));
-						training2 = reweightClasses(training2); // duplico il numero di istanze che hanno come buggyness=yes, ossia i positivi
+						training2 = reweightClasses(training2, 10); // duplico il numero di istanze che hanno come buggyness=yes, ossia i positivi
 					}
 					else {
 						costSensitiveClassifier.setClassifier(filteredClassifier);
 						costSensitiveClassifier.setMinimizeExpectedCost(false);
 						costSensitiveClassifier.setCostMatrix(createCostMatrix(1.0,10.0));
-						training2 = reweightClasses(training2); // duplico il numero di istanze che hanno come buggyness=yes, ossia i positivi
+						training2 = reweightClasses(training2, 10); // duplico il numero di istanze che hanno come buggyness=yes, ossia i positivi
 						
 					}
 					
+					break;
+					
+					default:
+						logger.log(Level.SEVERE,"Error in cost sensitive ");
+						System.exit(1);
 					break;
 	
 			}
@@ -598,66 +544,75 @@ public class TestWeka{
 		//classifier e' sempre diverso da null
 		//filteredClassifier puo' essere = null --> vuol dire che non sto usando balancing
 		// costClassifier puo' essere = null --> vuol dire che non sto usando cost sensitive
-		String classifierName = entry.getClassifierName();
-		String featureSelectionName = entry.getFeatureSelection();
-		String balancingName = entry.getBalancing();
-		String costSensitiveName = entry.getSensitivity();
 		
-		System.out.println(classifierName + "--->\t" + featureSelectionName +  "--->\t" + balancingName +  "--->\t" + costSensitiveName );
-
 		Evaluation eval = null;
 		try {
 			eval = new Evaluation(testing);
+			if(costSensitiveClassifier == null) {
+				// NON STO USANDO COST SENSITIVE
+
+				evaluateNoCost(eval, filteredClassifier, classifier, entry, training, testing);
+
+
+			}
+			else {
+				// STO USANDO COST SENSITIVE
+				evaluateWithCost(eval, costSensitiveClassifier, entry, training, testing);
+				
+			}
 		} catch (Exception e1) {
+			logger.log(Level.SEVERE,"Error in initializing the evaluator");
 			e1.printStackTrace();
-			//FileLogger.getLogger().error("Errore nella inizializzazione dell' Evaluator")
 		}
 		
-		if(costSensitiveClassifier == null) {
-			System.out.println("NON STO USANDO COST SENSITIVE");
-
-			evaluateNoCost(eval, filteredClassifier, classifier, entry, training, testing);
-
-
-		}
-		else {
-			System.out.println("STO USANDO COST SENSITIVE");
-			
-			evaluateCost(eval, filteredClassifier, classifier, costSensitiveClassifier, entry, training, testing);
-		}
-		System.out.println("\n\n" );
+		
 	}
 	
 	
 	public static void evaluateNoCost(Evaluation eval, FilteredClassifier filteredClassifier, AbstractClassifier classifier, M2Entries entry, Instances training, Instances testing) {
 
-		String balancingName = entry.getBalancing();
-
 		//controllo balancing, quindi filteredClassifier
 		if (filteredClassifier == null) {
-			System.out.println("NON STO USANDO BALANCING");
+			// NON STO USANDO BALANCING
 			try {
 				classifier.buildClassifier(training);
 				eval.evaluateModel(classifier, testing);
 				addEntryEvaluation(eval,entry);
 				
 			} catch (Exception e) {
+				logger.log(Level.SEVERE,ERROR_CLASSIFIER);
+
 				e.printStackTrace();
-				//FileLogger.getLogger().error("Errore nel build del classificatore con filtro");
 			}
 			
 		}
 		else {	//sto usando balancing, quindi filteredClassifier
-			System.out.println("STO USANDO BALANCING ==  " + balancingName);
+			//STO USANDO BALANCING
 			try {
 				filteredClassifier.buildClassifier(training);
 				eval.evaluateModel(filteredClassifier, testing);
 				addEntryEvaluation(eval,entry);
 			} catch (Exception e) {
+				logger.log(Level.SEVERE,ERROR_CLASSIFIER);
 				e.printStackTrace();
 			}
 		}
 	}
+	
+	public static void evaluateWithCost(Evaluation eval, CostSensitiveClassifier costSensitiveClassifier, M2Entries entry, Instances training, Instances testing) {
+		
+		try {
+			costSensitiveClassifier.buildClassifier(training);
+			eval.evaluateModel(costSensitiveClassifier, testing);
+			addEntryEvaluation(eval,entry);
+
+		} catch (Exception e) {
+			logger.log(Level.SEVERE,ERROR_CLASSIFIER);
+
+			e.printStackTrace();
+		}
+	}
+	
 	
 	public static void addEntryEvaluation(Evaluation eval, M2Entries entry) {
 		entry.setPrecision(eval.precision(1));
@@ -669,81 +624,28 @@ public class TestWeka{
 		entry.setFP((int)eval.numFalsePositives(1));
 		entry.setFN((int)eval.numFalseNegatives(1));
 
-		
-		System.out.println("AUC = "+eval.areaUnderROC(1));
-		System.out.println("kappa = "+eval.kappa());
-		System.out.println("precision = "+eval.precision(1));
-		System.out.println("recall = "+eval.recall(1));
-		System.out.println("numTruePositives = "+eval.numTruePositives(1));
-		System.out.println("numTruePositives = "+(int)eval.numTruePositives(1));
-
-		System.out.println("numTrueNegatives = "+eval.numTrueNegatives(1));
-		System.out.println("numFalsePositives = "+eval.numFalsePositives(1));
-		System.out.println("numFalseNegatives = "+eval.numFalseNegatives(1));
-
-
-	}
-	
-	public static void evaluateCost(Evaluation eval, FilteredClassifier filteredClassifier, AbstractClassifier classifier, CostSensitiveClassifier costSensitiveClassifier, M2Entries entry, Instances training, Instances testing) {
-		String balancingName = entry.getBalancing();
-
-		if (filteredClassifier == null) {
-			System.out.println("NON STO USANDO BALANCING");
-			try {
-				costSensitiveClassifier.buildClassifier(training);
-				eval.evaluateModel(costSensitiveClassifier, testing);
-				addEntryEvaluation(eval,entry);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			
-		}
-		else {
-			System.out.println("STO USANDO BALANCING ==  " + balancingName);
-			try {
-				costSensitiveClassifier.buildClassifier(training);
-				eval.evaluateModel(costSensitiveClassifier, testing);
-				addEntryEvaluation(eval,entry);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
 	}
 	
 	
-	
-
-	
-	public static Instances reweightClasses(Instances training) {
+	public static Instances reweightClasses(Instances training, int weight) {
 		
 		Instances trainingReweighted = new Instances(training);
 		Instances training2 = new Instances(trainingReweighted);
 
-		
-		System.out.println("size training == " + training2.size());
-
 		int numAttr = trainingReweighted.numAttributes();
-		
-		int count = 0;
-		
 		
 		for (Instance instance : trainingReweighted) {
 			double target = instance.value(numAttr-1);
 
-			if(target==1.0) {
-				training2.add(instance);
-				count++;
+			if(target==1.0) {	// nel training le classi buggy sono indicate con 1.0
+				// duplico 10 volte (ossia weight) le classi buggy
+				for(int i = 0; i<weight; i++) {
+					training2.add(instance);
+				}
 			}
 			
 		}
-	
-		
-		System.out.println("size training == " + training2.size());
-
-		System.out.println("num positivi == " + count);
-
 		return training2;
-		
 	}
 
 	

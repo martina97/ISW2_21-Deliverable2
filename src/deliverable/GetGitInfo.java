@@ -2,10 +2,8 @@ package deliverable;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
+
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
@@ -34,7 +32,6 @@ import org.eclipse.jgit.treewalk.CanonicalTreeParser;
 import org.eclipse.jgit.treewalk.EmptyTreeIterator;
 import org.eclipse.jgit.treewalk.TreeWalk;
 import org.eclipse.jgit.util.io.DisabledOutputStream;
-
 
 import entities.JavaFile;
 import entities.Release;
@@ -120,9 +117,7 @@ public class GetGitInfo {
 				} catch (IOException e) {
 					logger.log(Level.SEVERE,"Errore nel prendere i file java associati al commit");
 					System.exit(1);
-				}
-				//Log.infoLog("\n\nIl numero di file .java relativi alla release e: " + filePath.size());
-	
+				}	
 			
 				}
 			}
@@ -226,7 +221,7 @@ public class GetGitInfo {
 	
 	 
 	  
-	 public static Map<String, List<String>> checkRename(List<Release> releasesList, String REPO ) throws IOException {
+	 public static Map<String, List<String>> checkRename(List<Release> releasesList, String repo ) throws IOException {
 		 /*
 		  * Nella lista dei file in ogni release potrebbero esserci delle classi che sono state rinominate, sia tra una release
 		  * e l'altra, sia nella stessa release, quindi devo gestire i file in una stessa release che hanno nomi diversi ma sono gli stessi, 
@@ -246,7 +241,7 @@ public class GetGitInfo {
 		  */
 		 
 		 FileRepositoryBuilder repositoryBuilder = new FileRepositoryBuilder();
-			repository = repositoryBuilder.setGitDir(new File(REPO)).readEnvironment() // scan environment GIT_* variables
+			repository = repositoryBuilder.setGitDir(new File(repo)).readEnvironment() // scan environment GIT_* variables
 					.findGitDir() // scan up the file system tree
 					.setMustExist(true).build();
 		  for (Release release : releasesList) {
@@ -342,9 +337,7 @@ public class GetGitInfo {
 		 
 		 for (Ticket ticket : ticketList) {
 			 List<Integer> aV = ticket.getAV();
-			 for (RevCommit commit : ticket.getCommitList()) {
-				 LocalDateTime commitDate = commit.getAuthorIdent().getWhen().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
-				
+			 for (RevCommit commit : ticket.getCommitList()) {				
 				 List<DiffEntry> diffs = getDiffs(commit);
 				 if (diffs != null) {
 					 analyzeDiffEntryBugg(diffs, releasesList, aV, fileAliasMap);
@@ -388,7 +381,7 @@ public class GetGitInfo {
 		 for (Release release : releasesList) {
 			 for (JavaFile javaFile : release.getFileList()){ 
 				 if(javaFile.getName().equals(file) || checkMapRename(javaFile.getName(), fileAliasMap)) {
-					 //System.out.println("FILE TROVATO");
+					 //FILE TROVATO
 					 compareReleaseAV(javaFile, aV, release);
 				 }
 			 }
@@ -401,7 +394,7 @@ public class GetGitInfo {
 			    String key = entry.getKey();
 			    List<String> oldPaths = entry.getValue();
 			    if (nameFile.equals(key) || oldPaths.contains(nameFile)) {
-					//System.out.println("il file sta negli alias ");
+					//IL FILE STA NEGLI ALIAS
 					 return true;
 			    }
 		 }
