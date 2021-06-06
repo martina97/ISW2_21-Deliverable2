@@ -544,11 +544,12 @@ CcomputeIfPresent(Ljava/lang/Object;Ljava/util/function/BiFunction;)cjava.util.
 »of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Âjava.util.Map#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;π
 Lof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)ijava.util.Map#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;à
 2getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Rjava.util.Map#getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;}
-+entry(Ljava/lang/Object;Ljava/lang/Object;)Njava.util.Map#entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;»
++entry(Ljava/lang/Object;Ljava/lang/Object;)Njava.util.Map#entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;Ã
 deliverable.Metricsjava.lang.Object}
 2setFileRelease(Ljava/util/List;Lentities/Release;)Gdeliverable.Metrics#setFileRelease(Ljava/util/List;Lentities/Release;)Vu
 .getMetrics(Ljava/util/List;Ljava/lang/String;)Cdeliverable.Metrics#getMetrics(Ljava/util/List;Ljava/lang/String;)V)
-<init>()deliverable.Metrics#<init>()V£
+<init>()deliverable.Metrics#<init>()VÅ
+4applyMetrics(Lentities/JavaFile;IIILjava/util/List;)Ideliverable.Metrics#applyMetrics(Lentities/JavaFile;IIILjava/util/List;)V£
 entities.JavaFilejava.lang.ObjectW
  setAVGChurn(Ljava/lang/Integer;)3entities.JavaFile#setAVGChurn(Ljava/lang/Integer;)VQ
 setOldPaths(Ljava/util/List;)0entities.JavaFile#setOldPaths(Ljava/util/List;)Va

@@ -78,19 +78,20 @@ public class Main {
 	   
 	   logger.log(Level.INFO,"Numero ticket = {0}.", ticketList.size());
 	  	   
+	   /*
 	   // PROPORTION VECCHIO 
 	   Proportion.checkTicket2(ticketList);
 	   Proportion.modifyListAV(ticketList);
-	   
+	   */
 
-	   /*
+	   
 	   // PROPORTION NUOVO
 	   Collections.reverse(ticketList); //inverto l'ordine dei ticket nella lista per semplicita' nel calcolo proportion
 
 	   Proportion.proportion(ticketList); //PROPORTION NUOVO
 	   
 	   checkAV();	//PROPORTION NUOVO
-	   */
+	   
 	   
 	   
 	   /* per ogni release prendo tutti i file java che sono stati toccati nei commit 
@@ -117,6 +118,7 @@ public class Main {
 	   logger.log(Level.INFO,"###### getMetrics ###### ");
 
 	   Metrics.getMetrics(releasesList, repo);
+	   CSVWriter.writeCsvBugg2(releasesList, nameProjectLowerCase);
 
 	   logger.log(Level.INFO,"\n\nSTAMPO BUGGYNESS");
 	   int numBugg = 0;

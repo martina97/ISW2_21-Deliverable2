@@ -1,16 +1,16 @@
 
 +deliverable.Main#main([Ljava/lang/String;)Vj
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java* *("12*–
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java) )("12*–
 2j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java}	 }(ö
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java|	 |(ö
 ó
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java}	 }(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java|	 |(
 releaseentities.Release"__id*
 ""π
 ∂
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java}	 }(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java|	 |(
 releaseentities.Release"
 __arrayGet*
 
@@ -19,69 +19,69 @@ __arrayGet*
 6
 1*Ã
 3j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java~
- ~(ò
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java}
+ }(ò
 ï
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java~
- ~(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java}
+ }(
 fileentities.JavaFile"__id*
 ""∑
 ¥
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java~
- ~(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java}
+ }(
 fileentities.JavaFile"
 __arrayGet*
 
 %69java.util.List*
 ""*
 2
-5* 
+5*∆
 5j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java (·ﬁ
-l
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÄ
- Ä(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java~ ~(ﬂ‹
+j
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java
+ (
 %70java.lang.String"-entities.JavaFile#getBugg()Ljava/lang/String;*
 
-fileentities.JavaFile2	getBugg()ÔÏ
-l
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÄ
- Ä(&
+fileentities.JavaFile2	getBugg()ÌÍ
+j
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java
+ (&
 %71boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
 
 %70java.lang.String*
 Yes2equals(Ljava/lang/Object;)*
 3*€
 6j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java~ ~(!‰·
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java} }(!‰·
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java~ ~(/
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java} }(/
 %69java.util.List".entities.Release#getFileList()Ljava/util/List;*
 
 releaseentities.Release2getFileList()*
 3*´
 7j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java} }('¥
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java| |('¥
 ±
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java} }('
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java| |('
 %68java.util.List"__id*&*$
 deliverable.Main"
 releasesList*
 2*ŒW
 8j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaH H(¥
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaG G(¥
 ±
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaH: H(F
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaG: G(F
 %20java.util.List"__id*&*$
 deliverable.Main"
 releasesListº
 π
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaH H(G
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaG G(G
 %21java.util.List"[deliverable.GetJIRAInfo#retrieveTickets(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;*"
 deliverable.GetJIRAInfo*!
 
@@ -90,7 +90,7 @@ j
 %20java.util.List≤
 Ø
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaH H(G"
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaG G(G"
 deliverable.Main"
 
 ticketList"__id*
@@ -98,46 +98,46 @@ ticketList"__id*
 %21java.util.List∑
 ¥
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaJ J(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaI I(
 %22void"#deliverable.Main#getCommitTicket()V*"
 deliverable.Main≠
 ™
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaM M(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaL L(
 %23void"deliverable.Main#setIv()V*"
 deliverable.MainØ
 ¨
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaN N(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaM M(
 %24void"deliverable.Main#checkAV()V*"
 deliverable.Main∏
 µ
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaP P(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaO O(
 
 %25java.util.logging.Logger"__id* *
 deliverable.Main"
 loggerù
 ö
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaP P(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaO O(
 %26java.util.logging.Level"__id*
 ""≤
 Ø
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaP2 P(<
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaO2 O(<
 %27java.util.List"__id*$*"
 deliverable.Main"
 
 ticketList¥±
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaP2 P(C
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaO2 O(C
 
 %28int"java.util.List#size()I*
 
 %27java.util.List2size()ãà
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaP P(D
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaO O(D
 %29void"\java.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)V*!
 
 %25java.util.logging.Logger* 
@@ -149,45 +149,45 @@ j
 %28int2Blog(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)≤
 Ø
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaS S(&
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaR R(&
 %30java.util.List"__id*$*"
 deliverable.Main"
 
 ticketListÈ
 Ê
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaS S('
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaR R('
 %31void"6deliverable.Proportion#checkTicket2(Ljava/util/List;)V*"
 deliverable.Proportion*
 
 %30java.util.List≤
 Ø
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaT T(&
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaS S(&
 %32java.util.List"__id*$*"
 deliverable.Main"
 
 ticketListÈ
 Ê
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaT T('
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaS S('
 %33void"6deliverable.Proportion#modifyListAV(Ljava/util/List;)V*"
 deliverable.Proportion*
 
 %32java.util.List∏
 µ
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javae e(	
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javad d(	
 %34java.util.logging.Logger"__id* *
 deliverable.Main"
 loggerù
 ö
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javae e(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javad d(
 %35java.util.logging.Level"__id*
 ""ﬂ‹
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javae e(6
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javad d(6
 %36void"Jjava.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;)V*!
 
 %34java.util.logging.Logger* 
@@ -196,13 +196,13 @@ j
 ###### checkRename ###### 20log(Ljava/util/logging/Level;Ljava/lang/String;)¥
 ±
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javag) g(5
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaf) f(5
 %37java.util.List"__id*&*$
 deliverable.Main"
 releasesList≠
 ™
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javag g(<
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaf f(<
 %38java.util.Map"Udeliverable.GetGitInfo#checkRename(Ljava/util/List;Ljava/lang/String;)Ljava/util/Map;*"
 deliverable.GetGitInfo*
 
@@ -211,36 +211,36 @@ j
 repojava.lang.String≥
 ∞
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javag g(<$
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaf f(<$
 deliverable.Main"
 fileAliasMap"__id*
 
 %38java.util.Map∏
 µ
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javah h(	
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javag g(	
 %39java.util.logging.Logger"__id* *
 deliverable.Main"
 loggerù
 ö
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javah h(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javag g(
 %40java.util.logging.Level"__id*
 ""≥
 ∞
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javah5 h(A
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javag5 g(A
 %41java.util.Map"__id*&*$
 deliverable.Main"
 fileAliasMap≤Ø
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javah5 h(H
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javag5 g(H
 
 %42int"java.util.Map#size()I*
 
 %41java.util.Map2size()èå
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javah h(I
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javag g(I
 %43void"\java.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)V*!
 
 %39java.util.logging.Logger* 
@@ -252,20 +252,20 @@ j
 %42int2Blog(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)¥
 ±
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaj j("
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javai i("
 %44java.util.List"__id*&*$
 deliverable.Main"
 releasesList≤
 Ø
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaj$ j(.
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javai$ i(.
 %45java.util.List"__id*$*"
 deliverable.Main"
 
 ticketListã
 à
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaj j(/
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javai i(/
 %46void"Edeliverable.Main#removeHalfRelease(Ljava/util/List;Ljava/util/List;)V*"
 deliverable.Main*
 
@@ -274,18 +274,18 @@ j
 %45java.util.List∏
 µ
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javam m(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javal l(
 
 %47java.util.logging.Logger"__id* *
 deliverable.Main"
 loggerù
 ö
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javam m(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javal l(
 %48java.util.logging.Level"__id*
 ""‡›
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javam m(8
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javal l(8
 %49void"Jjava.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;)V*!
 
 %47java.util.logging.Logger* 
@@ -294,19 +294,19 @@ j
 ###### getJavaFiles ###### 20log(Ljava/util/logging/Level;Ljava/lang/String;)¥
 ±
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javao& o(2
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javan& n(2
 %50java.util.List"__id*&*$
 deliverable.Main"
 releasesList≥
 ∞
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javao4 o(@
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javan4 n(@
 %51java.util.Map"__id*&*$
 deliverable.Main"
 fileAliasMap∆
 √
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javao o(A
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javan n(A
 %52void"Ydeliverable.GetGitInfo#getJavaFiles(Ljava/nio/file/Path;Ljava/util/List;Ljava/util/Map;)V*"
 deliverable.GetGitInfo* 
 
@@ -317,18 +317,18 @@ j
 %51java.util.Map∏
 µ
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javar r(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaq q(
 
 %53java.util.logging.Logger"__id* *
 deliverable.Main"
 loggerù
 ö
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javar r(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaq q(
 %54java.util.logging.Level"__id*
 ""‚ﬂ
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javar r(:
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaq q(:
 %55void"Jjava.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;)V*!
 
 %53java.util.logging.Logger* 
@@ -337,26 +337,26 @@ j
 ###### checkBuggyness ###### 20log(Ljava/util/logging/Level;Ljava/lang/String;)¥
 ±
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javas s(*
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javar r(*
 %56java.util.List"__id*&*$
 deliverable.Main"
 releasesList≤
 Ø
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javas, s(6
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javar, r(6
 %57java.util.List"__id*$*"
 deliverable.Main"
 
 ticketList≥
 ∞
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javas7 s(C
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javar7 r(C
 %58java.util.Map"__id*&*$
 deliverable.Main"
 fileAliasMapª
 ∏
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javas s(E
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javar r(E
 %59void"Wdeliverable.GetGitInfo#checkBuggyness(Ljava/util/List;Ljava/util/List;Ljava/util/Map;)V*"
 deliverable.GetGitInfo*
 
@@ -367,18 +367,18 @@ j
 %58java.util.Map∏
 µ
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javav v(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javau u(
 
 %60java.util.logging.Logger"__id* *
 deliverable.Main"
 loggerù
 ö
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javav v(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javau u(
 %61java.util.logging.Level"__id*
 ""ﬁ€
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javav v(6
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javau u(6
 %62void"Jjava.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;)V*!
 
 %60java.util.logging.Logger* 
@@ -387,13 +387,13 @@ j
 ###### getMetrics ###### 20log(Ljava/util/logging/Level;Ljava/lang/String;)¥
 ±
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javax x(#
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaw w(#
 %63java.util.List"__id*&*$
 deliverable.Main"
 releasesListè
 å
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javax x(*
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaw w(*
 %64void"Cdeliverable.Metrics#getMetrics(Ljava/util/List;Ljava/lang/String;)V*"
 deliverable.Metrics*
 
@@ -402,18 +402,18 @@ j
 repojava.lang.String∏
 µ
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaz z(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javay y(
 
 %65java.util.logging.Logger"__id* *
 deliverable.Main"
 loggerù
 ö
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaz z(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javay y(
 %66java.util.logging.Level"__id*
 ""Ÿ÷
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaz z(1
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javay y(1
 %67void"Jjava.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;)V*!
 
 %65java.util.logging.Logger* 
@@ -422,15 +422,15 @@ j
 \n\nSTAMPO BUGGYNESS20log(Ljava/util/logging/Level;Ljava/lang/String;)*
 7*—
 9j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaB	 B(ö
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaA	 A(ö
 ó
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaB	 B(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaA	 A(
 releaseentities.Release"__id*
 ""π
 ∂
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaB	 B(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaA	 A(
 releaseentities.Release"
 __arrayGet*
 
@@ -439,15 +439,15 @@ __arrayGet*
 8
 10*ü
 10j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaC C(ÿ’
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaB B(ÿ’
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaC C(0
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaB B(0
 %18"0entities.Release#getCommitList()Ljava/util/List;*
 
 releaseentities.Release2getCommitList()Ã
 …
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaC C(1
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaB B(1
 %19"0java.util.Collections#reverse(Ljava/util/List;)V*"
 java.util.Collections*
 
@@ -455,30 +455,30 @@ j
 9*ã
 0 "É
 l
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaá á(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÜ Ü(
 implicit return*¨
 11j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaB B('¥
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaA A('¥
 ±
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaB B('
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaA A('
 %17java.util.List"__id*&*$
 deliverable.Main"
 releasesList*
 9*’'
 12j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java- -($ò
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java, ,($ò
 ï
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java- -('
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java, ,('
 %0java.io.InputStream"__id*
 ""õò
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java- -(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java, ,(
 %1java.util.Scanner"java.util.Scannerﬂ
 ‹
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java- -((
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java, ,((
 %2"0java.util.Scanner#<init>(Ljava/io/InputStream;)V*
 
 %1java.util.Scanner*
@@ -486,29 +486,29 @@ j
 %0java.io.InputStream¨
 ©
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java- -()
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java, ,()
 inputjava.util.Scanner"__id*
 
 %1java.util.Scanner∑
 ¥
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java. .(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java- -(
 %3java.util.logging.Logger"__id* *
 deliverable.Main"
 loggerú
 ô
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java. .(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java- -(
 %4java.util.logging.Level"__id*
 ""´
 ®
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java. /(=
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java- .(=
 %5java.lang.String"__concat*][
 YINSERIRE IN MAIUSCOLO IL NOME DEL PROGETTO CHE SI DESIDERA ANALIZZARE.\n\nIN PARTICOLARE *97
 5INSERIRE LA STRINGA ''BOOKKEEPER'' OPPURE ''SYNCOPE''÷”
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java. /(?
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java- .(?
 
 %6void"Jjava.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;)V* 
 
@@ -518,95 +518,95 @@ j
 
 %5java.lang.String20log(Ljava/util/logging/Level;Ljava/lang/String;)Ÿ÷
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java1 1(#
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java0 0(#
 %7java.lang.String"*java.util.Scanner#next()Ljava/lang/String;*
 
 inputjava.util.Scanner2next()∞
 ≠
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java1 1($
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java0 0($
 nameProjectjava.lang.String"__id*
 
 %7java.lang.StringÎË
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java2  2(9
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java1  1(9
 %8java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*!
 
 nameProjectjava.lang.String2toLowerCase()π
 ∂
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java2 2(:(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java1 1(:(
 nameProjectLowerCasejava.lang.String"__id*
 
 %8java.lang.StringÍ
 Á
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java3 3(P
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java2 2(P
 %9java.lang.String"__concat*+)
 'D:/Programmi/Eclipse/eclipse-workspace/**
 (
 nameProjectLowerCasejava.lang.String∑
 ¥
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java3 3(Z
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java2 2(Z
 %10java.lang.String"__concat*
 
 %9java.lang.String*	
 /.git™
 ß
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java3 3([
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java2 2([
 repojava.lang.String"__id*
 
 %10java.lang.StringÎ
 Ë
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java4 4(\
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java3 3(\
 %11java.lang.String"__concat*+)
 'D:/Programmi/Eclipse/eclipse-workspace/**
 (
 nameProjectLowerCasejava.lang.Stringí
 è
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java4 4(]
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java3 3(]
 %12java.nio.file.Path"Rjava.nio.file.Paths#get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;*"
 java.nio.file.Paths*
 
 %11java.lang.String≤
 Ø
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java4 4(^
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java3 3(^
 repoPathjava.nio.file.Path"__id*
 
 %12java.nio.file.Pathøº
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java5 5(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java4 4(
 %13void"java.util.Scanner#close()V*
 
 inputjava.util.Scanner2close()í
 è
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java9 9(:
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java8 8(:
 %14java.util.List"Jdeliverable.GetJIRAInfo#getListRelease(Ljava/lang/String;)Ljava/util/List;*"
 deliverable.GetJIRAInfo*!
 
 nameProjectjava.lang.String¥
 ±
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java9 9(:$
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java8 8(:$
 deliverable.Main"
 releasesList"__id*
 
 %14java.util.List¥
 ±
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java>) >(5
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java=) =(5
 %15java.util.List"__id*&*$
 deliverable.Main"
 releasesList®
 •
 j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java> >(@
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.java= =(@
 %16"Ydeliverable.GetGitInfo#getAllCommit(Ljava/util/List;Ljava/nio/file/Path;)Ljava/util/List;*"
 deliverable.GetGitInfo*
 
@@ -615,35 +615,35 @@ j
 repoPathjava.nio.file.Path*
 11*–
 1l
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÜ Ü(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÖ Ö(
 õ
 ò
 l
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÜ Ü(
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÖ Ö(
 %72java.io.PrintStream"__id*
 ""±
 Æ
 l
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÜ Ü(2
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÖ Ö(2
 %73java.lang.String"__concat*
 \n\nnumFile == *
 ""¬
 ø
 l
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÜ Ü(D
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÖ Ö(D
 %74java.lang.String"__concat*
 
 %73java.lang.String*
 \tnumBugg == ∑
 ¥
 l
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÜ Ü(N
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÖ Ö(N
 %75java.lang.String"__concat*
 
 %74java.lang.String*
 ""ÜÉ
 l
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÜ Ü(O
+`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/Main.javaÖ Ö(O
 %76void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
 %72java.io.PrintStream*

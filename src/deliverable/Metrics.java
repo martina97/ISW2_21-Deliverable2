@@ -112,7 +112,7 @@ public class Metrics {
 			 listAuth.add(authName);
 			 javaFile.setNAuth(listAuth);
 			 
-			 applyMetrics(javaFile, numDiff, locAdded, churn, fileList);
+			 applyMetrics1(javaFile, numDiff, locAdded, churn, fileList);
 			 count = 1;
 		}
 		 else {
@@ -142,7 +142,7 @@ public class Metrics {
 			 listAuth.add(authName);
 			 javaFile.setNAuth(listAuth);
 			 javaFile.getNAuth().add(authName);
-			 applyMetrics(javaFile, numDiff, locAdded, churn, fileList);
+			 applyMetrics1(javaFile, numDiff, locAdded, churn, fileList);
 
 			 
 		 }
@@ -150,7 +150,7 @@ public class Metrics {
 	
 	
 	
-	public static void applyMetrics(JavaFile javaFile, int numDiff, int locAdded, int churn, List<JavaFile> fileList) {
+	public static void applyMetrics1(JavaFile javaFile, int numDiff, int locAdded, int churn, List<JavaFile> fileList) {
 		javaFile.setChgSetSize(numDiff);
 		List<Integer> chgSetSizeList = new ArrayList<>();
 		chgSetSizeList.add(numDiff);
@@ -166,6 +166,30 @@ public class Metrics {
 		fileList.add(javaFile);
 	}
 	
+	
+	
+	public static void applyMetrics2(JavaFile fileRel,JavaFile javaFile,List<String> nAuth ,List<Integer> chgSetSize,List<Integer> locAdded, List<Integer> churn) {
+		fileRel.setNr(fileRel.getNr() + javaFile.getNr());
+		 List<String> listAuth = fileRel.getNAuth();
+		 listAuth.addAll(nAuth);
+		 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
+		 fileRel.setNAuth(listAuth);
+		 fileRel.setChgSetSize(fileRel.getChgSetSize()+javaFile.getChgSetSize());
+		 List<Integer> chgSetSizeList = fileRel.getChgSetSizeList();
+		 chgSetSizeList.addAll(chgSetSize);
+		 fileRel.setChgSetSizeList(chgSetSizeList);
+		 fileRel.setLOCadded(fileRel.getLOCadded()+javaFile.getLOCadded());
+		 List<Integer> locAddedList = fileRel.getLocAddedList();
+		 locAddedList.addAll(locAdded);
+		 fileRel.setLocAddedList(locAddedList);
+		 
+		 fileRel.setChurn(fileRel.getChurn()+javaFile.getChurn());
+		 List<Integer> churnList = fileRel.getChurnList();
+		 churnList.addAll(churn);
+		 fileRel.setChurnList(churnList);
+	}
+	
+	
 	 public static void setFileRelease(List<JavaFile> fileList, Release release) {
 		 for (JavaFile javaFile : fileList) {
 			 List<String> nAuth = javaFile.getNAuth();
@@ -177,50 +201,12 @@ public class Metrics {
 			 for (JavaFile fileRel : release.getFileList()) {
 				 if (javaFile.getName().equals(fileRel.getName())) {
 					 //IL NOME DEL FILE STA NELLA RELEASE
-					 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
-					 List<String> listAuth = fileRel.getNAuth();
-					 listAuth.addAll(nAuth);
-					 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
-					 fileRel.setNAuth(listAuth);
-					 fileRel.setChgSetSize(fileRel.getChgSetSize()+javaFile.getChgSetSize());
-					 List<Integer> chgSetSizeList = fileRel.getChgSetSizeList();
-					 chgSetSizeList.addAll(chgSetSize);
-					 fileRel.setChgSetSizeList(chgSetSizeList);
-					 fileRel.setLOCadded(fileRel.getLOCadded()+javaFile.getLOCadded());
-					 List<Integer> locAddedList = fileRel.getLocAddedList();
-					 locAddedList.addAll(locAdded);
-					 fileRel.setLocAddedList(locAddedList);
-					 
-					 fileRel.setChurn(fileRel.getChurn()+javaFile.getChurn());
-					 List<Integer> churnList = fileRel.getChurnList();
-					 churnList.addAll(churn);
-					 fileRel.setChurnList(churnList);
-					 
+					 applyMetrics2(fileRel,javaFile,nAuth ,chgSetSize,locAdded, churn);
 				 }
 				 
 				 if(fileRel.getoldPaths()!=null && fileRel.getoldPaths().contains(javaFile.getName())) {
 					 //IL NOME DEL FILE STA NEGLI ALIAS
-
-					 fileRel.setNr(fileRel.getNr() + javaFile.getNr());
-					 List<String> listAuth = fileRel.getNAuth();
-					 listAuth.addAll(nAuth);
-					 listAuth = listAuth.stream().distinct().collect(Collectors.toList());
-					 fileRel.setNAuth(listAuth);
-					 fileRel.setChgSetSize(fileRel.getChgSetSize() + javaFile.getChgSetSize());
-					 List<Integer> chgSetSizeList = fileRel.getChgSetSizeList();
-					 chgSetSizeList.addAll(chgSetSize);
-					 fileRel.setChgSetSizeList(chgSetSizeList);
-					 
-					 fileRel.setLOCadded(fileRel.getLOCadded() + javaFile.getLOCadded());
-					 List<Integer> locAddedList = fileRel.getLocAddedList();
-					 locAddedList.addAll(locAdded);
-					 fileRel.setLocAddedList(locAddedList);
-					 
-					 fileRel.setChurn(fileRel.getChurn()+javaFile.getChurn());
-					 List<Integer> churnList = fileRel.getChurnList();
-					 churnList.addAll(churn);
-					 fileRel.setChurnList(churnList);
-
+					 applyMetrics2(fileRel,javaFile,nAuth ,chgSetSize,locAdded, churn);
 				 }
 			 }
 
