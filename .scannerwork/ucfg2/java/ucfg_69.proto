@@ -1,16 +1,17 @@
 
-5entities.JavaFile#getChgSetSizeList()Ljava/util/List;k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaW W('"1*²
-1k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaX	 X(·
-´
-k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaX	 X(
-%0java.util.List"__id*)*'
-entities.JavaFile"
-chgSetSizeList"…
-k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaX X(
-
-%0java.util.ListB
+2entities.JavaFile#getMAXChurn()Ljava/lang/Integer;m
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java® ®("1*¸
+1m
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java¯	 ¯(¶
+³
+m
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java¯	 ¯(
+%0java.lang.Integer"__id*#*!
+entities.JavaFile"
+
+maxChurn"Š
+m
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java¯ ¯(
+
+%0java.lang.IntegerB
 entities.JavaFile

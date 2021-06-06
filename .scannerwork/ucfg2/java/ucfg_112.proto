@@ -1,88 +1,10 @@
 
-Mdeliverable.GetGitInfo#checkMapRename(Ljava/lang/String;Ljava/util/HashMap;)Zr
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaå å(&"6*è
-2r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaç ç()£
- 
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaç ç()
-entryjava.util.Map$Entry"__id*
-""À
-½
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaç ç()
-entryjava.util.Map$Entry"
-__arrayGet*
-
-%0java.util.Set*
-""*
-5
-1*õ
-3r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaì ì("|
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaì ì(
-""*’
-4r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaê# ê(+
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaê# ê(>
-%4boolean",java.util.List#contains(Ljava/lang/Object;)Z*
-
-oldPathsjava.util.List*
-
-nameFilejava.lang.String2contains(Ljava/lang/Object;)*
-2
-3*Î	
-5r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaè è(éæ
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaè è("
-%1java.lang.String".java.util.Map$Entry#getKey()Ljava/lang/Object;*
-
-entryjava.util.Map$Entry2getKey()°
-­
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaè è(#
-keyjava.lang.String"__id*
-
-%1java.lang.Stringëè
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaé é(/
-%2java.util.List"0java.util.Map$Entry#getValue()Ljava/lang/Object;*
-
-entryjava.util.Map$Entry2
-getValue()±
-®
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaé é(0
-oldPathsjava.util.List"__id*
-
-%2java.util.List‹ˆ
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaê ê(
-%3boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
-
-nameFilejava.lang.String*
-
-keyjava.lang.String2equals(Ljava/lang/Object;)*
-3
-4*é
-6r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaç, ç(8êç
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaç, ç(C
-%0java.util.Set"+java.util.HashMap#entrySet()Ljava/util/Set;*#
-!
-fileAliasMapjava.util.HashMap2
-entrySet()*
-2*õ
-1r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaï
- ï("|
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaï ï(
-"":
-nameFilejava.lang.String:!
-fileAliasMapjava.util.HashMapB"
-deliverable.GetGitInfo
+entities.M2Entries#getRecall()Dl
+bD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/M2Entries.javaH H("1*é
+1l
+bD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/M2Entries.javaI
+ I("v
+l
+bD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/M2Entries.javaI I(
+""B
+entities.M2Entries

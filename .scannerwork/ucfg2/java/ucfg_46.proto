@@ -1,16 +1,16 @@
 
-0entities.DBEntriesM2#getAuc()Ljava/lang/Integer;n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java' '("1*¹
-1n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java(	 ((µ
-²
-n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java(	 ((
-%0java.lang.Integer"__id*!*
-entities.DBEntriesM2"
-auc"‹
-n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java( ((
-
-%0java.lang.IntegerB
-entities.DBEntriesM2
+5entities.JavaFile#getChgSetSizeList()Ljava/util/List;k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaU U('"1*²
+1k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaV	 V(·
+´
+k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaV	 V(
+%0java.util.List"__id*)*'
+entities.JavaFile"
+chgSetSizeList"…
+k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaV V(
+
+%0java.util.ListB
+entities.JavaFile

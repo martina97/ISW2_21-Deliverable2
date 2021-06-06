@@ -1,16 +1,16 @@
 
-6entities.DBEntriesM2#getPrecision()Ljava/lang/Integer;n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java! !("1*¿
-1n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java"	 "(»
-¸
-n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java"	 "(
-%0java.lang.Integer"__id*'*%
-entities.DBEntriesM2"
-	precision"‹
-n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java" "(
+7entities.JavaFile#getMaxChgSetSize()Ljava/lang/Integer;k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaM M( "1*·
+1k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaN	 N(¹
+¶
+k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaN	 N(
+%0java.lang.Integer"__id*(*&
+entities.JavaFile"
+maxChgSetSize"ˆ
+k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaN N(
 
-%0java.lang.IntegerB
-entities.DBEntriesM2
+%0java.lang.IntegerB
+entities.JavaFile

@@ -1,16 +1,16 @@
 
-2entities.DBEntriesM2#getKappa()Ljava/lang/Integer;n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java* *("1*»
-1n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java+	 +(·
-´
-n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java+	 +(
-%0java.lang.Integer"__id*#*!
-entities.DBEntriesM2"
-kappa"‹
-n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java+ +(
-
-%0java.lang.IntegerB
-entities.DBEntriesM2
+0entities.JavaFile#getChurnList()Ljava/util/List;k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaX X(""1*­
+1k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaY	 Y(²
+¯
+k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaY	 Y(
+%0java.util.List"__id*$*"
+entities.JavaFile"
+	churnList"…
+k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaY Y(
+
+%0java.util.ListB
+entities.JavaFile

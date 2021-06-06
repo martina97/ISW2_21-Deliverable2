@@ -111,19 +111,8 @@ public class Metrics {
 			 List<String> listAuth = new ArrayList<>();
 			 listAuth.add(authName);
 			 javaFile.setNAuth(listAuth);
-			 javaFile.setChgSetSize(numDiff);
-			 List<Integer> chgSetSizeList = new ArrayList<>();
-			 chgSetSizeList.add(numDiff);
-			 javaFile.setChgSetSizeList(chgSetSizeList);
-			 javaFile.setLOCadded(locAdded);
-			 List<Integer> locAddedList = new ArrayList<>();
-			 locAddedList.add(locAdded);
-			 javaFile.setLocAddedList(locAddedList);
-			 javaFile.setChurn(churn);
-			 List<Integer> churnList = new ArrayList<>();
-			 churnList.add(churn);
-			 javaFile.setChurnList(churnList);
-			 fileList.add(javaFile);
+			 
+			 applyMetrics(javaFile, numDiff, locAdded, churn, fileList);
 			 count = 1;
 		}
 		 else {
@@ -153,22 +142,29 @@ public class Metrics {
 			 listAuth.add(authName);
 			 javaFile.setNAuth(listAuth);
 			 javaFile.getNAuth().add(authName);
-			 javaFile.setChgSetSize(numDiff);
-			 List<Integer> chgSetSizeList = new ArrayList<>();
-			 chgSetSizeList.add(numDiff);
-			 javaFile.setChgSetSizeList(chgSetSizeList);
-			 javaFile.setLOCadded(locAdded);
-			 List<Integer> locAddedList = new ArrayList<>();
-			 locAddedList.add(locAdded);
-			 javaFile.setLocAddedList(locAddedList);
-			 javaFile.setChurn(churn);
-			 List<Integer> churnList = new ArrayList<>();
-			 churnList.add(churn);
-			 javaFile.setChurnList(churnList);
+			 applyMetrics(javaFile, numDiff, locAdded, churn, fileList);
+
 			 
-			 fileList.add(javaFile);
 		 }
 	 }
+	
+	
+	
+	public static void applyMetrics(JavaFile javaFile, int numDiff, int locAdded, int churn, List<JavaFile> fileList) {
+		javaFile.setChgSetSize(numDiff);
+		List<Integer> chgSetSizeList = new ArrayList<>();
+		chgSetSizeList.add(numDiff);
+		javaFile.setChgSetSizeList(chgSetSizeList);
+		javaFile.setLOCadded(locAdded);
+		List<Integer> locAddedList = new ArrayList<>();
+		locAddedList.add(locAdded);
+		javaFile.setLocAddedList(locAddedList);
+		javaFile.setChurn(churn);
+		List<Integer> churnList = new ArrayList<>();
+		churnList.add(churn);
+		javaFile.setChurnList(churnList);
+		fileList.add(javaFile);
+	}
 	
 	 public static void setFileRelease(List<JavaFile> fileList, Release release) {
 		 for (JavaFile javaFile : fileList) {

@@ -1,0 +1,13 @@
+javaFile.setChgSetSize(numDiff);
+List<Integer> chgSetSizeList = new ArrayList<>();
+chgSetSizeList.add(numDiff);
+javaFile.setChgSetSizeList(chgSetSizeList);
+javaFile.setLOCadded(locAdded);
+List<Integer> locAddedList = new ArrayList<>();
+locAddedList.add(locAdded);
+javaFile.setLocAddedList(locAddedList);
+javaFile.setChurn(churn);
+List<Integer> churnList = new ArrayList<>();
+churnList.add(churn);
+javaFile.setChurnList(churnList);
+fileList.add(javaFile);

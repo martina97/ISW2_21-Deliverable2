@@ -352,8 +352,6 @@ public class TestWeka{
 	public static void chooseBalancing(AbstractClassifier classifier,M2Entries entry, Instances training, Instances testing) {
 		
 		List<String> balancingNames = Arrays.asList("No","oversampling", "undersampling","SMOTE");
-		String classifierName = entry.getClassifierName();
-		String featureSelectionName = entry.getFeatureSelection();
 		
 		
 		for(int i = 0; i<balancingNames.size(); i++) {

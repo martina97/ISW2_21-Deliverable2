@@ -1,17 +1,16 @@
 
-3entities.DBEntriesM2#getClassifier()Ljava/util/Map;n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java" (/"1*¸
-1n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java	 (¸
-µ
-n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java	 (
-%0java.util.Map"__id*(*&
-entities.DBEntriesM2"
-
-classifier"‡
-n
-dD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/DBEntriesM2.java (
-
-%0java.util.MapB
-entities.DBEntriesM2
+,entities.JavaFile#getNr()Ljava/lang/Integer;k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaI I("1*¬
+1k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaJ	 J(®
+«
+k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaJ	 J(
+%0java.lang.Integer"__id**
+entities.JavaFile"
+nr"ˆ
+k
+aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.javaJ J(
+
+%0java.lang.IntegerB
+entities.JavaFile

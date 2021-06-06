@@ -170,7 +170,6 @@ public class GetJIRAInfo {
 		   Integer j = 0;
 		   Integer i = 0;
 		   Integer total = 1;
-		   Integer myYear; 
 		   JSONArray issues ;
 		 /// RITORNA UNA LISTA DI TICKET
 		 ArrayList<Ticket> ticketList = new ArrayList<>();
