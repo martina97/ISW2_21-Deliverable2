@@ -35,7 +35,7 @@ public class Main {
 	private static List<Release> releasesList;
 	private static List<Ticket> ticketList;
 	private static List<RevCommit> commitList;
-	private static Map<String, List<String>> fileAliasMap;
+	//private static Map<String, List<String>> fileAliasMap;
 
 
    public static void main(String[] args) throws IllegalStateException, GitAPIException, IOException, JSONException {
@@ -100,7 +100,7 @@ public class Main {
 	   
 	  logger.log(Level.INFO,"###### checkRename ###### ");
 
-	  fileAliasMap = GetGitInfo.checkRename(releasesList, repo);
+	   Map<String, List<String>> fileAliasMap = GetGitInfo.checkRename(releasesList, repo);
 	  logger.log(Level.INFO,"FileAliasMap SIZE = {0}.", fileAliasMap.size());
 	   
 	   removeHalfRelease(releasesList, ticketList);
