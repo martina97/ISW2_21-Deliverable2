@@ -1,16 +1,16 @@
 
-7entities.JavaFile#getAvgChgSetSize()Ljava/lang/Integer;`
-VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaQ Q( "1*ï
+-entities.JavaFile#getBugg()Ljava/lang/String;`
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java% %("1*è
 1`
-VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaR	 R(Æ
-´
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java&	 &(©
+¶
 `
-VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaR	 R(
-%0java.lang.Integer"__id*(*&
-entities.JavaFile"
-avgChgSetSize"}
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java&	 &(
+%0java.lang.String"__id*$*"
+entities.JavaFile"
+	buggyness"|
 `
-VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaR R(
-
-%0java.lang.IntegerB
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java& &(
+
+%0java.lang.StringB
 entities.JavaFile

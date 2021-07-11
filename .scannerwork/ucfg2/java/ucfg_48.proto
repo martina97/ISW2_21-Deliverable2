@@ -1,16 +1,16 @@
 
-0entities.JavaFile#getChurnList()Ljava/util/List;`
-VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaX X(""1*‹
+.entities.JavaFile#getSize()Ljava/lang/Integer;`
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java- -("1*Œ
 1`
-VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaY	 Y(§
-¤
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java.	 .(¥
+¢
 `
-VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaY	 Y(
-%0java.util.List"__id*$*"
-entities.JavaFile"
-	churnList"z
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java.	 .(
+%0java.lang.Integer"__id**
+entities.JavaFile"
+size"}
 `
-VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaY Y(
-
-%0java.util.ListB
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java. .(
+
+%0java.lang.IntegerB
 entities.JavaFile

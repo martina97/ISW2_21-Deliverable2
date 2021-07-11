@@ -1,10 +1,18 @@
 
-entities.M2Entries#getKappa()Da
-WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.javaN N("1*Ó
+5entities.M2Entries#getDatasetName()Ljava/lang/String;a
+WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.java ("1*•
 1a
-WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.javaO
- O("k
+WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.java
+ (­
+ª
 a
-WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.javaO O(
-""B
+WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.java
+ (
+%0java.lang.String"__id*'*%
+entities.M2Entries"
+datasetName"}
+a
+WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.java (
+
+%0java.lang.StringB
 entities.M2Entries

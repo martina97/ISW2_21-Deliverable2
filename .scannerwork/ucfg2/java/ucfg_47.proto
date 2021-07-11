@@ -1,16 +1,17 @@
 
-5entities.JavaFile#getChgSetSizeList()Ljava/util/List;`
-VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaU U('"1*ê
+/entities.JavaFile#getoldPaths()Ljava/util/List;`
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java) )( "1*ä
 1`
-VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaV	 V(¨
-©
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java*	 *(¶
+£
 `
-VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaV	 V(
-%0java.util.List"__id*)*'
-entities.JavaFile"
-chgSetSizeList"z
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java*	 *(
+%0java.util.List"__id*#*!
+entities.JavaFile"
+
+oldPaths"z
 `
-VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaV V(
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java* *(
 
 %0java.util.ListB
 entities.JavaFile

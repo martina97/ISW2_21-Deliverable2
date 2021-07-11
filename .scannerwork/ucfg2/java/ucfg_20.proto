@@ -1,17 +1,16 @@
 
--entities.Ticket#getFileList()Ljava/util/List;^
-TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java@ @( "1*Ç
+:entities.Ticket#getCreationDate()Ljava/time/LocalDateTime;^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java0 0(%"1*ô
 1^
-TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.javaA	 A(¢
-ü
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java1	 1(Ø
+¨
 ^
-TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.javaA	 A(
-%0java.util.List"__id*!*
-entities.Ticket"
-
-fileList"x
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java1	 1(
+%0java.time.LocalDateTime"__id*%*#
+entities.Ticket"
+creationDate"Å
 ^
-TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.javaA A(
-
-%0java.util.ListB
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java1 1(
+
+%0java.time.LocalDateTimeB
 entities.Ticket

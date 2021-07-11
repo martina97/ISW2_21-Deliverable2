@@ -1,11 +1,11 @@
 
-AfirstPart.GetJIRAInfo#readAll(Ljava/io/Reader;)Ljava/lang/String;d
-ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJIRAInfo.java, ,( "4*é
+Afirstpart.GetJIRAInfo#readAll(Ljava/io/Reader;)Ljava/lang/String;d
+ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetJIRAInfo.java, ,( "4*é
 2d
-ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJIRAInfo.java0
+ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetJIRAInfo.java0
  0(øõ
 d
-ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJIRAInfo.java0
+ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetJIRAInfo.java0
  0(
 %3java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*
 
@@ -13,43 +13,43 @@ ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJI
 ""2	append(C)*
 3* 
 3d
-ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJIRAInfo.java/ /(¬©
+ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetJIRAInfo.java/ /(¬©
 d
-ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJIRAInfo.java/ /(	
+ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetJIRAInfo.java/ /(	
 %2int"java.io.Reader#read()I*
 
 rdjava.io.Reader2read()*
 2
 1*ú
 4d
-ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJIRAInfo.java- -(-¡ž
+ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetJIRAInfo.java- -(-¡ž
 d
-ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJIRAInfo.java- -(+
+ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetJIRAInfo.java- -(+
 %0java.lang.StringBuilder"java.lang.StringBuilder³
 °
 d
-ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJIRAInfo.java- -(-
+ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetJIRAInfo.java- -(-
 %1"!java.lang.StringBuilder#<init>()V*
 
 %0java.lang.StringBuilder¯
 ¬
 d
-ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJIRAInfo.java- -(.
+ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetJIRAInfo.java- -(.
 sbjava.lang.StringBuilder"__id*
 
 %0java.lang.StringBuilder*
 3*Ó
 1d
-ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJIRAInfo.java2 2(äá
+ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetJIRAInfo.java2 2(äá
 d
-ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJIRAInfo.java2 2(
+ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetJIRAInfo.java2 2(
 %4java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*
 
 sbjava.lang.StringBuilder2
 toString()"€
 d
-ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/GetJIRAInfo.java2 2(
+ZD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetJIRAInfo.java2 2(
 
 %4java.lang.String:
 rdjava.io.ReaderB"
-firstPart.GetJIRAInfo
+firstpart.GetJIRAInfo

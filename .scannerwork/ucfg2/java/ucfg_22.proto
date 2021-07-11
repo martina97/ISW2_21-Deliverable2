@@ -1,10 +1,16 @@
 
-)entities.Ticket#getP()Ljava/lang/Integer;^
-TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.javaG G("1*Í
+*entities.Ticket#getOV()Ljava/lang/Integer;^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java8 8("1*‚
 1^
-TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.javaH	 H(
-"h
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java9	 9(Ÿ
+œ
 ^
-TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.javaH H(
-""B
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java9	 9(
+%0java.lang.Integer"__id**
+entities.Ticket"
+oV"{
+^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java9 9(
+
+%0java.lang.IntegerB
 entities.Ticket

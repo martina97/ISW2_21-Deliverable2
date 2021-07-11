@@ -225,7 +225,6 @@ public class Proportion {
 			 iV = listGood.get(i).getIV();
 			 oV = listGood.get(i).getOV();
 			 fV = listGood.get(i).getFV();
-			String id = listGood.get(i).getID();
 			Integer index = listGood.get(i).getIndex();
 	
 			float proportion = (float) (fV - iV) / (fV - oV);
@@ -238,7 +237,6 @@ public class Proportion {
 		for (int j = 0; j < listNoIV.size(); j++) {
 	
 			Ticket ticket = listNoIV.get(j);
-			String ticketID = ticket.getID();
 			Integer index = ticket.getIndex();
 			oV = ticket.getOV();
 			fV = ticket.getFV();

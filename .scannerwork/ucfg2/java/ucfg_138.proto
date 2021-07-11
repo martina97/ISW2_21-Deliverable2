@@ -1,16 +1,146 @@
 
-.entities.Release#getIndex()Ljava/lang/Integer;_
-UD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Release.java& &("1*â
-1_
-UD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Release.java'	 '(§
-°
-_
-UD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Release.java'	 '(
-%0java.lang.Integer"__id**
-entities.Release"
-index"|
-_
-UD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Release.java' '(
+Sfirstpart.GetGitInfo#checkRename(Ljava/util/List;Ljava/lang/String;)Ljava/util/Map;e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.java‡* ‡(5"11*ﬂ
+3e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÄ Ä(Ÿ÷
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÄ Ä('
+%7java.util.Set")java.util.HashMap#keySet()Ljava/util/Set;*#
+!
+fileAliasMapjava.util.HashMap2keySet()“œ
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÄ Ä(1
+%8java.lang.Object[]"*java.util.Set#toArray()[Ljava/lang/Object;*
+
+%7java.util.Set2	toArray()≤
+Ø
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÄ Ä(4
+%9java.lang.Object"
+__arrayGet*
+
+%8java.lang.Object[]*
+""£
+†
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÄ Ä(5
+keyjava.lang.Object"__id*
+
+%9java.lang.ObjectÀ
+»
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÅ Å(
+%10java.util.List"__mapGet*#
+!
+fileAliasMapjava.util.HashMap*
 
-%0java.lang.IntegerB
-entities.Release
+keyjava.lang.ObjectÂ‚
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÅ Å(#
+%11java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+%10java.util.List2stream()ıÚ
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÅ Å(.
+%12java.util.stream.Stream";java.util.stream.Stream#distinct()Ljava/util/stream/Stream;* 
+
+%11java.util.stream.Stream2
+distinct()
+Ì
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÅ7 Å(J!
+%13java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
+java.util.stream.Collectors¿Ω
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÅ Å(K
+%14java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%12java.util.stream.Stream*#
+!
+%13java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)*
+4*≤
+4e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaˇ ˇ(Ω∫
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaˇ ˇ()	
+%6int"java.util.HashMap#size()I*#
+!
+fileAliasMapjava.util.HashMap2size()*
+3
+1* 
+6e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.java˜	 ˜(ï
+í
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.java˜	 ˜(
+releaseentities.Release"__id*
+""Ω
+∫
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.java˜	 ˜(
+releaseentities.Release"
+__arrayGet* 
+
+releasesListjava.util.List*
+""*
+4
+9*Ò
+8e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.java˘ ˘(¸
+˘
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.java˘ ˘(-
+%5"Cfirstpart.GetGitInfo#analyzeDiffRename(LRevCommit;Ljava/util/Map;)V*"
+firstpart.GetGitInfo*
+""*#
+!
+fileAliasMapjava.util.HashMap*
+6
+8*«
+9e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.java¯ ¯($“œ
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.java¯ ¯(4
+%4"0entities.Release#getCommitList()Ljava/util/List;*
+
+releaseentities.Release2getCommitList()*
+6
+8*√
+11e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÈ0 È(?ñì
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÈ4 È(=
+%0java.util.HashMap"java.util.HashMap®
+•
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÈ0 È(?
+%1"java.util.HashMap#<init>()V*
+
+%0java.util.HashMapÆ
+´
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÈ È(@!
+fileAliasMapjava.util.HashMap"__id*
+
+%0java.util.HashMapåâ
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÙ0 Ù(4
+%2java.io.File"java.io.FileÃ
+…
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÙ, Ù(:
+%3"(java.io.File#<init>(Ljava/lang/String;)V*
+
+%2java.io.File*
+
+repojava.lang.String*
+6*˘
+1e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÑ Ñ("å
+e
+YD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/GetGitInfo.javaÑ Ñ(#
+!
+fileAliasMapjava.util.HashMap:
+releasesListjava.util.List:
+repojava.lang.StringB"
+firstpart.GetGitInfo

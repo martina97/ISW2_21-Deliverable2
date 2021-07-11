@@ -1,18 +1,17 @@
 
-:entities.M2Entries#getFeatureSelection()Ljava/lang/String;a
-WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.java0 0(#"1*š
-1a
-WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.java1
- 1(²
-¯
-a
-WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.java1
- 1(
-%0java.lang.String"__id*,**
-entities.M2Entries"
-featureSelection"}
-a
-WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.java1 1(
-
-%0java.lang.StringB
-entities.M2Entries
+2entities.JavaFile#getMAXChurn()Ljava/lang/Integer;b
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java® ®("1*–
+1b
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java¯	 ¯(«
+¨
+b
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java¯	 ¯(
+%0java.lang.Integer"__id*#*!
+entities.JavaFile"
+
+maxChurn"
+b
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java¯ ¯(
+
+%0java.lang.IntegerB
+entities.JavaFile

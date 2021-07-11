@@ -1,16 +1,11 @@
 
-'entities.Ticket#getAV()Ljava/util/List;^
-TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java( (("1*ü
+Lfirstpart.Utils#calculatePercentage(Ljava/lang/Integer;Ljava/lang/Integer;)F^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/Utils.java# #(("1*Í
 1^
-TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java)	 )(œ
-™
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/Utils.java' '("h
 ^
-TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java)	 )(
-%0java.util.List"__id**
-entities.Ticket"
-aV"x
-^
-TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java) )(
-
-%0java.util.ListB
-entities.Ticket
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/Utils.java' '($
+"":
+	numeratorjava.lang.Integer:
+totaljava.lang.IntegerB"
+firstpart.Utils
