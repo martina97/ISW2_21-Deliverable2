@@ -1,1 +1,1 @@
-sonar-scanner.bat -D"sonar.organization=martina97" -D"sonar.projectKey=martina97_ISW2_21-Deliverable2_BOOKKEEPER" -D"sonar.sources=." -D"sonar.host.url=https://sonarcloud.io" -D"sonar.java.binaries=src"
+sonar-scanner.bat -D"sonar.organization=martina97" -D"sonar.projectKey=martina97_ISW2_21-Deliverable2" -D"sonar.sources=." -D"sonar.host.url=https://sonarcloud.io" -D"sonar.java.binaries=src"
