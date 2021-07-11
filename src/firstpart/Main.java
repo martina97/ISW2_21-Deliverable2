@@ -1,4 +1,4 @@
-package firstPart;
+package firstpart;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,7 +35,6 @@ public class Main {
 	private static List<Release> releasesList;
 	private static List<Ticket> ticketList;
 	private static List<RevCommit> commitList;
-	//private static Map<String, List<String>> fileAliasMap;
 
 
    public static void main(String[] args) throws IllegalStateException, GitAPIException, IOException, JSONException {
@@ -98,7 +97,6 @@ public class Main {
 	    * e setto inizialmente buggyness = "no" 
 	    */
 	   
-	  logger.log(Level.INFO,"###### checkRename ###### ");
 
 	   Map<String, List<String>> fileAliasMap = GetGitInfo.checkRename(releasesList, repo);
 	  logger.log(Level.INFO,"FileAliasMap SIZE = {0}.", fileAliasMap.size());
@@ -106,33 +104,18 @@ public class Main {
 	   removeHalfRelease(releasesList, ticketList);
 	   
 
-	   logger.log(Level.INFO,"###### getJavaFiles ###### ");
 
 	   GetGitInfo.getJavaFiles(repoPath, releasesList, fileAliasMap);
 	   
 	   
-	   logger.log(Level.INFO,"###### checkBuggyness ###### ");
 	   GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
 	   
 
-	   logger.log(Level.INFO,"###### getMetrics ###### ");
 
 	   Metrics.getMetrics(releasesList, repo);
-	   CSVWriter.writeCsvBugg2(releasesList, nameProjectLowerCase);
+	   CSVWriter.writeCsvBugg(releasesList, nameProjectLowerCase);
 
-	   logger.log(Level.INFO,"\n\nSTAMPO BUGGYNESS");
-	   int numBugg = 0;
-	   int numFile = 0;
-	   for (Release release : releasesList) {
-		   for (JavaFile file : release.getFileList()) {
-			   numFile++;
-			   if (file.getBugg().equals("Yes")) {
-				   numBugg++;
-			   }
-
-		   }
-	   }
-	   System.out.println("\n\nnumFile == " + numFile + "\tnumBugg == " + numBugg);
+	 
    	}                                                                                                                                                                                                                                                                                                                                           
 
    

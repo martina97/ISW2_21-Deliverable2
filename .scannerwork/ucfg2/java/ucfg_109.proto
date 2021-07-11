@@ -1,18 +1,655 @@
 
--entities.M2Entries#getTN()Ljava/lang/Integer;l
-bD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/M2Entries.java? ?("1*∞
-1l
-bD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/M2Entries.java@
- @(∞
-≠
-l
-bD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/M2Entries.java@
- @(
-%0java.lang.Integer"__id**
-entities.M2Entries"
-tN"â
-l
-bD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/M2Entries.java@ @(
+)firstPart.Main#main([Ljava/lang/String;)V]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java) )("12*©
+2]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java~	 ~(ç
+ä
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java~	 ~(
+releaseentities.Release"__id*
+""¨
+©
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java~	 ~(
+releaseentities.Release"
+__arrayGet*
+
+%68java.util.List*
+""*
+6
+1*•
+3]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java
+ (ã
+à
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java
+ (
+fileentities.JavaFile"__id*
+""™
+ß
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java
+ (
+fileentities.JavaFile"
+__arrayGet*
+
+%69java.util.List*
+""*
+2
+5*•
+5_
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaÄ Ä(‘—
+_
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaÅ
+ Å(
+%70java.lang.String"-entities.JavaFile#getBugg()Ljava/lang/String;*
+
+fileentities.JavaFile2	getBugg()‚ﬂ
+_
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaÅ
+ Å(&
+%71boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
 
-%0java.lang.IntegerB
-entities.M2Entries
+%70java.lang.String*
+Yes2equals(Ljava/lang/Object;)*
+3*¡
+6]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java (!◊‘
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java (/
+%69java.util.List".entities.Release#getFileList()Ljava/util/List;*
+
+releaseentities.Release2getFileList()*
+3*è
+7]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java~ ~('•
+¢
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java~ ~('
+%68java.util.List"__id*$*"
+firstPart.Main"
+releasesList*
+2*⁄R
+8]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaG G(•
+¢
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaG: G(F
+%20java.util.List"__id*$*"
+firstPart.Main"
+releasesList´
+®
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaG G(G
+%21java.util.List"YfirstPart.GetJIRAInfo#retrieveTickets(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;*"
+firstPart.GetJIRAInfo*!
+
+nameProjectjava.lang.String*
+
+%20java.util.List£
+†
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaG G(G 
+firstPart.Main"
+
+ticketList"__id*
+
+%21java.util.List¶
+£
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaI I(
+%22void"!firstPart.Main#getCommitTicket()V*"
+firstPart.Mainú
+ô
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaL L(
+%23void"firstPart.Main#setIv()V*"
+firstPart.Mainû
+õ
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaM M(
+%24void"firstPart.Main#checkAV()V*"
+firstPart.Main©
+¶
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaO O(
+
+%25java.util.logging.Logger"__id**
+firstPart.Main"
+loggerê
+ç
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaO O(
+%26java.util.logging.Level"__id*
+""£
+†
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaO2 O(<
+%27java.util.List"__id*"* 
+firstPart.Main"
+
+ticketListß§
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaO2 O(C
+
+%28int"java.util.List#size()I*
+
+%27java.util.List2size()˛˚
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaO O(D
+%29void"\java.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)V*!
+
+%25java.util.logging.Logger* 
+
+%26java.util.logging.Level*
+Numero ticket = {0}.*
+
+
+%28int2Blog(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)£
+†
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaY Y("
+%30java.util.List"__id*"* 
+firstPart.Main"
+
+ticketList’
+“
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaY Y(#
+%31void"0java.util.Collections#reverse(Ljava/util/List;)V*"
+java.util.Collections*
+
+%30java.util.List£
+†
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java[ [($
+%32java.util.List"__id*"* 
+firstPart.Main"
+
+ticketList÷
+”
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java[ [(%
+%33void"2firstPart.Proportion#proportion(Ljava/util/List;)V*"
+firstPart.Proportion*
+
+%32java.util.Listû
+õ
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java] ](
+%34void"firstPart.Main#checkAV()V*"
+firstPart.Main©
+¶
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javae e(	
+%35java.util.logging.Logger"__id**
+firstPart.Main"
+loggerê
+ç
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javae e(
+%36java.util.logging.Level"__id*
+""“œ
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javae e(6
+%37void"Jjava.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;)V*!
+
+%35java.util.logging.Logger* 
+
+%36java.util.logging.Level*
+###### checkRename ###### 20log(Ljava/util/logging/Level;Ljava/lang/String;)•
+¢
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javagD g(P
+%38java.util.List"__id*$*"
+firstPart.Main"
+releasesListú
+ô
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javag- g(W
+%39java.util.Map"SfirstPart.GetGitInfo#checkRename(Ljava/util/List;Ljava/lang/String;)Ljava/util/Map;*"
+firstPart.GetGitInfo*
+
+%38java.util.List*
+
+repojava.lang.Stringü
+ú
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javag g(X
+fileAliasMapjava.util.Map"__id*
+
+%39java.util.Map©
+¶
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javah h(	
+%40java.util.logging.Logger"__id**
+firstPart.Main"
+loggerê
+ç
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javah h(
+%41java.util.logging.Level"__id*
+""Æ´
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javah5 h(H
+
+%42int"java.util.Map#size()I*
+
+fileAliasMapjava.util.Map2size()Çˇ
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javah h(I
+%43void"\java.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)V*!
+
+%40java.util.logging.Logger* 
+
+%41java.util.logging.Level*
+FileAliasMap SIZE = {0}.*
+
+
+%42int2Blog(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)•
+¢
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaj j("
+%44java.util.List"__id*$*"
+firstPart.Main"
+releasesList£
+†
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaj$ j(.
+%45java.util.List"__id*"* 
+firstPart.Main"
+
+ticketList˙
+˜
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaj j(/
+%46void"CfirstPart.Main#removeHalfRelease(Ljava/util/List;Ljava/util/List;)V*"
+firstPart.Main*
+
+%44java.util.List*
+
+%45java.util.List©
+¶
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javam m(
+
+%47java.util.logging.Logger"__id**
+firstPart.Main"
+loggerê
+ç
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javam m(
+%48java.util.logging.Level"__id*
+""”–
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javam m(8
+%49void"Jjava.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;)V*!
+
+%47java.util.logging.Logger* 
+
+%48java.util.logging.Level*
+###### getJavaFiles ###### 20log(Ljava/util/logging/Level;Ljava/lang/String;)•
+¢
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javao& o(2
+%50java.util.List"__id*$*"
+firstPart.Main"
+releasesListæ
+ª
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javao o(A
+%51void"WfirstPart.GetGitInfo#getJavaFiles(Ljava/nio/file/Path;Ljava/util/List;Ljava/util/Map;)V*"
+firstPart.GetGitInfo* 
+
+repoPathjava.nio.file.Path*
+
+%50java.util.List*
+
+fileAliasMapjava.util.Map©
+¶
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javar r(
+
+%52java.util.logging.Logger"__id**
+firstPart.Main"
+loggerê
+ç
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javar r(
+%53java.util.logging.Level"__id*
+""’“
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javar r(:
+%54void"Jjava.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;)V*!
+
+%52java.util.logging.Logger* 
+
+%53java.util.logging.Level*!
+###### checkBuggyness ###### 20log(Ljava/util/logging/Level;Ljava/lang/String;)•
+¢
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javas s(*
+%55java.util.List"__id*$*"
+firstPart.Main"
+releasesList£
+†
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javas, s(6
+%56java.util.List"__id*"* 
+firstPart.Main"
+
+ticketList≥
+∞
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javas s(E
+%57void"UfirstPart.GetGitInfo#checkBuggyness(Ljava/util/List;Ljava/util/List;Ljava/util/Map;)V*"
+firstPart.GetGitInfo*
+
+%55java.util.List*
+
+%56java.util.List*
+
+fileAliasMapjava.util.Map©
+¶
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javav v(
+
+%58java.util.logging.Logger"__id**
+firstPart.Main"
+loggerê
+ç
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javav v(
+%59java.util.logging.Level"__id*
+""—Œ
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javav v(6
+%60void"Jjava.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;)V*!
+
+%58java.util.logging.Logger* 
+
+%59java.util.logging.Level*
+###### getMetrics ###### 20log(Ljava/util/logging/Level;Ljava/lang/String;)•
+¢
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javax x(#
+%61java.util.List"__id*$*"
+firstPart.Main"
+releasesList˛
+˚
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javax x(*
+%62void"AfirstPart.Metrics#getMetrics(Ljava/util/List;Ljava/lang/String;)V*"
+firstPart.Metrics*
+
+%61java.util.List*
+
+repojava.lang.String•
+¢
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javay y((
+%63java.util.List"__id*$*"
+firstPart.Main"
+releasesListï
+í
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javay y(?
+%64void"FfirstPart.CSVWriter#writeCsvBugg2(Ljava/util/List;Ljava/lang/String;)V*"
+firstPart.CSVWriter*
+
+%63java.util.List**
+(
+nameProjectLowerCasejava.lang.String©
+¶
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java{ {(
+
+%65java.util.logging.Logger"__id**
+firstPart.Main"
+loggerê
+ç
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java{ {(
+%66java.util.logging.Level"__id*
+""Ã…
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java{ {(1
+%67void"Jjava.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;)V*!
+
+%65java.util.logging.Logger* 
+
+%66java.util.logging.Level*
+\n\nSTAMPO BUGGYNESS20log(Ljava/util/logging/Level;Ljava/lang/String;)*
+7*™
+9]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaA	 A(ç
+ä
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaA	 A(
+releaseentities.Release"__id*
+""¨
+©
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaA	 A(
+releaseentities.Release"
+__arrayGet*
+
+%17java.util.List*
+""*
+8
+10*¯
+10]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaB B(À»
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaB B(0
+%18"0entities.Release#getCommitList()Ljava/util/List;*
+
+releaseentities.Release2getCommitList()ø
+º
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaB B(1
+%19"0java.util.Collections#reverse(Ljava/util/List;)V*"
+java.util.Collections*
+
+%18*
+9*}
+0 "v
+_
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaà à(
+implicit return*ê
+11]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaA A('•
+¢
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaA A('
+%17java.util.List"__id*$*"
+firstPart.Main"
+releasesList*
+9*è%
+12]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java, ,($ã
+à
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java, ,('
+%0java.io.InputStream"__id*
+""éã
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java, ,(
+%1java.util.Scanner"java.util.Scanner“
+œ
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java, ,((
+%2"0java.util.Scanner#<init>(Ljava/io/InputStream;)V*
+
+%1java.util.Scanner*
+
+%0java.io.InputStreamü
+ú
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java, ,()
+inputjava.util.Scanner"__id*
+
+%1java.util.Scanner®
+•
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java- -(
+%3java.util.logging.Logger"__id**
+firstPart.Main"
+loggerè
+å
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java- -(
+%4java.util.logging.Level"__id*
+""û
+õ
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java- .(=
+%5java.lang.String"__concat*][
+YINSERIRE IN MAIUSCOLO IL NOME DEL PROGETTO CHE SI DESIDERA ANALIZZARE.\n\nIN PARTICOLARE *97
+5INSERIRE LA STRINGA ''BOOKKEEPER'' OPPURE ''SYNCOPE''…∆
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java- .(?
+
+%6void"Jjava.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;)V* 
+
+%3java.util.logging.Logger*
+
+%4java.util.logging.Level*
+
+%5java.lang.String20log(Ljava/util/logging/Level;Ljava/lang/String;)Ã…
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java0 0(#
+%7java.lang.String"*java.util.Scanner#next()Ljava/lang/String;*
+
+inputjava.util.Scanner2next()£
+†
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java0 0($
+nameProjectjava.lang.String"__id*
+
+%7java.lang.Stringﬁ€
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java1  1(9
+%8java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*!
+
+nameProjectjava.lang.String2toLowerCase()¨
+©
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java1 1(:(
+nameProjectLowerCasejava.lang.String"__id*
+
+%8java.lang.String›
+⁄
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java2 2(P
+%9java.lang.String"__concat*+)
+'D:/Programmi/Eclipse/eclipse-workspace/**
+(
+nameProjectLowerCasejava.lang.String™
+ß
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java2 2(Z
+%10java.lang.String"__concat*
+
+%9java.lang.String*	
+/.gitù
+ö
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java2 2([
+repojava.lang.String"__id*
+
+%10java.lang.Stringﬁ
+€
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java3 3(\
+%11java.lang.String"__concat*+)
+'D:/Programmi/Eclipse/eclipse-workspace/**
+(
+nameProjectLowerCasejava.lang.StringÖ
+Ç
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java3 3(]
+%12java.nio.file.Path"Rjava.nio.file.Paths#get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;*"
+java.nio.file.Paths*
+
+%11java.lang.String•
+¢
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java3 3(^
+repoPathjava.nio.file.Path"__id*
+
+%12java.nio.file.Path≤Ø
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java4 4(
+%13void"java.util.Scanner#close()V*
+
+inputjava.util.Scanner2close()Å
+˛
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java8 8(:
+%14java.util.List"HfirstPart.GetJIRAInfo#getListRelease(Ljava/lang/String;)Ljava/util/List;*"
+firstPart.GetJIRAInfo*!
+
+nameProjectjava.lang.String•
+¢
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java8 8(:"
+firstPart.Main"
+releasesList"__id*
+
+%14java.util.List•
+¢
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java=) =(5
+%15java.util.List"__id*$*"
+firstPart.Main"
+releasesListó
+î
+]
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.java= =(@
+%16"WfirstPart.GetGitInfo#getAllCommit(Ljava/util/List;Ljava/nio/file/Path;)Ljava/util/List;*"
+firstPart.GetGitInfo*
+
+%15java.util.List* 
+
+repoPathjava.nio.file.Path*
+11*Ç
+1_
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaá á(
+é
+ã
+_
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaá á(
+%72java.io.PrintStream"__id*
+""§
+°
+_
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaá á(2
+%73java.lang.String"__concat*
+\n\nnumFile == *
+""µ
+≤
+_
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaá á(D
+%74java.lang.String"__concat*
+
+%73java.lang.String*
+\tnumBugg == ™
+ß
+_
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaá á(N
+%75java.lang.String"__concat*
+
+%74java.lang.String*
+""˘ˆ
+_
+SD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Main.javaá á(O
+%76void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%72java.io.PrintStream*
+
+%75java.lang.String2println(Ljava/lang/String;)*
+0:
+argsjava.lang.String[]B"
+firstPart.Main

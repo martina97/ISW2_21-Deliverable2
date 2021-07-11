@@ -1,17 +1,16 @@
 
--entities.Ticket#getFileList()Ljava/util/List;i
-_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.java@ @( "1*¤
-1i
-_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.javaA	 A(­
-ª
-i
-_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.javaA	 A(
-%0java.util.List"__id*!*
-entities.Ticket"
-
-fileList"ƒ
-i
-_D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Ticket.javaA A(
-
-%0java.util.ListB
+-entities.Ticket#getIndex()Ljava/lang/Integer;^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java< <("1*…
+1^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java=	 =(¢
+Ÿ
+^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java=	 =(
+%0java.lang.Integer"__id**
+entities.Ticket"
+index"{
+^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Ticket.java= =(
+
+%0java.lang.IntegerB
 entities.Ticket

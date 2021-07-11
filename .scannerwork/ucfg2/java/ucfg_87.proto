@@ -1,146 +1,18 @@
 
-Udeliverable.GetGitInfo#checkRename(Ljava/util/List;Ljava/lang/String;)Ljava/util/Map;r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java‡* ‡(5"11*·
-3r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÄ Ä(Ê„
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÄ Ä('
-%7java.util.Set")java.util.HashMap#keySet()Ljava/util/Set;*#
-!
-fileAliasMapjava.util.HashMap2keySet()ﬂ‹
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÄ Ä(1
-%8java.lang.Object[]"*java.util.Set#toArray()[Ljava/lang/Object;*
-
-%7java.util.Set2	toArray()ø
-º
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÄ Ä(4
-%9java.lang.Object"
-__arrayGet*
-
-%8java.lang.Object[]*
-""∞
-≠
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÄ Ä(5
-keyjava.lang.Object"__id*
-
-%9java.lang.Objectÿ
-’
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÅ Å(
-%10java.util.List"__mapGet*#
-!
-fileAliasMapjava.util.HashMap*
+-entities.M2Entries#getFN()Ljava/lang/Integer;a
+WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.javaB B("1*é
+1a
+WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.javaC
+ C(•
+¢
+a
+WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.javaC
+ C(
+%0java.lang.Integer"__id**
+entities.M2Entries"
+fN"~
+a
+WD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/M2Entries.javaC C(
 
-keyjava.lang.ObjectÚÔ
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÅ Å(#
-%11java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
-
-%10java.util.List2stream()Çˇ
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÅ Å(.
-%12java.util.stream.Stream";java.util.stream.Stream#distinct()Ljava/util/stream/Stream;* 
-
-%11java.util.stream.Stream2
-distinct()˝
-˙
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÅ7 Å(J!
-%13java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
-java.util.stream.CollectorsÕ 
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÅ Å(K
-%14java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
-
-%12java.util.stream.Stream*#
-!
-%13java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)*
-4*Ã
-4r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaˇ ˇ( «
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaˇ ˇ()	
-%6int"java.util.HashMap#size()I*#
-!
-fileAliasMapjava.util.HashMap2size()*
-3
-1*Ò
-6r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java˜	 ˜(¢
-ü
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java˜	 ˜(
-releaseentities.Release"__id*
-"" 
-«
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java˜	 ˜(
-releaseentities.Release"
-__arrayGet* 
-
-releasesListjava.util.List*
-""*
-4
-9*è
-8r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java˘ ˘(ç
-ä
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java˘ ˘(-
-%5"Edeliverable.GetGitInfo#analyzeDiffRename(LRevCommit;Ljava/util/Map;)V*"
-deliverable.GetGitInfo*
-""*#
-!
-fileAliasMapjava.util.HashMap*
-6
-8*·
-9r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java¯ ¯($ﬂ‹
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.java¯ ¯(4
-%4"0entities.Release#getCommitList()Ljava/util/List;*
-
-releaseentities.Release2getCommitList()*
-6
-8*ë
-11r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÈ0 È(?£†
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÈ4 È(=
-%0java.util.HashMap"java.util.HashMapµ
-≤
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÈ0 È(?
-%1"java.util.HashMap#<init>()V*
-
-%0java.util.HashMapª
-∏
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÈ È(@!
-fileAliasMapjava.util.HashMap"__id*
-
-%0java.util.HashMapôñ
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÙ0 Ù(4
-%2java.io.File"java.io.FileŸ
-÷
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÙ, Ù(:
-%3"(java.io.File#<init>(Ljava/lang/String;)V*
-
-%2java.io.File*
-
-repojava.lang.String*
-6*ì
-1r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÑ Ñ("ô
-r
-fD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/deliverable/GetGitInfo.javaÑ Ñ(#
-!
-fileAliasMapjava.util.HashMap:
-releasesListjava.util.List:
-repojava.lang.StringB"
-deliverable.GetGitInfo
+%0java.lang.IntegerB
+entities.M2Entries

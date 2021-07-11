@@ -1,16 +1,16 @@
 
-3entities.JavaFile#getLocAddedList()Ljava/util/List;k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java\ \(%"1*°
-1k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java]	 ](µ
-²
-k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java]	 ](
-%0java.util.List"__id*'*%
-entities.JavaFile"
-locAddedList"…
-k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java] ](
+0entities.JavaFile#getChurnList()Ljava/util/List;`
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaX X(""1*‹
+1`
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaY	 Y(§
+¤
+`
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaY	 Y(
+%0java.util.List"__id*$*"
+entities.JavaFile"
+	churnList"z
+`
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.javaY Y(
 
 %0java.util.ListB
 entities.JavaFile

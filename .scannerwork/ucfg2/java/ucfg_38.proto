@@ -1,17 +1,17 @@
 
-2entities.JavaFile#getLOCadded()Ljava/lang/Integer;k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java5 5("1*²
-1k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java6	 6(´
-±
-k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java6	 6(
-%0java.lang.Integer"__id*#*!
-entities.JavaFile"
+4entities.JavaFile#getLOCtouched()Ljava/lang/Integer;`
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java1 1("1*’
+1`
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java2	 2(«
+¨
+`
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java2	 2(
+%0java.lang.Integer"__id*%*#
+entities.JavaFile"
 
-locAdded"ˆ
-k
-aD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/JavaFile.java6 6(
+locTouched"}
+`
+VD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/JavaFile.java2 2(
 
 %0java.lang.IntegerB
 entities.JavaFile

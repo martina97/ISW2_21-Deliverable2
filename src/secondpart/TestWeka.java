@@ -1,4 +1,4 @@
-package secondPart;
+package secondpart;
 /*
  *  How to use WEKA API in Java 
  *  Copyright (C) 2014 
@@ -44,12 +44,11 @@ import weka.core.converters.ArffSaver;
 import weka.core.converters.CSVLoader;
 import weka.core.converters.ConverterUtils.DataSource;
 import weka.classifiers.lazy.IBk;
-import firstPart.CSVWriter;
-import firstPart.GetJIRAInfo;
-import firstPart.Utils;
 import entities.M2Entries;
 import entities.Release;
-
+import firstpart.CSVWriter;
+import firstpart.GetJIRAInfo;
+import firstpart.Utils;
 import weka.filters.supervised.instance.SpreadSubsample;
 
 

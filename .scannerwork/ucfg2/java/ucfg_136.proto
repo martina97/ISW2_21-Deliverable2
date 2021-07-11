@@ -1,17 +1,16 @@
 
-.entities.Release#getFileList()Ljava/util/List;j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Release.java, ,(""1*¨
-1j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Release.java-	 -(¯
-¬
-j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Release.java-	 -(
-%0java.util.List"__id*"* 
-entities.Release"
-
-fileList"„
-j
-`D:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2_BOOKKEEPER/src/entities/Release.java- -(
-
-%0java.util.ListB
+/entities.Release#getRelease()Ljava/lang/String;_
+UD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Release.java ("1*…
+1_
+UD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Release.java	 (¡
+ž
+_
+UD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Release.java	 (
+%0java.lang.String"__id**
+entities.Release"
+rel"{
+_
+UD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/entities/Release.java (
+
+%0java.lang.StringB
 entities.Release

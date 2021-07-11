@@ -1,7 +1,7 @@
-package firstPart;
+package firstpart;
 
 import java.io.FileWriter;
-
+import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 import java.util.logging.Logger;
@@ -23,74 +23,14 @@ public class CSVWriter {
 
 	
 	
-	public static void writeCsvBugg2(List<Release> releasesList, String nameProject) {
+	public static void writeCsvBugg(List<Release> releasesList, String nameProject) {
 		try (
 				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\FINITO\\CSV FINALE" + nameProject + "06GIUGNO.csv")) {
 
 				   fileWriter.append("RELEASE;FILENAME;LOC;LOC_added;MAX_LOC_Added;AVG_LOC_Added;Churn;MAX_Churn;AVG_Churn;NR;NAUTH;ChgSetSize;MAX_ChgSet;AVG_ChgSet;BUGGYNESS\n");
 				   for (Release release : releasesList) {
 					   for (JavaFile file : release.getFileList()) {
-						   fileWriter.append(release.getIndex().toString());
-						   fileWriter.append(";");
-						   fileWriter.append(file.getName());
-						   fileWriter.append(";");
-						   fileWriter.append(file.getSize().toString());
-						   fileWriter.append(";");
-						   fileWriter.append(file.getLOCadded().toString());
-						   fileWriter.append(";");
-						   
-						   if(file.getLOCadded().equals(0)) {
-							   fileWriter.append("0");
-							   fileWriter.append(";");
-							   fileWriter.append("0");
-						   }
-						   else {
-							   int maxLocAdded = Collections.max((file.getLocAddedList()));
-							   fileWriter.append(String.valueOf(maxLocAdded));
-							   fileWriter.append(";");
-							   double avgLocAdded = Utils.calculateAverage(file.getLocAddedList());
-							   fileWriter.append(String.format("%.2f",avgLocAdded));
-						   }
-						   fileWriter.append(";");
-						   fileWriter.append(file.getChurn().toString());
-						   fileWriter.append(";");
-						   if(file.getChurn().equals(0)) {
-							   fileWriter.append("0");
-							   fileWriter.append(";");
-							   fileWriter.append("0");
-						   }
-						   else {
-							   int maxChurn = Collections.max((file.getChurnList()));
-							   fileWriter.append(String.valueOf(maxChurn));
-							   fileWriter.append(";");
-							   double avgChurn = Utils.calculateAverage(file.getChurnList());
-							   fileWriter.append(String.format("%.2f",avgChurn));
-						   }
-						   fileWriter.append(";");
-
-						   fileWriter.append(file.getNr().toString());
-						   fileWriter.append(";");
-						   int size = file.getNAuth().size();
-						   fileWriter.append(String.valueOf(size));
-						   fileWriter.append(";");
-						   fileWriter.append(file.getChgSetSize().toString());
-						   fileWriter.append(";");
-						   if(file.getChgSetSize().equals(0)) {
-							   fileWriter.append("0");
-							   fileWriter.append(";");
-							   fileWriter.append("0");
-						   }
-						   else {
-							   int maxChgSet = Collections.max((file.getChgSetSizeList()));
-							   fileWriter.append(String.valueOf(maxChgSet));
-							   fileWriter.append(";");
-							   double avgChgSet = Utils.calculateAverage(file.getChgSetSizeList());
-							   fileWriter.append(String.format("%.2f",avgChgSet));
-							   
-						   }
-						   fileWriter.append(";");
-						   fileWriter.append(file.getBugg());
-						   fileWriter.append("\n");
+						   appendMetrics(fileWriter, release, file);
 					   }
 				   } 
 				  } catch (Exception ex) {
@@ -99,6 +39,69 @@ public class CSVWriter {
 				  }
 				 }	
 	
+	public static void appendMetrics(FileWriter fileWriter, Release release, JavaFile file) throws IOException {
+		fileWriter.append(release.getIndex().toString());
+		   fileWriter.append(";");
+		   fileWriter.append(file.getName());
+		   fileWriter.append(";");
+		   fileWriter.append(file.getSize().toString());
+		   fileWriter.append(";");
+		   fileWriter.append(file.getLOCadded().toString());
+		   fileWriter.append(";");
+		   
+		   if(file.getLOCadded().equals(0)) {
+			   fileWriter.append("0");
+			   fileWriter.append(";");
+			   fileWriter.append("0");
+		   }
+		   else {
+			   int maxLocAdded = Collections.max((file.getLocAddedList()));
+			   fileWriter.append(String.valueOf(maxLocAdded));
+			   fileWriter.append(";");
+			   double avgLocAdded = Utils.calculateAverage(file.getLocAddedList());
+			   fileWriter.append(String.format("%.2f",avgLocAdded));
+		   }
+		   fileWriter.append(";");
+		   fileWriter.append(file.getChurn().toString());
+		   fileWriter.append(";");
+		   if(file.getChurn().equals(0)) {
+			   fileWriter.append("0");
+			   fileWriter.append(";");
+			   fileWriter.append("0");
+		   }
+		   else {
+			   int maxChurn = Collections.max((file.getChurnList()));
+			   fileWriter.append(String.valueOf(maxChurn));
+			   fileWriter.append(";");
+			   double avgChurn = Utils.calculateAverage(file.getChurnList());
+			   fileWriter.append(String.format("%.2f",avgChurn));
+		   }
+		   fileWriter.append(";");
+
+		   fileWriter.append(file.getNr().toString());
+		   fileWriter.append(";");
+		   int size = file.getNAuth().size();
+		   fileWriter.append(String.valueOf(size));
+		   fileWriter.append(";");
+		   fileWriter.append(file.getChgSetSize().toString());
+		   fileWriter.append(";");
+		   if(file.getChgSetSize().equals(0)) {
+			   fileWriter.append("0");
+			   fileWriter.append(";");
+			   fileWriter.append("0");
+		   }
+		   else {
+			   int maxChgSet = Collections.max((file.getChgSetSizeList()));
+			   fileWriter.append(String.valueOf(maxChgSet));
+			   fileWriter.append(";");
+			   double avgChgSet = Utils.calculateAverage(file.getChgSetSizeList());
+			   fileWriter.append(String.format("%.2f",avgChgSet));
+			   
+		   }
+		   fileWriter.append(";");
+		   fileWriter.append(file.getBugg());
+		   fileWriter.append("\n");
+	}
 	
 	public static void writeCsvReleases(List<Ticket> ticketList, String test) {
 	 

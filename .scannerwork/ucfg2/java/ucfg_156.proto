@@ -1,0 +1,48 @@
+
+EfirstPart.Utils#doubleTransform(Ljava/lang/Double;)Ljava/lang/String;^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Utils.java, ,(%"1*Š
+1^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Utils.java-' -(-‰
+†
+^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Utils.java-P -(Y
+%0java.util.Locale"__id*
+""§
+¤
+^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Utils.java-/ -(Z$
+%1java.text.DecimalFormatSymbols"^java.text.DecimalFormatSymbols#getInstance(Ljava/util/Locale;)Ljava/text/DecimalFormatSymbols;*"" 
+java.text.DecimalFormatSymbols*
+
+%0java.util.Locale›˜
+^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Utils.java- -(&
+%2java.text.DecimalFormat"java.text.DecimalFormat‘
+Ž
+^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Utils.java- -([
+%3"Sjava.text.DecimalFormat#<init>(Ljava/lang/String;Ljava/text/DecimalFormatSymbols;)V*
+
+%2java.text.DecimalFormat*
+#.##*&
+$
+%1java.text.DecimalFormatSymbols©
+¦
+^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Utils.java- -(\
+dfjava.text.DecimalFormat"__id*
+
+%2java.text.DecimalFormat”‘
+^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Utils.java.	 .(
+%4java.lang.String"=java.text.Format#format(Ljava/lang/Object;)Ljava/lang/String;*
+
+dfjava.text.DecimalFormat*
+
+valuejava.lang.Double2format(Ljava/lang/Object;)"z
+^
+TD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstPart/Utils.java. .(
+
+%4java.lang.String:
+valuejava.lang.DoubleB"
+firstPart.Utils
