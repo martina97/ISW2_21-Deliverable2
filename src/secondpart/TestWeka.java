@@ -511,14 +511,11 @@ public class TestWeka{
 						costSensitiveClassifier.setClassifier(classifier);
 						costSensitiveClassifier.setMinimizeExpectedCost(false);
 						costSensitiveClassifier.setCostMatrix(createCostMatrix(1.0,10.0));
-						training2 = reweightClasses(training2, 10); // duplico il numero di istanze che hanno come buggyness=yes, ossia i positivi
 					}
 					else {
 						costSensitiveClassifier.setClassifier(filteredClassifier);
 						costSensitiveClassifier.setMinimizeExpectedCost(false);
 						costSensitiveClassifier.setCostMatrix(createCostMatrix(1.0,10.0));
-						training2 = reweightClasses(training2, 10); // duplico il numero di istanze che hanno come buggyness=yes, ossia i positivi
-						
 					}
 					
 					break;
@@ -622,30 +619,7 @@ public class TestWeka{
 		entry.setFN((int)eval.numFalseNegatives(1));
 
 	}
-	
-	
-	public static Instances reweightClasses(Instances training, int weight) {
-		
-		Instances trainingReweighted = new Instances(training);
-		Instances training2 = new Instances(trainingReweighted);
 
-		int numAttr = trainingReweighted.numAttributes();
-		
-		for (Instance instance : trainingReweighted) {
-			double target = instance.value(numAttr-1);
-
-			if(target==1.0) {	// nel training le classi buggy sono indicate con 1.0
-				// duplico 10 volte (ossia weight) le classi buggy
-				for(int i = 0; i<weight; i++) {
-					training2.add(instance);
-				}
-			}
-			
-		}
-		return training2;
-	}
-
-	
 	
 	public static CostMatrix createCostMatrix(double weightFalsePositive, double weightFalseNegative) {
 	    CostMatrix costMatrix = new CostMatrix(2);
