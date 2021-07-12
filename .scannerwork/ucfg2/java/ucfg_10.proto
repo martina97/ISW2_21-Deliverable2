@@ -1,23 +1,23 @@
 
 Kfirstpart.CSVWriter#writeCsvMilestone2(Ljava/util/List;Ljava/lang/String;)Vd
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÜ Ü(&"69*ï
-68e
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaà à(õÆ
-´
-e
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaà à(õ 
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaà à(&"69*ì
+68d
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaä ä(W≠
+™
+d
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaä ä(W 
 
 fileWriterjava.io.FileWriter"__id*
 
 %2java.io.FileWriter¬
 ø
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaä ã([
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaå ç([
 %4java.lang.String"__concat*_]
 [Dataset;#TrainingRelease;%training;%Defective in training;%Defective in testing;Classifier;*TR
-PBalancing;Feature Selection;Sensitivity;TP;FP;TN;FN;Precision;Recall;AUC;Kappa\n¨©
+PFeature Selection;Balancing;Sensitivity;TP;FP;TN;FN;Precision;Recall;AUC;Kappa\n¨©
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaä ã(\
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaå ç(\
 %5java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -26,37 +26,37 @@ fileWriterjava.io.FileWriter*
 %4java.lang.String2 append(Ljava/lang/CharSequence;)*
 3*ç
 24d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaß ß(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java© ©(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaß ß(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java© ©(
 %48java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
 fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
-23*®
-69e
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaà, à(Öâ
-Ü
-e
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaà, à(é
-%0java.lang.String"__concat*[Y
-WD:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\weka\\*
+23*‡
+69d
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaä, ä(Aƒ
+¡
+d
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaä, ä(J
+%0java.lang.String"__concat*
+output\\second part*
 
-projNamejava.lang.Stringµ
-≤
-e
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaà, à(ö
+projNamejava.lang.String¥
+±
+d
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaä, ä(V
 %1java.lang.String"__concat*
 
 %0java.lang.String*
 	 Weka.csvóî
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaà! à(+
-%2java.io.FileWriter"java.io.FileWriter÷
-”
-e
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaà à(õ
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaä! ä(+
+%2java.io.FileWriter"java.io.FileWriter’
+“
+d
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaä ä(W
 %3".java.io.FileWriter#<init>(Ljava/lang/String;)V*
 
 %2java.io.FileWriter*
@@ -64,9 +64,9 @@ XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWr
 %1java.lang.String*
 68*°
 25d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¶ ¶(/Æ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java® ®(/Æ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¶ ¶(/
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java® ®(/
 %47java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -75,26 +75,26 @@ fileWriterjava.io.FileWriter*
 %46java.lang.String2 append(Ljava/lang/CharSequence;)*
 24*Õ
 26d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¶ ¶(.⁄◊
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java® ®(.⁄◊
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¶ ¶(.
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java® ®(.
 %46java.lang.String".java.lang.Integer#toString()Ljava/lang/String;*
 
 %45java.lang.Integer2
 toString()*
 25*Õ
 27d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¶ ¶(⁄◊
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java® ®(⁄◊
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¶ ¶(#
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java® ®(#
 %45java.lang.Integer"-entities.M2Entries#getTN()Ljava/lang/Integer;*
 
 entryentities.M2Entries2getTN()*
 26*ç
 28d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java• •(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaß ß(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java• •(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaß ß(
 %44java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -102,9 +102,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 27*°
 29d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java§ §(/Æ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¶ ¶(/Æ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java§ §(/
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¶ ¶(/
 %43java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -113,26 +113,26 @@ fileWriterjava.io.FileWriter*
 %42java.lang.String2 append(Ljava/lang/CharSequence;)*
 28*Õ
 30d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java§ §(.⁄◊
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¶ ¶(.⁄◊
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java§ §(.
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¶ ¶(.
 %42java.lang.String".java.lang.Integer#toString()Ljava/lang/String;*
 
 %41java.lang.Integer2
 toString()*
 29*Õ
 31d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java§ §(⁄◊
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¶ ¶(⁄◊
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java§ §(#
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¶ ¶(#
 %41java.lang.Integer"-entities.M2Entries#getFP()Ljava/lang/Integer;*
 
 entryentities.M2Entries2getFP()*
 30*ç
 32d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java£ £(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java• •(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java£ £(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java• •(
 %40java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -140,9 +140,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 31*°
 33d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¢ ¢(/Æ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java§ §(/Æ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¢ ¢(/
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java§ §(/
 %39java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -151,26 +151,26 @@ fileWriterjava.io.FileWriter*
 %38java.lang.String2 append(Ljava/lang/CharSequence;)*
 32*Õ
 34d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¢ ¢(.⁄◊
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java§ §(.⁄◊
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¢ ¢(.
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java§ §(.
 %38java.lang.String".java.lang.Integer#toString()Ljava/lang/String;*
 
 %37java.lang.Integer2
 toString()*
 33*Õ
 35d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¢ ¢(⁄◊
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java§ §(⁄◊
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¢ ¢(#
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java§ §(#
 %37java.lang.Integer"-entities.M2Entries#getTP()Ljava/lang/Integer;*
 
 entryentities.M2Entries2getTP()*
 34*ç
 36d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java° °(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java£ £(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java° °(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java£ £(
 %36java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -178,9 +178,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 35*°
 37d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java† †(-Æ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¢ ¢(-Æ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java† †(-
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¢ ¢(-
 %35java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -189,17 +189,17 @@ fileWriterjava.io.FileWriter*
 %34java.lang.String2 append(Ljava/lang/CharSequence;)*
 36*›
 38d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java† †(ÍÁ
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¢ ¢(ÍÁ
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java† †(,
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¢ ¢(,
 %34java.lang.String"5entities.M2Entries#getSensitivity()Ljava/lang/String;*
 
 entryentities.M2Entries2getSensitivity()*
 37*ç
 39d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaü ü(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java° °(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaü ü(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java° °(
 %33java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -207,9 +207,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 38*°
 40d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaû û(+Æ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java† †(+Æ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaû û(+
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java† †(+
 %32java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -218,17 +218,17 @@ fileWriterjava.io.FileWriter*
 %31java.lang.String2 append(Ljava/lang/CharSequence;)*
 39*Ÿ
 41d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaû û(Ê„
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java† †(Ê„
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaû û(*
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java† †(*
 %31java.lang.String"3entities.M2Entries#getBalancing()Ljava/lang/String;*
 
 entryentities.M2Entries2getBalancing()*
 40*ç
 42d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaù ù(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaü ü(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaù ù(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaü ü(
 %30java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -236,9 +236,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 41*°
 43d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaú ú(2Æ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaû û(2Æ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaú ú(2
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaû û(2
 %29java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -247,17 +247,17 @@ fileWriterjava.io.FileWriter*
 %28java.lang.String2 append(Ljava/lang/CharSequence;)*
 42*Á
 44d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaú ú(ÙÒ
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaû û(ÙÒ
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaú ú(1
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaû û(1
 %28java.lang.String":entities.M2Entries#getFeatureSelection()Ljava/lang/String;*
 
 entryentities.M2Entries2getFeatureSelection()*
 43*ç
 45d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaõ õ(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaù ù(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaõ õ(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaù ù(
 %27java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -265,9 +265,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 44*°
 46d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaö ö(0Æ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaú ú(0Æ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaö ö(0
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaú ú(0
 %26java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -276,17 +276,17 @@ fileWriterjava.io.FileWriter*
 %25java.lang.String2 append(Ljava/lang/CharSequence;)*
 45*„
 47d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaö ö(Ì
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaú ú(Ì
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaö ö(/
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaú ú(/
 %25java.lang.String"8entities.M2Entries#getClassifierName()Ljava/lang/String;*
 
 entryentities.M2Entries2getClassifierName()*
 46*ç
 48d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaô ô(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaõ õ(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaô ô(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaõ õ(
 %24java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -294,9 +294,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 47*°
 49d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaò ò(GÆ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaö ö(GÆ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaò ò(G
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaö ö(G
 %23java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -305,27 +305,27 @@ fileWriterjava.io.FileWriter*
 %22java.lang.String2 append(Ljava/lang/CharSequence;)*
 48*‚
 50d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaò ò(FÔ
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaö ö(FÔ
 Ï
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaò ò(F
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaö ö(F
 %22java.lang.String"Efirstpart.Utils#doubleTransform(Ljava/lang/Double;)Ljava/lang/String;*"
 firstpart.Utils*
 
 %21double*
 49*»
 51d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaò ò(’“
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaö ö(’“
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaò, ò(E
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaö, ö(E
 %21double"'entities.M2Entries#getDefectPercTest()D*
 
 entryentities.M2Entries2getDefectPercTest()*
 50*ç
 52d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaó ó(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaô ô(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaó ó(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaô ô(
 %20java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -333,9 +333,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 51*°
 53d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javañ ñ(HÆ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaò ò(HÆ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javañ ñ(H
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaò ò(H
 %19java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -344,45 +344,45 @@ fileWriterjava.io.FileWriter*
 %18java.lang.String2 append(Ljava/lang/CharSequence;)*
 52*‚
 54d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javañ ñ(GÔ
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaò ò(GÔ
 Ï
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javañ ñ(G
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaò ò(G
 %18java.lang.String"Efirstpart.Utils#doubleTransform(Ljava/lang/Double;)Ljava/lang/String;*"
 firstpart.Utils*
 
 %17double*
 53*·
 10d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÆ Æ(;Ô
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java∞ ∞(;Ô
 Ï
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÆ Æ(;
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java∞ ∞(;
 %62java.lang.String"Efirstpart.Utils#doubleTransform(Ljava/lang/Double;)Ljava/lang/String;*"
 firstpart.Utils*
 
 %61double*
 9* 
 55d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javañ ñ(◊‘
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaò ò(◊‘
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javañ, ñ(F
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaò, ò(F
 %17double"(entities.M2Entries#getDefectPercTrain()D*
 
 entryentities.M2Entries2getDefectPercTrain()*
 54*≤
 11d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÆ Æ(øº
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java∞ ∞(øº
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÆ, Æ(:
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java∞, ∞(:
 %61double"entities.M2Entries#getAuc()D*
 
 entryentities.M2Entries2getAuc()*
 10*ç
 56d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaï ï(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaó ó(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaï ï(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaó ó(
 %16java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -390,9 +390,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 55*ç
 12d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java≠ ≠(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaØ Ø(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java≠ ≠(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaØ Ø(
 %60java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -400,9 +400,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 11*°
 57d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaî î(EÆ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javañ ñ(EÆ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaî î(E
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javañ ñ(E
 %15java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -411,9 +411,9 @@ fileWriterjava.io.FileWriter*
 %14java.lang.String2 append(Ljava/lang/CharSequence;)*
 56*°
 13d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¨ ¨(?Æ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÆ Æ(?Æ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¨ ¨(?
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÆ Æ(?
 %59java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -422,45 +422,45 @@ fileWriterjava.io.FileWriter*
 %58java.lang.String2 append(Ljava/lang/CharSequence;)*
 12*‚
 58d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaî î(DÔ
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javañ ñ(DÔ
 Ï
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaî î(D
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javañ ñ(D
 %14java.lang.String"Efirstpart.Utils#doubleTransform(Ljava/lang/Double;)Ljava/lang/String;*"
 firstpart.Utils*
 
 %13double*
 57*‚
 14d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¨ ¨(>Ô
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÆ Æ(>Ô
 Ï
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¨ ¨(>
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÆ Æ(>
 %58java.lang.String"Efirstpart.Utils#doubleTransform(Ljava/lang/Double;)Ljava/lang/String;*"
 firstpart.Utils*
 
 %57double*
 13*ƒ
 59d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaî î(—Œ
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javañ ñ(—Œ
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaî, î(C
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javañ, ñ(C
 %13double"%entities.M2Entries#getTrainingPerc()D*
 
 entryentities.M2Entries2getTrainingPerc()*
 58*∏
 15d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¨ ¨(≈¬
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÆ Æ(≈¬
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¨, ¨(=
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÆ, Æ(=
 %57double"entities.M2Entries#getRecall()D*
 
 entryentities.M2Entries2getRecall()*
 14*ç
 16d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java´ ´(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java≠ ≠(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java´ ´(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java≠ ≠(
 %56java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -468,9 +468,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 15*°
 17d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java™ ™(BÆ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¨ ¨(BÆ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java™ ™(B
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¨ ¨(B
 %55java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -479,37 +479,37 @@ fileWriterjava.io.FileWriter*
 %54java.lang.String2 append(Ljava/lang/CharSequence;)*
 16*‚
 18d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java™ ™(AÔ
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¨ ¨(AÔ
 Ï
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java™ ™(A
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¨ ¨(A
 %54java.lang.String"Efirstpart.Utils#doubleTransform(Ljava/lang/Double;)Ljava/lang/String;*"
 firstpart.Utils*
 
 %53double*
 17*æ
 19d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java™ ™(À»
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¨ ¨(À»
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java™, ™(@
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java¨, ¨(@
 %53double""entities.M2Entries#getPrecision()D*
 
 entryentities.M2Entries2getPrecision()*
 18*Ç
 0 "{
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaπ π(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaª ª(
 implicit return*…
 3d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaé	 é(î
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaê	 ê(î
 ë
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaé	 é(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaê	 ê(
 entryentities.M2Entries"__id*
 ""Ω
 ∫
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaé	 é(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaê	 ê(
 entryentities.M2Entries"
 __arrayGet*!
 
@@ -518,9 +518,9 @@ __arrayGet*!
 0
 66*å
 4d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java± ±(õò
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java≥ ≥(õò
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java± ±(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java≥ ≥(
 %68java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -528,9 +528,9 @@ fileWriterjava.io.FileWriter*
 \n2 append(Ljava/lang/CharSequence;)*
 3*ü
 5d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java∞ ∞(>Æ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java≤ ≤(>Æ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java∞ ∞(>
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java≤ ≤(>
 %67java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -539,28 +539,28 @@ fileWriterjava.io.FileWriter*
 %66java.lang.String2 append(Ljava/lang/CharSequence;)*
 4*‡
 6d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java∞ ∞(=Ô
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java≤ ≤(=Ô
 Ï
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java∞ ∞(=
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java≤ ≤(=
 %66java.lang.String"Efirstpart.Utils#doubleTransform(Ljava/lang/Double;)Ljava/lang/String;*"
 firstpart.Utils*
 
 %65double*
 5*¥
 7d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java∞ ∞(√¿
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java≤ ≤(√¿
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java∞, ∞(<
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java≤, ≤(<
 %65double"entities.M2Entries#getKappa()D*
 
 entryentities.M2Entries2
 getKappa()*
 6*ã
 8d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaØ Ø(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java± ±(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaØ Ø(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java± ±(
 %64java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -568,9 +568,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 7*ü
 9d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÆ Æ(<Æ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java∞ ∞(<Æ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaÆ Æ(<
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java∞ ∞(<
 %63java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -579,9 +579,9 @@ fileWriterjava.io.FileWriter*
 %62java.lang.String2 append(Ljava/lang/CharSequence;)*
 8*ç
 60d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaì ì(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaï ï(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaì ì(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaï ï(
 %12java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -589,9 +589,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 59*°
 61d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaí í(?Æ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaî î(?Æ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaí í(?
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaî î(?
 %11java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -600,26 +600,26 @@ fileWriterjava.io.FileWriter*
 %10java.lang.String2 append(Ljava/lang/CharSequence;)*
 60*Ã
 62d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaí í(>Ÿ÷
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaî î(>Ÿ÷
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaí í(>
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaî î(>
 %10java.lang.String".java.lang.Integer#toString()Ljava/lang/String;*
 
 %9java.lang.Integer2
 toString()*
 61*Ï
 63d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaí í(˘ˆ
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaî î(˘ˆ
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaí í(3
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaî î(3
 %9java.lang.Integer"=entities.M2Entries#getNumTrainingRelease()Ljava/lang/Integer;*
 
 entryentities.M2Entries2getNumTrainingRelease()*
 62*å
 64d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaë ë(ôñ
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaì ì(ôñ
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaë ë(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaì ì(
 %8java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -627,9 +627,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 63*ç
 20d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java© ©(öó
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java´ ´(öó
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java© ©(
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java´ ´(
 %52java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -637,9 +637,9 @@ fileWriterjava.io.FileWriter*
 ;2 append(Ljava/lang/CharSequence;)*
 19*ü
 65d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaê ê(0¨©
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaí í(0¨©
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaê ê(0
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaí í(0
 %7java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -648,9 +648,9 @@ fileWriterjava.io.FileWriter*
 %6java.lang.String2 append(Ljava/lang/CharSequence;)*
 64*°
 21d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java® ®(/Æ´
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java™ ™(/Æ´
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java® ®(/
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java™ ™(/
 %51java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
  
 
@@ -659,26 +659,26 @@ fileWriterjava.io.FileWriter*
 %50java.lang.String2 append(Ljava/lang/CharSequence;)*
 20*‹
 66d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaê ê(ÈÊ
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaí í(ÈÊ
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaê ê(/
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.javaí í(/
 %6java.lang.String"5entities.M2Entries#getDatasetName()Ljava/lang/String;*
 
 entryentities.M2Entries2getDatasetName()*
 65*Õ
 22d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java® ®(.⁄◊
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java™ ™(.⁄◊
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java® ®(.
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java™ ™(.
 %50java.lang.String".java.lang.Integer#toString()Ljava/lang/String;*
 
 %49java.lang.Integer2
 toString()*
 21*Õ
 23d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java® ®(⁄◊
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java™ ™(⁄◊
 d
-XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java® ®(#
+XD:/Programmi/Eclipse/eclipse-workspace/ISW2_21-Deliverable2/src/firstpart/CSVWriter.java™ ™(#
 %49java.lang.Integer"-entities.M2Entries#getFN()Ljava/lang/Integer;*
 
 entryentities.M2Entries2getFN()*
