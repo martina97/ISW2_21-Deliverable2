@@ -98,7 +98,9 @@ public class GetJIRAInfo {
 
 		if (releases.size() < 6)
 			return releaseList;
-		String pathname = "D:\\" + "Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\Releases_" + projName + ".csv";
+		
+		
+		String pathname = "output\\first part\\Releases_" + projName + ".csv";
 		try (FileWriter fileWriter = new FileWriter(pathname)) {
 
 			fileWriter.append("Index;Version ID;Version Name;Date");

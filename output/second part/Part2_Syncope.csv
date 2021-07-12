@@ -1,0 +1,1873 @@
+Dataset;#TrainingRelease;%training;%Defective in training;%Defective in testing;Classifier;Feature Selection;Balancing;Sensitivity;TP;FP;TN;FN;Precision;Recall;AUC;Kappa
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;No;No;No;383;10;157;1;0.97;1;0.98;0.95
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;No;No;Sensitive Threshold;0;0;167;384;0;0;0.5;0
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;No;No;Sensitive Learning;221;2;165;163;0.99;0.58;0.99;0.44
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;No;oversampling;No;382;26;141;2;0.94;0.99;0.95;0.87
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;No;oversampling;Sensitive Threshold;0;0;167;384;0;0;0.5;0
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;No;oversampling;Sensitive Learning;148;4;163;236;0.97;0.39;0.94;0.26
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;No;undersampling;No;169;3;164;215;0.98;0.44;0.98;0.31
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;No;undersampling;Sensitive Threshold;0;0;167;384;0;0;0.5;0
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;No;undersampling;Sensitive Learning;93;13;154;291;0.88;0.24;0.73;0.11
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;No;SMOTE;No;257;2;165;127;0.99;0.67;0.99;0.54
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;No;SMOTE;Sensitive Threshold;0;0;167;384;0;0;0.5;0
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;No;SMOTE;Sensitive Learning;174;1;166;210;0.99;0.45;0.98;0.33
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;Best first;No;No;382;5;162;2;0.99;0.99;0.98;0.97
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;Best first;No;Sensitive Threshold;116;1;166;268;0.99;0.3;0.65;0.2
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;Best first;No;Sensitive Learning;381;3;164;3;0.99;0.99;0.99;0.97
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;Best first;oversampling;No;382;26;141;2;0.94;0.99;0.95;0.87
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;Best first;oversampling;Sensitive Threshold;130;2;165;254;0.98;0.34;0.66;0.23
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;Best first;oversampling;Sensitive Learning;383;24;143;1;0.94;1;0.94;0.89
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;Best first;undersampling;No;382;5;162;2;0.99;0.99;0.98;0.97
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;Best first;undersampling;Sensitive Threshold;0;0;167;384;0;0;0.5;0
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;Best first;undersampling;Sensitive Learning;382;98;69;2;0.8;0.99;0.74;0.49
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;Best first;SMOTE;No;381;3;164;3;0.99;0.99;0.99;0.97
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;Best first;SMOTE;Sensitive Threshold;0;0;167;384;0;0;0.5;0
+SYNCOPE;1;4.12;26.98;30.31;Random Forest;Best first;SMOTE;Sensitive Learning;174;1;166;210;0.99;0.45;0.97;0.33
+SYNCOPE;1;4.12;26.98;30.31;IBk;No;No;No;335;149;18;49;0.69;0.87;0.49;-0.02
+SYNCOPE;1;4.12;26.98;30.31;IBk;No;No;Sensitive Threshold;335;149;18;49;0.69;0.87;0.49;-0.02
+SYNCOPE;1;4.12;26.98;30.31;IBk;No;No;Sensitive Learning;335;149;18;49;0.69;0.87;0.49;-0.02
+SYNCOPE;1;4.12;26.98;30.31;IBk;No;oversampling;No;243;112;55;141;0.68;0.63;0.45;-0.04
+SYNCOPE;1;4.12;26.98;30.31;IBk;No;oversampling;Sensitive Threshold;243;112;55;141;0.68;0.63;0.48;-0.04
+SYNCOPE;1;4.12;26.98;30.31;IBk;No;oversampling;Sensitive Learning;358;150;17;26;0.7;0.93;0.47;0.04
+SYNCOPE;1;4.12;26.98;30.31;IBk;No;undersampling;No;303;137;30;81;0.69;0.79;0.48;-0.03
+SYNCOPE;1;4.12;26.98;30.31;IBk;No;undersampling;Sensitive Threshold;303;137;30;81;0.69;0.79;0.48;-0.03
+SYNCOPE;1;4.12;26.98;30.31;IBk;No;undersampling;Sensitive Learning;87;38;129;297;0.7;0.23;0.51;0
+SYNCOPE;1;4.12;26.98;30.31;IBk;No;SMOTE;No;268;119;48;116;0.69;0.7;0.49;-0.01
+SYNCOPE;1;4.12;26.98;30.31;IBk;No;SMOTE;Sensitive Threshold;268;119;48;116;0.69;0.7;0.49;-0.01
+SYNCOPE;1;4.12;26.98;30.31;IBk;No;SMOTE;Sensitive Learning;350;155;12;34;0.69;0.91;0.49;-0.02
+SYNCOPE;1;4.12;26.98;30.31;IBk;Best first;No;No;382;5;162;2;0.99;0.99;0.99;0.97
+SYNCOPE;1;4.12;26.98;30.31;IBk;Best first;No;Sensitive Threshold;381;3;164;3;0.99;0.99;0.99;0.97
+SYNCOPE;1;4.12;26.98;30.31;IBk;Best first;No;Sensitive Learning;381;3;164;3;0.99;0.99;0.99;0.97
+SYNCOPE;1;4.12;26.98;30.31;IBk;Best first;oversampling;No;198;2;165;186;0.99;0.52;0.95;0.38
+SYNCOPE;1;4.12;26.98;30.31;IBk;Best first;oversampling;Sensitive Threshold;198;2;165;186;0.99;0.52;0.75;0.38
+SYNCOPE;1;4.12;26.98;30.31;IBk;Best first;oversampling;Sensitive Learning;121;2;165;263;0.98;0.32;0.94;0.21
+SYNCOPE;1;4.12;26.98;30.31;IBk;Best first;undersampling;No;142;2;165;242;0.99;0.37;0.98;0.25
+SYNCOPE;1;4.12;26.98;30.31;IBk;Best first;undersampling;Sensitive Threshold;142;2;165;242;0.99;0.37;0.68;0.25
+SYNCOPE;1;4.12;26.98;30.31;IBk;Best first;undersampling;Sensitive Learning;55;1;166;329;0.98;0.14;0.74;0.09
+SYNCOPE;1;4.12;26.98;30.31;IBk;Best first;SMOTE;No;381;3;164;3;0.99;0.99;0.99;0.97
+SYNCOPE;1;4.12;26.98;30.31;IBk;Best first;SMOTE;Sensitive Threshold;381;3;164;3;0.99;0.99;0.99;0.97
+SYNCOPE;1;4.12;26.98;30.31;IBk;Best first;SMOTE;Sensitive Learning;174;1;166;210;0.99;0.45;0.97;0.33
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;No;No;No;381;162;5;3;0.7;0.99;0.96;0.03
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;No;No;Sensitive Threshold;373;153;14;11;0.71;0.97;0.53;0.07
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;No;No;Sensitive Learning;376;152;15;8;0.71;0.98;0.97;0.09
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;No;oversampling;No;374;156;11;10;0.71;0.97;0.91;0.05
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;No;oversampling;Sensitive Threshold;363;41;126;21;0.9;0.95;0.85;0.72
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;No;oversampling;Sensitive Learning;384;39;128;0;0.91;1;0.93;0.82
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;No;undersampling;No;384;166;1;0;0.7;1;0.98;0.01
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;No;undersampling;Sensitive Threshold;138;2;165;246;0.99;0.36;0.67;0.25
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;No;undersampling;Sensitive Learning;384;167;0;0;0.7;1;0.73;0
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;No;SMOTE;No;382;136;31;2;0.74;0.99;0.97;0.23
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;No;SMOTE;Sensitive Threshold;347;3;164;37;0.99;0.9;0.94;0.84
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;No;SMOTE;Sensitive Learning;374;147;20;10;0.72;0.97;0.93;0.12
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;Best first;No;No;384;167;0;0;0.7;1;0.99;0
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;Best first;No;Sensitive Threshold;0;0;167;384;0;0;0.5;0
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;Best first;No;Sensitive Learning;381;3;164;3;0.99;0.99;0.99;0.97
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;Best first;oversampling;No;198;2;165;186;0.99;0.52;0.95;0.38
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;Best first;oversampling;Sensitive Threshold;1;0;167;383;1;0;0.5;0
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;Best first;oversampling;Sensitive Learning;121;2;165;263;0.98;0.32;0.94;0.21
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;Best first;undersampling;No;142;2;165;242;0.99;0.37;0.98;0.25
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;Best first;undersampling;Sensitive Threshold;0;0;167;384;0;0;0.5;0
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;Best first;undersampling;Sensitive Learning;55;1;166;329;0.98;0.14;0.74;0.09
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;Best first;SMOTE;No;381;3;164;3;0.99;0.99;0.99;0.97
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;Best first;SMOTE;Sensitive Threshold;0;0;167;384;0;0;0.5;0
+SYNCOPE;1;4.12;26.98;30.31;Naive Bayes;Best first;SMOTE;Sensitive Learning;174;1;166;210;0.99;0.45;0.97;0.33
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;No;No;No;373;14;163;4;0.96;0.99;0.97;0.92
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;No;No;Sensitive Threshold;304;9;168;73;0.97;0.81;0.88;0.69
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;No;No;Sensitive Learning;371;12;165;6;0.97;0.98;0.97;0.92
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;No;oversampling;No;298;12;165;79;0.96;0.79;0.96;0.66
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;No;oversampling;Sensitive Threshold;106;3;174;271;0.97;0.28;0.63;0.19
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;No;oversampling;Sensitive Learning;200;11;166;177;0.95;0.53;0.95;0.38
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;No;undersampling;No;244;8;169;133;0.97;0.65;0.97;0.51
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;No;undersampling;Sensitive Threshold;5;0;177;372;1;0.01;0.51;0.01
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;No;undersampling;Sensitive Learning;340;54;123;37;0.86;0.9;0.86;0.61
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;No;SMOTE;No;372;12;165;5;0.97;0.99;0.97;0.93
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;No;SMOTE;Sensitive Threshold;7;0;177;370;1;0.02;0.51;0.01
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;No;SMOTE;Sensitive Learning;243;8;169;134;0.97;0.64;0.96;0.5
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;Best first;No;No;373;14;163;4;0.96;0.99;0.97;0.92
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;Best first;No;Sensitive Threshold;370;11;166;7;0.97;0.98;0.96;0.92
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;Best first;No;Sensitive Learning;371;11;166;6;0.97;0.98;0.96;0.93
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;Best first;oversampling;No;373;20;157;4;0.95;0.99;0.96;0.9
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;Best first;oversampling;Sensitive Threshold;228;7;170;149;0.97;0.6;0.78;0.47
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;Best first;oversampling;Sensitive Learning;372;17;160;5;0.96;0.99;0.95;0.91
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;Best first;undersampling;No;372;13;164;5;0.97;0.99;0.97;0.92
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;Best first;undersampling;Sensitive Threshold;58;0;177;319;1;0.15;0.58;0.1
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;Best first;undersampling;Sensitive Learning;374;64;113;3;0.85;0.99;0.86;0.69
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;Best first;SMOTE;No;371;12;165;6;0.97;0.98;0.96;0.92
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;Best first;SMOTE;Sensitive Threshold;223;9;168;154;0.96;0.59;0.77;0.44
+SYNCOPE;2;5.85;27.97;31.95;Random Forest;Best first;SMOTE;Sensitive Learning;245;9;168;132;0.96;0.65;0.96;0.51
+SYNCOPE;2;5.85;27.97;31.95;IBk;No;No;No;373;14;163;4;0.96;0.99;0.96;0.92
+SYNCOPE;2;5.85;27.97;31.95;IBk;No;No;Sensitive Threshold;373;14;163;4;0.96;0.99;0.96;0.92
+SYNCOPE;2;5.85;27.97;31.95;IBk;No;No;Sensitive Learning;373;14;163;4;0.96;0.99;0.96;0.92
+SYNCOPE;2;5.85;27.97;31.95;IBk;No;oversampling;No;311;21;156;66;0.94;0.82;0.87;0.66
+SYNCOPE;2;5.85;27.97;31.95;IBk;No;oversampling;Sensitive Threshold;287;21;156;90;0.93;0.76;0.82;0.58
+SYNCOPE;2;5.85;27.97;31.95;IBk;No;oversampling;Sensitive Learning;236;14;163;141;0.94;0.63;0.82;0.46
+SYNCOPE;2;5.85;27.97;31.95;IBk;No;undersampling;No;252;10;167;125;0.96;0.67;0.84;0.52
+SYNCOPE;2;5.85;27.97;31.95;IBk;No;undersampling;Sensitive Threshold;222;10;167;155;0.96;0.59;0.77;0.44
+SYNCOPE;2;5.85;27.97;31.95;IBk;No;undersampling;Sensitive Learning;216;52;125;161;0.81;0.57;0.67;0.24
+SYNCOPE;2;5.85;27.97;31.95;IBk;No;SMOTE;No;373;14;163;4;0.96;0.99;0.96;0.92
+SYNCOPE;2;5.85;27.97;31.95;IBk;No;SMOTE;Sensitive Threshold;373;14;163;4;0.96;0.99;0.96;0.92
+SYNCOPE;2;5.85;27.97;31.95;IBk;No;SMOTE;Sensitive Learning;245;13;164;132;0.95;0.65;0.86;0.49
+SYNCOPE;2;5.85;27.97;31.95;IBk;Best first;No;No;372;13;164;5;0.97;0.99;0.96;0.92
+SYNCOPE;2;5.85;27.97;31.95;IBk;Best first;No;Sensitive Threshold;371;11;166;6;0.97;0.98;0.96;0.93
+SYNCOPE;2;5.85;27.97;31.95;IBk;Best first;No;Sensitive Learning;371;11;166;6;0.97;0.98;0.96;0.93
+SYNCOPE;2;5.85;27.97;31.95;IBk;Best first;oversampling;No;295;11;166;82;0.96;0.78;0.96;0.65
+SYNCOPE;2;5.85;27.97;31.95;IBk;Best first;oversampling;Sensitive Threshold;294;10;167;83;0.97;0.78;0.86;0.65
+SYNCOPE;2;5.85;27.97;31.95;IBk;Best first;oversampling;Sensitive Learning;197;7;170;180;0.97;0.52;0.96;0.38
+SYNCOPE;2;5.85;27.97;31.95;IBk;Best first;undersampling;No;239;6;171;138;0.98;0.63;0.97;0.5
+SYNCOPE;2;5.85;27.97;31.95;IBk;Best first;undersampling;Sensitive Threshold;239;6;171;138;0.98;0.63;0.8;0.5
+SYNCOPE;2;5.85;27.97;31.95;IBk;Best first;undersampling;Sensitive Learning;105;1;176;272;0.99;0.28;0.86;0.19
+SYNCOPE;2;5.85;27.97;31.95;IBk;Best first;SMOTE;No;371;11;166;6;0.97;0.98;0.96;0.93
+SYNCOPE;2;5.85;27.97;31.95;IBk;Best first;SMOTE;Sensitive Threshold;371;11;166;6;0.97;0.98;0.96;0.93
+SYNCOPE;2;5.85;27.97;31.95;IBk;Best first;SMOTE;Sensitive Learning;245;9;168;132;0.96;0.65;0.96;0.51
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;No;No;No;367;160;17;10;0.7;0.97;0.94;0.09
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;No;No;Sensitive Threshold;334;7;170;43;0.98;0.89;0.92;0.8
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;No;No;Sensitive Learning;353;10;167;24;0.97;0.94;0.95;0.86
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;No;oversampling;No;282;10;167;95;0.97;0.75;0.96;0.61
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;No;oversampling;Sensitive Threshold;1;0;177;376;1;0;0.5;0
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;No;oversampling;Sensitive Learning;355;14;163;22;0.96;0.94;0.93;0.85
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;No;undersampling;No;357;109;68;20;0.77;0.95;0.92;0.38
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;No;undersampling;Sensitive Threshold;0;0;177;377;0;0;0.5;0
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;No;undersampling;Sensitive Learning;360;158;19;17;0.69;0.95;0.83;0.08
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;No;SMOTE;No;351;8;169;26;0.98;0.93;0.95;0.86
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;No;SMOTE;Sensitive Threshold;0;0;177;377;0;0;0.5;0
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;No;SMOTE;Sensitive Learning;127;4;173;250;0.97;0.34;0.94;0.23
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;Best first;No;No;374;18;159;3;0.95;0.99;0.96;0.91
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;Best first;No;Sensitive Threshold;0;0;177;377;0;0;0.5;0
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;Best first;No;Sensitive Learning;371;11;166;6;0.97;0.98;0.96;0.93
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;Best first;oversampling;No;295;11;166;82;0.96;0.78;0.96;0.65
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;Best first;oversampling;Sensitive Threshold;13;0;177;364;1;0.03;0.52;0.02
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;Best first;oversampling;Sensitive Learning;197;7;170;180;0.97;0.52;0.96;0.38
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;Best first;undersampling;No;239;6;171;138;0.98;0.63;0.97;0.5
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;Best first;undersampling;Sensitive Threshold;0;0;177;377;0;0;0.5;0
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;Best first;undersampling;Sensitive Learning;105;1;176;272;0.99;0.28;0.86;0.19
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;Best first;SMOTE;No;371;11;166;6;0.97;0.98;0.96;0.93
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;Best first;SMOTE;Sensitive Threshold;0;0;177;377;0;0;0.5;0
+SYNCOPE;2;5.85;27.97;31.95;Naive Bayes;Best first;SMOTE;Sensitive Learning;245;9;168;132;0.96;0.65;0.96;0.51
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;No;No;No;365;14;171;4;0.96;0.99;0.98;0.93
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;No;No;Sensitive Threshold;359;10;175;10;0.97;0.97;0.96;0.92
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;No;No;Sensitive Learning;363;10;175;6;0.97;0.98;0.98;0.93
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;No;oversampling;No;355;12;173;14;0.97;0.96;0.97;0.89
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;No;oversampling;Sensitive Threshold;241;7;178;128;0.97;0.65;0.81;0.53
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;No;oversampling;Sensitive Learning;331;9;176;38;0.97;0.9;0.98;0.82
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;No;undersampling;No;302;10;175;67;0.97;0.82;0.97;0.71
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;No;undersampling;Sensitive Threshold;64;2;183;305;0.97;0.17;0.58;0.12
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;No;undersampling;Sensitive Learning;153;7;178;216;0.96;0.41;0.91;0.29
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;No;SMOTE;No;368;12;173;1;0.97;1;0.97;0.95
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;No;SMOTE;Sensitive Threshold;67;1;184;302;0.99;0.18;0.59;0.13
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;No;SMOTE;Sensitive Learning;301;9;176;68;0.97;0.82;0.97;0.71
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;Best first;No;No;366;19;166;3;0.95;0.99;0.97;0.91
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;Best first;No;Sensitive Threshold;361;10;175;8;0.97;0.98;0.96;0.93
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;Best first;No;Sensitive Learning;362;10;175;7;0.97;0.98;0.97;0.93
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;Best first;oversampling;No;364;15;170;5;0.96;0.99;0.96;0.92
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;Best first;oversampling;Sensitive Threshold;285;8;177;84;0.97;0.77;0.86;0.66
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;Best first;oversampling;Sensitive Learning;365;16;169;4;0.96;0.99;0.97;0.92
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;Best first;undersampling;No;364;16;169;5;0.96;0.99;0.97;0.91
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;Best first;undersampling;Sensitive Threshold;123;4;181;246;0.97;0.33;0.66;0.24
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;Best first;undersampling;Sensitive Learning;366;55;130;3;0.87;0.99;0.9;0.75
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;Best first;SMOTE;No;365;18;167;4;0.95;0.99;0.97;0.91
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;Best first;SMOTE;Sensitive Threshold;361;10;175;8;0.97;0.98;0.96;0.93
+SYNCOPE;3;7.59;28.88;33.39;Random Forest;Best first;SMOTE;Sensitive Learning;302;9;176;67;0.97;0.82;0.96;0.71
+SYNCOPE;3;7.59;28.88;33.39;IBk;No;No;No;367;10;175;2;0.97;0.99;0.97;0.95
+SYNCOPE;3;7.59;28.88;33.39;IBk;No;No;Sensitive Threshold;367;10;175;2;0.97;0.99;0.97;0.95
+SYNCOPE;3;7.59;28.88;33.39;IBk;No;No;Sensitive Learning;367;10;175;2;0.97;0.99;0.97;0.95
+SYNCOPE;3;7.59;28.88;33.39;IBk;No;oversampling;No;334;15;170;35;0.96;0.91;0.94;0.8
+SYNCOPE;3;7.59;28.88;33.39;IBk;No;oversampling;Sensitive Threshold;321;14;171;48;0.96;0.87;0.9;0.76
+SYNCOPE;3;7.59;28.88;33.39;IBk;No;oversampling;Sensitive Learning;299;8;177;70;0.97;0.81;0.9;0.71
+SYNCOPE;3;7.59;28.88;33.39;IBk;No;undersampling;No;303;10;175;66;0.97;0.82;0.93;0.71
+SYNCOPE;3;7.59;28.88;33.39;IBk;No;undersampling;Sensitive Threshold;274;10;175;95;0.96;0.74;0.84;0.62
+SYNCOPE;3;7.59;28.88;33.39;IBk;No;undersampling;Sensitive Learning;201;33;152;168;0.86;0.54;0.73;0.31
+SYNCOPE;3;7.59;28.88;33.39;IBk;No;SMOTE;No;367;10;175;2;0.97;0.99;0.97;0.95
+SYNCOPE;3;7.59;28.88;33.39;IBk;No;SMOTE;Sensitive Threshold;367;10;175;2;0.97;0.99;0.97;0.95
+SYNCOPE;3;7.59;28.88;33.39;IBk;No;SMOTE;Sensitive Learning;299;12;173;70;0.96;0.81;0.91;0.69
+SYNCOPE;3;7.59;28.88;33.39;IBk;Best first;No;No;366;19;166;3;0.95;0.99;0.97;0.91
+SYNCOPE;3;7.59;28.88;33.39;IBk;Best first;No;Sensitive Threshold;362;10;175;7;0.97;0.98;0.96;0.93
+SYNCOPE;3;7.59;28.88;33.39;IBk;Best first;No;Sensitive Learning;362;10;175;7;0.97;0.98;0.97;0.93
+SYNCOPE;3;7.59;28.88;33.39;IBk;Best first;oversampling;No;334;12;173;35;0.97;0.91;0.97;0.82
+SYNCOPE;3;7.59;28.88;33.39;IBk;Best first;oversampling;Sensitive Threshold;332;9;176;37;0.97;0.9;0.93;0.82
+SYNCOPE;3;7.59;28.88;33.39;IBk;Best first;oversampling;Sensitive Learning;255;10;175;114;0.96;0.69;0.97;0.56
+SYNCOPE;3;7.59;28.88;33.39;IBk;Best first;undersampling;No;284;10;175;85;0.97;0.77;0.97;0.65
+SYNCOPE;3;7.59;28.88;33.39;IBk;Best first;undersampling;Sensitive Threshold;284;6;179;85;0.98;0.77;0.87;0.67
+SYNCOPE;3;7.59;28.88;33.39;IBk;Best first;undersampling;Sensitive Learning;153;5;180;216;0.97;0.41;0.9;0.3
+SYNCOPE;3;7.59;28.88;33.39;IBk;Best first;SMOTE;No;365;18;167;4;0.95;0.99;0.97;0.91
+SYNCOPE;3;7.59;28.88;33.39;IBk;Best first;SMOTE;Sensitive Threshold;362;10;175;7;0.97;0.98;0.96;0.93
+SYNCOPE;3;7.59;28.88;33.39;IBk;Best first;SMOTE;Sensitive Learning;301;9;176;68;0.97;0.82;0.97;0.71
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;No;No;No;360;22;163;9;0.94;0.98;0.96;0.87
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;No;No;Sensitive Threshold;333;7;178;36;0.98;0.9;0.93;0.83
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;No;No;Sensitive Learning;346;8;177;23;0.98;0.94;0.96;0.88
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;No;oversampling;No;356;12;173;13;0.97;0.96;0.96;0.9
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;No;oversampling;Sensitive Threshold;123;4;181;246;0.97;0.33;0.66;0.24
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;No;oversampling;Sensitive Learning;252;8;177;117;0.97;0.68;0.97;0.56
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;No;undersampling;No;363;127;58;6;0.74;0.98;0.95;0.36
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;No;undersampling;Sensitive Threshold;116;4;181;253;0.97;0.31;0.65;0.22
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;No;undersampling;Sensitive Learning;91;2;183;278;0.98;0.25;0.86;0.17
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;No;SMOTE;No;348;14;171;21;0.96;0.94;0.97;0.86
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;No;SMOTE;Sensitive Threshold;0;0;185;369;0;0;0.5;0
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;No;SMOTE;Sensitive Learning;345;12;173;24;0.97;0.93;0.95;0.86
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;Best first;No;No;369;24;161;0;0.94;1;0.97;0.9
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;Best first;No;Sensitive Threshold;0;0;185;369;0;0;0.5;0
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;Best first;No;Sensitive Learning;362;10;175;7;0.97;0.98;0.97;0.93
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;Best first;oversampling;No;334;12;173;35;0.97;0.91;0.97;0.82
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;Best first;oversampling;Sensitive Threshold;32;0;185;337;1;0.09;0.54;0.06
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;Best first;oversampling;Sensitive Learning;255;10;175;114;0.96;0.69;0.97;0.56
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;Best first;undersampling;No;284;10;175;85;0.97;0.77;0.97;0.65
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;Best first;undersampling;Sensitive Threshold;0;0;185;369;0;0;0.5;0
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;Best first;undersampling;Sensitive Learning;153;5;180;216;0.97;0.41;0.9;0.3
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;Best first;SMOTE;No;365;18;167;4;0.95;0.99;0.97;0.91
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;Best first;SMOTE;Sensitive Threshold;0;0;185;369;0;0;0.5;0
+SYNCOPE;3;7.59;28.88;33.39;Naive Bayes;Best first;SMOTE;Sensitive Learning;301;8;177;68;0.97;0.82;0.96;0.71
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;No;No;No;838;141;197;10;0.86;0.99;0.98;0.65
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;No;No;Sensitive Threshold;349;1;337;499;1;0.41;0.7;0.28
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;No;No;Sensitive Learning;487;1;337;361;1;0.57;0.99;0.43
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;No;oversampling;No;619;11;327;229;0.98;0.73;0.93;0.58
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;No;oversampling;Sensitive Threshold;187;0;338;661;1;0.22;0.61;0.14
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;No;oversampling;Sensitive Learning;460;9;329;388;0.98;0.54;0.89;0.39
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;No;undersampling;No;728;83;255;120;0.9;0.86;0.92;0.59
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;No;undersampling;Sensitive Threshold;126;0;338;722;1;0.15;0.57;0.09
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;No;undersampling;Sensitive Learning;683;116;222;165;0.85;0.81;0.82;0.44
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;No;SMOTE;No;729;1;337;119;1;0.86;0.98;0.78
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;No;SMOTE;Sensitive Threshold;184;0;338;664;1;0.22;0.61;0.14
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;No;SMOTE;Sensitive Learning;528;2;336;320;1;0.62;0.92;0.48
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;Best first;No;No;841;135;203;7;0.86;0.99;0.99;0.67
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;Best first;No;Sensitive Threshold;401;1;337;447;1;0.47;0.73;0.34
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;Best first;No;Sensitive Learning;801;1;337;47;1;0.94;0.99;0.9
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;Best first;oversampling;No;833;141;197;15;0.86;0.98;0.93;0.64
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;Best first;oversampling;Sensitive Threshold;488;1;337;360;1;0.58;0.79;0.43
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;Best first;oversampling;Sensitive Learning;833;143;195;15;0.85;0.98;0.89;0.63
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;Best first;undersampling;No;833;133;205;15;0.86;0.98;0.91;0.66
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;Best first;undersampling;Sensitive Threshold;200;1;337;648;1;0.24;0.62;0.15
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;Best first;undersampling;Sensitive Learning;837;185;153;11;0.82;0.99;0.8;0.52
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;Best first;SMOTE;No;813;3;335;35;1;0.96;0.99;0.92
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;Best first;SMOTE;Sensitive Threshold;361;1;337;487;1;0.43;0.71;0.3
+SYNCOPE;4;9.32;29.72;28.5;Random Forest;Best first;SMOTE;Sensitive Learning;539;3;335;309;0.99;0.64;0.92;0.49
+SYNCOPE;4;9.32;29.72;28.5;IBk;No;No;No;686;106;232;162;0.87;0.81;0.8;0.47
+SYNCOPE;4;9.32;29.72;28.5;IBk;No;No;Sensitive Threshold;578;44;294;270;0.93;0.68;0.78;0.46
+SYNCOPE;4;9.32;29.72;28.5;IBk;No;No;Sensitive Learning;599;50;288;249;0.92;0.71;0.8;0.47
+SYNCOPE;4;9.32;29.72;28.5;IBk;No;oversampling;No;585;82;256;263;0.88;0.69;0.77;0.39
+SYNCOPE;4;9.32;29.72;28.5;IBk;No;oversampling;Sensitive Threshold;504;52;286;344;0.91;0.59;0.72;0.35
+SYNCOPE;4;9.32;29.72;28.5;IBk;No;oversampling;Sensitive Learning;510;83;255;338;0.86;0.6;0.69;0.29
+SYNCOPE;4;9.32;29.72;28.5;IBk;No;undersampling;No;519;68;270;329;0.88;0.61;0.74;0.33
+SYNCOPE;4;9.32;29.72;28.5;IBk;No;undersampling;Sensitive Threshold;447;33;305;401;0.93;0.53;0.71;0.32
+SYNCOPE;4;9.32;29.72;28.5;IBk;No;undersampling;Sensitive Learning;394;71;267;454;0.85;0.46;0.63;0.19
+SYNCOPE;4;9.32;29.72;28.5;IBk;No;SMOTE;No;668;99;239;180;0.87;0.79;0.81;0.46
+SYNCOPE;4;9.32;29.72;28.5;IBk;No;SMOTE;Sensitive Threshold;578;44;294;270;0.93;0.68;0.78;0.46
+SYNCOPE;4;9.32;29.72;28.5;IBk;No;SMOTE;Sensitive Learning;541;76;262;307;0.88;0.64;0.72;0.34
+SYNCOPE;4;9.32;29.72;28.5;IBk;Best first;No;No;834;134;204;14;0.86;0.98;0.99;0.66
+SYNCOPE;4;9.32;29.72;28.5;IBk;Best first;No;Sensitive Threshold;801;1;337;47;1;0.94;0.97;0.9
+SYNCOPE;4;9.32;29.72;28.5;IBk;Best first;No;Sensitive Learning;801;1;337;47;1;0.94;0.99;0.9
+SYNCOPE;4;9.32;29.72;28.5;IBk;Best first;oversampling;No;593;3;335;255;0.99;0.7;0.93;0.56
+SYNCOPE;4;9.32;29.72;28.5;IBk;Best first;oversampling;Sensitive Threshold;586;1;337;262;1;0.69;0.84;0.56
+SYNCOPE;4;9.32;29.72;28.5;IBk;Best first;oversampling;Sensitive Learning;427;3;335;421;0.99;0.5;0.89;0.36
+SYNCOPE;4;9.32;29.72;28.5;IBk;Best first;undersampling;No;498;2;336;350;1;0.59;0.91;0.44
+SYNCOPE;4;9.32;29.72;28.5;IBk;Best first;undersampling;Sensitive Threshold;491;1;337;357;1;0.58;0.79;0.44
+SYNCOPE;4;9.32;29.72;28.5;IBk;Best first;undersampling;Sensitive Learning;273;3;335;575;0.99;0.32;0.8;0.21
+SYNCOPE;4;9.32;29.72;28.5;IBk;Best first;SMOTE;No;811;3;335;37;1;0.96;0.99;0.92
+SYNCOPE;4;9.32;29.72;28.5;IBk;Best first;SMOTE;Sensitive Threshold;801;1;337;47;1;0.94;0.97;0.9
+SYNCOPE;4;9.32;29.72;28.5;IBk;Best first;SMOTE;Sensitive Learning;539;3;335;309;0.99;0.64;0.92;0.49
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;No;No;No;820;166;172;28;0.83;0.97;0.95;0.54
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;No;No;Sensitive Threshold;334;3;335;514;0.99;0.39;0.69;0.26
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;No;No;Sensitive Learning;762;6;332;86;0.99;0.9;0.94;0.82
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;No;oversampling;No;700;77;261;148;0.9;0.83;0.9;0.56
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;No;oversampling;Sensitive Threshold;69;1;337;779;0.99;0.08;0.54;0.05
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;No;oversampling;Sensitive Learning;779;120;218;69;0.87;0.92;0.88;0.59
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;No;undersampling;No;814;167;171;34;0.83;0.96;0.89;0.53
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;No;undersampling;Sensitive Threshold;70;1;337;778;0.99;0.08;0.54;0.05
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;No;undersampling;Sensitive Learning;822;310;28;26;0.73;0.97;0.8;0.07
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;No;SMOTE;No;772;7;331;76;0.99;0.91;0.95;0.84
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;No;SMOTE;Sensitive Threshold;2;1;337;846;0.67;0;0.5;0
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;No;SMOTE;Sensitive Learning;787;116;222;61;0.87;0.93;0.89;0.61
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;Best first;No;No;848;175;163;0;0.83;1;0.99;0.57
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;Best first;No;Sensitive Threshold;359;1;337;489;1;0.42;0.71;0.29
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;Best first;No;Sensitive Learning;801;1;337;47;1;0.94;0.98;0.9
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;Best first;oversampling;No;593;3;335;255;0.99;0.7;0.93;0.56
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;Best first;oversampling;Sensitive Threshold;55;0;338;793;1;0.06;0.53;0.04
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;Best first;oversampling;Sensitive Learning;427;3;335;421;0.99;0.5;0.89;0.36
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;Best first;undersampling;No;498;2;336;350;1;0.59;0.91;0.44
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;Best first;undersampling;Sensitive Threshold;0;0;338;848;0;0;0.5;0
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;Best first;undersampling;Sensitive Learning;273;3;335;575;0.99;0.32;0.8;0.21
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;Best first;SMOTE;No;811;3;335;37;1;0.96;0.98;0.92
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;Best first;SMOTE;Sensitive Threshold;0;0;338;848;0;0;0.5;0
+SYNCOPE;4;9.32;29.72;28.5;Naive Bayes;Best first;SMOTE;Sensitive Learning;537;3;335;311;0.99;0.63;0.92;0.49
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;No;No;No;366;138;165;6;0.73;0.98;0.85;0.55
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;No;No;Sensitive Threshold;291;63;240;81;0.82;0.78;0.79;0.57
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;No;No;Sensitive Learning;331;67;236;41;0.83;0.89;0.87;0.67
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;No;oversampling;No;335;101;202;37;0.77;0.9;0.85;0.58
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;No;oversampling;Sensitive Threshold;231;42;261;141;0.85;0.62;0.74;0.47
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;No;oversampling;Sensitive Learning;311;84;219;61;0.79;0.84;0.83;0.56
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;No;undersampling;No;346;126;177;26;0.73;0.93;0.84;0.53
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;No;undersampling;Sensitive Threshold;130;32;271;242;0.8;0.35;0.62;0.23
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;No;undersampling;Sensitive Learning;318;119;184;54;0.73;0.85;0.82;0.47
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;No;SMOTE;No;337;67;236;35;0.83;0.91;0.84;0.69
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;No;SMOTE;Sensitive Threshold;36;4;299;336;0.9;0.1;0.54;0.08
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;No;SMOTE;Sensitive Learning;298;64;239;74;0.82;0.8;0.83;0.59
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;Best first;No;No;367;139;164;5;0.73;0.99;0.86;0.55
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;Best first;No;Sensitive Threshold;298;64;239;74;0.82;0.8;0.79;0.59
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;Best first;No;Sensitive Learning;318;64;239;54;0.83;0.85;0.85;0.65
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;Best first;oversampling;No;356;137;166;16;0.72;0.96;0.85;0.52
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;Best first;oversampling;Sensitive Threshold;290;62;241;82;0.82;0.78;0.79;0.57
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;Best first;oversampling;Sensitive Learning;355;138;165;17;0.72;0.95;0.83;0.52
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;Best first;undersampling;No;356;135;168;16;0.73;0.96;0.84;0.53
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;Best first;undersampling;Sensitive Threshold;208;51;252;164;0.8;0.56;0.7;0.38
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;Best first;undersampling;Sensitive Learning;359;156;147;13;0.7;0.97;0.8;0.47
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;Best first;SMOTE;No;335;68;235;37;0.83;0.9;0.86;0.68
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;Best first;SMOTE;Sensitive Threshold;297;64;239;75;0.82;0.8;0.79;0.59
+SYNCOPE;5;13.05;29.37;44.89;Random Forest;Best first;SMOTE;Sensitive Learning;296;63;240;76;0.82;0.8;0.84;0.59
+SYNCOPE;5;13.05;29.37;44.89;IBk;No;No;No;350;84;219;22;0.81;0.94;0.83;0.68
+SYNCOPE;5;13.05;29.37;44.89;IBk;No;No;Sensitive Threshold;349;82;221;23;0.81;0.94;0.83;0.68
+SYNCOPE;5;13.05;29.37;44.89;IBk;No;No;Sensitive Learning;349;82;221;23;0.81;0.94;0.83;0.68
+SYNCOPE;5;13.05;29.37;44.89;IBk;No;oversampling;No;337;83;220;35;0.8;0.91;0.82;0.64
+SYNCOPE;5;13.05;29.37;44.89;IBk;No;oversampling;Sensitive Threshold;337;83;220;35;0.8;0.91;0.82;0.64
+SYNCOPE;5;13.05;29.37;44.89;IBk;No;oversampling;Sensitive Learning;314;77;226;58;0.8;0.84;0.81;0.59
+SYNCOPE;5;13.05;29.37;44.89;IBk;No;undersampling;No;312;74;229;60;0.81;0.84;0.8;0.6
+SYNCOPE;5;13.05;29.37;44.89;IBk;No;undersampling;Sensitive Threshold;310;74;229;62;0.81;0.83;0.79;0.59
+SYNCOPE;5;13.05;29.37;44.89;IBk;No;undersampling;Sensitive Learning;244;78;225;128;0.76;0.66;0.71;0.39
+SYNCOPE;5;13.05;29.37;44.89;IBk;No;SMOTE;No;349;81;222;23;0.81;0.94;0.84;0.68
+SYNCOPE;5;13.05;29.37;44.89;IBk;No;SMOTE;Sensitive Threshold;349;80;223;23;0.81;0.94;0.84;0.69
+SYNCOPE;5;13.05;29.37;44.89;IBk;No;SMOTE;Sensitive Learning;317;81;222;55;0.8;0.85;0.8;0.59
+SYNCOPE;5;13.05;29.37;44.89;IBk;Best first;No;No;367;139;164;5;0.73;0.99;0.85;0.55
+SYNCOPE;5;13.05;29.37;44.89;IBk;Best first;No;Sensitive Threshold;318;64;239;54;0.83;0.85;0.82;0.65
+SYNCOPE;5;13.05;29.37;44.89;IBk;Best first;No;Sensitive Learning;318;64;239;54;0.83;0.85;0.85;0.65
+SYNCOPE;5;13.05;29.37;44.89;IBk;Best first;oversampling;No;317;65;238;55;0.83;0.85;0.86;0.64
+SYNCOPE;5;13.05;29.37;44.89;IBk;Best first;oversampling;Sensitive Threshold;311;64;239;61;0.83;0.84;0.81;0.63
+SYNCOPE;5;13.05;29.37;44.89;IBk;Best first;oversampling;Sensitive Learning;270;57;246;102;0.83;0.73;0.83;0.53
+SYNCOPE;5;13.05;29.37;44.89;IBk;Best first;undersampling;No;292;60;243;80;0.83;0.78;0.84;0.58
+SYNCOPE;5;13.05;29.37;44.89;IBk;Best first;undersampling;Sensitive Threshold;286;60;243;86;0.83;0.77;0.79;0.57
+SYNCOPE;5;13.05;29.37;44.89;IBk;Best first;undersampling;Sensitive Learning;195;39;264;177;0.83;0.52;0.8;0.38
+SYNCOPE;5;13.05;29.37;44.89;IBk;Best first;SMOTE;No;335;68;235;37;0.83;0.9;0.86;0.68
+SYNCOPE;5;13.05;29.37;44.89;IBk;Best first;SMOTE;Sensitive Threshold;318;64;239;54;0.83;0.85;0.82;0.65
+SYNCOPE;5;13.05;29.37;44.89;IBk;Best first;SMOTE;Sensitive Learning;296;63;240;76;0.82;0.8;0.84;0.59
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;No;No;No;361;211;92;11;0.63;0.97;0.87;0.29
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;No;No;Sensitive Threshold;311;56;247;61;0.85;0.84;0.83;0.65
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;No;No;Sensitive Learning;340;109;194;32;0.76;0.91;0.87;0.57
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;No;oversampling;No;349;127;176;23;0.73;0.94;0.85;0.54
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;No;oversampling;Sensitive Threshold;295;54;249;77;0.85;0.79;0.81;0.61
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;No;oversampling;Sensitive Learning;348;127;176;24;0.73;0.94;0.84;0.53
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;No;undersampling;No;350;242;61;22;0.59;0.94;0.83;0.15
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;No;undersampling;Sensitive Threshold;307;71;232;65;0.81;0.83;0.8;0.59
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;No;undersampling;Sensitive Learning;345;250;53;27;0.58;0.93;0.8;0.11
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;No;SMOTE;No;355;114;189;17;0.76;0.95;0.88;0.6
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;No;SMOTE;Sensitive Threshold;5;1;302;367;0.83;0.01;0.51;0.01
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;No;SMOTE;Sensitive Learning;324;90;213;48;0.78;0.87;0.83;0.58
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;Best first;No;No;371;139;164;1;0.73;1;0.86;0.56
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;Best first;No;Sensitive Threshold;295;64;239;77;0.82;0.79;0.79;0.58
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;Best first;No;Sensitive Learning;318;64;239;54;0.83;0.85;0.85;0.65
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;Best first;oversampling;No;317;65;238;55;0.83;0.85;0.86;0.64
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;Best first;oversampling;Sensitive Threshold;72;11;292;300;0.87;0.19;0.58;0.14
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;Best first;oversampling;Sensitive Learning;270;57;246;102;0.83;0.73;0.83;0.53
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;Best first;undersampling;No;292;60;243;80;0.83;0.78;0.84;0.58
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;Best first;undersampling;Sensitive Threshold;0;0;303;372;0;0;0.5;0
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;Best first;undersampling;Sensitive Learning;195;39;264;177;0.83;0.52;0.8;0.38
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;Best first;SMOTE;No;328;65;238;44;0.83;0.88;0.85;0.67
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;Best first;SMOTE;Sensitive Threshold;0;0;303;372;0;0;0.5;0
+SYNCOPE;5;13.05;29.37;44.89;Naive Bayes;Best first;SMOTE;Sensitive Learning;293;62;241;79;0.83;0.79;0.84;0.58
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;No;No;No;402;223;61;39;0.64;0.91;0.82;0.14
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;No;No;Sensitive Threshold;213;3;281;228;0.99;0.48;0.74;0.41
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;No;No;Sensitive Learning;331;17;267;110;0.95;0.75;0.87;0.65
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;No;oversampling;No;347;72;212;94;0.83;0.79;0.83;0.53
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;No;oversampling;Sensitive Threshold;108;2;282;333;0.98;0.24;0.62;0.2
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;No;oversampling;Sensitive Learning;325;62;222;116;0.84;0.74;0.81;0.5
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;No;undersampling;No;341;82;202;100;0.81;0.77;0.83;0.48
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;No;undersampling;Sensitive Threshold;19;0;284;422;1;0.04;0.52;0.03
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;No;undersampling;Sensitive Learning;319;122;162;122;0.72;0.72;0.76;0.29
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;No;SMOTE;No;353;21;263;88;0.94;0.8;0.88;0.7
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;No;SMOTE;Sensitive Threshold;59;2;282;382;0.97;0.13;0.56;0.1
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;No;SMOTE;Sensitive Learning;278;16;268;163;0.95;0.63;0.79;0.53
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;Best first;No;No;435;227;57;6;0.66;0.99;0.91;0.22
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;Best first;No;Sensitive Threshold;302;14;270;139;0.96;0.68;0.82;0.59
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;Best first;No;Sensitive Learning;365;20;264;76;0.95;0.83;0.9;0.73
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;Best first;oversampling;No;420;229;55;21;0.65;0.95;0.87;0.17
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;Best first;oversampling;Sensitive Threshold;312;20;264;129;0.94;0.71;0.82;0.6
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;Best first;oversampling;Sensitive Learning;417;228;56;24;0.65;0.95;0.83;0.16
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;Best first;undersampling;No;421;222;62;20;0.65;0.95;0.88;0.2
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;Best first;undersampling;Sensitive Threshold;244;11;273;197;0.96;0.55;0.76;0.46
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;Best first;undersampling;Sensitive Learning;418;238;46;23;0.64;0.95;0.78;0.13
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;Best first;SMOTE;No;393;29;255;48;0.93;0.89;0.91;0.78
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;Best first;SMOTE;Sensitive Threshold;291;14;270;150;0.95;0.66;0.81;0.56
+SYNCOPE;6;15.17;31.54;39.17;Random Forest;Best first;SMOTE;Sensitive Learning;311;21;263;130;0.94;0.71;0.82;0.59
+SYNCOPE;6;15.17;31.54;39.17;IBk;No;No;No;414;168;116;27;0.71;0.94;0.66;0.38
+SYNCOPE;6;15.17;31.54;39.17;IBk;No;No;Sensitive Threshold;414;166;118;27;0.71;0.94;0.68;0.39
+SYNCOPE;6;15.17;31.54;39.17;IBk;No;No;Sensitive Learning;414;166;118;27;0.71;0.94;0.66;0.39
+SYNCOPE;6;15.17;31.54;39.17;IBk;No;oversampling;No;388;156;128;53;0.71;0.88;0.64;0.35
+SYNCOPE;6;15.17;31.54;39.17;IBk;No;oversampling;Sensitive Threshold;388;156;128;53;0.71;0.88;0.67;0.35
+SYNCOPE;6;15.17;31.54;39.17;IBk;No;oversampling;Sensitive Learning;354;129;155;87;0.73;0.8;0.69;0.36
+SYNCOPE;6;15.17;31.54;39.17;IBk;No;undersampling;No;363;128;156;78;0.74;0.82;0.69;0.38
+SYNCOPE;6;15.17;31.54;39.17;IBk;No;undersampling;Sensitive Threshold;362;126;158;79;0.74;0.82;0.69;0.39
+SYNCOPE;6;15.17;31.54;39.17;IBk;No;undersampling;Sensitive Learning;322;149;135;119;0.68;0.73;0.59;0.21
+SYNCOPE;6;15.17;31.54;39.17;IBk;No;SMOTE;No;412;166;118;29;0.71;0.93;0.67;0.38
+SYNCOPE;6;15.17;31.54;39.17;IBk;No;SMOTE;Sensitive Threshold;412;164;120;29;0.72;0.93;0.68;0.39
+SYNCOPE;6;15.17;31.54;39.17;IBk;No;SMOTE;Sensitive Learning;361;132;152;80;0.73;0.82;0.67;0.37
+SYNCOPE;6;15.17;31.54;39.17;IBk;Best first;No;No;434;227;57;7;0.66;0.98;0.9;0.21
+SYNCOPE;6;15.17;31.54;39.17;IBk;Best first;No;Sensitive Threshold;325;14;270;116;0.96;0.74;0.84;0.65
+SYNCOPE;6;15.17;31.54;39.17;IBk;Best first;No;Sensitive Learning;386;28;256;55;0.93;0.88;0.9;0.76
+SYNCOPE;6;15.17;31.54;39.17;IBk;Best first;oversampling;No;362;29;255;79;0.93;0.82;0.87;0.7
+SYNCOPE;6;15.17;31.54;39.17;IBk;Best first;oversampling;Sensitive Threshold;326;20;264;115;0.94;0.74;0.83;0.63
+SYNCOPE;6;15.17;31.54;39.17;IBk;Best first;oversampling;Sensitive Learning;325;27;257;116;0.92;0.74;0.83;0.61
+SYNCOPE;6;15.17;31.54;39.17;IBk;Best first;undersampling;No;353;22;262;88;0.94;0.8;0.88;0.69
+SYNCOPE;6;15.17;31.54;39.17;IBk;Best first;undersampling;Sensitive Threshold;305;12;272;136;0.96;0.69;0.82;0.6
+SYNCOPE;6;15.17;31.54;39.17;IBk;Best first;undersampling;Sensitive Learning;251;12;272;190;0.95;0.57;0.78;0.47
+SYNCOPE;6;15.17;31.54;39.17;IBk;Best first;SMOTE;No;391;29;255;50;0.93;0.89;0.91;0.77
+SYNCOPE;6;15.17;31.54;39.17;IBk;Best first;SMOTE;Sensitive Threshold;325;14;270;116;0.96;0.74;0.84;0.65
+SYNCOPE;6;15.17;31.54;39.17;IBk;Best first;SMOTE;Sensitive Learning;309;19;265;132;0.94;0.7;0.82;0.59
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;No;No;No;422;232;52;19;0.65;0.96;0.88;0.16
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;No;No;Sensitive Threshold;297;15;269;144;0.95;0.67;0.81;0.57
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;No;No;Sensitive Learning;350;128;156;91;0.73;0.79;0.82;0.35
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;No;oversampling;No;394;169;115;47;0.7;0.89;0.85;0.32
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;No;oversampling;Sensitive Threshold;184;6;278;257;0.97;0.42;0.7;0.34
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;No;oversampling;Sensitive Learning;311;23;261;130;0.93;0.71;0.85;0.58
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;No;undersampling;No;404;212;72;37;0.66;0.92;0.83;0.19
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;No;undersampling;Sensitive Threshold;92;2;282;349;0.98;0.21;0.6;0.17
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;No;undersampling;Sensitive Learning;405;232;52;36;0.64;0.92;0.77;0.12
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;No;SMOTE;No;359;21;263;82;0.94;0.81;0.86;0.71
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;No;SMOTE;Sensitive Threshold;0;0;284;441;0;0;0.5;0
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;No;SMOTE;Sensitive Learning;386;198;86;55;0.66;0.88;0.79;0.2
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;Best first;No;No;440;228;56;1;0.66;1;0.91;0.23
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;Best first;No;Sensitive Threshold;281;14;270;160;0.95;0.64;0.79;0.54
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;Best first;No;Sensitive Learning;325;14;270;116;0.96;0.74;0.9;0.65
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;Best first;oversampling;No;362;29;255;79;0.93;0.82;0.87;0.7
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;Best first;oversampling;Sensitive Threshold;107;5;279;334;0.96;0.24;0.61;0.19
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;Best first;oversampling;Sensitive Learning;325;27;257;116;0.92;0.74;0.83;0.61
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;Best first;undersampling;No;353;22;262;88;0.94;0.8;0.88;0.69
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;Best first;undersampling;Sensitive Threshold;0;0;284;441;0;0;0.5;0
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;Best first;undersampling;Sensitive Learning;251;12;272;190;0.95;0.57;0.78;0.47
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;Best first;SMOTE;No;390;29;255;51;0.93;0.88;0.91;0.77
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;Best first;SMOTE;Sensitive Threshold;0;0;284;441;0;0;0.5;0
+SYNCOPE;6;15.17;31.54;39.17;Naive Bayes;Best first;SMOTE;Sensitive Learning;297;16;268;144;0.95;0.67;0.8;0.57
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;No;No;No;416;87;217;17;0.83;0.96;0.91;0.7
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;No;No;Sensitive Threshold;261;27;277;172;0.91;0.6;0.76;0.48
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;No;No;Sensitive Learning;342;45;259;91;0.88;0.79;0.91;0.63
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;No;oversampling;No;389;62;242;44;0.86;0.9;0.9;0.7
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;No;oversampling;Sensitive Threshold;204;21;283;229;0.91;0.47;0.7;0.36
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;No;oversampling;Sensitive Learning;376;63;241;57;0.86;0.87;0.88;0.66
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;No;undersampling;No;371;50;254;62;0.88;0.86;0.89;0.69
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;No;undersampling;Sensitive Threshold;77;6;298;356;0.93;0.18;0.58;0.13
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;No;undersampling;Sensitive Learning;380;94;210;53;0.8;0.88;0.86;0.58
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;No;SMOTE;No;388;48;256;45;0.89;0.9;0.91;0.74
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;No;SMOTE;Sensitive Threshold;188;16;288;245;0.92;0.43;0.69;0.34
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;No;SMOTE;Sensitive Learning;313;43;261;120;0.88;0.72;0.89;0.56
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;Best first;No;No;429;58;246;4;0.88;0.99;0.91;0.82
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;Best first;No;Sensitive Threshold;292;33;271;141;0.9;0.67;0.78;0.54
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;Best first;No;Sensitive Learning;390;48;256;43;0.89;0.9;0.92;0.74
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;Best first;oversampling;No;412;71;233;21;0.85;0.95;0.91;0.74
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;Best first;oversampling;Sensitive Threshold;305;33;271;128;0.9;0.7;0.8;0.57
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;Best first;oversampling;Sensitive Learning;404;76;228;29;0.84;0.93;0.89;0.7
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;Best first;undersampling;No;409;55;249;24;0.88;0.94;0.91;0.78
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;Best first;undersampling;Sensitive Threshold;231;28;276;202;0.89;0.53;0.72;0.41
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;Best first;undersampling;Sensitive Learning;415;119;185;18;0.78;0.96;0.86;0.6
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;Best first;SMOTE;No;410;49;255;23;0.89;0.95;0.91;0.8
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;Best first;SMOTE;Sensitive Threshold;281;32;272;152;0.9;0.65;0.77;0.51
+SYNCOPE;7;17.44;32.54;41.25;Random Forest;Best first;SMOTE;Sensitive Learning;318;41;263;115;0.89;0.73;0.9;0.58
+SYNCOPE;7;17.44;32.54;41.25;IBk;No;No;No;404;49;255;29;0.89;0.93;0.89;0.78
+SYNCOPE;7;17.44;32.54;41.25;IBk;No;No;Sensitive Threshold;404;47;257;29;0.9;0.93;0.89;0.79
+SYNCOPE;7;17.44;32.54;41.25;IBk;No;No;Sensitive Learning;404;48;256;29;0.89;0.93;0.89;0.78
+SYNCOPE;7;17.44;32.54;41.25;IBk;No;oversampling;No;389;60;244;44;0.87;0.9;0.87;0.71
+SYNCOPE;7;17.44;32.54;41.25;IBk;No;oversampling;Sensitive Threshold;379;51;253;54;0.88;0.88;0.85;0.71
+SYNCOPE;7;17.44;32.54;41.25;IBk;No;oversampling;Sensitive Learning;361;55;249;72;0.87;0.83;0.82;0.65
+SYNCOPE;7;17.44;32.54;41.25;IBk;No;undersampling;No;359;43;261;74;0.89;0.83;0.86;0.68
+SYNCOPE;7;17.44;32.54;41.25;IBk;No;undersampling;Sensitive Threshold;354;43;261;79;0.89;0.82;0.84;0.66
+SYNCOPE;7;17.44;32.54;41.25;IBk;No;undersampling;Sensitive Learning;307;71;233;126;0.81;0.71;0.76;0.46
+SYNCOPE;7;17.44;32.54;41.25;IBk;No;SMOTE;No;402;49;255;31;0.89;0.93;0.89;0.77
+SYNCOPE;7;17.44;32.54;41.25;IBk;No;SMOTE;Sensitive Threshold;402;47;257;31;0.9;0.93;0.89;0.78
+SYNCOPE;7;17.44;32.54;41.25;IBk;No;SMOTE;Sensitive Learning;346;44;260;87;0.89;0.8;0.84;0.64
+SYNCOPE;7;17.44;32.54;41.25;IBk;Best first;No;No;429;58;246;4;0.88;0.99;0.92;0.82
+SYNCOPE;7;17.44;32.54;41.25;IBk;Best first;No;Sensitive Threshold;329;34;270;104;0.91;0.76;0.82;0.63
+SYNCOPE;7;17.44;32.54;41.25;IBk;Best first;No;Sensitive Learning;390;48;256;43;0.89;0.9;0.92;0.74
+SYNCOPE;7;17.44;32.54;41.25;IBk;Best first;oversampling;No;367;44;260;66;0.89;0.85;0.91;0.7
+SYNCOPE;7;17.44;32.54;41.25;IBk;Best first;oversampling;Sensitive Threshold;316;33;271;117;0.91;0.73;0.81;0.6
+SYNCOPE;7;17.44;32.54;41.25;IBk;Best first;oversampling;Sensitive Learning;335;44;260;98;0.88;0.77;0.89;0.61
+SYNCOPE;7;17.44;32.54;41.25;IBk;Best first;undersampling;No;353;45;259;80;0.89;0.82;0.91;0.66
+SYNCOPE;7;17.44;32.54;41.25;IBk;Best first;undersampling;Sensitive Threshold;288;32;272;145;0.9;0.67;0.78;0.53
+SYNCOPE;7;17.44;32.54;41.25;IBk;Best first;undersampling;Sensitive Learning;262;35;269;171;0.88;0.61;0.86;0.46
+SYNCOPE;7;17.44;32.54;41.25;IBk;Best first;SMOTE;No;409;49;255;24;0.89;0.94;0.91;0.79
+SYNCOPE;7;17.44;32.54;41.25;IBk;Best first;SMOTE;Sensitive Threshold;329;34;270;104;0.91;0.76;0.82;0.63
+SYNCOPE;7;17.44;32.54;41.25;IBk;Best first;SMOTE;Sensitive Learning;315;39;265;118;0.89;0.73;0.91;0.58
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;No;No;No;421;115;189;12;0.79;0.97;0.9;0.63
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;No;No;Sensitive Threshold;277;29;275;156;0.91;0.64;0.77;0.51
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;No;No;Sensitive Learning;360;35;269;73;0.91;0.83;0.9;0.7
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;No;oversampling;No;345;33;271;88;0.91;0.8;0.9;0.67
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;No;oversampling;Sensitive Threshold;49;4;300;384;0.92;0.11;0.55;0.08
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;No;oversampling;Sensitive Learning;325;35;269;108;0.9;0.75;0.89;0.61
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;No;undersampling;No;347;38;266;86;0.9;0.8;0.9;0.66
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;No;undersampling;Sensitive Threshold;0;0;304;433;0;0;0.5;0
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;No;undersampling;Sensitive Learning;8;3;301;425;0.73;0.02;0.87;0.01
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;No;SMOTE;No;377;37;267;56;0.91;0.87;0.9;0.74
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;No;SMOTE;Sensitive Threshold;0;0;304;433;0;0;0.5;0
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;No;SMOTE;Sensitive Learning;310;36;268;123;0.9;0.72;0.9;0.57
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;Best first;No;No;429;59;245;4;0.88;0.99;0.91;0.82
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;Best first;No;Sensitive Threshold;253;29;275;180;0.9;0.58;0.74;0.46
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;Best first;No;Sensitive Learning;329;34;270;104;0.91;0.76;0.91;0.63
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;Best first;oversampling;No;367;44;260;66;0.89;0.85;0.91;0.7
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;Best first;oversampling;Sensitive Threshold;112;17;287;321;0.87;0.26;0.6;0.18
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;Best first;oversampling;Sensitive Learning;335;44;260;98;0.88;0.77;0.89;0.61
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;Best first;undersampling;No;353;45;259;80;0.89;0.82;0.9;0.66
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;Best first;undersampling;Sensitive Threshold;0;0;304;433;0;0;0.5;0
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;Best first;undersampling;Sensitive Learning;262;35;269;171;0.88;0.61;0.86;0.46
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;Best first;SMOTE;No;405;49;255;28;0.89;0.94;0.9;0.78
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;Best first;SMOTE;Sensitive Threshold;0;0;304;433;0;0;0.5;0
+SYNCOPE;7;17.44;32.54;41.25;Naive Bayes;Best first;SMOTE;Sensitive Learning;304;38;266;129;0.89;0.7;0.9;0.55
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;No;No;No;417;66;255;7;0.86;0.98;0.96;0.8
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;No;No;Sensitive Threshold;8;0;321;416;1;0.02;0.51;0.02
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;No;No;Sensitive Learning;367;16;305;57;0.96;0.87;0.96;0.8
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;No;oversampling;No;372;41;280;52;0.9;0.88;0.95;0.75
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;No;oversampling;Sensitive Threshold;5;0;321;419;1;0.01;0.51;0.01
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;No;oversampling;Sensitive Learning;342;32;289;82;0.91;0.81;0.94;0.69
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;No;undersampling;No;351;37;284;73;0.9;0.83;0.94;0.7
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;No;undersampling;Sensitive Threshold;3;0;321;421;1;0.01;0.5;0.01
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;No;undersampling;Sensitive Learning;275;34;287;149;0.89;0.65;0.88;0.52
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;No;SMOTE;No;420;64;257;4;0.87;0.99;0.96;0.81
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;No;SMOTE;Sensitive Threshold;14;0;321;410;1;0.03;0.52;0.03
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;No;SMOTE;Sensitive Learning;256;18;303;168;0.93;0.6;0.93;0.52
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;Best first;No;No;421;69;252;3;0.86;0.99;0.97;0.8
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;Best first;No;Sensitive Threshold;324;5;316;100;0.98;0.76;0.87;0.72
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;Best first;No;Sensitive Learning;389;41;280;35;0.9;0.92;0.97;0.79
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;Best first;oversampling;No;409;56;265;15;0.88;0.96;0.95;0.8
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;Best first;oversampling;Sensitive Threshold;316;17;304;108;0.95;0.75;0.85;0.67
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;Best first;oversampling;Sensitive Learning;398;58;263;26;0.87;0.94;0.94;0.77
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;Best first;undersampling;No;409;62;259;15;0.87;0.96;0.95;0.79
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;Best first;undersampling;Sensitive Threshold;261;5;316;163;0.98;0.62;0.8;0.57
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;Best first;undersampling;Sensitive Learning;402;95;226;22;0.81;0.95;0.88;0.67
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;Best first;SMOTE;No;418;67;254;6;0.86;0.99;0.96;0.8
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;Best first;SMOTE;Sensitive Threshold;328;8;313;96;0.98;0.77;0.87;0.72
+SYNCOPE;8;19.75;33.56;43.09;Random Forest;Best first;SMOTE;Sensitive Learning;342;31;290;82;0.92;0.81;0.95;0.7
+SYNCOPE;8;19.75;33.56;43.09;IBk;No;No;No;373;54;267;51;0.87;0.88;0.86;0.71
+SYNCOPE;8;19.75;33.56;43.09;IBk;No;No;Sensitive Threshold;373;54;267;51;0.87;0.88;0.86;0.71
+SYNCOPE;8;19.75;33.56;43.09;IBk;No;No;Sensitive Learning;373;54;267;51;0.87;0.88;0.86;0.71
+SYNCOPE;8;19.75;33.56;43.09;IBk;No;oversampling;No;345;36;285;79;0.91;0.81;0.85;0.69
+SYNCOPE;8;19.75;33.56;43.09;IBk;No;oversampling;Sensitive Threshold;345;36;285;79;0.91;0.81;0.85;0.69
+SYNCOPE;8;19.75;33.56;43.09;IBk;No;oversampling;Sensitive Learning;268;23;298;156;0.92;0.63;0.8;0.53
+SYNCOPE;8;19.75;33.56;43.09;IBk;No;undersampling;No;314;32;289;110;0.91;0.74;0.82;0.62
+SYNCOPE;8;19.75;33.56;43.09;IBk;No;undersampling;Sensitive Threshold;314;32;289;110;0.91;0.74;0.82;0.62
+SYNCOPE;8;19.75;33.56;43.09;IBk;No;undersampling;Sensitive Learning;187;27;294;237;0.87;0.44;0.66;0.33
+SYNCOPE;8;19.75;33.56;43.09;IBk;No;SMOTE;No;372;53;268;52;0.88;0.88;0.86;0.71
+SYNCOPE;8;19.75;33.56;43.09;IBk;No;SMOTE;Sensitive Threshold;372;53;268;52;0.88;0.88;0.86;0.71
+SYNCOPE;8;19.75;33.56;43.09;IBk;No;SMOTE;Sensitive Learning;274;35;286;150;0.89;0.65;0.81;0.51
+SYNCOPE;8;19.75;33.56;43.09;IBk;Best first;No;No;420;67;254;4;0.86;0.99;0.97;0.8
+SYNCOPE;8;19.75;33.56;43.09;IBk;Best first;No;Sensitive Threshold;335;5;316;89;0.99;0.79;0.89;0.75
+SYNCOPE;8;19.75;33.56;43.09;IBk;Best first;No;Sensitive Learning;389;41;280;35;0.9;0.92;0.97;0.79
+SYNCOPE;8;19.75;33.56;43.09;IBk;Best first;oversampling;No;385;48;273;39;0.89;0.91;0.95;0.76
+SYNCOPE;8;19.75;33.56;43.09;IBk;Best first;oversampling;Sensitive Threshold;334;17;304;90;0.95;0.79;0.87;0.72
+SYNCOPE;8;19.75;33.56;43.09;IBk;Best first;oversampling;Sensitive Learning;355;51;270;69;0.87;0.84;0.94;0.67
+SYNCOPE;8;19.75;33.56;43.09;IBk;Best first;undersampling;No;373;55;266;51;0.87;0.88;0.96;0.71
+SYNCOPE;8;19.75;33.56;43.09;IBk;Best first;undersampling;Sensitive Threshold;311;5;316;113;0.98;0.73;0.86;0.69
+SYNCOPE;8;19.75;33.56;43.09;IBk;Best first;undersampling;Sensitive Learning;282;43;278;142;0.87;0.67;0.88;0.51
+SYNCOPE;8;19.75;33.56;43.09;IBk;Best first;SMOTE;No;417;66;255;7;0.86;0.98;0.96;0.8
+SYNCOPE;8;19.75;33.56;43.09;IBk;Best first;SMOTE;Sensitive Threshold;339;8;313;85;0.98;0.8;0.89;0.75
+SYNCOPE;8;19.75;33.56;43.09;IBk;Best first;SMOTE;Sensitive Learning;340;28;293;84;0.92;0.8;0.95;0.7
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;No;No;No;403;174;147;21;0.7;0.95;0.83;0.43
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;No;No;Sensitive Threshold;341;70;251;83;0.83;0.8;0.79;0.58
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;No;No;Sensitive Learning;385;74;247;39;0.84;0.91;0.87;0.69
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;No;oversampling;No;392;68;253;32;0.85;0.92;0.89;0.72
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;No;oversampling;Sensitive Threshold;305;25;296;119;0.92;0.72;0.82;0.62
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;No;oversampling;Sensitive Learning;403;145;176;21;0.74;0.95;0.79;0.52
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;No;undersampling;No;399;139;182;25;0.74;0.94;0.79;0.53
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;No;undersampling;Sensitive Threshold;213;51;270;211;0.81;0.5;0.67;0.32
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;No;undersampling;Sensitive Learning;319;104;217;105;0.75;0.75;0.77;0.43
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;No;SMOTE;No;400;133;188;24;0.75;0.94;0.85;0.55
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;No;SMOTE;Sensitive Threshold;329;55;266;95;0.86;0.78;0.8;0.6
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;No;SMOTE;Sensitive Learning;282;17;304;142;0.94;0.67;0.88;0.58
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;Best first;No;No;424;71;250;0;0.86;1;0.95;0.8
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;Best first;No;Sensitive Threshold;248;5;316;176;0.98;0.58;0.78;0.53
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;Best first;No;Sensitive Learning;335;5;316;89;0.99;0.79;0.97;0.75
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;Best first;oversampling;No;385;48;273;39;0.89;0.91;0.94;0.76
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;Best first;oversampling;Sensitive Threshold;169;10;311;255;0.94;0.4;0.68;0.34
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;Best first;oversampling;Sensitive Learning;355;51;270;69;0.87;0.84;0.94;0.67
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;Best first;undersampling;No;373;55;266;51;0.87;0.88;0.94;0.71
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;Best first;undersampling;Sensitive Threshold;0;0;321;424;0;0;0.5;0
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;Best first;undersampling;Sensitive Learning;282;43;278;142;0.87;0.67;0.88;0.51
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;Best first;SMOTE;No;419;69;252;5;0.86;0.99;0.95;0.79
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;Best first;SMOTE;Sensitive Threshold;252;8;313;172;0.97;0.59;0.78;0.54
+SYNCOPE;8;19.75;33.56;43.09;Naive Bayes;Best first;SMOTE;Sensitive Learning;329;20;301;95;0.94;0.78;0.94;0.69
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;No;No;No;421;58;259;6;0.88;0.99;0.99;0.82
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;No;No;Sensitive Threshold;342;3;314;85;0.99;0.8;0.9;0.77
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;No;No;Sensitive Learning;404;22;295;23;0.95;0.95;0.98;0.88
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;No;oversampling;No;406;70;247;21;0.85;0.95;0.96;0.74
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;No;oversampling;Sensitive Threshold;251;0;317;176;1;0.59;0.79;0.55
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;No;oversampling;Sensitive Learning;391;44;273;36;0.9;0.92;0.95;0.78
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;No;undersampling;No;408;30;287;19;0.93;0.96;0.97;0.86
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;No;undersampling;Sensitive Threshold;140;0;317;287;1;0.33;0.66;0.29
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;No;undersampling;Sensitive Learning;395;115;202;32;0.77;0.93;0.91;0.58
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;No;SMOTE;No;422;93;224;5;0.82;0.99;0.98;0.72
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;No;SMOTE;Sensitive Threshold;349;5;312;78;0.99;0.82;0.9;0.78
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;No;SMOTE;Sensitive Learning;372;28;289;55;0.93;0.87;0.95;0.77
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;Best first;No;No;425;67;250;2;0.86;1;0.99;0.81
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;Best first;No;Sensitive Threshold;335;0;317;92;1;0.78;0.89;0.76
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;Best first;No;Sensitive Learning;394;5;312;33;0.99;0.92;0.99;0.9
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;Best first;oversampling;No;409;79;238;18;0.84;0.96;0.97;0.73
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;Best first;oversampling;Sensitive Threshold;335;2;315;92;0.99;0.78;0.89;0.75
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;Best first;oversampling;Sensitive Learning;403;64;253;24;0.86;0.94;0.96;0.75
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;Best first;undersampling;No;418;52;265;9;0.89;0.98;0.98;0.83
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;Best first;undersampling;Sensitive Threshold;293;0;317;134;1;0.69;0.84;0.65
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;Best first;undersampling;Sensitive Learning;412;140;177;15;0.75;0.96;0.91;0.55
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;Best first;SMOTE;No;423;67;250;4;0.86;0.99;0.98;0.8
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;Best first;SMOTE;Sensitive Threshold;341;1;316;86;1;0.8;0.9;0.77
+SYNCOPE;9;22.09;34.56;42.61;Random Forest;Best first;SMOTE;Sensitive Learning;358;25;292;69;0.93;0.84;0.96;0.75
+SYNCOPE;9;22.09;34.56;42.61;IBk;No;No;No;423;24;293;4;0.95;0.99;0.96;0.92
+SYNCOPE;9;22.09;34.56;42.61;IBk;No;No;Sensitive Threshold;423;24;293;4;0.95;0.99;0.96;0.92
+SYNCOPE;9;22.09;34.56;42.61;IBk;No;No;Sensitive Learning;423;24;293;4;0.95;0.99;0.96;0.92
+SYNCOPE;9;22.09;34.56;42.61;IBk;No;oversampling;No;410;60;257;17;0.87;0.96;0.87;0.78
+SYNCOPE;9;22.09;34.56;42.61;IBk;No;oversampling;Sensitive Threshold;410;60;257;17;0.87;0.96;0.89;0.78
+SYNCOPE;9;22.09;34.56;42.61;IBk;No;oversampling;Sensitive Learning;400;52;265;27;0.88;0.94;0.91;0.78
+SYNCOPE;9;22.09;34.56;42.61;IBk;No;undersampling;No;413;21;296;14;0.95;0.97;0.95;0.9
+SYNCOPE;9;22.09;34.56;42.61;IBk;No;undersampling;Sensitive Threshold;413;21;296;14;0.95;0.97;0.95;0.9
+SYNCOPE;9;22.09;34.56;42.61;IBk;No;undersampling;Sensitive Learning;414;137;180;13;0.75;0.97;0.8;0.57
+SYNCOPE;9;22.09;34.56;42.61;IBk;No;SMOTE;No;422;25;292;5;0.94;0.99;0.96;0.92
+SYNCOPE;9;22.09;34.56;42.61;IBk;No;SMOTE;Sensitive Threshold;422;25;292;5;0.94;0.99;0.95;0.92
+SYNCOPE;9;22.09;34.56;42.61;IBk;No;SMOTE;Sensitive Learning;399;34;283;28;0.92;0.93;0.91;0.83
+SYNCOPE;9;22.09;34.56;42.61;IBk;Best first;No;No;423;66;251;4;0.87;0.99;0.99;0.8
+SYNCOPE;9;22.09;34.56;42.61;IBk;Best first;No;Sensitive Threshold;340;0;317;87;1;0.8;0.9;0.77
+SYNCOPE;9;22.09;34.56;42.61;IBk;Best first;No;Sensitive Learning;394;5;312;33;0.99;0.92;0.99;0.9
+SYNCOPE;9;22.09;34.56;42.61;IBk;Best first;oversampling;No;395;37;280;32;0.91;0.93;0.97;0.81
+SYNCOPE;9;22.09;34.56;42.61;IBk;Best first;oversampling;Sensitive Threshold;345;2;315;82;0.99;0.81;0.9;0.78
+SYNCOPE;9;22.09;34.56;42.61;IBk;Best first;oversampling;Sensitive Learning;367;31;286;60;0.92;0.86;0.96;0.75
+SYNCOPE;9;22.09;34.56;42.61;IBk;Best first;undersampling;No;405;41;276;22;0.91;0.95;0.98;0.83
+SYNCOPE;9;22.09;34.56;42.61;IBk;Best first;undersampling;Sensitive Threshold;331;0;317;96;1;0.78;0.89;0.75
+SYNCOPE;9;22.09;34.56;42.61;IBk;Best first;undersampling;Sensitive Learning;324;26;291;103;0.93;0.76;0.91;0.66
+SYNCOPE;9;22.09;34.56;42.61;IBk;Best first;SMOTE;No;421;66;251;6;0.86;0.99;0.99;0.8
+SYNCOPE;9;22.09;34.56;42.61;IBk;Best first;SMOTE;Sensitive Threshold;347;1;316;80;1;0.81;0.9;0.78
+SYNCOPE;9;22.09;34.56;42.61;IBk;Best first;SMOTE;Sensitive Learning;356;20;297;71;0.95;0.83;0.97;0.75
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;No;No;No;422;293;24;5;0.59;0.99;0.97;0.07
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;No;No;Sensitive Threshold;412;55;262;15;0.88;0.96;0.9;0.8
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;No;No;Sensitive Learning;414;147;170;13;0.74;0.97;0.97;0.53
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;No;oversampling;No;420;226;91;7;0.65;0.98;0.95;0.3
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;No;oversampling;Sensitive Threshold;381;22;295;46;0.95;0.89;0.91;0.81
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;No;oversampling;Sensitive Learning;401;84;233;26;0.83;0.94;0.94;0.69
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;No;undersampling;No;420;272;45;7;0.61;0.98;0.96;0.14
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;No;undersampling;Sensitive Threshold;376;24;293;51;0.94;0.88;0.9;0.8
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;No;undersampling;Sensitive Learning;418;280;37;9;0.6;0.98;0.9;0.11
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;No;SMOTE;No;422;264;53;5;0.62;0.99;0.96;0.17
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;No;SMOTE;Sensitive Threshold;408;43;274;19;0.9;0.96;0.91;0.83
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;No;SMOTE;Sensitive Learning;397;98;219;30;0.8;0.93;0.94;0.64
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;Best first;No;No;427;70;247;0;0.86;1;0.99;0.8
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;Best first;No;Sensitive Threshold;247;0;317;180;1;0.58;0.79;0.54
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;Best first;No;Sensitive Learning;334;0;317;93;1;0.78;0.99;0.75
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;Best first;oversampling;No;395;37;280;32;0.91;0.93;0.97;0.81
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;Best first;oversampling;Sensitive Threshold;188;1;316;239;0.99;0.44;0.72;0.4
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;Best first;oversampling;Sensitive Learning;367;31;286;60;0.92;0.86;0.96;0.75
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;Best first;undersampling;No;405;41;276;22;0.91;0.95;0.98;0.83
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;Best first;undersampling;Sensitive Threshold;0;0;317;427;0;0;0.5;0
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;Best first;undersampling;Sensitive Learning;324;26;291;103;0.93;0.76;0.91;0.66
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;Best first;SMOTE;No;424;68;249;3;0.86;0.99;0.98;0.8
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;Best first;SMOTE;Sensitive Threshold;254;1;316;173;1;0.59;0.8;0.55
+SYNCOPE;9;22.09;34.56;42.61;Naive Bayes;Best first;SMOTE;Sensitive Learning;347;13;304;80;0.96;0.81;0.95;0.75
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;No;No;No;425;15;282;23;0.97;0.95;0.99;0.89
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;No;No;Sensitive Threshold;382;7;290;66;0.98;0.85;0.91;0.8
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;No;No;Sensitive Learning;412;9;288;36;0.98;0.92;0.99;0.88
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;No;oversampling;No;418;12;285;30;0.97;0.93;0.98;0.88
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;No;oversampling;Sensitive Threshold;289;3;294;159;0.99;0.65;0.82;0.58
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;No;oversampling;Sensitive Learning;388;11;286;60;0.97;0.87;0.98;0.81
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;No;undersampling;No;408;10;287;40;0.98;0.91;0.99;0.86
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;No;undersampling;Sensitive Threshold;220;3;294;228;0.99;0.49;0.74;0.43
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;No;undersampling;Sensitive Learning;380;20;277;68;0.95;0.85;0.95;0.76
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;No;SMOTE;No;424;13;284;24;0.97;0.95;0.99;0.9
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;No;SMOTE;Sensitive Threshold;384;6;291;64;0.98;0.86;0.92;0.81
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;No;SMOTE;Sensitive Learning;380;7;290;68;0.98;0.85;0.98;0.8
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;Best first;No;No;443;43;254;5;0.91;0.99;0.99;0.86
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;Best first;No;Sensitive Threshold;342;5;292;106;0.99;0.76;0.87;0.71
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;Best first;No;Sensitive Learning;388;6;291;60;0.98;0.87;0.98;0.82
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;Best first;oversampling;No;430;26;271;18;0.94;0.96;0.98;0.88
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;Best first;oversampling;Sensitive Threshold;346;4;293;102;0.99;0.77;0.88;0.72
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;Best first;oversampling;Sensitive Learning;422;26;271;26;0.94;0.94;0.97;0.85
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;Best first;undersampling;No;427;27;270;21;0.94;0.95;0.98;0.87
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;Best first;undersampling;Sensitive Threshold;306;2;295;142;0.99;0.68;0.84;0.63
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;Best first;undersampling;Sensitive Learning;418;40;257;30;0.91;0.93;0.95;0.8
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;Best first;SMOTE;No;441;40;257;7;0.92;0.98;0.99;0.87
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;Best first;SMOTE;Sensitive Threshold;348;4;293;100;0.99;0.78;0.88;0.72
+SYNCOPE;10;24.43;35.33;39.87;Random Forest;Best first;SMOTE;Sensitive Learning;386;13;284;62;0.97;0.86;0.98;0.8
+SYNCOPE;10;24.43;35.33;39.87;IBk;No;No;No;419;9;288;29;0.98;0.94;0.95;0.89
+SYNCOPE;10;24.43;35.33;39.87;IBk;No;No;Sensitive Threshold;419;8;289;29;0.98;0.94;0.95;0.9
+SYNCOPE;10;24.43;35.33;39.87;IBk;No;No;Sensitive Learning;419;8;289;29;0.98;0.94;0.95;0.9
+SYNCOPE;10;24.43;35.33;39.87;IBk;No;oversampling;No;412;10;287;36;0.98;0.92;0.95;0.87
+SYNCOPE;10;24.43;35.33;39.87;IBk;No;oversampling;Sensitive Threshold;410;9;288;38;0.98;0.92;0.94;0.87
+SYNCOPE;10;24.43;35.33;39.87;IBk;No;oversampling;Sensitive Learning;387;12;285;61;0.97;0.86;0.91;0.8
+SYNCOPE;10;24.43;35.33;39.87;IBk;No;undersampling;No;405;7;290;43;0.98;0.9;0.95;0.86
+SYNCOPE;10;24.43;35.33;39.87;IBk;No;undersampling;Sensitive Threshold;402;7;290;46;0.98;0.9;0.94;0.85
+SYNCOPE;10;24.43;35.33;39.87;IBk;No;undersampling;Sensitive Learning;368;26;271;80;0.93;0.82;0.87;0.71
+SYNCOPE;10;24.43;35.33;39.87;IBk;No;SMOTE;No;420;8;289;28;0.98;0.94;0.95;0.9
+SYNCOPE;10;24.43;35.33;39.87;IBk;No;SMOTE;Sensitive Threshold;420;8;289;28;0.98;0.94;0.96;0.9
+SYNCOPE;10;24.43;35.33;39.87;IBk;No;SMOTE;Sensitive Learning;396;10;287;52;0.98;0.88;0.94;0.83
+SYNCOPE;10;24.43;35.33;39.87;IBk;Best first;No;No;442;41;256;6;0.92;0.99;0.99;0.87
+SYNCOPE;10;24.43;35.33;39.87;IBk;Best first;No;Sensitive Threshold;337;3;294;111;0.99;0.75;0.87;0.7
+SYNCOPE;10;24.43;35.33;39.87;IBk;Best first;No;Sensitive Learning;388;6;291;60;0.98;0.87;0.99;0.82
+SYNCOPE;10;24.43;35.33;39.87;IBk;Best first;oversampling;No;424;24;273;24;0.95;0.95;0.98;0.87
+SYNCOPE;10;24.43;35.33;39.87;IBk;Best first;oversampling;Sensitive Threshold;351;3;294;97;0.99;0.78;0.89;0.73
+SYNCOPE;10;24.43;35.33;39.87;IBk;Best first;oversampling;Sensitive Learning;397;25;272;51;0.94;0.89;0.98;0.79
+SYNCOPE;10;24.43;35.33;39.87;IBk;Best first;undersampling;No;414;24;273;34;0.95;0.92;0.98;0.84
+SYNCOPE;10;24.43;35.33;39.87;IBk;Best first;undersampling;Sensitive Threshold;329;3;294;119;0.99;0.73;0.86;0.68
+SYNCOPE;10;24.43;35.33;39.87;IBk;Best first;undersampling;Sensitive Learning;347;23;274;101;0.94;0.77;0.95;0.67
+SYNCOPE;10;24.43;35.33;39.87;IBk;Best first;SMOTE;No;440;40;257;8;0.92;0.98;0.99;0.86
+SYNCOPE;10;24.43;35.33;39.87;IBk;Best first;SMOTE;Sensitive Threshold;345;4;293;103;0.99;0.77;0.88;0.72
+SYNCOPE;10;24.43;35.33;39.87;IBk;Best first;SMOTE;Sensitive Learning;381;10;287;67;0.97;0.85;0.98;0.79
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;No;No;No;439;245;52;9;0.64;0.98;0.97;0.18
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;No;No;Sensitive Threshold;427;28;269;21;0.94;0.95;0.93;0.86
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;No;No;Sensitive Learning;429;28;269;19;0.94;0.96;0.97;0.87
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;No;oversampling;No;438;88;209;10;0.83;0.98;0.97;0.71
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;No;oversampling;Sensitive Threshold;415;20;277;33;0.95;0.93;0.93;0.85
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;No;oversampling;Sensitive Learning;437;72;225;11;0.86;0.98;0.96;0.76
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;No;undersampling;No;439;253;44;9;0.63;0.98;0.96;0.15
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;No;undersampling;Sensitive Threshold;409;19;278;39;0.96;0.91;0.92;0.84
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;No;undersampling;Sensitive Learning;439;273;24;9;0.62;0.98;0.94;0.07
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;No;SMOTE;No;439;91;206;9;0.83;0.98;0.97;0.71
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;No;SMOTE;Sensitive Threshold;418;21;276;30;0.95;0.93;0.93;0.86
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;No;SMOTE;Sensitive Learning;421;22;275;27;0.95;0.94;0.97;0.86
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;Best first;No;No;445;46;251;3;0.91;0.99;0.99;0.86
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;Best first;No;Sensitive Threshold;262;2;295;186;0.99;0.58;0.79;0.52
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;Best first;No;Sensitive Learning;337;3;294;111;0.99;0.75;0.99;0.7
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;Best first;oversampling;No;424;24;273;24;0.95;0.95;0.98;0.87
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;Best first;oversampling;Sensitive Threshold;202;1;296;246;1;0.45;0.72;0.39
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;Best first;oversampling;Sensitive Learning;397;25;272;51;0.94;0.89;0.98;0.79
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;Best first;undersampling;No;414;24;273;34;0.95;0.92;0.98;0.84
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;Best first;undersampling;Sensitive Threshold;0;0;297;448;0;0;0.5;0
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;Best first;undersampling;Sensitive Learning;347;23;274;101;0.94;0.77;0.95;0.67
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;Best first;SMOTE;No;442;43;254;6;0.91;0.99;0.98;0.86
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;Best first;SMOTE;Sensitive Threshold;253;3;294;195;0.99;0.56;0.78;0.5
+SYNCOPE;10;24.43;35.33;39.87;Naive Bayes;Best first;SMOTE;Sensitive Learning;368;8;289;80;0.98;0.82;0.98;0.76
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;No;No;No;432;5;282;29;0.99;0.94;0.99;0.91
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;No;No;Sensitive Threshold;375;3;284;86;0.99;0.81;0.9;0.76
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;No;No;Sensitive Learning;413;3;284;48;0.99;0.9;0.99;0.86
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;No;oversampling;No;426;7;280;35;0.98;0.92;0.98;0.88
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;No;oversampling;Sensitive Threshold;313;3;284;148;0.99;0.68;0.83;0.61
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;No;oversampling;Sensitive Learning;384;5;282;77;0.99;0.83;0.97;0.78
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;No;undersampling;No;415;3;284;46;0.99;0.9;0.99;0.87
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;No;undersampling;Sensitive Threshold;276;1;286;185;1;0.6;0.8;0.53
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;No;undersampling;Sensitive Learning;403;38;249;58;0.91;0.87;0.95;0.73
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;No;SMOTE;No;432;4;283;29;0.99;0.94;0.98;0.91
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;No;SMOTE;Sensitive Threshold;372;3;284;89;0.99;0.81;0.9;0.75
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;No;SMOTE;Sensitive Learning;387;4;283;74;0.99;0.84;0.98;0.79
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;Best first;No;No;458;30;257;3;0.94;0.99;0.99;0.91
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;Best first;No;Sensitive Threshold;360;2;285;101;0.99;0.78;0.89;0.73
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;Best first;No;Sensitive Learning;390;2;285;71;0.99;0.85;0.99;0.8
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;Best first;oversampling;No;442;26;261;19;0.94;0.96;0.99;0.87
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;Best first;oversampling;Sensitive Threshold;359;2;285;102;0.99;0.78;0.89;0.72
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;Best first;oversampling;Sensitive Learning;430;22;265;31;0.95;0.93;0.98;0.85
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;Best first;undersampling;No;449;16;271;12;0.97;0.97;0.99;0.92
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;Best first;undersampling;Sensitive Threshold;323;2;285;138;0.99;0.7;0.85;0.64
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;Best first;undersampling;Sensitive Learning;432;75;212;29;0.85;0.94;0.95;0.7
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;Best first;SMOTE;No;452;31;256;9;0.94;0.98;0.99;0.89
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;Best first;SMOTE;Sensitive Threshold;349;4;283;112;0.99;0.76;0.87;0.69
+SYNCOPE;11;26.77;35.73;38.37;Random Forest;Best first;SMOTE;Sensitive Learning;394;10;277;67;0.98;0.85;0.98;0.79
+SYNCOPE;11;26.77;35.73;38.37;IBk;No;No;No;426;4;283;35;0.99;0.92;0.96;0.89
+SYNCOPE;11;26.77;35.73;38.37;IBk;No;No;Sensitive Threshold;426;4;283;35;0.99;0.92;0.96;0.89
+SYNCOPE;11;26.77;35.73;38.37;IBk;No;No;Sensitive Learning;426;4;283;35;0.99;0.92;0.96;0.89
+SYNCOPE;11;26.77;35.73;38.37;IBk;No;oversampling;No;425;7;280;36;0.98;0.92;0.95;0.88
+SYNCOPE;11;26.77;35.73;38.37;IBk;No;oversampling;Sensitive Threshold;424;5;282;37;0.99;0.92;0.95;0.88
+SYNCOPE;11;26.77;35.73;38.37;IBk;No;oversampling;Sensitive Learning;395;8;279;66;0.98;0.86;0.93;0.8
+SYNCOPE;11;26.77;35.73;38.37;IBk;No;undersampling;No;417;3;284;44;0.99;0.9;0.95;0.87
+SYNCOPE;11;26.77;35.73;38.37;IBk;No;undersampling;Sensitive Threshold;416;3;284;45;0.99;0.9;0.95;0.87
+SYNCOPE;11;26.77;35.73;38.37;IBk;No;undersampling;Sensitive Learning;389;37;250;72;0.91;0.84;0.86;0.7
+SYNCOPE;11;26.77;35.73;38.37;IBk;No;SMOTE;No;428;4;283;33;0.99;0.93;0.96;0.9
+SYNCOPE;11;26.77;35.73;38.37;IBk;No;SMOTE;Sensitive Threshold;428;4;283;33;0.99;0.93;0.96;0.9
+SYNCOPE;11;26.77;35.73;38.37;IBk;No;SMOTE;Sensitive Learning;396;4;283;65;0.99;0.86;0.94;0.81
+SYNCOPE;11;26.77;35.73;38.37;IBk;Best first;No;No;458;30;257;3;0.94;0.99;0.99;0.91
+SYNCOPE;11;26.77;35.73;38.37;IBk;Best first;No;Sensitive Threshold;336;2;285;125;0.99;0.73;0.86;0.67
+SYNCOPE;11;26.77;35.73;38.37;IBk;Best first;No;Sensitive Learning;389;2;285;72;0.99;0.84;0.99;0.8
+SYNCOPE;11;26.77;35.73;38.37;IBk;Best first;oversampling;No;436;15;272;25;0.97;0.95;0.99;0.89
+SYNCOPE;11;26.77;35.73;38.37;IBk;Best first;oversampling;Sensitive Threshold;365;2;285;96;0.99;0.79;0.89;0.74
+SYNCOPE;11;26.77;35.73;38.37;IBk;Best first;oversampling;Sensitive Learning;406;12;275;55;0.97;0.88;0.98;0.82
+SYNCOPE;11;26.77;35.73;38.37;IBk;Best first;undersampling;No;435;10;277;26;0.98;0.94;0.99;0.9
+SYNCOPE;11;26.77;35.73;38.37;IBk;Best first;undersampling;Sensitive Threshold;333;2;285;128;0.99;0.72;0.86;0.66
+SYNCOPE;11;26.77;35.73;38.37;IBk;Best first;undersampling;Sensitive Learning;379;13;274;82;0.97;0.82;0.94;0.74
+SYNCOPE;11;26.77;35.73;38.37;IBk;Best first;SMOTE;No;452;31;256;9;0.94;0.98;0.99;0.89
+SYNCOPE;11;26.77;35.73;38.37;IBk;Best first;SMOTE;Sensitive Threshold;344;4;283;117;0.99;0.75;0.87;0.68
+SYNCOPE;11;26.77;35.73;38.37;IBk;Best first;SMOTE;Sensitive Learning;387;10;277;74;0.97;0.84;0.98;0.77
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;No;No;No;452;238;49;9;0.66;0.98;0.97;0.18
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;No;No;Sensitive Threshold;430;17;270;31;0.96;0.93;0.94;0.87
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;No;No;Sensitive Learning;436;19;268;25;0.96;0.95;0.96;0.88
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;No;oversampling;No;447;105;182;14;0.81;0.97;0.96;0.64
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;No;oversampling;Sensitive Threshold;393;5;282;68;0.99;0.85;0.92;0.8
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;No;oversampling;Sensitive Learning;447;79;208;14;0.85;0.97;0.96;0.73
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;No;undersampling;No;447;191;96;14;0.7;0.97;0.96;0.34
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;No;undersampling;Sensitive Threshold;379;2;285;82;0.99;0.82;0.91;0.77
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;No;undersampling;Sensitive Learning;442;249;38;19;0.64;0.96;0.9;0.11
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;No;SMOTE;No;452;164;123;9;0.73;0.98;0.97;0.46
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;No;SMOTE;Sensitive Threshold;421;10;277;40;0.98;0.91;0.94;0.86
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;No;SMOTE;Sensitive Learning;436;90;197;25;0.83;0.95;0.95;0.66
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;Best first;No;No;459;32;255;2;0.93;1;0.99;0.9
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;Best first;No;Sensitive Threshold;282;2;285;179;0.99;0.61;0.8;0.54
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;Best first;No;Sensitive Learning;388;2;285;73;0.99;0.84;0.99;0.8
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;Best first;oversampling;No;436;15;272;25;0.97;0.95;0.99;0.89
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;Best first;oversampling;Sensitive Threshold;232;2;285;229;0.99;0.5;0.75;0.43
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;Best first;oversampling;Sensitive Learning;406;12;275;55;0.97;0.88;0.98;0.82
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;Best first;undersampling;No;435;10;277;26;0.98;0.94;0.99;0.9
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;Best first;undersampling;Sensitive Threshold;3;0;287;458;1;0.01;0.5;0.01
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;Best first;undersampling;Sensitive Learning;379;13;274;82;0.97;0.82;0.95;0.74
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;Best first;SMOTE;No;454;32;255;7;0.93;0.98;0.98;0.89
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;Best first;SMOTE;Sensitive Threshold;269;4;283;192;0.99;0.58;0.78;0.51
+SYNCOPE;11;26.77;35.73;38.37;Naive Bayes;Best first;SMOTE;Sensitive Learning;367;6;281;94;0.98;0.8;0.97;0.73
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;No;No;No;417;38;287;10;0.92;0.98;0.96;0.87
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;No;No;Sensitive Threshold;386;20;305;41;0.95;0.9;0.92;0.84
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;No;No;Sensitive Learning;407;28;297;20;0.94;0.95;0.96;0.87
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;No;oversampling;No;408;31;294;19;0.93;0.96;0.95;0.86
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;No;oversampling;Sensitive Threshold;365;22;303;62;0.94;0.85;0.89;0.78
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;No;oversampling;Sensitive Learning;396;27;298;31;0.94;0.93;0.94;0.84
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;No;undersampling;No;408;28;297;19;0.94;0.96;0.96;0.87
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;No;undersampling;Sensitive Threshold;329;17;308;98;0.95;0.77;0.86;0.7
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;No;undersampling;Sensitive Learning;386;51;274;41;0.88;0.9;0.94;0.75
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;No;SMOTE;No;418;38;287;9;0.92;0.98;0.96;0.87
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;No;SMOTE;Sensitive Threshold;390;20;305;37;0.95;0.91;0.93;0.85
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;No;SMOTE;Sensitive Learning;387;29;296;40;0.93;0.91;0.96;0.81
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;Best first;No;No;427;61;264;0;0.88;1;0.96;0.83
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;Best first;No;Sensitive Threshold;358;19;306;69;0.95;0.84;0.89;0.77
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;Best first;No;Sensitive Learning;387;20;305;40;0.95;0.91;0.96;0.84
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;Best first;oversampling;No;414;48;277;13;0.9;0.97;0.96;0.83
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;Best first;oversampling;Sensitive Threshold;342;17;308;85;0.95;0.8;0.87;0.73
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;Best first;oversampling;Sensitive Learning;410;46;279;17;0.9;0.96;0.95;0.83
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;Best first;undersampling;No;419;41;284;8;0.91;0.98;0.96;0.87
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;Best first;undersampling;Sensitive Threshold;312;16;309;115;0.95;0.73;0.84;0.66
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;Best first;undersampling;Sensitive Learning;411;80;245;16;0.84;0.96;0.93;0.73
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;Best first;SMOTE;No;420;63;262;7;0.87;0.98;0.96;0.81
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;Best first;SMOTE;Sensitive Threshold;337;21;304;90;0.94;0.79;0.86;0.71
+SYNCOPE;12;29.11;35.94;43.22;Random Forest;Best first;SMOTE;Sensitive Learning;374;27;298;53;0.93;0.88;0.95;0.79
+SYNCOPE;12;29.11;35.94;43.22;IBk;No;No;No;413;38;287;14;0.92;0.97;0.93;0.86
+SYNCOPE;12;29.11;35.94;43.22;IBk;No;No;Sensitive Threshold;413;37;288;14;0.92;0.97;0.93;0.86
+SYNCOPE;12;29.11;35.94;43.22;IBk;No;No;Sensitive Learning;413;37;288;14;0.92;0.97;0.93;0.86
+SYNCOPE;12;29.11;35.94;43.22;IBk;No;oversampling;No;409;36;289;18;0.92;0.96;0.92;0.85
+SYNCOPE;12;29.11;35.94;43.22;IBk;No;oversampling;Sensitive Threshold;407;34;291;20;0.92;0.95;0.92;0.85
+SYNCOPE;12;29.11;35.94;43.22;IBk;No;oversampling;Sensitive Learning;393;26;299;34;0.94;0.92;0.92;0.84
+SYNCOPE;12;29.11;35.94;43.22;IBk;No;undersampling;No;407;28;297;20;0.94;0.95;0.94;0.87
+SYNCOPE;12;29.11;35.94;43.22;IBk;No;undersampling;Sensitive Threshold;406;27;298;21;0.94;0.95;0.93;0.87
+SYNCOPE;12;29.11;35.94;43.22;IBk;No;undersampling;Sensitive Learning;370;48;277;57;0.89;0.87;0.86;0.72
+SYNCOPE;12;29.11;35.94;43.22;IBk;No;SMOTE;No;413;38;287;14;0.92;0.97;0.93;0.86
+SYNCOPE;12;29.11;35.94;43.22;IBk;No;SMOTE;Sensitive Threshold;413;37;288;14;0.92;0.97;0.93;0.86
+SYNCOPE;12;29.11;35.94;43.22;IBk;No;SMOTE;Sensitive Learning;398;30;295;29;0.93;0.93;0.92;0.84
+SYNCOPE;12;29.11;35.94;43.22;IBk;Best first;No;No;425;56;269;2;0.88;1;0.96;0.84
+SYNCOPE;12;29.11;35.94;43.22;IBk;Best first;No;Sensitive Threshold;373;20;305;54;0.95;0.87;0.91;0.8
+SYNCOPE;12;29.11;35.94;43.22;IBk;Best first;No;Sensitive Learning;398;20;305;29;0.95;0.93;0.96;0.87
+SYNCOPE;12;29.11;35.94;43.22;IBk;Best first;oversampling;No;407;39;286;20;0.91;0.95;0.95;0.84
+SYNCOPE;12;29.11;35.94;43.22;IBk;Best first;oversampling;Sensitive Threshold;348;17;308;79;0.95;0.81;0.88;0.75
+SYNCOPE;12;29.11;35.94;43.22;IBk;Best first;oversampling;Sensitive Learning;391;40;285;36;0.91;0.92;0.95;0.79
+SYNCOPE;12;29.11;35.94;43.22;IBk;Best first;undersampling;No;410;37;288;17;0.92;0.96;0.96;0.85
+SYNCOPE;12;29.11;35.94;43.22;IBk;Best first;undersampling;Sensitive Threshold;317;17;308;110;0.95;0.74;0.85;0.67
+SYNCOPE;12;29.11;35.94;43.22;IBk;Best first;undersampling;Sensitive Learning;367;35;290;60;0.91;0.86;0.93;0.74
+SYNCOPE;12;29.11;35.94;43.22;IBk;Best first;SMOTE;No;420;63;262;7;0.87;0.98;0.95;0.81
+SYNCOPE;12;29.11;35.94;43.22;IBk;Best first;SMOTE;Sensitive Threshold;342;21;304;85;0.94;0.8;0.87;0.72
+SYNCOPE;12;29.11;35.94;43.22;IBk;Best first;SMOTE;Sensitive Learning;372;27;298;55;0.93;0.87;0.95;0.78
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;No;No;No;418;270;55;9;0.61;0.98;0.93;0.16
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;No;No;Sensitive Threshold;403;48;277;24;0.89;0.94;0.9;0.8
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;No;No;Sensitive Learning;408;50;275;19;0.89;0.96;0.93;0.81
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;No;oversampling;No;416;115;210;11;0.78;0.97;0.93;0.65
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;No;oversampling;Sensitive Threshold;374;29;296;53;0.93;0.88;0.89;0.78
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;No;oversampling;Sensitive Learning;407;59;266;20;0.87;0.95;0.93;0.78
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;No;undersampling;No;415;231;94;12;0.64;0.97;0.92;0.28
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;No;undersampling;Sensitive Threshold;370;28;297;57;0.93;0.87;0.89;0.77
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;No;undersampling;Sensitive Learning;414;276;49;13;0.6;0.97;0.9;0.13
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;No;SMOTE;No;418;183;142;9;0.7;0.98;0.94;0.44
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;No;SMOTE;Sensitive Threshold;397;39;286;30;0.91;0.93;0.9;0.81
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;No;SMOTE;Sensitive Learning;403;55;270;24;0.88;0.94;0.93;0.78
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;Best first;No;No;427;69;256;0;0.86;1;0.96;0.81
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;Best first;No;Sensitive Threshold;266;16;309;161;0.94;0.62;0.79;0.54
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;Best first;No;Sensitive Learning;373;20;305;54;0.95;0.87;0.96;0.8
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;Best first;oversampling;No;407;39;286;20;0.91;0.95;0.95;0.84
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;Best first;oversampling;Sensitive Threshold;246;14;311;181;0.95;0.58;0.77;0.5
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;Best first;oversampling;Sensitive Learning;391;40;285;36;0.91;0.92;0.95;0.79
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;Best first;undersampling;No;410;37;288;17;0.92;0.96;0.96;0.85
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;Best first;undersampling;Sensitive Threshold;13;0;325;414;1;0.03;0.52;0.03
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;Best first;undersampling;Sensitive Learning;367;35;290;60;0.91;0.86;0.93;0.74
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;Best first;SMOTE;No;422;65;260;5;0.87;0.99;0.95;0.81
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;Best first;SMOTE;Sensitive Threshold;273;18;307;154;0.94;0.64;0.79;0.56
+SYNCOPE;12;29.11;35.94;43.22;Naive Bayes;Best first;SMOTE;Sensitive Learning;363;22;303;64;0.94;0.85;0.95;0.77
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;No;No;No;459;18;277;18;0.96;0.96;0.98;0.9
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;No;No;Sensitive Threshold;375;7;288;102;0.98;0.79;0.88;0.72
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;No;No;Sensitive Learning;412;13;282;65;0.97;0.86;0.98;0.79
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;No;oversampling;No;419;14;281;58;0.97;0.88;0.98;0.81
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;No;oversampling;Sensitive Threshold;336;6;289;141;0.98;0.7;0.84;0.63
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;No;oversampling;Sensitive Learning;397;14;281;80;0.97;0.83;0.97;0.75
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;No;undersampling;No;419;14;281;58;0.97;0.88;0.98;0.81
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;No;undersampling;Sensitive Threshold;306;5;290;171;0.98;0.64;0.81;0.56
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;No;undersampling;Sensitive Learning;401;24;271;76;0.94;0.84;0.95;0.73
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;No;SMOTE;No;459;19;276;18;0.96;0.96;0.98;0.9
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;No;SMOTE;Sensitive Threshold;365;9;286;112;0.98;0.77;0.87;0.69
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;No;SMOTE;Sensitive Learning;391;14;281;86;0.97;0.82;0.97;0.74
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;Best first;No;No;468;33;262;9;0.93;0.98;0.97;0.88
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;Best first;No;Sensitive Threshold;378;10;285;99;0.97;0.79;0.88;0.72
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;Best first;No;Sensitive Learning;409;11;284;68;0.97;0.86;0.97;0.79
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;Best first;oversampling;No;453;20;275;24;0.96;0.95;0.97;0.88
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;Best first;oversampling;Sensitive Threshold;353;7;288;124;0.98;0.74;0.86;0.67
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;Best first;oversampling;Sensitive Learning;447;25;270;30;0.95;0.94;0.97;0.85
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;Best first;undersampling;No;457;21;274;20;0.96;0.96;0.97;0.89
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;Best first;undersampling;Sensitive Threshold;316;6;289;161;0.98;0.66;0.82;0.58
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;Best first;undersampling;Sensitive Learning;444;51;244;33;0.9;0.93;0.95;0.77
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;Best first;SMOTE;No;465;34;261;12;0.93;0.97;0.97;0.87
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;Best first;SMOTE;Sensitive Threshold;350;11;284;127;0.97;0.73;0.85;0.65
+SYNCOPE;13;31.47;36.49;38.21;Random Forest;Best first;SMOTE;Sensitive Learning;387;12;283;90;0.97;0.81;0.96;0.73
+SYNCOPE;13;31.47;36.49;38.21;IBk;No;No;No;432;13;282;45;0.97;0.91;0.93;0.84
+SYNCOPE;13;31.47;36.49;38.21;IBk;No;No;Sensitive Threshold;431;13;282;46;0.97;0.9;0.93;0.84
+SYNCOPE;13;31.47;36.49;38.21;IBk;No;No;Sensitive Learning;431;13;282;46;0.97;0.9;0.93;0.84
+SYNCOPE;13;31.47;36.49;38.21;IBk;No;oversampling;No;429;12;283;48;0.97;0.9;0.93;0.84
+SYNCOPE;13;31.47;36.49;38.21;IBk;No;oversampling;Sensitive Threshold;426;12;283;51;0.97;0.89;0.93;0.83
+SYNCOPE;13;31.47;36.49;38.21;IBk;No;oversampling;Sensitive Learning;402;11;284;75;0.97;0.84;0.91;0.77
+SYNCOPE;13;31.47;36.49;38.21;IBk;No;undersampling;No;427;11;284;50;0.97;0.9;0.93;0.84
+SYNCOPE;13;31.47;36.49;38.21;IBk;No;undersampling;Sensitive Threshold;426;11;284;51;0.97;0.89;0.93;0.83
+SYNCOPE;13;31.47;36.49;38.21;IBk;No;undersampling;Sensitive Learning;405;27;268;72;0.94;0.85;0.89;0.74
+SYNCOPE;13;31.47;36.49;38.21;IBk;No;SMOTE;No;432;13;282;45;0.97;0.91;0.94;0.84
+SYNCOPE;13;31.47;36.49;38.21;IBk;No;SMOTE;Sensitive Threshold;431;13;282;46;0.97;0.9;0.93;0.84
+SYNCOPE;13;31.47;36.49;38.21;IBk;No;SMOTE;Sensitive Learning;407;13;282;70;0.97;0.85;0.91;0.78
+SYNCOPE;13;31.47;36.49;38.21;IBk;Best first;No;No;468;33;262;9;0.93;0.98;0.97;0.88
+SYNCOPE;13;31.47;36.49;38.21;IBk;Best first;No;Sensitive Threshold;382;10;285;95;0.97;0.8;0.88;0.73
+SYNCOPE;13;31.47;36.49;38.21;IBk;Best first;No;Sensitive Learning;410;11;284;67;0.97;0.86;0.97;0.79
+SYNCOPE;13;31.47;36.49;38.21;IBk;Best first;oversampling;No;430;16;279;47;0.96;0.9;0.97;0.83
+SYNCOPE;13;31.47;36.49;38.21;IBk;Best first;oversampling;Sensitive Threshold;356;7;288;121;0.98;0.75;0.86;0.67
+SYNCOPE;13;31.47;36.49;38.21;IBk;Best first;oversampling;Sensitive Learning;411;21;274;66;0.95;0.86;0.97;0.77
+SYNCOPE;13;31.47;36.49;38.21;IBk;Best first;undersampling;No;434;18;277;43;0.96;0.91;0.97;0.84
+SYNCOPE;13;31.47;36.49;38.21;IBk;Best first;undersampling;Sensitive Threshold;319;6;289;158;0.98;0.67;0.82;0.59
+SYNCOPE;13;31.47;36.49;38.21;IBk;Best first;undersampling;Sensitive Learning;391;19;276;86;0.95;0.82;0.95;0.72
+SYNCOPE;13;31.47;36.49;38.21;IBk;Best first;SMOTE;No;465;34;261;12;0.93;0.97;0.97;0.87
+SYNCOPE;13;31.47;36.49;38.21;IBk;Best first;SMOTE;Sensitive Threshold;355;11;284;122;0.97;0.74;0.85;0.66
+SYNCOPE;13;31.47;36.49;38.21;IBk;Best first;SMOTE;Sensitive Learning;383;12;283;94;0.97;0.8;0.96;0.72
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;No;No;No;460;189;106;17;0.71;0.96;0.95;0.36
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;No;No;Sensitive Threshold;425;10;285;52;0.98;0.89;0.93;0.83
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;No;No;Sensitive Learning;439;15;280;38;0.97;0.92;0.95;0.86
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;No;oversampling;No;460;61;234;17;0.88;0.96;0.95;0.78
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;No;oversampling;Sensitive Threshold;393;10;285;84;0.98;0.82;0.9;0.75
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;No;oversampling;Sensitive Learning;458;129;166;19;0.78;0.96;0.94;0.56
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;No;undersampling;No;454;162;133;23;0.74;0.95;0.94;0.44
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;No;undersampling;Sensitive Threshold;395;9;286;82;0.98;0.83;0.9;0.76
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;No;undersampling;Sensitive Learning;456;248;47;21;0.65;0.96;0.9;0.14
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;No;SMOTE;No;459;94;201;18;0.83;0.96;0.95;0.68
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;No;SMOTE;Sensitive Threshold;415;10;285;62;0.98;0.87;0.92;0.81
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;No;SMOTE;Sensitive Learning;432;24;271;45;0.95;0.91;0.94;0.81
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;Best first;No;No;473;40;255;4;0.92;0.99;0.97;0.88
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;Best first;No;Sensitive Threshold;297;6;289;180;0.98;0.62;0.8;0.54
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;Best first;No;Sensitive Learning;382;10;285;95;0.97;0.8;0.97;0.73
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;Best first;oversampling;No;430;16;279;47;0.96;0.9;0.97;0.83
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;Best first;oversampling;Sensitive Threshold;270;6;289;207;0.98;0.57;0.77;0.48
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;Best first;oversampling;Sensitive Learning;411;21;274;66;0.95;0.86;0.97;0.77
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;Best first;undersampling;No;434;18;277;43;0.96;0.91;0.97;0.84
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;Best first;undersampling;Sensitive Threshold;20;1;294;457;0.95;0.04;0.52;0.03
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;Best first;undersampling;Sensitive Learning;391;19;276;86;0.95;0.82;0.95;0.72
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;Best first;SMOTE;No;468;35;260;9;0.93;0.98;0.97;0.88
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;Best first;SMOTE;Sensitive Threshold;310;7;288;167;0.98;0.65;0.81;0.57
+SYNCOPE;13;31.47;36.49;38.21;Naive Bayes;Best first;SMOTE;Sensitive Learning;368;10;285;109;0.97;0.77;0.96;0.69
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;No;No;No;475;50;278;31;0.9;0.94;0.95;0.79
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;No;No;Sensitive Threshold;332;19;309;174;0.95;0.66;0.8;0.55
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;No;No;Sensitive Learning;387;34;294;119;0.92;0.76;0.94;0.63
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;No;oversampling;No;417;38;290;89;0.92;0.82;0.94;0.69
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;No;oversampling;Sensitive Threshold;326;22;306;180;0.94;0.64;0.79;0.53
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;No;oversampling;Sensitive Learning;390;34;294;116;0.92;0.77;0.93;0.64
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;No;undersampling;No;398;38;290;108;0.91;0.79;0.94;0.65
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;No;undersampling;Sensitive Threshold;280;11;317;226;0.96;0.55;0.76;0.47
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;No;undersampling;Sensitive Learning;402;46;282;104;0.9;0.79;0.93;0.63
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;No;SMOTE;No;474;49;279;32;0.91;0.94;0.94;0.79
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;No;SMOTE;Sensitive Threshold;326;23;305;180;0.93;0.64;0.79;0.53
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;No;SMOTE;Sensitive Learning;364;30;298;142;0.92;0.72;0.94;0.59
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;Best first;No;No;501;59;269;5;0.89;0.99;0.95;0.83
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;Best first;No;Sensitive Threshold;357;24;304;149;0.94;0.71;0.82;0.59
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;Best first;No;Sensitive Learning;399;30;298;107;0.93;0.79;0.95;0.67
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;Best first;oversampling;No;486;55;273;20;0.9;0.96;0.94;0.81
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;Best first;oversampling;Sensitive Threshold;336;17;311;170;0.95;0.66;0.81;0.57
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;Best first;oversampling;Sensitive Learning;483;49;279;23;0.91;0.95;0.94;0.82
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;Best first;undersampling;No;490;48;280;16;0.91;0.97;0.94;0.84
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;Best first;undersampling;Sensitive Threshold;302;15;313;204;0.95;0.6;0.78;0.5
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;Best first;undersampling;Sensitive Learning;483;69;259;23;0.88;0.95;0.92;0.76
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;Best first;SMOTE;No;495;58;270;11;0.9;0.98;0.95;0.82
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;Best first;SMOTE;Sensitive Threshold;341;16;312;165;0.96;0.67;0.81;0.58
+SYNCOPE;14;33.9;36.61;39.33;Random Forest;Best first;SMOTE;Sensitive Learning;386;31;297;120;0.93;0.76;0.93;0.64
+SYNCOPE;14;33.9;36.61;39.33;IBk;No;No;No;448;43;285;58;0.91;0.89;0.88;0.75
+SYNCOPE;14;33.9;36.61;39.33;IBk;No;No;Sensitive Threshold;448;42;286;58;0.91;0.89;0.88;0.75
+SYNCOPE;14;33.9;36.61;39.33;IBk;No;No;Sensitive Learning;448;43;285;58;0.91;0.89;0.88;0.75
+SYNCOPE;14;33.9;36.61;39.33;IBk;No;oversampling;No;427;40;288;79;0.91;0.84;0.86;0.71
+SYNCOPE;14;33.9;36.61;39.33;IBk;No;oversampling;Sensitive Threshold;427;39;289;79;0.92;0.84;0.86;0.71
+SYNCOPE;14;33.9;36.61;39.33;IBk;No;oversampling;Sensitive Learning;407;38;290;99;0.91;0.8;0.84;0.67
+SYNCOPE;14;33.9;36.61;39.33;IBk;No;undersampling;No;429;42;286;77;0.91;0.85;0.86;0.71
+SYNCOPE;14;33.9;36.61;39.33;IBk;No;undersampling;Sensitive Threshold;426;41;287;80;0.91;0.84;0.86;0.7
+SYNCOPE;14;33.9;36.61;39.33;IBk;No;undersampling;Sensitive Learning;431;55;273;75;0.89;0.85;0.84;0.68
+SYNCOPE;14;33.9;36.61;39.33;IBk;No;SMOTE;No;449;45;283;57;0.91;0.89;0.89;0.75
+SYNCOPE;14;33.9;36.61;39.33;IBk;No;SMOTE;Sensitive Threshold;449;44;284;57;0.91;0.89;0.88;0.75
+SYNCOPE;14;33.9;36.61;39.33;IBk;No;SMOTE;Sensitive Learning;411;39;289;95;0.91;0.81;0.85;0.67
+SYNCOPE;14;33.9;36.61;39.33;IBk;Best first;No;No;498;48;280;8;0.91;0.98;0.95;0.86
+SYNCOPE;14;33.9;36.61;39.33;IBk;Best first;No;Sensitive Threshold;373;25;303;133;0.94;0.74;0.83;0.62
+SYNCOPE;14;33.9;36.61;39.33;IBk;Best first;No;Sensitive Learning;400;30;298;106;0.93;0.79;0.95;0.67
+SYNCOPE;14;33.9;36.61;39.33;IBk;Best first;oversampling;No;412;41;287;94;0.91;0.81;0.94;0.67
+SYNCOPE;14;33.9;36.61;39.33;IBk;Best first;oversampling;Sensitive Threshold;338;18;310;168;0.95;0.67;0.81;0.57
+SYNCOPE;14;33.9;36.61;39.33;IBk;Best first;oversampling;Sensitive Learning;400;36;292;106;0.92;0.79;0.94;0.66
+SYNCOPE;14;33.9;36.61;39.33;IBk;Best first;undersampling;No;418;36;292;88;0.92;0.83;0.94;0.7
+SYNCOPE;14;33.9;36.61;39.33;IBk;Best first;undersampling;Sensitive Threshold;313;15;313;193;0.95;0.62;0.79;0.52
+SYNCOPE;14;33.9;36.61;39.33;IBk;Best first;undersampling;Sensitive Learning;382;35;293;124;0.92;0.75;0.92;0.62
+SYNCOPE;14;33.9;36.61;39.33;IBk;Best first;SMOTE;No;494;54;274;12;0.9;0.98;0.94;0.83
+SYNCOPE;14;33.9;36.61;39.33;IBk;Best first;SMOTE;Sensitive Threshold;359;17;311;147;0.95;0.71;0.83;0.61
+SYNCOPE;14;33.9;36.61;39.33;IBk;Best first;SMOTE;Sensitive Learning;382;30;298;124;0.93;0.75;0.93;0.63
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;No;No;No;476;176;152;30;0.73;0.94;0.9;0.44
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;No;No;Sensitive Threshold;411;26;302;95;0.94;0.81;0.87;0.71
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;No;No;Sensitive Learning;459;31;297;47;0.94;0.91;0.91;0.81
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;No;oversampling;No;464;72;256;42;0.87;0.92;0.9;0.71
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;No;oversampling;Sensitive Threshold;370;25;303;136;0.94;0.73;0.83;0.62
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;No;oversampling;Sensitive Learning;449;46;282;57;0.91;0.89;0.92;0.74
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;No;undersampling;No;469;164;164;37;0.74;0.93;0.9;0.46
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;No;undersampling;Sensitive Threshold;382;22;306;124;0.95;0.75;0.84;0.65
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;No;undersampling;Sensitive Learning;463;200;128;43;0.7;0.92;0.87;0.33
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;No;SMOTE;No;473;91;237;33;0.84;0.93;0.9;0.68
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;No;SMOTE;Sensitive Threshold;402;25;303;104;0.94;0.79;0.86;0.69
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;No;SMOTE;Sensitive Learning;464;65;263;42;0.88;0.92;0.9;0.73
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;Best first;No;No;501;72;256;5;0.87;0.99;0.94;0.8
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;Best first;No;Sensitive Threshold;288;13;315;218;0.96;0.57;0.76;0.48
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;Best first;No;Sensitive Learning;373;25;303;133;0.94;0.74;0.95;0.62
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;Best first;oversampling;No;412;41;287;94;0.91;0.81;0.94;0.67
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;Best first;oversampling;Sensitive Threshold;256;14;314;250;0.95;0.51;0.73;0.41
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;Best first;oversampling;Sensitive Learning;400;36;292;106;0.92;0.79;0.93;0.66
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;Best first;undersampling;No;418;36;292;88;0.92;0.83;0.94;0.7
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;Best first;undersampling;Sensitive Threshold;58;1;327;448;0.98;0.11;0.56;0.09
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;Best first;undersampling;Sensitive Learning;382;35;293;124;0.92;0.75;0.92;0.62
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;Best first;SMOTE;No;497;66;262;9;0.88;0.98;0.94;0.81
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;Best first;SMOTE;Sensitive Threshold;292;14;314;214;0.95;0.58;0.77;0.48
+SYNCOPE;14;33.9;36.61;39.33;Naive Bayes;Best first;SMOTE;Sensitive Learning;367;25;303;139;0.94;0.73;0.93;0.61
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;No;No;No;538;17;249;67;0.97;0.89;0.98;0.78
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;No;No;Sensitive Threshold;342;2;264;263;0.99;0.57;0.78;0.44
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;No;No;Sensitive Learning;441;5;261;164;0.99;0.73;0.98;0.61
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;No;oversampling;No;500;12;254;105;0.98;0.83;0.97;0.71
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;No;oversampling;Sensitive Threshold;336;2;264;269;0.99;0.56;0.77;0.43
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;No;oversampling;Sensitive Learning;471;12;254;134;0.98;0.78;0.96;0.65
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;No;undersampling;No;498;11;255;107;0.98;0.82;0.97;0.71
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;No;undersampling;Sensitive Threshold;310;2;264;295;0.99;0.51;0.75;0.39
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;No;undersampling;Sensitive Learning;497;15;251;108;0.97;0.82;0.95;0.7
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;No;SMOTE;No;541;16;250;64;0.97;0.89;0.98;0.79
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;No;SMOTE;Sensitive Threshold;356;1;265;249;1;0.59;0.79;0.46
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;No;SMOTE;Sensitive Learning;406;4;262;199;0.99;0.67;0.96;0.54
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;Best first;No;No;563;19;247;42;0.97;0.93;0.98;0.84
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;Best first;No;Sensitive Threshold;376;6;260;229;0.98;0.62;0.8;0.49
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;Best first;No;Sensitive Learning;474;8;258;131;0.98;0.78;0.98;0.67
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;Best first;oversampling;No;552;19;247;53;0.97;0.91;0.97;0.81
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;Best first;oversampling;Sensitive Threshold;369;5;261;236;0.99;0.61;0.8;0.48
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;Best first;oversampling;Sensitive Learning;458;10;256;147;0.98;0.76;0.97;0.63
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;Best first;undersampling;No;554;19;247;51;0.97;0.92;0.97;0.82
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;Best first;undersampling;Sensitive Threshold;319;1;265;286;1;0.53;0.76;0.4
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;Best first;undersampling;Sensitive Learning;554;21;245;51;0.96;0.92;0.95;0.81
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;Best first;SMOTE;No;563;18;248;42;0.97;0.93;0.98;0.84
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;Best first;SMOTE;Sensitive Threshold;355;7;259;250;0.98;0.59;0.78;0.45
+SYNCOPE;15;36.51;36.81;30.54;Random Forest;Best first;SMOTE;Sensitive Learning;425;8;258;180;0.98;0.7;0.97;0.57
+SYNCOPE;15;36.51;36.81;30.54;IBk;No;No;No;521;11;255;84;0.98;0.86;0.91;0.76
+SYNCOPE;15;36.51;36.81;30.54;IBk;No;No;Sensitive Threshold;518;9;257;87;0.98;0.86;0.91;0.76
+SYNCOPE;15;36.51;36.81;30.54;IBk;No;No;Sensitive Learning;518;10;256;87;0.98;0.86;0.91;0.76
+SYNCOPE;15;36.51;36.81;30.54;IBk;No;oversampling;No;504;12;254;101;0.98;0.83;0.89;0.72
+SYNCOPE;15;36.51;36.81;30.54;IBk;No;oversampling;Sensitive Threshold;495;11;255;110;0.98;0.82;0.89;0.7
+SYNCOPE;15;36.51;36.81;30.54;IBk;No;oversampling;Sensitive Learning;474;8;258;131;0.98;0.78;0.87;0.67
+SYNCOPE;15;36.51;36.81;30.54;IBk;No;undersampling;No;489;10;256;116;0.98;0.81;0.89;0.69
+SYNCOPE;15;36.51;36.81;30.54;IBk;No;undersampling;Sensitive Threshold;481;8;258;124;0.98;0.8;0.88;0.68
+SYNCOPE;15;36.51;36.81;30.54;IBk;No;undersampling;Sensitive Learning;490;17;249;115;0.97;0.81;0.89;0.68
+SYNCOPE;15;36.51;36.81;30.54;IBk;No;SMOTE;No;524;10;256;81;0.98;0.87;0.92;0.77
+SYNCOPE;15;36.51;36.81;30.54;IBk;No;SMOTE;Sensitive Threshold;521;8;258;84;0.98;0.86;0.92;0.77
+SYNCOPE;15;36.51;36.81;30.54;IBk;No;SMOTE;Sensitive Learning;463;7;259;142;0.99;0.77;0.89;0.65
+SYNCOPE;15;36.51;36.81;30.54;IBk;Best first;No;No;562;19;247;43;0.97;0.93;0.98;0.84
+SYNCOPE;15;36.51;36.81;30.54;IBk;Best first;No;Sensitive Threshold;436;6;260;169;0.99;0.72;0.85;0.6
+SYNCOPE;15;36.51;36.81;30.54;IBk;Best first;No;Sensitive Learning;474;8;258;131;0.98;0.78;0.98;0.67
+SYNCOPE;15;36.51;36.81;30.54;IBk;Best first;oversampling;No;476;10;256;129;0.98;0.79;0.97;0.67
+SYNCOPE;15;36.51;36.81;30.54;IBk;Best first;oversampling;Sensitive Threshold;384;5;261;221;0.99;0.63;0.81;0.5
+SYNCOPE;15;36.51;36.81;30.54;IBk;Best first;oversampling;Sensitive Learning;456;10;256;149;0.98;0.75;0.97;0.62
+SYNCOPE;15;36.51;36.81;30.54;IBk;Best first;undersampling;No;485;10;256;120;0.98;0.8;0.97;0.68
+SYNCOPE;15;36.51;36.81;30.54;IBk;Best first;undersampling;Sensitive Threshold;357;1;265;248;1;0.59;0.79;0.47
+SYNCOPE;15;36.51;36.81;30.54;IBk;Best first;undersampling;Sensitive Learning;433;9;257;172;0.98;0.72;0.95;0.58
+SYNCOPE;15;36.51;36.81;30.54;IBk;Best first;SMOTE;No;562;18;248;43;0.97;0.93;0.98;0.84
+SYNCOPE;15;36.51;36.81;30.54;IBk;Best first;SMOTE;Sensitive Threshold;416;7;259;189;0.98;0.69;0.83;0.55
+SYNCOPE;15;36.51;36.81;30.54;IBk;Best first;SMOTE;Sensitive Learning;424;7;259;181;0.98;0.7;0.97;0.57
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;No;No;No;566;127;139;39;0.82;0.94;0.93;0.5
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;No;No;Sensitive Threshold;492;8;258;113;0.98;0.81;0.89;0.71
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;No;No;Sensitive Learning;523;15;251;82;0.97;0.86;0.93;0.75
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;No;oversampling;No;546;17;249;59;0.97;0.9;0.93;0.8
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;No;oversampling;Sensitive Threshold;393;5;261;212;0.99;0.65;0.82;0.52
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;No;oversampling;Sensitive Learning;518;17;249;87;0.97;0.86;0.93;0.74
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;No;undersampling;No;563;134;132;42;0.81;0.93;0.92;0.47
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;No;undersampling;Sensitive Threshold;454;6;260;151;0.99;0.75;0.86;0.63
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;No;undersampling;Sensitive Learning;569;235;31;36;0.71;0.94;0.88;0.07
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;No;SMOTE;No;562;23;243;43;0.96;0.93;0.93;0.83
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;No;SMOTE;Sensitive Threshold;480;7;259;125;0.99;0.79;0.88;0.68
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;No;SMOTE;Sensitive Learning;499;13;253;106;0.97;0.82;0.93;0.71
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;Best first;No;No;579;20;246;26;0.97;0.96;0.97;0.88
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;Best first;No;Sensitive Threshold;353;6;260;252;0.98;0.58;0.78;0.45
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;Best first;No;Sensitive Learning;438;6;260;167;0.99;0.72;0.97;0.6
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;Best first;oversampling;No;476;10;256;129;0.98;0.79;0.97;0.67
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;Best first;oversampling;Sensitive Threshold;277;2;264;328;0.99;0.46;0.73;0.34
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;Best first;oversampling;Sensitive Learning;456;10;256;149;0.98;0.75;0.97;0.62
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;Best first;undersampling;No;485;10;256;120;0.98;0.8;0.97;0.68
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;Best first;undersampling;Sensitive Threshold;62;0;266;543;1;0.1;0.55;0.07
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;Best first;undersampling;Sensitive Learning;433;9;257;172;0.98;0.72;0.95;0.58
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;Best first;SMOTE;No;573;19;247;32;0.97;0.95;0.97;0.86
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;Best first;SMOTE;Sensitive Threshold;307;2;264;298;0.99;0.51;0.75;0.38
+SYNCOPE;15;36.51;36.81;30.54;Naive Bayes;Best first;SMOTE;Sensitive Learning;409;7;259;196;0.98;0.68;0.96;0.54
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;No;No;No;560;13;258;50;0.98;0.92;0.99;0.84
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;No;No;Sensitive Threshold;443;2;269;167;1;0.73;0.86;0.61
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;No;No;Sensitive Learning;520;6;265;90;0.99;0.85;0.99;0.76
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;No;oversampling;No;537;18;253;73;0.97;0.88;0.96;0.77
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;No;oversampling;Sensitive Threshold;417;6;265;193;0.99;0.68;0.83;0.56
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;No;oversampling;Sensitive Learning;518;18;253;92;0.97;0.85;0.96;0.73
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;No;undersampling;No;536;12;259;74;0.98;0.88;0.97;0.78
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;No;undersampling;Sensitive Threshold;370;1;270;240;1;0.61;0.8;0.48
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;No;undersampling;Sensitive Learning;519;18;253;91;0.97;0.85;0.95;0.73
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;No;SMOTE;No;560;14;257;50;0.98;0.92;0.98;0.84
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;No;SMOTE;Sensitive Threshold;450;3;268;160;0.99;0.74;0.86;0.63
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;No;SMOTE;Sensitive Learning;473;9;262;137;0.98;0.78;0.97;0.66
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;Best first;No;No;580;20;251;30;0.97;0.95;0.98;0.87
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;Best first;No;Sensitive Threshold;443;3;268;167;0.99;0.73;0.86;0.61
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;Best first;No;Sensitive Learning;514;13;258;96;0.98;0.84;0.99;0.73
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;Best first;oversampling;No;561;23;248;49;0.96;0.92;0.97;0.81
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;Best first;oversampling;Sensitive Threshold;399;5;266;211;0.99;0.65;0.82;0.52
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;Best first;oversampling;Sensitive Learning;493;17;254;117;0.97;0.81;0.97;0.68
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;Best first;undersampling;No;563;19;252;47;0.97;0.92;0.98;0.83
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;Best first;undersampling;Sensitive Threshold;341;1;270;269;1;0.56;0.78;0.44
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;Best first;undersampling;Sensitive Learning;551;25;246;59;0.96;0.9;0.96;0.78
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;Best first;SMOTE;No;573;20;251;37;0.97;0.94;0.98;0.85
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;Best first;SMOTE;Sensitive Threshold;422;2;269;188;1;0.69;0.84;0.57
+SYNCOPE;16;39.25;36.37;30.76;Random Forest;Best first;SMOTE;Sensitive Learning;467;15;256;143;0.97;0.77;0.97;0.63
+SYNCOPE;16;39.25;36.37;30.76;IBk;No;No;No;560;14;257;50;0.98;0.92;0.94;0.84
+SYNCOPE;16;39.25;36.37;30.76;IBk;No;No;Sensitive Threshold;560;12;259;50;0.98;0.92;0.94;0.84
+SYNCOPE;16;39.25;36.37;30.76;IBk;No;No;Sensitive Learning;560;13;258;50;0.98;0.92;0.94;0.84
+SYNCOPE;16;39.25;36.37;30.76;IBk;No;oversampling;No;548;20;251;62;0.96;0.9;0.92;0.79
+SYNCOPE;16;39.25;36.37;30.76;IBk;No;oversampling;Sensitive Threshold;530;17;254;80;0.97;0.87;0.9;0.76
+SYNCOPE;16;39.25;36.37;30.76;IBk;No;oversampling;Sensitive Learning;512;17;254;98;0.97;0.84;0.91;0.72
+SYNCOPE;16;39.25;36.37;30.76;IBk;No;undersampling;No;528;9;262;82;0.98;0.87;0.92;0.77
+SYNCOPE;16;39.25;36.37;30.76;IBk;No;undersampling;Sensitive Threshold;523;8;263;87;0.98;0.86;0.91;0.77
+SYNCOPE;16;39.25;36.37;30.76;IBk;No;undersampling;Sensitive Learning;505;13;258;105;0.97;0.83;0.91;0.71
+SYNCOPE;16;39.25;36.37;30.76;IBk;No;SMOTE;No;560;14;257;50;0.98;0.92;0.94;0.84
+SYNCOPE;16;39.25;36.37;30.76;IBk;No;SMOTE;Sensitive Threshold;560;12;259;50;0.98;0.92;0.94;0.84
+SYNCOPE;16;39.25;36.37;30.76;IBk;No;SMOTE;Sensitive Learning;510;13;258;100;0.98;0.84;0.89;0.72
+SYNCOPE;16;39.25;36.37;30.76;IBk;Best first;No;No;567;20;251;43;0.97;0.93;0.98;0.84
+SYNCOPE;16;39.25;36.37;30.76;IBk;Best first;No;Sensitive Threshold;477;7;264;133;0.99;0.78;0.88;0.67
+SYNCOPE;16;39.25;36.37;30.76;IBk;Best first;No;Sensitive Learning;514;13;258;96;0.98;0.84;0.98;0.73
+SYNCOPE;16;39.25;36.37;30.76;IBk;Best first;oversampling;No;516;16;255;94;0.97;0.85;0.97;0.73
+SYNCOPE;16;39.25;36.37;30.76;IBk;Best first;oversampling;Sensitive Threshold;417;7;264;193;0.98;0.68;0.83;0.55
+SYNCOPE;16;39.25;36.37;30.76;IBk;Best first;oversampling;Sensitive Learning;491;17;254;119;0.97;0.8;0.97;0.67
+SYNCOPE;16;39.25;36.37;30.76;IBk;Best first;undersampling;No;531;13;258;79;0.98;0.87;0.98;0.77
+SYNCOPE;16;39.25;36.37;30.76;IBk;Best first;undersampling;Sensitive Threshold;394;2;269;216;0.99;0.65;0.82;0.52
+SYNCOPE;16;39.25;36.37;30.76;IBk;Best first;undersampling;Sensitive Learning;458;11;260;152;0.98;0.75;0.96;0.62
+SYNCOPE;16;39.25;36.37;30.76;IBk;Best first;SMOTE;No;569;20;251;41;0.97;0.93;0.98;0.84
+SYNCOPE;16;39.25;36.37;30.76;IBk;Best first;SMOTE;Sensitive Threshold;456;7;264;154;0.98;0.75;0.86;0.63
+SYNCOPE;16;39.25;36.37;30.76;IBk;Best first;SMOTE;Sensitive Learning;462;15;256;148;0.97;0.76;0.97;0.62
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;No;No;No;597;160;111;13;0.79;0.98;0.96;0.46
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;No;No;Sensitive Threshold;556;13;258;54;0.98;0.91;0.93;0.83
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;No;No;Sensitive Learning;563;21;250;47;0.96;0.92;0.96;0.82
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;No;oversampling;No;577;25;246;33;0.96;0.95;0.95;0.85
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;No;oversampling;Sensitive Threshold;450;7;264;160;0.98;0.74;0.86;0.62
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;No;oversampling;Sensitive Learning;578;24;247;32;0.96;0.95;0.95;0.85
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;No;undersampling;No;589;143;128;21;0.8;0.97;0.95;0.5
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;No;undersampling;Sensitive Threshold;524;10;261;86;0.98;0.86;0.91;0.76
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;No;undersampling;Sensitive Learning;585;178;93;25;0.77;0.96;0.93;0.36
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;No;SMOTE;No;589;43;228;21;0.93;0.97;0.96;0.83
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;No;SMOTE;Sensitive Threshold;539;13;258;71;0.98;0.88;0.92;0.79
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;No;SMOTE;Sensitive Learning;569;25;246;41;0.96;0.93;0.95;0.83
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;Best first;No;No;593;21;250;17;0.97;0.97;0.98;0.9
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;Best first;No;Sensitive Threshold;360;1;270;250;1;0.59;0.79;0.47
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;Best first;No;Sensitive Learning;478;7;264;132;0.99;0.78;0.98;0.67
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;Best first;oversampling;No;516;16;255;94;0.97;0.85;0.97;0.73
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;Best first;oversampling;Sensitive Threshold;299;3;268;311;0.99;0.49;0.74;0.36
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;Best first;oversampling;Sensitive Learning;491;17;254;119;0.97;0.8;0.97;0.67
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;Best first;undersampling;No;531;13;258;79;0.98;0.87;0.98;0.77
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;Best first;undersampling;Sensitive Threshold;73;0;271;537;1;0.12;0.56;0.08
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;Best first;undersampling;Sensitive Learning;458;11;260;152;0.98;0.75;0.96;0.62
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;Best first;SMOTE;No;581;21;250;29;0.97;0.95;0.97;0.87
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;Best first;SMOTE;Sensitive Threshold;319;2;269;291;0.99;0.52;0.76;0.4
+SYNCOPE;16;39.25;36.37;30.76;Naive Bayes;Best first;SMOTE;Sensitive Learning;448;12;259;162;0.97;0.73;0.96;0.6
+SYNCOPE;17;42.01;36;28.48;Random Forest;No;No;No;667;16;256;16;0.98;0.98;0.99;0.92
+SYNCOPE;17;42.01;36;28.48;Random Forest;No;No;Sensitive Threshold;478;2;270;205;1;0.7;0.85;0.57
+SYNCOPE;17;42.01;36;28.48;Random Forest;No;No;Sensitive Learning;580;5;267;103;0.99;0.85;0.99;0.75
+SYNCOPE;17;42.01;36;28.48;Random Forest;No;oversampling;No;613;12;260;70;0.98;0.9;0.99;0.8
+SYNCOPE;17;42.01;36;28.48;Random Forest;No;oversampling;Sensitive Threshold;416;2;270;267;1;0.61;0.8;0.47
+SYNCOPE;17;42.01;36;28.48;Random Forest;No;oversampling;Sensitive Learning;576;14;258;107;0.98;0.84;0.98;0.72
+SYNCOPE;17;42.01;36;28.48;Random Forest;No;undersampling;No;603;10;262;80;0.98;0.88;0.99;0.79
+SYNCOPE;17;42.01;36;28.48;Random Forest;No;undersampling;Sensitive Threshold;337;2;270;346;0.99;0.49;0.74;0.35
+SYNCOPE;17;42.01;36;28.48;Random Forest;No;undersampling;Sensitive Learning;558;13;259;125;0.98;0.82;0.96;0.68
+SYNCOPE;17;42.01;36;28.48;Random Forest;No;SMOTE;No;665;16;256;18;0.98;0.97;0.99;0.91
+SYNCOPE;17;42.01;36;28.48;Random Forest;No;SMOTE;Sensitive Threshold;479;3;269;204;0.99;0.7;0.85;0.56
+SYNCOPE;17;42.01;36;28.48;Random Forest;No;SMOTE;Sensitive Learning;504;6;266;179;0.99;0.74;0.98;0.6
+SYNCOPE;17;42.01;36;28.48;Random Forest;Best first;No;No;654;22;250;29;0.97;0.96;0.98;0.87
+SYNCOPE;17;42.01;36;28.48;Random Forest;Best first;No;Sensitive Threshold;477;3;269;206;0.99;0.7;0.84;0.56
+SYNCOPE;17;42.01;36;28.48;Random Forest;Best first;No;Sensitive Learning;516;4;268;167;0.99;0.76;0.98;0.63
+SYNCOPE;17;42.01;36;28.48;Random Forest;Best first;oversampling;No;636;19;253;47;0.97;0.93;0.98;0.84
+SYNCOPE;17;42.01;36;28.48;Random Forest;Best first;oversampling;Sensitive Threshold;417;3;269;266;0.99;0.61;0.8;0.46
+SYNCOPE;17;42.01;36;28.48;Random Forest;Best first;oversampling;Sensitive Learning;631;22;250;52;0.97;0.92;0.97;0.82
+SYNCOPE;17;42.01;36;28.48;Random Forest;Best first;undersampling;No;633;18;254;50;0.97;0.93;0.98;0.83
+SYNCOPE;17;42.01;36;28.48;Random Forest;Best first;undersampling;Sensitive Threshold;376;2;270;307;0.99;0.55;0.77;0.41
+SYNCOPE;17;42.01;36;28.48;Random Forest;Best first;undersampling;Sensitive Learning;621;19;253;62;0.97;0.91;0.96;0.8
+SYNCOPE;17;42.01;36;28.48;Random Forest;Best first;SMOTE;No;653;20;252;30;0.97;0.96;0.98;0.87
+SYNCOPE;17;42.01;36;28.48;Random Forest;Best first;SMOTE;Sensitive Threshold;455;4;268;228;0.99;0.67;0.83;0.52
+SYNCOPE;17;42.01;36;28.48;Random Forest;Best first;SMOTE;Sensitive Learning;490;3;269;193;0.99;0.72;0.98;0.58
+SYNCOPE;17;42.01;36;28.48;IBk;No;No;No;657;13;259;26;0.98;0.96;0.96;0.9
+SYNCOPE;17;42.01;36;28.48;IBk;No;No;Sensitive Threshold;657;13;259;26;0.98;0.96;0.96;0.9
+SYNCOPE;17;42.01;36;28.48;IBk;No;No;Sensitive Learning;657;13;259;26;0.98;0.96;0.96;0.9
+SYNCOPE;17;42.01;36;28.48;IBk;No;oversampling;No;634;14;258;49;0.98;0.93;0.94;0.84
+SYNCOPE;17;42.01;36;28.48;IBk;No;oversampling;Sensitive Threshold;628;14;258;55;0.98;0.92;0.93;0.83
+SYNCOPE;17;42.01;36;28.48;IBk;No;oversampling;Sensitive Learning;596;13;259;87;0.98;0.87;0.92;0.76
+SYNCOPE;17;42.01;36;28.48;IBk;No;undersampling;No;623;12;260;60;0.98;0.91;0.93;0.82
+SYNCOPE;17;42.01;36;28.48;IBk;No;undersampling;Sensitive Threshold;616;12;260;67;0.98;0.9;0.93;0.81
+SYNCOPE;17;42.01;36;28.48;IBk;No;undersampling;Sensitive Learning;564;11;261;119;0.98;0.83;0.9;0.7
+SYNCOPE;17;42.01;36;28.48;IBk;No;SMOTE;No;656;14;258;27;0.98;0.96;0.96;0.9
+SYNCOPE;17;42.01;36;28.48;IBk;No;SMOTE;Sensitive Threshold;656;14;258;27;0.98;0.96;0.95;0.9
+SYNCOPE;17;42.01;36;28.48;IBk;No;SMOTE;Sensitive Learning;590;12;260;93;0.98;0.86;0.92;0.75
+SYNCOPE;17;42.01;36;28.48;IBk;Best first;No;No;652;22;250;31;0.97;0.95;0.98;0.87
+SYNCOPE;17;42.01;36;28.48;IBk;Best first;No;Sensitive Threshold;477;3;269;206;0.99;0.7;0.84;0.56
+SYNCOPE;17;42.01;36;28.48;IBk;Best first;No;Sensitive Learning;515;3;269;168;0.99;0.75;0.98;0.63
+SYNCOPE;17;42.01;36;28.48;IBk;Best first;oversampling;No;551;10;262;132;0.98;0.81;0.98;0.68
+SYNCOPE;17;42.01;36;28.48;IBk;Best first;oversampling;Sensitive Threshold;439;4;268;244;0.99;0.64;0.81;0.5
+SYNCOPE;17;42.01;36;28.48;IBk;Best first;oversampling;Sensitive Learning;512;12;260;171;0.98;0.75;0.97;0.6
+SYNCOPE;17;42.01;36;28.48;IBk;Best first;undersampling;No;552;9;263;131;0.98;0.81;0.98;0.68
+SYNCOPE;17;42.01;36;28.48;IBk;Best first;undersampling;Sensitive Threshold;411;2;270;272;1;0.6;0.8;0.46
+SYNCOPE;17;42.01;36;28.48;IBk;Best first;undersampling;Sensitive Learning;479;8;264;204;0.98;0.7;0.96;0.55
+SYNCOPE;17;42.01;36;28.48;IBk;Best first;SMOTE;No;649;20;252;34;0.97;0.95;0.98;0.86
+SYNCOPE;17;42.01;36;28.48;IBk;Best first;SMOTE;Sensitive Threshold;456;4;268;227;0.99;0.67;0.83;0.52
+SYNCOPE;17;42.01;36;28.48;IBk;Best first;SMOTE;Sensitive Learning;484;3;269;199;0.99;0.71;0.98;0.57
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;No;No;No;643;183;89;40;0.78;0.94;0.93;0.32
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;No;No;Sensitive Threshold;560;6;266;123;0.99;0.82;0.9;0.71
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;No;No;Sensitive Learning;602;15;257;81;0.98;0.88;0.93;0.77
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;No;oversampling;No;628;25;247;55;0.96;0.92;0.94;0.8
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;No;oversampling;Sensitive Threshold;500;6;266;183;0.99;0.73;0.86;0.59
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;No;oversampling;Sensitive Learning;622;22;250;61;0.97;0.91;0.94;0.8
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;No;undersampling;No;625;104;168;58;0.86;0.92;0.91;0.56
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;No;undersampling;Sensitive Threshold;510;6;266;173;0.99;0.75;0.86;0.61
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;No;undersampling;Sensitive Learning;632;231;41;51;0.73;0.93;0.89;0.09
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;No;SMOTE;No;634;55;217;49;0.92;0.93;0.93;0.73
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;No;SMOTE;Sensitive Threshold;540;6;266;143;0.99;0.79;0.88;0.67
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;No;SMOTE;Sensitive Learning;587;13;259;96;0.98;0.86;0.94;0.74
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;Best first;No;No;666;22;250;17;0.97;0.98;0.98;0.9
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;Best first;No;Sensitive Threshold;360;3;269;323;0.99;0.53;0.76;0.38
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;Best first;No;Sensitive Learning;480;3;269;203;0.99;0.7;0.98;0.57
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;Best first;oversampling;No;551;10;262;132;0.98;0.81;0.98;0.68
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;Best first;oversampling;Sensitive Threshold;305;2;270;378;0.99;0.45;0.72;0.31
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;Best first;oversampling;Sensitive Learning;512;12;260;171;0.98;0.75;0.97;0.6
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;Best first;undersampling;No;552;9;263;131;0.98;0.81;0.98;0.68
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;Best first;undersampling;Sensitive Threshold;116;1;271;567;0.99;0.17;0.58;0.1
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;Best first;undersampling;Sensitive Learning;479;8;264;204;0.98;0.7;0.96;0.55
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;Best first;SMOTE;No;656;21;251;27;0.97;0.96;0.98;0.88
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;Best first;SMOTE;Sensitive Threshold;339;4;268;344;0.99;0.5;0.74;0.35
+SYNCOPE;17;42.01;36;28.48;Naive Bayes;Best first;SMOTE;Sensitive Learning;465;3;269;218;0.99;0.68;0.97;0.54
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;No;No;No;668;69;214;13;0.91;0.98;0.98;0.78
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;No;No;Sensitive Threshold;502;7;276;179;0.99;0.74;0.86;0.6
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;No;No;Sensitive Learning;601;15;268;80;0.98;0.88;0.98;0.78
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;No;oversampling;No;630;30;253;51;0.95;0.93;0.96;0.8
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;No;oversampling;Sensitive Threshold;448;8;275;233;0.98;0.66;0.81;0.51
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;No;oversampling;Sensitive Learning;601;28;255;80;0.96;0.88;0.95;0.74
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;No;undersampling;No;618;29;254;63;0.96;0.91;0.96;0.78
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;No;undersampling;Sensitive Threshold;397;3;280;284;0.99;0.58;0.79;0.44
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;No;undersampling;Sensitive Learning;594;38;245;87;0.94;0.87;0.94;0.7
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;No;SMOTE;No;664;68;215;17;0.91;0.98;0.97;0.78
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;No;SMOTE;Sensitive Threshold;506;8;275;175;0.98;0.74;0.86;0.61
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;No;SMOTE;Sensitive Learning;541;12;271;140;0.98;0.79;0.96;0.66
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;Best first;No;No;661;74;209;20;0.9;0.97;0.97;0.75
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;Best first;No;Sensitive Threshold;475;6;277;206;0.99;0.7;0.84;0.56
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;Best first;No;Sensitive Learning;582;10;273;99;0.98;0.85;0.97;0.75
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;Best first;oversampling;No;632;70;213;49;0.9;0.93;0.95;0.7
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;Best first;oversampling;Sensitive Threshold;445;6;277;236;0.99;0.65;0.82;0.51
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;Best first;oversampling;Sensitive Learning;551;16;267;130;0.97;0.81;0.95;0.67
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;Best first;undersampling;No;636;66;217;45;0.91;0.93;0.96;0.72
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;Best first;undersampling;Sensitive Threshold;403;5;278;278;0.99;0.59;0.79;0.45
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;Best first;undersampling;Sensitive Learning;626;76;207;55;0.89;0.92;0.93;0.67
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;Best first;SMOTE;No;660;73;210;21;0.9;0.97;0.97;0.75
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;Best first;SMOTE;Sensitive Threshold;456;7;276;225;0.98;0.67;0.82;0.53
+SYNCOPE;18;45.01;35.5;29.36;Random Forest;Best first;SMOTE;Sensitive Learning;533;13;270;148;0.98;0.78;0.95;0.65
+SYNCOPE;18;45.01;35.5;29.36;IBk;No;No;No;667;49;234;14;0.93;0.98;0.92;0.84
+SYNCOPE;18;45.01;35.5;29.36;IBk;No;No;Sensitive Threshold;667;40;243;14;0.94;0.98;0.92;0.86
+SYNCOPE;18;45.01;35.5;29.36;IBk;No;No;Sensitive Learning;667;41;242;14;0.94;0.98;0.92;0.86
+SYNCOPE;18;45.01;35.5;29.36;IBk;No;oversampling;No;648;42;241;33;0.94;0.95;0.91;0.81
+SYNCOPE;18;45.01;35.5;29.36;IBk;No;oversampling;Sensitive Threshold;634;33;250;47;0.95;0.93;0.91;0.8
+SYNCOPE;18;45.01;35.5;29.36;IBk;No;oversampling;Sensitive Learning;610;36;247;71;0.94;0.9;0.89;0.74
+SYNCOPE;18;45.01;35.5;29.36;IBk;No;undersampling;No;631;43;240;50;0.94;0.93;0.9;0.77
+SYNCOPE;18;45.01;35.5;29.36;IBk;No;undersampling;Sensitive Threshold;628;36;247;53;0.95;0.92;0.9;0.78
+SYNCOPE;18;45.01;35.5;29.36;IBk;No;undersampling;Sensitive Learning;571;56;227;110;0.91;0.84;0.84;0.61
+SYNCOPE;18;45.01;35.5;29.36;IBk;No;SMOTE;No;666;51;232;15;0.93;0.98;0.92;0.83
+SYNCOPE;18;45.01;35.5;29.36;IBk;No;SMOTE;Sensitive Threshold;666;41;242;15;0.94;0.98;0.92;0.86
+SYNCOPE;18;45.01;35.5;29.36;IBk;No;SMOTE;Sensitive Learning;604;30;253;77;0.95;0.89;0.91;0.74
+SYNCOPE;18;45.01;35.5;29.36;IBk;Best first;No;No;658;73;210;23;0.9;0.97;0.97;0.75
+SYNCOPE;18;45.01;35.5;29.36;IBk;Best first;No;Sensitive Threshold;540;6;277;141;0.99;0.79;0.89;0.68
+SYNCOPE;18;45.01;35.5;29.36;IBk;Best first;No;Sensitive Learning;575;10;273;106;0.98;0.84;0.97;0.74
+SYNCOPE;18;45.01;35.5;29.36;IBk;Best first;oversampling;No;577;17;266;104;0.97;0.85;0.95;0.72
+SYNCOPE;18;45.01;35.5;29.36;IBk;Best first;oversampling;Sensitive Threshold;469;6;277;212;0.99;0.69;0.83;0.55
+SYNCOPE;18;45.01;35.5;29.36;IBk;Best first;oversampling;Sensitive Learning;547;16;267;134;0.97;0.8;0.95;0.67
+SYNCOPE;18;45.01;35.5;29.36;IBk;Best first;undersampling;No;585;15;268;96;0.97;0.86;0.96;0.74
+SYNCOPE;18;45.01;35.5;29.36;IBk;Best first;undersampling;Sensitive Threshold;459;5;278;222;0.99;0.67;0.83;0.54
+SYNCOPE;18;45.01;35.5;29.36;IBk;Best first;undersampling;Sensitive Learning;509;16;267;172;0.97;0.75;0.93;0.6
+SYNCOPE;18;45.01;35.5;29.36;IBk;Best first;SMOTE;No;659;73;210;22;0.9;0.97;0.97;0.75
+SYNCOPE;18;45.01;35.5;29.36;IBk;Best first;SMOTE;Sensitive Threshold;521;7;276;160;0.99;0.77;0.87;0.64
+SYNCOPE;18;45.01;35.5;29.36;IBk;Best first;SMOTE;Sensitive Learning;526;13;270;155;0.98;0.77;0.95;0.63
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;No;No;No;655;176;107;26;0.79;0.96;0.94;0.4
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;No;No;Sensitive Threshold;622;52;231;59;0.92;0.91;0.86;0.72
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;No;No;Sensitive Learning;635;65;218;46;0.91;0.93;0.93;0.72
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;No;oversampling;No;641;73;210;40;0.9;0.94;0.93;0.71
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;No;oversampling;Sensitive Threshold;544;13;270;137;0.98;0.8;0.88;0.67
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;No;oversampling;Sensitive Learning;637;62;221;44;0.91;0.94;0.94;0.73
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;No;undersampling;No;649;186;97;32;0.78;0.95;0.92;0.35
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;No;undersampling;Sensitive Threshold;600;51;232;81;0.92;0.88;0.85;0.68
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;No;undersampling;Sensitive Learning;633;172;111;48;0.79;0.93;0.89;0.37
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;No;SMOTE;No;651;97;186;30;0.87;0.96;0.94;0.66
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;No;SMOTE;Sensitive Threshold;611;35;248;70;0.95;0.9;0.89;0.75
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;No;SMOTE;Sensitive Learning;635;76;207;46;0.89;0.93;0.92;0.69
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;Best first;No;No;670;76;207;11;0.9;0.98;0.97;0.77
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;Best first;No;Sensitive Threshold;359;5;278;322;0.99;0.53;0.75;0.38
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;Best first;No;Sensitive Learning;571;10;273;110;0.98;0.84;0.95;0.73
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;Best first;oversampling;No;577;17;266;104;0.97;0.85;0.95;0.72
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;Best first;oversampling;Sensitive Threshold;321;4;279;360;0.99;0.47;0.73;0.33
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;Best first;oversampling;Sensitive Learning;547;16;267;134;0.97;0.8;0.95;0.67
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;Best first;undersampling;No;585;15;268;96;0.97;0.86;0.96;0.74
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;Best first;undersampling;Sensitive Threshold;167;0;283;514;1;0.25;0.62;0.16
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;Best first;undersampling;Sensitive Learning;509;16;267;172;0.97;0.75;0.92;0.6
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;Best first;SMOTE;No;663;74;209;18;0.9;0.97;0.96;0.76
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;Best first;SMOTE;Sensitive Threshold;340;6;277;341;0.98;0.5;0.74;0.36
+SYNCOPE;18;45.01;35.5;29.36;Naive Bayes;Best first;SMOTE;Sensitive Learning;514;12;271;167;0.98;0.75;0.94;0.61
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;No;No;No;665;53;249;5;0.93;0.99;0.97;0.85
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;No;No;Sensitive Threshold;557;15;287;113;0.97;0.83;0.89;0.72
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;No;No;Sensitive Learning;635;25;277;35;0.96;0.95;0.97;0.86
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;No;oversampling;No;639;41;261;31;0.94;0.95;0.96;0.83
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;No;oversampling;Sensitive Threshold;486;15;287;184;0.97;0.73;0.84;0.59
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;No;oversampling;Sensitive Learning;615;38;264;55;0.94;0.92;0.95;0.78
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;No;undersampling;No;643;30;272;27;0.96;0.96;0.97;0.86
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;No;undersampling;Sensitive Threshold;405;8;294;265;0.98;0.6;0.79;0.47
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;No;undersampling;Sensitive Learning;622;66;236;48;0.9;0.93;0.93;0.72
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;No;SMOTE;No;666;54;248;4;0.93;0.99;0.97;0.85
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;No;SMOTE;Sensitive Threshold;570;17;285;100;0.97;0.85;0.9;0.74
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;No;SMOTE;Sensitive Learning;565;20;282;105;0.97;0.84;0.96;0.72
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;Best first;No;No;654;43;259;16;0.94;0.98;0.96;0.85
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;Best first;No;Sensitive Threshold;522;15;287;148;0.97;0.78;0.86;0.65
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;Best first;No;Sensitive Learning;572;24;278;98;0.96;0.85;0.96;0.73
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;Best first;oversampling;No;627;56;246;43;0.92;0.94;0.96;0.76
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;Best first;oversampling;Sensitive Threshold;474;10;292;196;0.98;0.71;0.84;0.58
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;Best first;oversampling;Sensitive Learning;552;32;270;118;0.95;0.82;0.95;0.67
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;Best first;undersampling;No;632;38;264;38;0.94;0.94;0.96;0.82
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;Best first;undersampling;Sensitive Threshold;413;9;293;257;0.98;0.62;0.79;0.48
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;Best first;undersampling;Sensitive Learning;626;75;227;44;0.89;0.93;0.93;0.71
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;Best first;SMOTE;No;648;44;258;22;0.94;0.97;0.96;0.84
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;Best first;SMOTE;Sensitive Threshold;508;16;286;162;0.97;0.76;0.85;0.62
+SYNCOPE;19;48.04;35.11;31.07;Random Forest;Best first;SMOTE;Sensitive Learning;537;20;282;133;0.96;0.8;0.95;0.67
+SYNCOPE;19;48.04;35.11;31.07;IBk;No;No;No;660;31;271;10;0.96;0.99;0.94;0.9
+SYNCOPE;19;48.04;35.11;31.07;IBk;No;No;Sensitive Threshold;660;31;271;10;0.96;0.99;0.94;0.9
+SYNCOPE;19;48.04;35.11;31.07;IBk;No;No;Sensitive Learning;660;31;271;10;0.96;0.99;0.94;0.9
+SYNCOPE;19;48.04;35.11;31.07;IBk;No;oversampling;No;645;47;255;25;0.93;0.96;0.91;0.82
+SYNCOPE;19;48.04;35.11;31.07;IBk;No;oversampling;Sensitive Threshold;642;43;259;28;0.94;0.96;0.91;0.83
+SYNCOPE;19;48.04;35.11;31.07;IBk;No;oversampling;Sensitive Learning;613;36;266;57;0.94;0.91;0.9;0.78
+SYNCOPE;19;48.04;35.11;31.07;IBk;No;undersampling;No;646;29;273;24;0.96;0.96;0.94;0.87
+SYNCOPE;19;48.04;35.11;31.07;IBk;No;undersampling;Sensitive Threshold;636;28;274;34;0.96;0.95;0.93;0.85
+SYNCOPE;19;48.04;35.11;31.07;IBk;No;undersampling;Sensitive Learning;600;62;240;70;0.91;0.9;0.86;0.69
+SYNCOPE;19;48.04;35.11;31.07;IBk;No;SMOTE;No;661;32;270;9;0.95;0.99;0.94;0.9
+SYNCOPE;19;48.04;35.11;31.07;IBk;No;SMOTE;Sensitive Threshold;661;32;270;9;0.95;0.99;0.94;0.9
+SYNCOPE;19;48.04;35.11;31.07;IBk;No;SMOTE;Sensitive Learning;620;29;273;50;0.96;0.93;0.92;0.81
+SYNCOPE;19;48.04;35.11;31.07;IBk;Best first;No;No;654;43;259;16;0.94;0.98;0.96;0.85
+SYNCOPE;19;48.04;35.11;31.07;IBk;Best first;No;Sensitive Threshold;531;13;289;139;0.98;0.79;0.87;0.67
+SYNCOPE;19;48.04;35.11;31.07;IBk;Best first;No;Sensitive Learning;574;24;278;96;0.96;0.86;0.96;0.73
+SYNCOPE;19;48.04;35.11;31.07;IBk;Best first;oversampling;No;582;35;267;88;0.94;0.87;0.96;0.72
+SYNCOPE;19;48.04;35.11;31.07;IBk;Best first;oversampling;Sensitive Threshold;494;12;290;176;0.98;0.74;0.85;0.61
+SYNCOPE;19;48.04;35.11;31.07;IBk;Best first;oversampling;Sensitive Learning;550;32;270;120;0.95;0.82;0.95;0.66
+SYNCOPE;19;48.04;35.11;31.07;IBk;Best first;undersampling;No;586;31;271;84;0.95;0.87;0.96;0.74
+SYNCOPE;19;48.04;35.11;31.07;IBk;Best first;undersampling;Sensitive Threshold;467;12;290;203;0.97;0.7;0.83;0.56
+SYNCOPE;19;48.04;35.11;31.07;IBk;Best first;undersampling;Sensitive Learning;513;27;275;157;0.95;0.77;0.93;0.6
+SYNCOPE;19;48.04;35.11;31.07;IBk;Best first;SMOTE;No;647;44;258;23;0.94;0.97;0.96;0.84
+SYNCOPE;19;48.04;35.11;31.07;IBk;Best first;SMOTE;Sensitive Threshold;511;15;287;159;0.97;0.76;0.86;0.63
+SYNCOPE;19;48.04;35.11;31.07;IBk;Best first;SMOTE;Sensitive Learning;532;17;285;138;0.97;0.79;0.95;0.66
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;No;No;No;644;259;43;26;0.71;0.96;0.92;0.13
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;No;No;Sensitive Threshold;615;35;267;55;0.95;0.92;0.9;0.79
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;No;No;Sensitive Learning;629;80;222;41;0.89;0.94;0.93;0.7
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;No;oversampling;No;639;105;197;31;0.86;0.95;0.92;0.65
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;No;oversampling;Sensitive Threshold;599;43;259;71;0.93;0.89;0.88;0.73
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;No;oversampling;Sensitive Learning;633;96;206;37;0.87;0.94;0.92;0.66
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;No;undersampling;No;641;259;43;29;0.71;0.96;0.91;0.13
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;No;undersampling;Sensitive Threshold;599;41;261;71;0.94;0.89;0.88;0.74
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;No;undersampling;Sensitive Learning;641;275;27;29;0.7;0.96;0.88;0.06
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;No;SMOTE;No;643;140;162;27;0.82;0.96;0.92;0.55
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;No;SMOTE;Sensitive Threshold;604;33;269;66;0.95;0.9;0.9;0.77
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;No;SMOTE;Sensitive Learning;628;94;208;42;0.87;0.94;0.91;0.66
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;Best first;No;No;662;46;256;8;0.94;0.99;0.95;0.87
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;Best first;No;Sensitive Threshold;347;10;292;323;0.97;0.52;0.74;0.38
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;Best first;No;Sensitive Learning;558;19;283;112;0.97;0.83;0.96;0.71
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;Best first;oversampling;No;582;35;267;88;0.94;0.87;0.96;0.72
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;Best first;oversampling;Sensitive Threshold;316;6;296;354;0.98;0.47;0.73;0.34
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;Best first;oversampling;Sensitive Learning;550;32;270;120;0.95;0.82;0.95;0.66
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;Best first;undersampling;No;586;31;271;84;0.95;0.87;0.95;0.74
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;Best first;undersampling;Sensitive Threshold;141;5;297;529;0.97;0.21;0.6;0.13
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;Best first;undersampling;Sensitive Learning;513;27;275;157;0.95;0.77;0.92;0.6
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;Best first;SMOTE;No;654;44;258;16;0.94;0.98;0.94;0.85
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;Best first;SMOTE;Sensitive Threshold;324;11;291;346;0.97;0.48;0.72;0.34
+SYNCOPE;19;48.04;35.11;31.07;Naive Bayes;Best first;SMOTE;Sensitive Learning;519;17;285;151;0.97;0.77;0.94;0.64
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;No;No;No;681;11;266;20;0.98;0.97;0.99;0.92
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;No;No;Sensitive Threshold;592;6;271;109;0.99;0.84;0.91;0.74
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;No;No;Sensitive Learning;659;9;268;42;0.99;0.94;0.99;0.88
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;No;oversampling;No;648;11;266;53;0.98;0.92;0.98;0.85
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;No;oversampling;Sensitive Threshold;509;7;270;192;0.99;0.73;0.85;0.58
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;No;oversampling;Sensitive Learning;616;9;268;85;0.99;0.88;0.98;0.78
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;No;undersampling;No;650;10;267;51;0.98;0.93;0.99;0.85
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;No;undersampling;Sensitive Threshold;447;2;275;254;1;0.64;0.82;0.49
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;No;undersampling;Sensitive Learning;624;26;251;77;0.96;0.89;0.96;0.75
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;No;SMOTE;No;678;11;266;23;0.98;0.97;0.99;0.92
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;No;SMOTE;Sensitive Threshold;601;6;271;100;0.99;0.86;0.92;0.76
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;No;SMOTE;Sensitive Learning;597;7;270;104;0.99;0.85;0.98;0.75
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;Best first;No;No;680;19;258;21;0.97;0.97;0.98;0.9
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;Best first;No;Sensitive Threshold;536;6;271;165;0.99;0.76;0.87;0.63
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;Best first;No;Sensitive Learning;602;7;270;99;0.99;0.86;0.98;0.76
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;Best first;oversampling;No;654;15;262;47;0.98;0.93;0.98;0.85
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;Best first;oversampling;Sensitive Threshold;497;5;272;204;0.99;0.71;0.85;0.57
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;Best first;oversampling;Sensitive Learning;651;15;262;50;0.98;0.93;0.98;0.84
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;Best first;undersampling;No;651;16;261;50;0.98;0.93;0.98;0.84
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;Best first;undersampling;Sensitive Threshold;445;6;271;256;0.99;0.63;0.81;0.48
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;Best first;undersampling;Sensitive Learning;648;39;238;53;0.94;0.92;0.96;0.77
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;Best first;SMOTE;No;672;19;258;29;0.97;0.96;0.98;0.88
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;Best first;SMOTE;Sensitive Threshold;528;6;271;173;0.99;0.75;0.87;0.62
+SYNCOPE;20;51.09;34.87;28.32;Random Forest;Best first;SMOTE;Sensitive Learning;574;14;263;127;0.98;0.82;0.98;0.68
+SYNCOPE;20;51.09;34.87;28.32;IBk;No;No;No;680;10;267;21;0.99;0.97;0.97;0.92
+SYNCOPE;20;51.09;34.87;28.32;IBk;No;No;Sensitive Threshold;680;10;267;21;0.99;0.97;0.97;0.92
+SYNCOPE;20;51.09;34.87;28.32;IBk;No;No;Sensitive Learning;680;10;267;21;0.99;0.97;0.97;0.92
+SYNCOPE;20;51.09;34.87;28.32;IBk;No;oversampling;No;657;11;266;44;0.98;0.94;0.95;0.87
+SYNCOPE;20;51.09;34.87;28.32;IBk;No;oversampling;Sensitive Threshold;648;10;267;53;0.98;0.92;0.94;0.85
+SYNCOPE;20;51.09;34.87;28.32;IBk;No;oversampling;Sensitive Learning;628;10;267;73;0.98;0.9;0.93;0.8
+SYNCOPE;20;51.09;34.87;28.32;IBk;No;undersampling;No;659;10;267;42;0.99;0.94;0.95;0.87
+SYNCOPE;20;51.09;34.87;28.32;IBk;No;undersampling;Sensitive Threshold;654;10;267;47;0.98;0.93;0.95;0.86
+SYNCOPE;20;51.09;34.87;28.32;IBk;No;undersampling;Sensitive Learning;617;14;263;84;0.98;0.88;0.92;0.77
+SYNCOPE;20;51.09;34.87;28.32;IBk;No;SMOTE;No;681;11;266;20;0.98;0.97;0.97;0.92
+SYNCOPE;20;51.09;34.87;28.32;IBk;No;SMOTE;Sensitive Threshold;681;11;266;20;0.98;0.97;0.97;0.92
+SYNCOPE;20;51.09;34.87;28.32;IBk;No;SMOTE;Sensitive Learning;637;10;267;64;0.98;0.91;0.95;0.82
+SYNCOPE;20;51.09;34.87;28.32;IBk;Best first;No;No;677;18;259;24;0.97;0.97;0.99;0.89
+SYNCOPE;20;51.09;34.87;28.32;IBk;Best first;No;Sensitive Threshold;551;6;271;150;0.99;0.79;0.88;0.66
+SYNCOPE;20;51.09;34.87;28.32;IBk;Best first;No;Sensitive Learning;600;7;270;101;0.99;0.86;0.99;0.75
+SYNCOPE;20;51.09;34.87;28.32;IBk;Best first;oversampling;No;625;11;266;76;0.98;0.89;0.98;0.8
+SYNCOPE;20;51.09;34.87;28.32;IBk;Best first;oversampling;Sensitive Threshold;511;5;272;190;0.99;0.73;0.86;0.59
+SYNCOPE;20;51.09;34.87;28.32;IBk;Best first;oversampling;Sensitive Learning;589;12;265;112;0.98;0.84;0.98;0.72
+SYNCOPE;20;51.09;34.87;28.32;IBk;Best first;undersampling;No;626;15;262;75;0.98;0.89;0.98;0.79
+SYNCOPE;20;51.09;34.87;28.32;IBk;Best first;undersampling;Sensitive Threshold;489;5;272;212;0.99;0.7;0.84;0.55
+SYNCOPE;20;51.09;34.87;28.32;IBk;Best first;undersampling;Sensitive Learning;538;12;265;163;0.98;0.77;0.96;0.62
+SYNCOPE;20;51.09;34.87;28.32;IBk;Best first;SMOTE;No;668;19;258;33;0.97;0.95;0.98;0.87
+SYNCOPE;20;51.09;34.87;28.32;IBk;Best first;SMOTE;Sensitive Threshold;536;5;272;165;0.99;0.76;0.87;0.64
+SYNCOPE;20;51.09;34.87;28.32;IBk;Best first;SMOTE;Sensitive Learning;570;14;263;131;0.98;0.81;0.98;0.68
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;No;No;No;676;234;43;25;0.74;0.96;0.95;0.15
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;No;No;Sensitive Threshold;653;13;264;48;0.98;0.93;0.94;0.85
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;No;No;Sensitive Learning;658;56;221;43;0.92;0.94;0.95;0.75
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;No;oversampling;No;669;56;221;32;0.92;0.95;0.95;0.77
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;No;oversampling;Sensitive Threshold;602;9;268;99;0.99;0.86;0.91;0.75
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;No;oversampling;Sensitive Learning;658;30;247;43;0.96;0.94;0.95;0.82
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;No;undersampling;No;669;218;59;32;0.75;0.95;0.94;0.21
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;No;undersampling;Sensitive Threshold;615;11;266;86;0.98;0.88;0.92;0.77
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;No;undersampling;Sensitive Learning;665;239;38;36;0.74;0.95;0.91;0.11
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;No;SMOTE;No;673;104;173;28;0.87;0.96;0.95;0.64
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;No;SMOTE;Sensitive Threshold;643;12;265;58;0.98;0.92;0.94;0.83
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;No;SMOTE;Sensitive Learning;642;30;247;59;0.96;0.92;0.94;0.78
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;Best first;No;No;688;20;257;13;0.97;0.98;0.98;0.92
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;Best first;No;Sensitive Threshold;366;4;273;335;0.99;0.52;0.75;0.37
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;Best first;No;Sensitive Learning;580;6;271;121;0.99;0.83;0.98;0.72
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;Best first;oversampling;No;625;11;266;76;0.98;0.89;0.98;0.8
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;Best first;oversampling;Sensitive Threshold;345;3;274;356;0.99;0.49;0.74;0.35
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;Best first;oversampling;Sensitive Learning;589;12;265;112;0.98;0.84;0.98;0.72
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;Best first;undersampling;No;626;15;262;75;0.98;0.89;0.98;0.79
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;Best first;undersampling;Sensitive Threshold;155;0;277;546;1;0.22;0.61;0.14
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;Best first;undersampling;Sensitive Learning;538;12;265;163;0.98;0.77;0.96;0.62
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;Best first;SMOTE;No;677;19;258;24;0.97;0.97;0.98;0.89
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;Best first;SMOTE;Sensitive Threshold;338;3;274;363;0.99;0.48;0.74;0.34
+SYNCOPE;20;51.09;34.87;28.32;Naive Bayes;Best first;SMOTE;Sensitive Learning;554;10;267;147;0.98;0.79;0.97;0.66
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;No;No;No;1671;234;265;28;0.88;0.98;0.83;0.6
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;No;No;Sensitive Threshold;584;5;494;1115;0.99;0.34;0.67;0.19
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;No;No;Sensitive Learning;660;9;490;1039;0.99;0.39;0.79;0.21
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;No;oversampling;No;817;51;448;882;0.94;0.48;0.82;0.24
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;No;oversampling;Sensitive Threshold;525;5;494;1174;0.99;0.31;0.65;0.16
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;No;oversampling;Sensitive Learning;897;93;406;802;0.91;0.53;0.81;0.23
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;No;undersampling;No;826;85;414;873;0.91;0.49;0.82;0.2
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;No;undersampling;Sensitive Threshold;464;5;494;1235;0.99;0.27;0.63;0.14
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;No;undersampling;Sensitive Learning;687;75;424;1012;0.9;0.4;0.77;0.15
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;No;SMOTE;No;1671;234;265;28;0.88;0.98;0.81;0.6
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;No;SMOTE;Sensitive Threshold;590;5;494;1109;0.99;0.35;0.67;0.19
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;No;SMOTE;Sensitive Learning;624;9;490;1075;0.99;0.37;0.79;0.2
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;Best first;No;No;1682;241;258;17;0.87;0.99;0.84;0.6
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;Best first;No;Sensitive Threshold;552;7;492;1147;0.99;0.32;0.66;0.17
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;Best first;No;Sensitive Learning;607;7;492;1092;0.99;0.36;0.83;0.19
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;Best first;oversampling;No;644;14;485;1055;0.98;0.38;0.83;0.2
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;Best first;oversampling;Sensitive Threshold;508;7;492;1191;0.99;0.3;0.64;0.16
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;Best first;oversampling;Sensitive Learning;1643;241;258;56;0.87;0.97;0.83;0.56
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;Best first;undersampling;No;1654;239;260;45;0.87;0.97;0.84;0.57
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;Best first;undersampling;Sensitive Threshold;479;7;492;1220;0.99;0.28;0.63;0.14
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;Best first;undersampling;Sensitive Learning;1643;253;246;56;0.87;0.97;0.81;0.53
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;Best first;SMOTE;No;1671;241;258;28;0.87;0.98;0.84;0.59
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;Best first;SMOTE;Sensitive Threshold;553;7;492;1146;0.99;0.33;0.66;0.17
+SYNCOPE;21;54.16;34.5;22.7;Random Forest;Best first;SMOTE;Sensitive Learning;591;10;489;1108;0.98;0.35;0.83;0.18
+SYNCOPE;21;54.16;34.5;22.7;IBk;No;No;No;1188;147;352;511;0.89;0.7;0.71;0.32
+SYNCOPE;21;54.16;34.5;22.7;IBk;No;No;Sensitive Threshold;1137;146;353;562;0.89;0.67;0.69;0.29
+SYNCOPE;21;54.16;34.5;22.7;IBk;No;No;Sensitive Learning;1137;147;352;562;0.89;0.67;0.71;0.29
+SYNCOPE;21;54.16;34.5;22.7;IBk;No;oversampling;No;1107;134;365;592;0.89;0.65;0.67;0.29
+SYNCOPE;21;54.16;34.5;22.7;IBk;No;oversampling;Sensitive Threshold;1077;134;365;622;0.89;0.63;0.68;0.27
+SYNCOPE;21;54.16;34.5;22.7;IBk;No;oversampling;Sensitive Learning;1025;130;369;674;0.89;0.6;0.69;0.25
+SYNCOPE;21;54.16;34.5;22.7;IBk;No;undersampling;No;1044;132;367;655;0.89;0.61;0.68;0.26
+SYNCOPE;21;54.16;34.5;22.7;IBk;No;undersampling;Sensitive Threshold;1011;131;368;688;0.89;0.6;0.67;0.24
+SYNCOPE;21;54.16;34.5;22.7;IBk;No;undersampling;Sensitive Learning;871;112;387;828;0.89;0.51;0.65;0.19
+SYNCOPE;21;54.16;34.5;22.7;IBk;No;SMOTE;No;1202;156;343;497;0.89;0.71;0.72;0.32
+SYNCOPE;21;54.16;34.5;22.7;IBk;No;SMOTE;Sensitive Threshold;1164;156;343;535;0.88;0.69;0.69;0.29
+SYNCOPE;21;54.16;34.5;22.7;IBk;No;SMOTE;Sensitive Learning;1150;128;371;549;0.9;0.68;0.73;0.32
+SYNCOPE;21;54.16;34.5;22.7;IBk;Best first;No;No;1681;241;258;18;0.87;0.99;0.83;0.6
+SYNCOPE;21;54.16;34.5;22.7;IBk;Best first;No;Sensitive Threshold;550;7;492;1149;0.99;0.32;0.65;0.17
+SYNCOPE;21;54.16;34.5;22.7;IBk;Best first;No;Sensitive Learning;613;7;492;1086;0.99;0.36;0.83;0.2
+SYNCOPE;21;54.16;34.5;22.7;IBk;Best first;oversampling;No;643;12;487;1056;0.98;0.38;0.83;0.2
+SYNCOPE;21;54.16;34.5;22.7;IBk;Best first;oversampling;Sensitive Threshold;520;7;492;1179;0.99;0.31;0.65;0.16
+SYNCOPE;21;54.16;34.5;22.7;IBk;Best first;oversampling;Sensitive Learning;607;12;487;1092;0.98;0.36;0.83;0.19
+SYNCOPE;21;54.16;34.5;22.7;IBk;Best first;undersampling;No;645;12;487;1054;0.98;0.38;0.84;0.2
+SYNCOPE;21;54.16;34.5;22.7;IBk;Best first;undersampling;Sensitive Threshold;510;7;492;1189;0.99;0.3;0.64;0.16
+SYNCOPE;21;54.16;34.5;22.7;IBk;Best first;undersampling;Sensitive Learning;566;10;489;1133;0.98;0.33;0.81;0.17
+SYNCOPE;21;54.16;34.5;22.7;IBk;Best first;SMOTE;No;1670;241;258;29;0.87;0.98;0.84;0.59
+SYNCOPE;21;54.16;34.5;22.7;IBk;Best first;SMOTE;Sensitive Threshold;537;7;492;1162;0.99;0.32;0.65;0.17
+SYNCOPE;21;54.16;34.5;22.7;IBk;Best first;SMOTE;Sensitive Learning;586;10;489;1113;0.98;0.34;0.83;0.18
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;No;No;No;1347;349;150;352;0.79;0.79;0.75;0.09
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;No;No;Sensitive Threshold;1004;81;418;695;0.93;0.59;0.71;0.3
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;No;No;Sensitive Learning;1312;149;350;387;0.9;0.77;0.76;0.41
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;No;oversampling;No;1373;207;292;326;0.87;0.81;0.76;0.36
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;No;oversampling;Sensitive Threshold;990;79;420;709;0.93;0.58;0.71;0.29
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;No;oversampling;Sensitive Learning;1412;182;317;287;0.89;0.83;0.81;0.43
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;No;undersampling;No;1388;203;296;311;0.87;0.82;0.79;0.38
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;No;undersampling;Sensitive Threshold;1008;32;467;691;0.97;0.59;0.76;0.36
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;No;undersampling;Sensitive Learning;1370;384;115;329;0.78;0.81;0.72;0.04
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;No;SMOTE;No;1338;219;280;361;0.86;0.79;0.76;0.32
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;No;SMOTE;Sensitive Threshold;873;56;443;826;0.94;0.51;0.7;0.26
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;No;SMOTE;Sensitive Learning;1303;160;339;396;0.89;0.77;0.77;0.38
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;Best first;No;No;1690;243;256;9;0.87;0.99;0.84;0.61
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;Best first;No;Sensitive Threshold;418;5;494;1281;0.99;0.25;0.62;0.12
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;Best first;No;Sensitive Learning;583;7;492;1116;0.99;0.34;0.83;0.18
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;Best first;oversampling;No;643;12;487;1056;0.98;0.38;0.83;0.2
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;Best first;oversampling;Sensitive Threshold;374;3;496;1325;0.99;0.22;0.61;0.11
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;Best first;oversampling;Sensitive Learning;607;12;487;1092;0.98;0.36;0.83;0.19
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;Best first;undersampling;No;645;12;487;1054;0.98;0.38;0.84;0.2
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;Best first;undersampling;Sensitive Threshold;200;0;499;1499;1;0.12;0.56;0.06
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;Best first;undersampling;Sensitive Learning;566;10;489;1133;0.98;0.33;0.81;0.17
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;Best first;SMOTE;No;1677;242;257;22;0.87;0.99;0.84;0.59
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;Best first;SMOTE;Sensitive Threshold;354;2;497;1345;0.99;0.21;0.6;0.1
+SYNCOPE;21;54.16;34.5;22.7;Naive Bayes;Best first;SMOTE;Sensitive Learning;567;9;490;1132;0.98;0.33;0.82;0.18
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;No;No;No;1492;1065;259;0;0.58;1;0.94;0.2
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;No;No;Sensitive Threshold;445;0;1324;1047;1;0.3;0.65;0.29
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;No;No;Sensitive Learning;1373;181;1143;119;0.88;0.92;0.94;0.79
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;No;oversampling;No;1468;952;372;24;0.61;0.98;0.93;0.28
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;No;oversampling;Sensitive Threshold;270;0;1324;1222;1;0.18;0.59;0.17
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;No;oversampling;Sensitive Learning;1460;947;377;32;0.61;0.98;0.92;0.27
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;No;undersampling;No;1471;969;355;21;0.6;0.99;0.88;0.26
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;No;undersampling;Sensitive Threshold;144;0;1324;1348;1;0.1;0.55;0.09
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;No;undersampling;Sensitive Learning;1482;1284;40;10;0.54;0.99;0.9;0.02
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;No;SMOTE;No;1445;873;451;47;0.62;0.97;0.95;0.32
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;No;SMOTE;Sensitive Threshold;76;0;1324;1416;1;0.05;0.53;0.05
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;No;SMOTE;Sensitive Learning;1336;66;1258;156;0.95;0.9;0.94;0.84
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;Best first;No;No;1478;912;412;14;0.62;0.99;0.94;0.31
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;Best first;No;Sensitive Threshold;581;0;1324;911;1;0.39;0.69;0.37
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;Best first;No;Sensitive Learning;1218;2;1322;274;1;0.82;0.94;0.81
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;Best first;oversampling;No;968;5;1319;524;0.99;0.65;0.86;0.63
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;Best first;oversampling;Sensitive Threshold;740;1;1323;752;1;0.5;0.75;0.48
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;Best first;oversampling;Sensitive Learning;1447;940;384;45;0.61;0.97;0.83;0.27
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;Best first;undersampling;No;1450;905;419;42;0.62;0.97;0.87;0.3
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;Best first;undersampling;Sensitive Threshold;494;0;1324;998;1;0.33;0.67;0.32
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;Best first;undersampling;Sensitive Learning;1441;1019;305;51;0.59;0.97;0.78;0.2
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;Best first;SMOTE;No;1251;6;1318;241;1;0.84;0.94;0.83
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;Best first;SMOTE;Sensitive Threshold;541;1;1323;951;1;0.36;0.68;0.35
+SYNCOPE;22;61.06;33.17;47.02;Random Forest;Best first;SMOTE;Sensitive Learning;846;2;1322;646;1;0.57;0.85;0.55
+SYNCOPE;22;61.06;33.17;47.02;IBk;No;No;No;1423;1168;156;69;0.55;0.95;0.5;0.08
+SYNCOPE;22;61.06;33.17;47.02;IBk;No;No;Sensitive Threshold;1402;1142;182;90;0.55;0.94;0.54;0.08
+SYNCOPE;22;61.06;33.17;47.02;IBk;No;No;Sensitive Learning;1404;1147;177;88;0.55;0.94;0.5;0.08
+SYNCOPE;22;61.06;33.17;47.02;IBk;No;oversampling;No;1421;1180;144;71;0.55;0.95;0.56;0.06
+SYNCOPE;22;61.06;33.17;47.02;IBk;No;oversampling;Sensitive Threshold;1412;1167;157;80;0.55;0.95;0.53;0.07
+SYNCOPE;22;61.06;33.17;47.02;IBk;No;oversampling;Sensitive Learning;1411;1176;148;81;0.55;0.95;0.39;0.06
+SYNCOPE;22;61.06;33.17;47.02;IBk;No;undersampling;No;1402;1127;197;90;0.55;0.94;0.54;0.09
+SYNCOPE;22;61.06;33.17;47.02;IBk;No;undersampling;Sensitive Threshold;1388;1112;212;104;0.56;0.93;0.55;0.09
+SYNCOPE;22;61.06;33.17;47.02;IBk;No;undersampling;Sensitive Learning;1432;1230;94;60;0.54;0.96;0.6;0.03
+SYNCOPE;22;61.06;33.17;47.02;IBk;No;SMOTE;No;1406;1151;173;86;0.55;0.94;0.5;0.08
+SYNCOPE;22;61.06;33.17;47.02;IBk;No;SMOTE;Sensitive Threshold;1400;1134;190;92;0.55;0.94;0.54;0.09
+SYNCOPE;22;61.06;33.17;47.02;IBk;No;SMOTE;Sensitive Learning;1400;1147;177;92;0.55;0.94;0.53;0.08
+SYNCOPE;22;61.06;33.17;47.02;IBk;Best first;No;No;1477;912;412;15;0.62;0.99;0.94;0.31
+SYNCOPE;22;61.06;33.17;47.02;IBk;Best first;No;Sensitive Threshold;1152;0;1324;340;1;0.77;0.89;0.76
+SYNCOPE;22;61.06;33.17;47.02;IBk;Best first;No;Sensitive Learning;1218;2;1322;274;1;0.82;0.94;0.81
+SYNCOPE;22;61.06;33.17;47.02;IBk;Best first;oversampling;No;967;4;1320;525;1;0.65;0.86;0.63
+SYNCOPE;22;61.06;33.17;47.02;IBk;Best first;oversampling;Sensitive Threshold;846;1;1323;646;1;0.57;0.78;0.55
+SYNCOPE;22;61.06;33.17;47.02;IBk;Best first;oversampling;Sensitive Learning;821;5;1319;671;0.99;0.55;0.83;0.53
+SYNCOPE;22;61.06;33.17;47.02;IBk;Best first;undersampling;No;957;4;1320;535;1;0.64;0.87;0.62
+SYNCOPE;22;61.06;33.17;47.02;IBk;Best first;undersampling;Sensitive Threshold;806;0;1324;686;1;0.54;0.77;0.52
+SYNCOPE;22;61.06;33.17;47.02;IBk;Best first;undersampling;Sensitive Learning;704;6;1318;788;0.99;0.47;0.79;0.45
+SYNCOPE;22;61.06;33.17;47.02;IBk;Best first;SMOTE;No;1250;6;1318;242;1;0.84;0.94;0.82
+SYNCOPE;22;61.06;33.17;47.02;IBk;Best first;SMOTE;Sensitive Threshold;1139;0;1324;353;1;0.76;0.88;0.75
+SYNCOPE;22;61.06;33.17;47.02;IBk;Best first;SMOTE;Sensitive Learning;842;2;1322;650;1;0.56;0.85;0.55
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;No;No;No;1396;1189;135;96;0.54;0.94;0.51;0.04
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;No;No;Sensitive Threshold;1374;1157;167;118;0.54;0.92;0.52;0.05
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;No;No;Sensitive Learning;1389;1181;143;103;0.54;0.93;0.51;0.04
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;No;oversampling;No;1389;1186;138;103;0.54;0.93;0.5;0.04
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;No;oversampling;Sensitive Threshold;1325;1119;205;167;0.54;0.89;0.52;0.04
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;No;oversampling;Sensitive Learning;1420;1227;97;72;0.54;0.95;0.49;0.03
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;No;undersampling;No;1403;1201;123;89;0.54;0.94;0.5;0.03
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;No;undersampling;Sensitive Threshold;1342;1136;188;150;0.54;0.9;0.52;0.04
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;No;undersampling;Sensitive Learning;1433;1256;68;59;0.53;0.96;0.47;0.01
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;No;SMOTE;No;1403;1196;128;89;0.54;0.94;0.5;0.04
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;No;SMOTE;Sensitive Threshold;1345;1134;190;147;0.54;0.9;0.52;0.05
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;No;SMOTE;Sensitive Learning;1395;1186;138;97;0.54;0.93;0.5;0.04
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;Best first;No;No;1488;914;410;4;0.62;1;0.95;0.32
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;Best first;No;Sensitive Threshold;453;0;1324;1039;1;0.3;0.65;0.29
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;Best first;No;Sensitive Learning;1188;1;1323;304;1;0.8;0.92;0.79
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;Best first;oversampling;No;967;4;1320;525;1;0.65;0.86;0.63
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;Best first;oversampling;Sensitive Threshold;395;0;1324;1097;1;0.26;0.63;0.25
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;Best first;oversampling;Sensitive Learning;821;5;1319;671;0.99;0.55;0.83;0.53
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;Best first;undersampling;No;957;4;1320;535;1;0.64;0.87;0.62
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;Best first;undersampling;Sensitive Threshold;194;0;1324;1298;1;0.13;0.57;0.12
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;Best first;undersampling;Sensitive Learning;704;6;1318;788;0.99;0.47;0.78;0.45
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;Best first;SMOTE;No;1243;6;1318;249;1;0.83;0.93;0.82
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;Best first;SMOTE;Sensitive Threshold;280;0;1324;1212;1;0.19;0.59;0.18
+SYNCOPE;22;61.06;33.17;47.02;Naive Bayes;Best first;SMOTE;Sensitive Learning;833;1;1323;659;1;0.56;0.83;0.54
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;No;No;No;770;1009;279;20;0.43;0.97;0.88;0.15
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;No;No;Sensitive Threshold;589;12;1276;201;0.98;0.75;0.87;0.77
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;No;No;Sensitive Learning;661;20;1268;129;0.97;0.84;0.88;0.84
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;No;oversampling;No;664;529;759;126;0.56;0.84;0.87;0.39
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;No;oversampling;Sensitive Threshold;569;10;1278;221;0.98;0.72;0.86;0.75
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;No;oversampling;Sensitive Learning;659;849;439;131;0.44;0.83;0.85;0.15
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;No;undersampling;No;643;652;636;147;0.5;0.81;0.85;0.27
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;No;undersampling;Sensitive Threshold;486;9;1279;304;0.98;0.62;0.8;0.66
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;No;undersampling;Sensitive Learning;615;584;704;175;0.51;0.78;0.82;0.3
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;No;SMOTE;No;770;1010;278;20;0.43;0.97;0.88;0.15
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;No;SMOTE;Sensitive Threshold;591;11;1277;199;0.98;0.75;0.87;0.78
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;No;SMOTE;Sensitive Learning;610;16;1272;180;0.97;0.77;0.87;0.79
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;Best first;No;No;783;1010;278;7;0.44;0.99;0.92;0.17
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;Best first;No;Sensitive Threshold;527;5;1283;263;0.99;0.67;0.83;0.71
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;Best first;No;Sensitive Learning;612;12;1276;178;0.98;0.77;0.92;0.8
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;Best first;oversampling;No;632;14;1274;158;0.98;0.8;0.9;0.82
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;Best first;oversampling;Sensitive Threshold;501;6;1282;289;0.99;0.63;0.81;0.68
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;Best first;oversampling;Sensitive Learning;745;1021;267;45;0.42;0.94;0.88;0.12
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;Best first;undersampling;No;754;1001;287;36;0.43;0.95;0.9;0.14
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;Best first;undersampling;Sensitive Threshold;467;5;1283;323;0.99;0.59;0.79;0.64
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;Best first;undersampling;Sensitive Learning;747;1034;254;43;0.42;0.95;0.86;0.11
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;Best first;SMOTE;No;774;1010;278;16;0.43;0.98;0.91;0.16
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;Best first;SMOTE;Sensitive Threshold;548;6;1282;242;0.99;0.69;0.84;0.73
+SYNCOPE;23;69.89;34.92;61.98;Random Forest;Best first;SMOTE;Sensitive Learning;583;11;1277;207;0.98;0.74;0.89;0.77
+SYNCOPE;23;69.89;34.92;61.98;IBk;No;No;No;728;483;805;62;0.6;0.92;0.78;0.5
+SYNCOPE;23;69.89;34.92;61.98;IBk;No;No;Sensitive Threshold;728;416;872;62;0.64;0.92;0.8;0.55
+SYNCOPE;23;69.89;34.92;61.98;IBk;No;No;Sensitive Learning;728;426;862;62;0.63;0.92;0.78;0.54
+SYNCOPE;23;69.89;34.92;61.98;IBk;No;oversampling;No;675;508;780;115;0.57;0.85;0.75;0.42
+SYNCOPE;23;69.89;34.92;61.98;IBk;No;oversampling;Sensitive Threshold;671;454;834;119;0.6;0.85;0.75;0.46
+SYNCOPE;23;69.89;34.92;61.98;IBk;No;oversampling;Sensitive Learning;649;419;869;141;0.61;0.82;0.8;0.46
+SYNCOPE;23;69.89;34.92;61.98;IBk;No;undersampling;No;677;361;927;113;0.65;0.86;0.8;0.54
+SYNCOPE;23;69.89;34.92;61.98;IBk;No;undersampling;Sensitive Threshold;677;315;973;113;0.68;0.86;0.81;0.58
+SYNCOPE;23;69.89;34.92;61.98;IBk;No;undersampling;Sensitive Learning;586;326;962;204;0.64;0.74;0.71;0.47
+SYNCOPE;23;69.89;34.92;61.98;IBk;No;SMOTE;No;729;479;809;61;0.6;0.92;0.8;0.5
+SYNCOPE;23;69.89;34.92;61.98;IBk;No;SMOTE;Sensitive Threshold;729;422;866;61;0.63;0.92;0.8;0.55
+SYNCOPE;23;69.89;34.92;61.98;IBk;No;SMOTE;Sensitive Learning;656;412;876;134;0.61;0.83;0.77;0.48
+SYNCOPE;23;69.89;34.92;61.98;IBk;Best first;No;No;782;1010;278;8;0.44;0.99;0.92;0.17
+SYNCOPE;23;69.89;34.92;61.98;IBk;Best first;No;Sensitive Threshold;576;7;1281;214;0.99;0.73;0.86;0.76
+SYNCOPE;23;69.89;34.92;61.98;IBk;Best first;No;Sensitive Learning;607;12;1276;183;0.98;0.77;0.92;0.79
+SYNCOPE;23;69.89;34.92;61.98;IBk;Best first;oversampling;No;631;14;1274;159;0.98;0.8;0.9;0.82
+SYNCOPE;23;69.89;34.92;61.98;IBk;Best first;oversampling;Sensitive Threshold;521;5;1283;269;0.99;0.66;0.83;0.7
+SYNCOPE;23;69.89;34.92;61.98;IBk;Best first;oversampling;Sensitive Learning;597;19;1269;193;0.97;0.76;0.88;0.77
+SYNCOPE;23;69.89;34.92;61.98;IBk;Best first;undersampling;No;622;12;1276;168;0.98;0.79;0.9;0.81
+SYNCOPE;23;69.89;34.92;61.98;IBk;Best first;undersampling;Sensitive Threshold;492;6;1282;298;0.99;0.62;0.81;0.67
+SYNCOPE;23;69.89;34.92;61.98;IBk;Best first;undersampling;Sensitive Learning;554;12;1276;236;0.98;0.7;0.86;0.73
+SYNCOPE;23;69.89;34.92;61.98;IBk;Best first;SMOTE;No;770;1010;278;20;0.43;0.97;0.91;0.15
+SYNCOPE;23;69.89;34.92;61.98;IBk;Best first;SMOTE;Sensitive Threshold;594;8;1280;196;0.99;0.75;0.87;0.78
+SYNCOPE;23;69.89;34.92;61.98;IBk;Best first;SMOTE;Sensitive Learning;581;11;1277;209;0.98;0.74;0.89;0.76
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;No;No;No;745;1214;74;45;0.38;0.94;0.85;0
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;No;No;Sensitive Threshold;705;951;337;85;0.43;0.89;0.58;0.13
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;No;No;Sensitive Learning;733;1048;240;57;0.41;0.93;0.81;0.09
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;No;oversampling;No;746;1029;259;44;0.42;0.94;0.84;0.12
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;No;oversampling;Sensitive Threshold;634;666;622;156;0.49;0.8;0.64;0.25
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;No;oversampling;Sensitive Learning;740;1050;238;50;0.41;0.94;0.83;0.1
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;No;undersampling;No;740;1209;79;50;0.38;0.94;0.82;0
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;No;undersampling;Sensitive Threshold;692;925;363;98;0.43;0.88;0.58;0.13
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;No;undersampling;Sensitive Learning;739;1216;72;51;0.38;0.94;0.79;-0.01
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;No;SMOTE;No;744;1162;126;46;0.39;0.94;0.85;0.03
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;No;SMOTE;Sensitive Threshold;698;931;357;92;0.43;0.88;0.58;0.13
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;No;SMOTE;Sensitive Learning;728;1033;255;62;0.41;0.92;0.79;0.1
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;Best first;No;No;786;1013;275;4;0.44;0.99;0.94;0.17
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;Best first;No;Sensitive Threshold;405;5;1283;385;0.99;0.51;0.75;0.56
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;Best first;No;Sensitive Learning;586;9;1279;204;0.98;0.74;0.87;0.77
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;Best first;oversampling;No;631;14;1274;159;0.98;0.8;0.9;0.82
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;Best first;oversampling;Sensitive Threshold;366;5;1283;424;0.99;0.46;0.73;0.51
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;Best first;oversampling;Sensitive Learning;597;19;1269;193;0.97;0.76;0.88;0.77
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;Best first;undersampling;No;622;12;1276;168;0.98;0.79;0.9;0.81
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;Best first;undersampling;Sensitive Threshold;214;3;1285;576;0.99;0.27;0.63;0.31
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;Best first;undersampling;Sensitive Learning;554;12;1276;236;0.98;0.7;0.86;0.73
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;Best first;SMOTE;No;777;1011;277;13;0.43;0.98;0.93;0.16
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;Best first;SMOTE;Sensitive Threshold;396;4;1284;394;0.99;0.5;0.75;0.55
+SYNCOPE;23;69.89;34.92;61.98;Naive Bayes;Best first;SMOTE;Sensitive Learning;569;8;1280;221;0.99;0.72;0.86;0.75
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;No;No;No;887;213;1154;64;0.81;0.93;0.97;0.76
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;No;No;Sensitive Threshold;494;9;1358;457;0.98;0.52;0.76;0.55
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;No;No;Sensitive Learning;719;14;1353;232;0.98;0.76;0.97;0.77
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;No;oversampling;No;764;15;1352;187;0.98;0.8;0.95;0.81
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;No;oversampling;Sensitive Threshold;246;7;1360;705;0.97;0.26;0.63;0.29
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;No;oversampling;Sensitive Learning;708;11;1356;243;0.98;0.74;0.94;0.76
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;No;undersampling;No;769;12;1355;182;0.98;0.81;0.96;0.82
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;No;undersampling;Sensitive Threshold;210;5;1362;741;0.98;0.22;0.61;0.25
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;No;undersampling;Sensitive Learning;668;9;1358;283;0.99;0.7;0.9;0.73
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;No;SMOTE;No;902;226;1141;49;0.8;0.95;0.97;0.76
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;No;SMOTE;Sensitive Threshold;542;9;1358;409;0.98;0.57;0.78;0.6
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;No;SMOTE;Sensitive Learning;662;13;1354;289;0.98;0.7;0.95;0.72
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;Best first;No;No;942;306;1061;9;0.75;0.99;0.98;0.73
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;Best first;No;Sensitive Threshold;607;10;1357;344;0.98;0.64;0.82;0.67
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;Best first;No;Sensitive Learning;758;11;1356;193;0.99;0.8;0.97;0.81
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;Best first;oversampling;No;765;15;1352;186;0.98;0.8;0.95;0.82
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;Best first;oversampling;Sensitive Threshold;611;8;1359;340;0.99;0.64;0.82;0.67
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;Best first;oversampling;Sensitive Learning;909;502;865;42;0.64;0.96;0.94;0.55
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;Best first;undersampling;No;923;299;1068;28;0.76;0.97;0.97;0.72
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;Best first;undersampling;Sensitive Threshold;545;7;1360;406;0.99;0.57;0.78;0.61
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;Best first;undersampling;Sensitive Learning;913;799;568;38;0.53;0.96;0.9;0.33
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;Best first;SMOTE;No;932;306;1061;19;0.75;0.98;0.97;0.72
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;Best first;SMOTE;Sensitive Threshold;621;10;1357;330;0.98;0.65;0.82;0.68
+SYNCOPE;24;76.42;37.23;58.97;Random Forest;Best first;SMOTE;Sensitive Learning;669;12;1355;282;0.98;0.7;0.95;0.73
+SYNCOPE;24;76.42;37.23;58.97;IBk;No;No;No;870;125;1242;81;0.87;0.91;0.93;0.82
+SYNCOPE;24;76.42;37.23;58.97;IBk;No;No;Sensitive Threshold;865;86;1281;86;0.91;0.91;0.92;0.85
+SYNCOPE;24;76.42;37.23;58.97;IBk;No;No;Sensitive Learning;865;86;1281;86;0.91;0.91;0.93;0.85
+SYNCOPE;24;76.42;37.23;58.97;IBk;No;oversampling;No;830;148;1219;121;0.85;0.87;0.91;0.76
+SYNCOPE;24;76.42;37.23;58.97;IBk;No;oversampling;Sensitive Threshold;818;101;1266;133;0.89;0.86;0.89;0.79
+SYNCOPE;24;76.42;37.23;58.97;IBk;No;oversampling;Sensitive Learning;766;110;1257;185;0.87;0.81;0.9;0.73
+SYNCOPE;24;76.42;37.23;58.97;IBk;No;undersampling;No;816;95;1272;135;0.9;0.86;0.91;0.79
+SYNCOPE;24;76.42;37.23;58.97;IBk;No;undersampling;Sensitive Threshold;809;75;1292;142;0.92;0.85;0.9;0.8
+SYNCOPE;24;76.42;37.23;58.97;IBk;No;undersampling;Sensitive Learning;737;196;1171;214;0.79;0.77;0.84;0.63
+SYNCOPE;24;76.42;37.23;58.97;IBk;No;SMOTE;No;869;129;1238;82;0.87;0.91;0.93;0.81
+SYNCOPE;24;76.42;37.23;58.97;IBk;No;SMOTE;Sensitive Threshold;864;89;1278;87;0.91;0.91;0.92;0.84
+SYNCOPE;24;76.42;37.23;58.97;IBk;No;SMOTE;Sensitive Learning;747;78;1289;204;0.91;0.79;0.89;0.74
+SYNCOPE;24;76.42;37.23;58.97;IBk;Best first;No;No;939;305;1062;12;0.75;0.99;0.97;0.73
+SYNCOPE;24;76.42;37.23;58.97;IBk;Best first;No;Sensitive Threshold;707;11;1356;244;0.98;0.74;0.87;0.76
+SYNCOPE;24;76.42;37.23;58.97;IBk;Best first;No;Sensitive Learning;744;11;1356;207;0.99;0.78;0.97;0.8
+SYNCOPE;24;76.42;37.23;58.97;IBk;Best first;oversampling;No;763;15;1352;188;0.98;0.8;0.95;0.81
+SYNCOPE;24;76.42;37.23;58.97;IBk;Best first;oversampling;Sensitive Threshold;641;9;1358;310;0.99;0.67;0.83;0.7
+SYNCOPE;24;76.42;37.23;58.97;IBk;Best first;oversampling;Sensitive Learning;715;14;1353;236;0.98;0.75;0.94;0.77
+SYNCOPE;24;76.42;37.23;58.97;IBk;Best first;undersampling;No;770;12;1355;181;0.98;0.81;0.97;0.82
+SYNCOPE;24;76.42;37.23;58.97;IBk;Best first;undersampling;Sensitive Threshold;629;7;1360;322;0.99;0.66;0.83;0.69
+SYNCOPE;24;76.42;37.23;58.97;IBk;Best first;undersampling;Sensitive Learning;672;12;1355;279;0.98;0.71;0.9;0.73
+SYNCOPE;24;76.42;37.23;58.97;IBk;Best first;SMOTE;No;930;305;1062;21;0.75;0.98;0.97;0.72
+SYNCOPE;24;76.42;37.23;58.97;IBk;Best first;SMOTE;Sensitive Threshold;724;11;1356;227;0.99;0.76;0.88;0.78
+SYNCOPE;24;76.42;37.23;58.97;IBk;Best first;SMOTE;Sensitive Learning;667;12;1355;284;0.98;0.7;0.95;0.72
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;No;No;No;909;1229;138;42;0.43;0.96;0.91;0.05
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;No;No;Sensitive Threshold;847;273;1094;104;0.76;0.89;0.85;0.67
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;No;No;Sensitive Learning;892;969;398;59;0.48;0.94;0.91;0.2
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;No;oversampling;No;903;1032;335;48;0.47;0.95;0.9;0.17
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;No;oversampling;Sensitive Threshold;810;359;1008;141;0.69;0.85;0.79;0.57
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;No;oversampling;Sensitive Learning;902;1002;365;49;0.47;0.95;0.89;0.19
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;No;undersampling;No;907;1125;242;44;0.45;0.95;0.9;0.11
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;No;undersampling;Sensitive Threshold;809;165;1202;142;0.83;0.85;0.86;0.73
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;No;undersampling;Sensitive Learning;908;1253;114;43;0.42;0.95;0.86;0.03
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;No;SMOTE;No;909;1066;301;42;0.46;0.96;0.91;0.15
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;No;SMOTE;Sensitive Threshold;823;165;1202;128;0.83;0.87;0.87;0.74
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;No;SMOTE;Sensitive Learning;895;975;392;56;0.48;0.94;0.88;0.2
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;Best first;No;No;943;307;1060;8;0.75;0.99;0.98;0.73
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;Best first;No;Sensitive Threshold;447;6;1361;504;0.99;0.47;0.73;0.51
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;Best first;No;Sensitive Learning;734;11;1356;217;0.99;0.77;0.96;0.79
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;Best first;oversampling;No;763;15;1352;188;0.98;0.8;0.95;0.81
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;Best first;oversampling;Sensitive Threshold;457;7;1360;494;0.98;0.48;0.74;0.52
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;Best first;oversampling;Sensitive Learning;715;14;1353;236;0.98;0.75;0.94;0.77
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;Best first;undersampling;No;770;12;1355;181;0.98;0.81;0.97;0.82
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;Best first;undersampling;Sensitive Threshold;239;1;1366;712;1;0.25;0.63;0.28
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;Best first;undersampling;Sensitive Learning;672;12;1355;279;0.98;0.71;0.9;0.73
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;Best first;SMOTE;No;932;307;1060;19;0.75;0.98;0.97;0.72
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;Best first;SMOTE;Sensitive Threshold;446;5;1362;505;0.99;0.47;0.73;0.51
+SYNCOPE;24;76.42;37.23;58.97;Naive Bayes;Best first;SMOTE;Sensitive Learning;659;11;1356;292;0.98;0.69;0.93;0.72
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;No;No;No;944;81;1331;233;0.92;0.8;0.97;0.75
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;No;No;Sensitive Threshold;658;15;1397;519;0.98;0.56;0.77;0.57
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;No;No;Sensitive Learning;810;20;1392;367;0.98;0.69;0.97;0.69
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;No;oversampling;No;809;20;1392;368;0.98;0.69;0.95;0.69
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;No;oversampling;Sensitive Threshold;429;8;1404;748;0.98;0.36;0.68;0.38
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;No;oversampling;Sensitive Learning;737;18;1394;440;0.98;0.63;0.94;0.63
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;No;undersampling;No;845;20;1392;332;0.98;0.72;0.97;0.72
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;No;undersampling;Sensitive Threshold;470;12;1400;707;0.98;0.4;0.7;0.41
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;No;undersampling;Sensitive Learning;727;16;1396;450;0.98;0.62;0.9;0.63
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;No;SMOTE;No;929;59;1353;248;0.94;0.79;0.97;0.76
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;No;SMOTE;Sensitive Threshold;673;15;1397;504;0.98;0.57;0.78;0.58
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;No;SMOTE;Sensitive Learning;718;17;1395;459;0.98;0.61;0.96;0.62
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;Best first;No;No;1168;217;1195;9;0.84;0.99;0.98;0.83
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;Best first;No;Sensitive Threshold;697;13;1399;480;0.98;0.59;0.79;0.6
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;Best first;No;Sensitive Learning;862;14;1398;315;0.98;0.73;0.98;0.74
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;Best first;oversampling;No;820;19;1393;357;0.98;0.7;0.95;0.7
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;Best first;oversampling;Sensitive Threshold;642;12;1400;535;0.98;0.55;0.77;0.56
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;Best first;oversampling;Sensitive Learning;1137;347;1065;40;0.77;0.97;0.94;0.7
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;Best first;undersampling;No;1153;208;1204;24;0.85;0.98;0.97;0.82
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;Best first;undersampling;Sensitive Threshold;575;11;1401;602;0.98;0.49;0.74;0.5
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;Best first;undersampling;Sensitive Learning;1144;614;798;33;0.65;0.97;0.9;0.52
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;Best first;SMOTE;No;1158;216;1196;19;0.84;0.98;0.97;0.82
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;Best first;SMOTE;Sensitive Threshold;713;13;1399;464;0.98;0.61;0.8;0.62
+SYNCOPE;25;83.69;39.12;54.54;Random Forest;Best first;SMOTE;Sensitive Learning;744;13;1399;433;0.98;0.63;0.96;0.64
+SYNCOPE;25;83.69;39.12;54.54;IBk;No;No;No;946;59;1353;231;0.94;0.8;0.88;0.77
+SYNCOPE;25;83.69;39.12;54.54;IBk;No;No;Sensitive Threshold;942;50;1362;235;0.95;0.8;0.88;0.78
+SYNCOPE;25;83.69;39.12;54.54;IBk;No;No;Sensitive Learning;942;50;1362;235;0.95;0.8;0.88;0.78
+SYNCOPE;25;83.69;39.12;54.54;IBk;No;oversampling;No;916;84;1328;261;0.92;0.78;0.84;0.73
+SYNCOPE;25;83.69;39.12;54.54;IBk;No;oversampling;Sensitive Threshold;906;59;1353;271;0.94;0.77;0.86;0.74
+SYNCOPE;25;83.69;39.12;54.54;IBk;No;oversampling;Sensitive Learning;843;61;1351;334;0.93;0.72;0.85;0.69
+SYNCOPE;25;83.69;39.12;54.54;IBk;No;undersampling;No;874;47;1365;303;0.95;0.74;0.86;0.72
+SYNCOPE;25;83.69;39.12;54.54;IBk;No;undersampling;Sensitive Threshold;869;39;1373;308;0.96;0.74;0.86;0.72
+SYNCOPE;25;83.69;39.12;54.54;IBk;No;undersampling;Sensitive Learning;777;133;1279;400;0.85;0.66;0.82;0.58
+SYNCOPE;25;83.69;39.12;54.54;IBk;No;SMOTE;No;949;59;1353;228;0.94;0.81;0.89;0.77
+SYNCOPE;25;83.69;39.12;54.54;IBk;No;SMOTE;Sensitive Threshold;945;50;1362;232;0.95;0.8;0.88;0.78
+SYNCOPE;25;83.69;39.12;54.54;IBk;No;SMOTE;Sensitive Learning;798;38;1374;379;0.95;0.68;0.84;0.67
+SYNCOPE;25;83.69;39.12;54.54;IBk;Best first;No;No;1165;217;1195;12;0.84;0.99;0.98;0.82
+SYNCOPE;25;83.69;39.12;54.54;IBk;Best first;No;Sensitive Threshold;797;14;1398;380;0.98;0.68;0.83;0.68
+SYNCOPE;25;83.69;39.12;54.54;IBk;Best first;No;Sensitive Learning;860;14;1398;317;0.98;0.73;0.98;0.74
+SYNCOPE;25;83.69;39.12;54.54;IBk;Best first;oversampling;No;819;19;1393;358;0.98;0.7;0.95;0.7
+SYNCOPE;25;83.69;39.12;54.54;IBk;Best first;oversampling;Sensitive Threshold;684;13;1399;493;0.98;0.58;0.79;0.59
+SYNCOPE;25;83.69;39.12;54.54;IBk;Best first;oversampling;Sensitive Learning;740;21;1391;437;0.97;0.63;0.94;0.63
+SYNCOPE;25;83.69;39.12;54.54;IBk;Best first;undersampling;No;854;14;1398;323;0.98;0.73;0.97;0.73
+SYNCOPE;25;83.69;39.12;54.54;IBk;Best first;undersampling;Sensitive Threshold;709;11;1401;468;0.98;0.6;0.8;0.61
+SYNCOPE;25;83.69;39.12;54.54;IBk;Best first;undersampling;Sensitive Learning;725;17;1395;452;0.98;0.62;0.91;0.62
+SYNCOPE;25;83.69;39.12;54.54;IBk;Best first;SMOTE;No;1156;216;1196;21;0.84;0.98;0.97;0.82
+SYNCOPE;25;83.69;39.12;54.54;IBk;Best first;SMOTE;Sensitive Threshold;817;14;1398;360;0.98;0.69;0.84;0.7
+SYNCOPE;25;83.69;39.12;54.54;IBk;Best first;SMOTE;Sensitive Learning;741;13;1399;436;0.98;0.63;0.96;0.64
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;No;No;No;1058;1001;411;119;0.51;0.9;0.84;0.18
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;No;No;Sensitive Threshold;873;46;1366;304;0.95;0.74;0.85;0.72
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;No;No;Sensitive Learning;1004;598;814;173;0.63;0.85;0.87;0.42
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;No;oversampling;No;1055;919;493;122;0.53;0.9;0.84;0.23
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;No;oversampling;Sensitive Threshold;837;112;1300;340;0.88;0.71;0.82;0.64
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;No;oversampling;Sensitive Learning;1058;855;557;119;0.55;0.9;0.86;0.28
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;No;undersampling;No;1048;977;435;129;0.52;0.89;0.83;0.19
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;No;undersampling;Sensitive Threshold;835;39;1373;342;0.96;0.71;0.84;0.7
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;No;undersampling;Sensitive Learning;1012;1090;322;165;0.48;0.86;0.78;0.08
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;No;SMOTE;No;1044;911;501;133;0.53;0.89;0.85;0.23
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;No;SMOTE;Sensitive Threshold;861;42;1370;316;0.95;0.73;0.85;0.72
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;No;SMOTE;Sensitive Learning;987;668;744;190;0.6;0.84;0.84;0.35
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;Best first;No;No;1170;218;1194;7;0.84;0.99;0.98;0.83
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;Best first;No;Sensitive Threshold;498;11;1401;679;0.98;0.42;0.71;0.44
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;Best first;No;Sensitive Learning;828;14;1398;349;0.98;0.7;0.97;0.71
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;Best first;oversampling;No;819;19;1393;358;0.98;0.7;0.95;0.7
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;Best first;oversampling;Sensitive Threshold;440;9;1403;737;0.98;0.37;0.68;0.39
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;Best first;oversampling;Sensitive Learning;740;21;1391;437;0.97;0.63;0.94;0.63
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;Best first;undersampling;No;854;14;1398;323;0.98;0.73;0.97;0.73
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;Best first;undersampling;Sensitive Threshold;264;6;1406;913;0.98;0.22;0.61;0.24
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;Best first;undersampling;Sensitive Learning;725;17;1395;452;0.98;0.62;0.9;0.62
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;Best first;SMOTE;No;1161;218;1194;16;0.84;0.99;0.97;0.82
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;Best first;SMOTE;Sensitive Threshold;435;9;1403;742;0.98;0.37;0.68;0.38
+SYNCOPE;25;83.69;39.12;54.54;Naive Bayes;Best first;SMOTE;Sensitive Learning;722;13;1399;455;0.98;0.61;0.95;0.62
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;No;No;No;1162;122;1296;27;0.9;0.98;0.99;0.89
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;No;No;Sensitive Threshold;691;0;1418;498;1;0.58;0.79;0.6
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;No;No;Sensitive Learning;883;2;1416;306;1;0.74;0.99;0.76
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;No;oversampling;No;968;3;1415;221;1;0.81;0.98;0.82
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;No;oversampling;Sensitive Threshold;550;0;1418;639;1;0.46;0.73;0.48
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;No;oversampling;Sensitive Learning;892;2;1416;297;1;0.75;0.97;0.76
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;No;undersampling;No;1040;1;1417;149;1;0.87;0.99;0.88
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;No;undersampling;Sensitive Threshold;570;0;1418;619;1;0.48;0.74;0.5
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;No;undersampling;Sensitive Learning;858;8;1410;331;0.99;0.72;0.95;0.73
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;No;SMOTE;No;1152;105;1313;37;0.92;0.97;0.99;0.89
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;No;SMOTE;Sensitive Threshold;704;0;1418;485;1;0.59;0.8;0.61
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;No;SMOTE;Sensitive Learning;839;2;1416;350;1;0.71;0.98;0.72
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;Best first;No;No;1178;152;1266;11;0.89;0.99;0.99;0.88
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;Best first;No;Sensitive Threshold;792;8;1410;397;0.99;0.67;0.83;0.68
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;Best first;No;Sensitive Learning;1083;8;1410;106;0.99;0.91;0.99;0.91
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;Best first;oversampling;No;1158;279;1139;31;0.81;0.97;0.98;0.76
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;Best first;oversampling;Sensitive Threshold;761;3;1415;428;1;0.64;0.82;0.66
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;Best first;oversampling;Sensitive Learning;1152;264;1154;37;0.81;0.97;0.97;0.77
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;Best first;undersampling;No;1165;146;1272;24;0.89;0.98;0.99;0.87
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;Best first;undersampling;Sensitive Threshold;674;5;1413;515;0.99;0.57;0.78;0.58
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;Best first;undersampling;Sensitive Learning;1153;454;964;36;0.72;0.97;0.95;0.63
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;Best first;SMOTE;No;1168;152;1266;21;0.88;0.98;0.99;0.87
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;Best first;SMOTE;Sensitive Threshold;807;8;1410;382;0.99;0.68;0.84;0.69
+SYNCOPE;26;91.82;40.48;54.39;Random Forest;Best first;SMOTE;Sensitive Learning;872;7;1411;317;0.99;0.73;0.98;0.74
+SYNCOPE;26;91.82;40.48;54.39;IBk;No;No;No;1140;80;1338;49;0.93;0.96;0.96;0.9
+SYNCOPE;26;91.82;40.48;54.39;IBk;No;No;Sensitive Threshold;1140;53;1365;49;0.96;0.96;0.96;0.92
+SYNCOPE;26;91.82;40.48;54.39;IBk;No;No;Sensitive Learning;1140;53;1365;49;0.96;0.96;0.96;0.92
+SYNCOPE;26;91.82;40.48;54.39;IBk;No;oversampling;No;1032;94;1324;157;0.92;0.87;0.93;0.81
+SYNCOPE;26;91.82;40.48;54.39;IBk;No;oversampling;Sensitive Threshold;1007;66;1352;182;0.94;0.85;0.9;0.81
+SYNCOPE;26;91.82;40.48;54.39;IBk;No;oversampling;Sensitive Learning;974;106;1312;215;0.9;0.82;0.9;0.75
+SYNCOPE;26;91.82;40.48;54.39;IBk;No;undersampling;No;1073;54;1364;116;0.95;0.9;0.95;0.87
+SYNCOPE;26;91.82;40.48;54.39;IBk;No;undersampling;Sensitive Threshold;1059;43;1375;130;0.96;0.89;0.93;0.87
+SYNCOPE;26;91.82;40.48;54.39;IBk;No;undersampling;Sensitive Learning;957;183;1235;232;0.84;0.8;0.87;0.68
+SYNCOPE;26;91.82;40.48;54.39;IBk;No;SMOTE;No;1138;84;1334;51;0.93;0.96;0.96;0.9
+SYNCOPE;26;91.82;40.48;54.39;IBk;No;SMOTE;Sensitive Threshold;1138;55;1363;51;0.95;0.96;0.96;0.92
+SYNCOPE;26;91.82;40.48;54.39;IBk;No;SMOTE;Sensitive Learning;935;38;1380;254;0.96;0.79;0.92;0.77
+SYNCOPE;26;91.82;40.48;54.39;IBk;Best first;No;No;1175;150;1268;14;0.89;0.99;1;0.87
+SYNCOPE;26;91.82;40.48;54.39;IBk;Best first;No;Sensitive Threshold;1021;8;1410;168;0.99;0.86;0.93;0.86
+SYNCOPE;26;91.82;40.48;54.39;IBk;Best first;No;Sensitive Learning;1087;8;1410;102;0.99;0.91;1;0.91
+SYNCOPE;26;91.82;40.48;54.39;IBk;Best first;oversampling;No;969;8;1410;220;0.99;0.81;0.98;0.82
+SYNCOPE;26;91.82;40.48;54.39;IBk;Best first;oversampling;Sensitive Threshold;836;3;1415;353;1;0.7;0.85;0.72
+SYNCOPE;26;91.82;40.48;54.39;IBk;Best first;oversampling;Sensitive Learning;899;9;1409;290;0.99;0.76;0.97;0.76
+SYNCOPE;26;91.82;40.48;54.39;IBk;Best first;undersampling;No;1048;7;1411;141;0.99;0.88;0.99;0.88
+SYNCOPE;26;91.82;40.48;54.39;IBk;Best first;undersampling;Sensitive Threshold;889;4;1414;300;1;0.75;0.87;0.76
+SYNCOPE;26;91.82;40.48;54.39;IBk;Best first;undersampling;Sensitive Learning;850;8;1410;339;0.99;0.71;0.95;0.73
+SYNCOPE;26;91.82;40.48;54.39;IBk;Best first;SMOTE;No;1163;151;1267;26;0.89;0.98;0.99;0.86
+SYNCOPE;26;91.82;40.48;54.39;IBk;Best first;SMOTE;Sensitive Threshold;1039;8;1410;150;0.99;0.87;0.93;0.88
+SYNCOPE;26;91.82;40.48;54.39;IBk;Best first;SMOTE;Sensitive Learning;869;7;1411;320;0.99;0.73;0.98;0.74
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;No;No;No;1158;1029;389;31;0.53;0.97;0.96;0.23
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;No;No;Sensitive Threshold;1086;57;1361;103;0.95;0.91;0.94;0.88
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;No;No;Sensitive Learning;1132;284;1134;57;0.8;0.95;0.96;0.74
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;No;oversampling;No;1145;787;631;44;0.59;0.96;0.94;0.39
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;No;oversampling;Sensitive Threshold;895;6;1412;294;0.99;0.75;0.87;0.76
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;No;oversampling;Sensitive Learning;1143;674;744;46;0.63;0.96;0.95;0.47
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;No;undersampling;No;1152;1023;395;37;0.53;0.97;0.95;0.23
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;No;undersampling;Sensitive Threshold;1033;50;1368;156;0.95;0.87;0.92;0.84
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;No;undersampling;Sensitive Learning;1155;1246;172;34;0.48;0.97;0.91;0.09
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;No;SMOTE;No;1158;886;532;31;0.57;0.97;0.96;0.33
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;No;SMOTE;Sensitive Threshold;1070;7;1411;119;0.99;0.9;0.95;0.9
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;No;SMOTE;Sensitive Learning;1123;752;666;66;0.6;0.94;0.94;0.4
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;Best first;No;No;1181;152;1266;8;0.89;0.99;0.99;0.88
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;Best first;No;Sensitive Threshold;511;4;1414;678;0.99;0.43;0.71;0.45
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;Best first;No;Sensitive Learning;1051;8;1410;138;0.99;0.88;0.99;0.89
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;Best first;oversampling;No;969;8;1410;220;0.99;0.81;0.98;0.82
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;Best first;oversampling;Sensitive Threshold;470;2;1416;719;1;0.4;0.7;0.41
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;Best first;oversampling;Sensitive Learning;899;9;1409;290;0.99;0.76;0.97;0.76
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;Best first;undersampling;No;1048;7;1411;141;0.99;0.88;0.99;0.88
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;Best first;undersampling;Sensitive Threshold;289;0;1418;900;1;0.24;0.62;0.26
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;Best first;undersampling;Sensitive Learning;850;8;1410;339;0.99;0.71;0.95;0.73
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;Best first;SMOTE;No;1171;152;1266;18;0.89;0.98;0.99;0.87
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;Best first;SMOTE;Sensitive Threshold;499;4;1414;690;0.99;0.42;0.71;0.44
+SYNCOPE;26;91.82;40.48;54.39;Naive Bayes;Best first;SMOTE;Sensitive Learning;857;7;1411;332;0.99;0.72;0.97;0.73

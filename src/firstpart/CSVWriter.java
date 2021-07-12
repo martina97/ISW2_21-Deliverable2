@@ -2,6 +2,9 @@ package firstpart;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
 import java.util.logging.Logger;
@@ -25,7 +28,7 @@ public class CSVWriter {
 	
 	public static void writeCsvBugg(List<Release> releasesList, String nameProject) {
 		try (
-				   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\FINITO\\CSV FINALE" + nameProject + "06GIUGNO.csv")) {
+				   FileWriter fileWriter = new FileWriter("output\\first part\\Finale_" + nameProject + ".csv")) {
 
 				   fileWriter.append("RELEASE;FILENAME;LOC;LOC_added;MAX_LOC_Added;AVG_LOC_Added;Churn;MAX_Churn;AVG_Churn;NR;NAUTH;ChgSetSize;MAX_ChgSet;AVG_ChgSet;BUGGYNESS\n");
 				   for (Release release : releasesList) {
@@ -103,10 +106,10 @@ public class CSVWriter {
 		   fileWriter.append("\n");
 	}
 	
-	public static void writeCsvReleases(List<Ticket> ticketList, String test) {
+	public static void writeTickets(List<Ticket> ticketList, String test) {
 	 
 	  try (
-	   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\"+test+".csv")) {
+	   FileWriter fileWriter = new FileWriter("output\\first part"+test+".csv")) {
 	   
 	   fileWriter.append("TICKET ID ; IV ; OV ; FV ; AV \n");
 	   for (Ticket ticket : ticketList) {
@@ -128,15 +131,14 @@ public class CSVWriter {
 	  
 	  	}
 	 }	
-	
-	
+
 	
 	public static void writeCsvMilestone2(List<M2Entries> dBentriesList, String projName) {
 		try (
-		   FileWriter fileWriter = new FileWriter("D:\\Programmi\\Eclipse\\eclipse-workspace\\ISW2_21-Deliverable2_BOOKKEEPER\\csv\\weka\\"+projName+" Weka.csv")) {
+		   FileWriter fileWriter = new FileWriter("output\\second part"+projName+" Weka.csv")) {
 		   
 		   fileWriter.append("Dataset;#TrainingRelease;%training;%Defective in training;%Defective in testing;Classifier;"
-		   		+ "Balancing;Feature Selection;Sensitivity;TP;FP;TN;FN;Precision;Recall;AUC;Kappa\n");
+		   		+ "Feature Selection;Balancing;Sensitivity;TP;FP;TN;FN;Precision;Recall;AUC;Kappa\n");
 		   
 
 		   for(M2Entries entry : dBentriesList) {

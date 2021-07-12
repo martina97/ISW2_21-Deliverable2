@@ -78,43 +78,37 @@ public class Main {
 	   logger.log(Level.INFO,"Numero ticket = {0}.", ticketList.size());
 	  	   
 	   /*
-	   // PROPORTION VECCHIO 
+	   // PROPORTION METODO 2 
 	   Proportion.checkTicket2(ticketList)
 	   Proportion.modifyListAV(ticketList)
 	   */
 
 	   
-	   // PROPORTION NUOVO
+	   // PROPORTION METODO 1
 	   Collections.reverse(ticketList); //inverto l'ordine dei ticket nella lista per semplicita' nel calcolo proportion
 
-	   Proportion.proportion(ticketList); //PROPORTION NUOVO
+	   Proportion.proportion(ticketList); //PROPORTION METODO 1
 	   
-	   checkAV();	//PROPORTION NUOVO
+	   checkAV();	//PROPORTION METODO 1
 	   
-	   
-	   
-	   /* per ogni release prendo tutti i file java che sono stati toccati nei commit 
-	    * e setto inizialmente buggyness = "no" 
-	    */
-	   
-
+	    
 	   Map<String, List<String>> fileAliasMap = GetGitInfo.checkRename(releasesList, repo);
 	  logger.log(Level.INFO,"FileAliasMap SIZE = {0}.", fileAliasMap.size());
 	   
 	   removeHalfRelease(releasesList, ticketList);
 	   
 
-
+	   /* per ogni release prendo tutti i file java che sono stati toccati nei commit 
+	    * e setto inizialmente buggyness = "no" 
+	    */
 	   GetGitInfo.getJavaFiles(repoPath, releasesList, fileAliasMap);
 	   
 	   
 	   GetGitInfo.checkBuggyness(releasesList, ticketList,fileAliasMap );
 	   
 
-
 	   Metrics.getMetrics(releasesList, repo);
 	   CSVWriter.writeCsvBugg(releasesList, nameProjectLowerCase);
-
 	 
    	}                                                                                                                                                                                                                                                                                                                                           
 
