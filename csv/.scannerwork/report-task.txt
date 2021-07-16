@@ -1,7 +1,0 @@
-organization=martina97
-projectKey=martina97_ISW2_21-Deliverable2_BOOKKEEPER
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.20278
-dashboardUrl=https://sonarcloud.io/dashboard?id=martina97_ISW2_21-Deliverable2_BOOKKEEPER
-ceTaskId=AXmJ3QUWYJIXlyrJvunM
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXmJ3QUWYJIXlyrJvunM
